@@ -4,7 +4,7 @@ import { FormEvent, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
-type Status = "idle" | "submitting" | "success" | "error";
+type Status = "idle" | "success" | "error";
 
 const inputClassName =
   "w-full rounded-[0.9rem] border border-border bg-white px-3.5 py-3 text-[0.95rem] text-foreground outline-none transition placeholder:text-muted-soft focus:border-nc-blue/60 focus:shadow-[0_0_0_4px_rgba(106,173,255,0.28)]";
@@ -27,11 +27,8 @@ export function ContactForm() {
       return;
     }
 
-    setStatus("submitting");
-
-    // Mailto fallback — plug a form backend/CRM later without changing UX.
     const subject = encodeURIComponent(
-      `Contato institucional — ${organization || name}`,
+      `Contato NoraCare — ${organization || name}`,
     );
     const body = encodeURIComponent(
       [
@@ -43,7 +40,8 @@ export function ContactForm() {
       ].join("\n"),
     );
 
-    window.location.href = `mailto:${siteConfig.commercialEmail}?subject=${subject}&body=${body}`;
+    // Apenas mailto — sem backend.
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
     setStatus("success");
     form.reset();
   }
@@ -113,16 +111,10 @@ export function ContactForm() {
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs text-muted">
-          Ao enviar, abrimos seu cliente de e-mail para{" "}
-          {siteConfig.commercialEmail}.
+          Ao enviar, abrimos seu cliente de e-mail para {siteConfig.email}.
         </p>
-        <Button
-          type="submit"
-          variant="secondary"
-          size="lg"
-          disabled={status === "submitting"}
-        >
-          {status === "submitting" ? "Preparando..." : "Enviar mensagem"}
+        <Button type="submit" variant="secondary" size="lg">
+          Enviar mensagem
         </Button>
       </div>
 

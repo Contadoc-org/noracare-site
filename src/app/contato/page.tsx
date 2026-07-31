@@ -6,11 +6,11 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Fale com a equipe NoraCare para demonstração, comercial ou suporte institucional.",
+    "Fale com a equipe NoraCare para demonstração, comercial ou suporte.",
   alternates: { canonical: "/contato" },
   openGraph: {
     title: `Contato | ${siteConfig.name}`,
-    description: "Solicite uma demonstração ou fale com o time comercial.",
+    description: "Solicite uma demonstração ou fale com o time NoraCare.",
     url: `${siteConfig.url}/contato`,
   },
 };
@@ -35,20 +35,22 @@ export default function ContatoPage() {
           <dl className="mt-10 space-y-5">
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
-                Comercial
+                WhatsApp
               </dt>
               <dd className="mt-1.5">
                 <a
-                  href={`mailto:${siteConfig.commercialEmail}`}
+                  href={siteConfig.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-lg font-semibold text-nc-navy hover:text-nc-blue"
                 >
-                  {siteConfig.commercialEmail}
+                  {siteConfig.phoneDisplay}
                 </a>
               </dd>
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
-                Geral
+                E-mail
               </dt>
               <dd className="mt-1.5">
                 <a

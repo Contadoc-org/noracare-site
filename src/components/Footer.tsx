@@ -39,14 +39,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/privacidade"
-                  className="text-sm text-white/75 transition hover:text-white"
-                >
-                  Privacidade
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -57,10 +49,12 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5 text-sm text-white/75">
               <li>
                 <a
-                  href={`mailto:${siteConfig.commercialEmail}`}
+                  href={siteConfig.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-white"
                 >
-                  {siteConfig.commercialEmail}
+                  WhatsApp {siteConfig.phoneDisplay}
                 </a>
               </li>
               <li>
@@ -89,7 +83,7 @@ export function Footer() {
           <p>
             © {year} {siteConfig.legalName}. Todos os direitos reservados.
           </p>
-          <p>institucional.noracare.com.br</p>
+          <p>{siteConfig.host}</p>
         </div>
       </Container>
     </footer>

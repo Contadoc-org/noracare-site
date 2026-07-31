@@ -87,7 +87,7 @@ export default function TwitterImage() {
             color: "rgba(255,255,255,0.65)",
           }}
         >
-          <span>institucional.noracare.com.br</span>
+          <span>site.noracare.com.br</span>
           <span style={{ color: "#92E0CD", fontWeight: 700 }}>
             Plataforma para saúde
           </span>

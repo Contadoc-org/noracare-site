@@ -2,7 +2,7 @@
 
 Site institucional moderno da **NoraCare**, construído com **Next.js (App Router)** para SEO, performance e deploy simples.
 
-**URL de produção:** [https://institucional.noracare.com.br](https://institucional.noracare.com.br)
+**URL de produção:** [https://site.noracare.com.br](https://site.noracare.com.br)
 
 ## Stack
 
@@ -43,9 +43,9 @@ npm start
 Edite `src/lib/site.ts`:
 
 - nome, tagline, descrição SEO
-- URL canônica (`https://institucional.noracare.com.br`)
+- URL canônica (`https://site.noracare.com.br`)
 - URL do app (`appUrl`)
-- e-mails comercial e geral
+- e-mail de contato (`contato@contadoc.com.br`)
 - redes sociais (quando existirem)
 
 Assets em `public/`:
@@ -63,8 +63,8 @@ Assets em `public/`:
 - [x] `robots.ts` → `/robots.txt`
 - [x] `lang="pt-BR"` e canonicals
 - [ ] Enviar sitemap no Google Search Console após o DNS
-- [ ] Confirmar e-mails reais (`contato@` / `comercial@`)
-- [ ] Confirmar URL do app em produção (`appUrl`)
+- [x] E-mail de contato (`contato@contadoc.com.br`)
+- [x] URL do app (`https://noracare.com.br`)
 
 ## Deploy sugerido
 
@@ -72,7 +72,7 @@ Assets em `public/`:
 
 1. Conecte este repositório
 2. Build: `npm run build` · Start: `npm start`
-3. Domínio custom: `institucional.noracare.com.br`
+3. Domínio custom: `site.noracare.com.br`
 4. DNS: CNAME (ou A/AAAA conforme o provedor) apontando para a hospedagem
 
 ### Opção B — S3 + CloudFront (alinhado à infra NoraCare)
@@ -93,15 +93,14 @@ const nextConfig = {
 Exemplo:
 
 ```
-institucional.noracare.com.br  CNAME  <host-do-deploy>
+site.noracare.com.br  CNAME  <host-do-deploy>
 ```
 
 Certificado TLS: use o do provedor ou ACM (`*.noracare.com.br` se já existir).
 
 ## Formulário de contato
 
-Hoje o formulário usa **mailto** para `comercial@noracare.com.br` (zero backend).  
-Para produção com CRM, troque o handler em `src/components/ContactForm.tsx` por uma API route / Formspree / HubSpot.
+O formulário de contato usa apenas **mailto** para `contato@contadoc.com.br` (sem backend).
 
 ## Scripts
 

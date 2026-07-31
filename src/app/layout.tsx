@@ -84,8 +84,12 @@ export default function RootLayout({
     url: siteConfig.url,
     description: siteConfig.description,
     email: siteConfig.email,
+    telephone: siteConfig.phoneE164,
     logo: `${siteConfig.url}/logo-mark.svg`,
-    sameAs: Object.values(siteConfig.social).filter(Boolean),
+    sameAs: [
+      ...Object.values(siteConfig.social).filter(Boolean),
+      siteConfig.whatsappUrl,
+    ],
   };
 
   return (

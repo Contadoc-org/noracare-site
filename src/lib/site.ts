@@ -6,11 +6,16 @@ export const siteConfig = {
   tagline: "Gestão inteligente de plantões e equipes de saúde",
   description:
     "Plataforma completa para hospitais e redes de saúde organizarem escalas, plantões, check-in biométrico, trocas e relatórios financeiros — com segurança e rastreabilidade.",
-  url: "https://institucional.noracare.com.br",
-  appUrl: "https://app.noracare.com.br",
+  url: "https://site.noracare.com.br",
+  host: "site.noracare.com.br",
+  appUrl: "https://noracare.com.br",
   locale: "pt_BR",
-  email: "contato@noracare.com.br",
-  commercialEmail: "comercial@noracare.com.br",
+  /** Contato único do site (mailto do formulário e links públicos). */
+  email: "contato@contadoc.com.br",
+  /** WhatsApp — DDD 21 */
+  phoneDisplay: "(21) 98081-8818",
+  phoneE164: "+5521980818818",
+  whatsappUrl: "https://wa.me/5521980818818",
   social: {
     // Preencha quando houver perfis oficiais
     linkedin: "",
@@ -23,6 +28,7 @@ export const navLinks = [
   { href: "/produto", label: "Produto" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
+  { href: "/privacidade", label: "Privacidade" },
 ] as const;
 
 export const features = [
