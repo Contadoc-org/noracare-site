@@ -8,7 +8,7 @@ export const siteConfig = {
     "Plataforma completa para hospitais e redes de saúde organizarem escalas, plantões, check-in biométrico, trocas e relatórios financeiros — com segurança e rastreabilidade.",
   url: "https://site.noracare.com.br",
   host: "site.noracare.com.br",
-  appUrl: "https://noracare.com.br",
+  appUrl: "https://app.noracare.com.br",
   locale: "pt_BR",
   /** Contato único do site (mailto do formulário e links públicos). */
   email: "contato@contadoc.com.br",

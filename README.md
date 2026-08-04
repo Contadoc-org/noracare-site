@@ -64,7 +64,7 @@ Assets em `public/`:
 - [x] `lang="pt-BR"` e canonicals
 - [ ] Enviar sitemap no Google Search Console após o DNS
 - [x] E-mail de contato (`contato@contadoc.com.br`)
-- [x] URL do app (`https://noracare.com.br`)
+- [x] URL do app (`https://app.noracare.com.br`)
 
 ## Deploy sugerido
 
