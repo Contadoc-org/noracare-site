@@ -20,7 +20,9 @@ Site institucional moderno da **NoraCare**, construído com **Next.js (App Route
 | `/produto` | Módulos e superfícies do produto |
 | `/sobre` | Missão e posicionamento |
 | `/contato` | Formulário comercial + e-mails |
-| `/privacidade` | Política de privacidade (LGPD) |
+| `/privacidade` | Política de privacidade do site (LGPD) |
+| `/privacidade-app` | Política de privacidade do app / plataforma |
+| `/exclusao-de-dados` | Passo a passo para exclusão de conta e dados |
 
 ## Desenvolvimento
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks, siteConfig } from "@/lib/site";
+import { legalLinks, navLinks, siteConfig } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
 
 export function Footer() {
@@ -9,8 +9,8 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-nc-navy text-white">
       <Container className="section-pad !py-14">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
-          <div>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Image
               src="/logo-light.svg"
               alt={siteConfig.name}
@@ -75,6 +75,24 @@ export function Footer() {
                   Acessar o app
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-nc-green">
+              Legal
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/75 transition hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -28,7 +28,13 @@ export const navLinks = [
   { href: "/produto", label: "Produto" },
   { href: "/sobre", label: "Sobre" },
   { href: "/contato", label: "Contato" },
-  { href: "/privacidade", label: "Privacidade" },
+] as const;
+
+/** Links legais exibidos no rodapé (site, app e exclusão de dados). */
+export const legalLinks = [
+  { href: "/privacidade", label: "Privacidade do site" },
+  { href: "/privacidade-app", label: "Privacidade do app" },
+  { href: "/exclusao-de-dados", label: "Exclusão de dados" },
 ] as const;
 
 export const features = [

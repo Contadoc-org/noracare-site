@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/site";
 
@@ -87,8 +88,22 @@ export default function PrivacidadePage() {
           <h2 className="text-xl font-bold text-nc-navy">7. Produto NoraCare</h2>
           <p>
             O tratamento de dados no aplicativo e na plataforma operacional
-            {` `}({siteConfig.appUrl}) segue contratos e políticas específicas
-            com cada cliente contratante, distintos deste site institucional.
+            {` `}({siteConfig.appUrl}) está descrito na{" "}
+            <Link
+              className="font-semibold text-nc-blue hover:underline"
+              href="/privacidade-app"
+            >
+              Política de privacidade do app
+            </Link>
+            , além dos contratos com cada cliente contratante. Para excluir
+            conta e dados pessoais, veja{" "}
+            <Link
+              className="font-semibold text-nc-blue hover:underline"
+              href="/exclusao-de-dados"
+            >
+              Exclusão de dados
+            </Link>
+            .
           </p>
         </div>
       </Container>
