@@ -1,13 +1,11 @@
 "use client";
 
 import { FormEvent, useState, type ReactNode } from "react";
+import { IconArrowRight, IconCheck } from "@/components/icons";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
 type Status = "idle" | "success" | "error";
-
-const inputClassName =
-  "w-full rounded-[0.9rem] border border-border bg-white px-3.5 py-3 text-[0.95rem] text-foreground outline-none transition placeholder:text-muted-soft focus:border-nc-blue/60 focus:shadow-[0_0_0_4px_rgba(106,173,255,0.28)]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -49,7 +47,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-3xl border border-border bg-white p-6 shadow-[var(--shadow-card)] sm:p-8"
+      className="card min-w-0 p-6 shadow-lift sm:p-8 lg:p-10"
       noValidate
     >
       <div className="grid gap-5 sm:grid-cols-2">
@@ -60,7 +58,7 @@ export function ContactForm() {
             type="text"
             autoComplete="name"
             required
-            className={inputClassName}
+            className="input"
             placeholder="Seu nome"
           />
         </Field>
@@ -72,7 +70,7 @@ export function ContactForm() {
             type="email"
             autoComplete="email"
             required
-            className={inputClassName}
+            className="input"
             placeholder="voce@hospital.com.br"
           />
         </Field>
@@ -87,7 +85,7 @@ export function ContactForm() {
             name="organization"
             type="text"
             autoComplete="organization"
-            className={inputClassName}
+            className="input"
             placeholder="Hospital, rede ou clínica"
           />
         </Field>
@@ -103,32 +101,39 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            className={`${inputClassName} resize-y`}
+            className="input min-h-36 resize-y"
             placeholder="Conte um pouco sobre a operação de plantões da sua rede..."
           />
         </Field>
       </div>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs text-muted">
+      <div className="mt-8 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs leading-relaxed text-muted-soft break-words">
           Ao enviar, abrimos seu cliente de e-mail para {siteConfig.email}.
         </p>
-        <Button type="submit" variant="secondary" size="lg">
+        <Button
+          type="submit"
+          variant="secondary"
+          size="lg"
+          className="w-full sm:w-auto"
+        >
           Enviar mensagem
+          <IconArrowRight />
         </Button>
       </div>
 
       {status === "success" ? (
         <p
-          className="mt-4 rounded-2xl bg-nc-green/15 px-4 py-3 text-sm font-medium text-nc-navy"
+          className="mt-5 flex items-start gap-3 rounded-xl border border-nc-teal/20 bg-[#effaf6] px-4 py-3 text-sm font-medium text-heading"
           role="status"
         >
+          <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-nc-teal" />
           Obrigado! Finalize o envio no seu e-mail para concluirmos o contato.
         </p>
       ) : null}
       {status === "error" ? (
         <p
-          className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm font-medium text-red-700"
+          className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-800"
           role="alert"
         >
           Preencha nome, e-mail e mensagem para continuar.
@@ -153,7 +158,7 @@ function Field({
 }) {
   return (
     <label className={`block ${className}`.trim()} htmlFor={htmlFor}>
-      <span className="mb-1.5 block text-sm font-semibold text-nc-navy">
+      <span className="mb-2 block text-sm font-semibold text-heading">
         {label}
         {required ? <span className="text-nc-blue"> *</span> : null}
       </span>

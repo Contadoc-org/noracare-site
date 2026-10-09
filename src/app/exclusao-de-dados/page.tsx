@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { IconClock } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
+import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -46,7 +48,6 @@ const stepsByEmail = [
       <>
         Escreva para{" "}
         <a
-          className="font-semibold text-nc-blue hover:underline"
           href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
             "Solicitação de exclusão de conta e dados — NoraCare",
           )}`}
@@ -76,201 +77,178 @@ const stepsByEmail = [
 
 export default function ExclusaoDeDadosPage() {
   return (
-    <section className="section-pad bg-white">
-      <Container className="max-w-3xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-nc-blue">
-          Legal · Aplicativo
-        </p>
-        <h1 className="mt-3 text-4xl font-bold tracking-tight text-nc-navy">
-          Exclusão de conta e dados
-        </h1>
-        <p className="mt-4 text-sm text-muted">
+    <>
+      <PageHero
+        size="sm"
+        eyebrow="Legal · Aplicativo"
+        title="Exclusão de conta e dados"
+      >
+        <p className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 font-mono text-xs text-white/75">
+          <IconClock className="h-3.5 w-3.5" />
           Última atualização: 5 de agosto de 2026
         </p>
+      </PageHero>
 
-        <div className="prose-nc mt-10 space-y-6 text-base leading-relaxed text-muted">
-          <p>
-            Esta página explica como titulares de dados podem solicitar a{" "}
-            <strong className="text-nc-navy">exclusão da conta</strong> e a{" "}
-            <strong className="text-nc-navy">eliminação ou anonimização</strong>{" "}
-            dos dados pessoais tratados no aplicativo e na plataforma{" "}
-            {siteConfig.name} (
-            <a
-              className="font-semibold text-nc-blue hover:underline"
-              href={siteConfig.appUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {siteConfig.appUrl.replace("https://", "")}
-            </a>
-            ).
-          </p>
-          <p>
-            Detalhes sobre o tratamento de dados estão na{" "}
-            <Link
-              href="/privacidade-app"
-              className="font-semibold text-nc-blue hover:underline"
-            >
-              Política de privacidade do app
-            </Link>
-            .
-          </p>
-
-          <h2 className="text-xl font-bold text-nc-navy">
-            1. Exclusão pelo aplicativo (quando disponível)
-          </h2>
-          <p>
-            Se a sua versão do app exibir a opção de exclusão na conta, siga
-            estes passos:
-          </p>
-          <ol className="mt-4 space-y-4">
-            {stepsInApp.map((step, index) => (
-              <li
-                key={step.title}
-                className="flex gap-4 rounded-2xl border border-border bg-background p-5"
+      <section className="bg-white py-14 sm:py-20">
+        <Container size="sm">
+          <div className="prose-nc break-words">
+            <p>
+              Esta página explica como titulares de dados podem solicitar a{" "}
+              <strong>exclusão da conta</strong> e a{" "}
+              <strong>eliminação ou anonimização</strong>{" "}
+              dos dados pessoais tratados no aplicativo e na plataforma{" "}
+              {siteConfig.name} (
+              <a
+                href={siteConfig.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-nc-navy text-sm font-bold text-white">
-                  {index + 1}
-                </span>
-                <div>
-                  <p className="font-semibold text-nc-navy">{step.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+                {siteConfig.appUrl.replace("https://", "")}
+              </a>
+              ).
+            </p>
+            <p>
+              Detalhes sobre o tratamento de dados estão na{" "}
+              <Link href="/privacidade-app">Política de privacidade do app</Link>
+              .
+            </p>
 
-          <h2 className="text-xl font-bold text-nc-navy">
-            2. Exclusão por e-mail (sempre disponível)
-          </h2>
-          <p>
-            Se não encontrar a opção no app, ou preferir solicitar por escrito:
-          </p>
-          <ol className="mt-4 space-y-4">
-            {stepsByEmail.map((step, index) => (
-              <li
-                key={step.title}
-                className="flex gap-4 rounded-2xl border border-border bg-background p-5"
+            <h2>1. Exclusão pelo aplicativo (quando disponível)</h2>
+            <p>
+              Se a sua versão do app exibir a opção de exclusão na conta, siga
+              estes passos:
+            </p>
+            <ol role="list" className="list-none! space-y-3! pl-0!">
+              {stepsInApp.map((step, index) => (
+                <li key={step.title} className="card flex gap-4 p-5 sm:p-6">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-linear-to-br from-nc-navy to-nc-blue font-mono text-sm font-semibold text-nc-green">
+                    {index + 1}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-semibold text-heading">{step.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-body">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <h2>2. Exclusão por e-mail (sempre disponível)</h2>
+            <p>
+              Se não encontrar a opção no app, ou preferir solicitar por escrito:
+            </p>
+            <ol role="list" className="list-none! space-y-3! pl-0!">
+              {stepsByEmail.map((step, index) => (
+                <li key={step.title} className="card flex gap-4 p-5 sm:p-6">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-nc-green font-mono text-sm font-semibold text-nc-navy">
+                    {index + 1}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-semibold text-heading">{step.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-body">
+                      {step.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div className="rounded-card border border-nc-blue/15 bg-[#f1f4fe] p-5 shadow-[inset_3px_0_0_0_var(--nc-blue)] sm:p-6">
+              <p className="text-sm font-semibold text-heading">
+                Modelo de mensagem
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-body">
+                “Solicito a exclusão da minha conta no NoraCare e a eliminação dos
+                dados pessoais associados ao e-mail [seu e-mail], nome [seu nome],
+                vinculado à instituição [se souber]. Declaro ser o titular desta
+                conta.”
+              </p>
+              <a
+                href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
+                  "Solicitação de exclusão de conta e dados — NoraCare",
+                )}&body=${encodeURIComponent(
+                  "Solicito a exclusão da minha conta no NoraCare e a eliminação dos dados pessoais associados.\n\nNome completo:\nE-mail cadastrado no app:\nInstituição/rede (se souber):\n\nDeclaro ser o titular desta conta.",
+                )}`}
+                className="mt-4 inline-flex min-h-11 items-center"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-nc-green text-sm font-bold text-nc-navy">
-                  {index + 1}
-                </span>
-                <div>
-                  <p className="font-semibold text-nc-navy">{step.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
+                Abrir e-mail pré-preenchido →
+              </a>
+            </div>
 
-          <div className="rounded-2xl border border-nc-blue/20 bg-nc-blue/5 p-5">
-            <p className="text-sm font-semibold text-nc-navy">
-              Modelo de mensagem
+            <h2>3. O que é excluído</h2>
+            <p>Após a conclusão do pedido, em regra eliminamos ou anonimizamos:</p>
+            <ul>
+              <li>Dados de cadastro e perfil da conta</li>
+              <li>Preferências e configurações pessoais no app</li>
+              <li>
+                Dados biométricos ou templates associados ao seu check-in, quando
+                armazenados sob nosso controle para a sua conta
+              </li>
+              <li>
+                Conteúdos e registros pessoais que não precisem ser mantidos por
+                obrigação legal ou legítima da instituição
+              </li>
+            </ul>
+
+            <h2>4. O que pode ser retido</h2>
+            <p>
+              Alguns dados podem ser mantidos, bloqueados ou anonimizados por
+              período adicional quando necessário para:
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              “Solicito a exclusão da minha conta no NoraCare e a eliminação dos
-              dados pessoais associados ao e-mail [seu e-mail], nome [seu nome],
-              vinculado à instituição [se souber]. Declaro ser o titular desta
-              conta.”
+            <ul>
+              <li>
+                Cumprir obrigação legal, regulatória ou ordem de autoridade
+              </li>
+              <li>
+                Exercício regular de direitos em processo judicial, administrativo
+                ou arbitral
+              </li>
+              <li>
+                Manter trilhas de auditoria e registros operacionais exigidos pela
+                instituição de saúde (ex.: histórico de plantões e ponto), sem uso
+                para outras finalidades
+              </li>
+              <li>Prevenção a fraudes e segurança da plataforma</li>
+            </ul>
+            <p>
+              Contas vinculadas a uma rede hospitalar podem exigir alinhamento com
+              o administrador da instituição (controladora dos dados no ambiente
+              dela). Nesses casos, informaremos se o pedido precisa ser
+              complementado ou autorizado por lá.
             </p>
-            <a
-              href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
-                "Solicitação de exclusão de conta e dados — NoraCare",
-              )}&body=${encodeURIComponent(
-                "Solicito a exclusão da minha conta no NoraCare e a eliminação dos dados pessoais associados.\n\nNome completo:\nE-mail cadastrado no app:\nInstituição/rede (se souber):\n\nDeclaro ser o titular desta conta.",
-              )}`}
-              className="mt-4 inline-flex text-sm font-semibold text-nc-blue hover:underline"
-            >
-              Abrir e-mail pré-preenchido →
-            </a>
+
+            <h2>5. Prazos</h2>
+            <ul>
+              <li>
+                <strong>Confirmação de recebimento:</strong>{" "}
+                em geral em até 3 dias úteis
+              </li>
+              <li>
+                <strong>Conclusão da exclusão:</strong> em
+                regra até 15 dias úteis após validação do pedido, podendo estender-se
+                nos limites da LGPD quando houver complexidade ou dependência da
+                instituição
+              </li>
+            </ul>
+
+            <h2>6. Contato</h2>
+            <p>
+              E-mail:{" "}
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+              <br />
+              WhatsApp:{" "}
+              <a
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteConfig.phoneDisplay}
+              </a>
+            </p>
           </div>
-
-          <h2 className="text-xl font-bold text-nc-navy">
-            3. O que é excluído
-          </h2>
-          <p>Após a conclusão do pedido, em regra eliminamos ou anonimizamos:</p>
-          <ul className="list-disc space-y-2 pl-5">
-            <li>Dados de cadastro e perfil da conta</li>
-            <li>Preferências e configurações pessoais no app</li>
-            <li>
-              Dados biométricos ou templates associados ao seu check-in, quando
-              armazenados sob nosso controle para a sua conta
-            </li>
-            <li>
-              Conteúdos e registros pessoais que não precisem ser mantidos por
-              obrigação legal ou legítima da instituição
-            </li>
-          </ul>
-
-          <h2 className="text-xl font-bold text-nc-navy">
-            4. O que pode ser retido
-          </h2>
-          <p>
-            Alguns dados podem ser mantidos, bloqueados ou anonimizados por
-            período adicional quando necessário para:
-          </p>
-          <ul className="list-disc space-y-2 pl-5">
-            <li>
-              Cumprir obrigação legal, regulatória ou ordem de autoridade
-            </li>
-            <li>
-              Exercício regular de direitos em processo judicial, administrativo
-              ou arbitral
-            </li>
-            <li>
-              Manter trilhas de auditoria e registros operacionais exigidos pela
-              instituição de saúde (ex.: histórico de plantões e ponto), sem uso
-              para outras finalidades
-            </li>
-            <li>Prevenção a fraudes e segurança da plataforma</li>
-          </ul>
-          <p>
-            Contas vinculadas a uma rede hospitalar podem exigir alinhamento com
-            o administrador da instituição (controladora dos dados no ambiente
-            dela). Nesses casos, informaremos se o pedido precisa ser
-            complementado ou autorizado por lá.
-          </p>
-
-          <h2 className="text-xl font-bold text-nc-navy">5. Prazos</h2>
-          <ul className="list-disc space-y-2 pl-5">
-            <li>
-              <strong className="text-nc-navy">Confirmação de recebimento:</strong>{" "}
-              em geral em até 3 dias úteis
-            </li>
-            <li>
-              <strong className="text-nc-navy">Conclusão da exclusão:</strong> em
-              regra até 15 dias úteis após validação do pedido, podendo estender-se
-              nos limites da LGPD quando houver complexidade ou dependência da
-              instituição
-            </li>
-          </ul>
-
-          <h2 className="text-xl font-bold text-nc-navy">6. Contato</h2>
-          <p>
-            E-mail:{" "}
-            <a
-              className="font-semibold text-nc-blue hover:underline"
-              href={`mailto:${siteConfig.email}`}
-            >
-              {siteConfig.email}
-            </a>
-            <br />
-            WhatsApp:{" "}
-            <a
-              className="font-semibold text-nc-blue hover:underline"
-              href={siteConfig.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {siteConfig.phoneDisplay}
-            </a>
-          </p>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 }

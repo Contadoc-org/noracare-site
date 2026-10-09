@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { CTA } from "@/components/sections/CTA";
-import { featureIcons, IconCheck } from "@/components/icons";
+import {
+  featureIcons,
+  IconChart,
+  IconCheck,
+  IconDevice,
+  IconShield,
+} from "@/components/icons";
 import { Container } from "@/components/ui/Container";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { features, siteConfig } from "@/lib/site";
 
@@ -21,6 +28,7 @@ export const metadata: Metadata = {
 const modules = [
   {
     title: "Admin web",
+    icon: IconChart,
     items: [
       "Gestão de redes, unidades, setores e escalas",
       "Convites multi-perfil com governança de acesso",
@@ -30,6 +38,8 @@ const modules = [
   },
   {
     title: "App do profissional",
+    icon: IconDevice,
+    featured: true,
     items: [
       "Plantões da semana e oportunidades anunciadas",
       "Check-in / check-out com validação",
@@ -39,6 +49,7 @@ const modules = [
   },
   {
     title: "Segurança e auditoria",
+    icon: IconShield,
     items: [
       "Papéis e permissões por escopo organizacional",
       "Registro de ações críticas em auditoria",
@@ -51,22 +62,13 @@ const modules = [
 export default function ProdutoPage() {
   return (
     <>
-      <section className="bg-hero-grid text-white">
-        <Container className="section-pad !pb-16 !pt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-nc-green">
-            Produto
-          </p>
-          <h1 className="mt-4 max-w-3xl text-balance text-4xl font-bold tracking-tight sm:text-5xl">
-            Uma suíte operacional para a jornada completa do plantão
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/75">
-            O NoraCare conecta gestão, coordenação e profissionais em fluxos
-            auditáveis — da montagem da escala ao fechamento financeiro.
-          </p>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow="Produto"
+        title="Uma suíte operacional para a jornada completa do plantão"
+        description="O NoraCare conecta gestão, coordenação e profissionais em fluxos auditáveis — da montagem da escala ao fechamento financeiro."
+      />
 
-      <section className="section-pad bg-mesh-light">
+      <section className="surface-light section-pad">
         <Container>
           <SectionHeading
             eyebrow="Módulos"
@@ -74,23 +76,32 @@ export default function ProdutoPage() {
             description="Cada módulo resolve uma fricção real da operação de plantões, com papéis e trilhas de auditoria claros."
           />
 
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => {
+          <div className="mt-14 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+            {features.map((feature, i) => {
               const Icon = featureIcons[feature.icon];
               return (
                 <article
                   key={feature.id}
-                  className="rounded-3xl border border-border bg-white p-6 shadow-[var(--shadow-card)]"
+                  className="card card-hover group flex flex-col p-6 sm:p-7"
                 >
-                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-nc-navy text-nc-green">
-                    <Icon />
+                  <div className="flex items-start justify-between">
+                    <span className="icon-tile">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <span
+                      aria-hidden
+                      className="font-mono text-xs text-muted-soft"
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                   </div>
-                  <h2 className="mt-4 text-lg font-bold text-nc-navy">
-                    {feature.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                  <h3 className="h-card mt-6">{feature.title}</h3>
+                  <p className="mt-2 text-[0.9375rem] leading-relaxed text-body">
                     {feature.description}
                   </p>
+                  <div aria-hidden className="mt-auto pt-6">
+                    <div className="h-px w-full bg-linear-to-r from-nc-teal/40 via-nc-blue/20 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
                 </article>
               );
             })}
@@ -104,28 +115,40 @@ export default function ProdutoPage() {
             eyebrow="Superfícies"
             title="Admin, app e compliance no mesmo produto"
           />
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
-            {modules.map((mod) => (
-              <article
-                key={mod.title}
-                className="rounded-3xl border border-border bg-background p-7"
-              >
-                <h3 className="text-xl font-bold text-nc-navy">{mod.title}</h3>
-                <ul className="mt-5 space-y-3">
-                  {mod.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-2.5 text-sm leading-relaxed text-muted"
-                    >
-                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-nc-green/20 text-nc-navy">
-                        <IconCheck className="h-3.5 w-3.5" />
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="mt-14 grid gap-5 sm:mt-16 lg:grid-cols-3 lg:items-stretch">
+            {modules.map((mod) => {
+              const Icon = mod.icon;
+              const surface = mod.featured
+                ? "surface-dark relative flex flex-col overflow-hidden rounded-card border border-white/10 p-7 shadow-panel sm:p-8 lg:-my-4 lg:py-12"
+                : "card-muted flex flex-col p-7 sm:p-8";
+              const bullet = mod.featured
+                ? "bg-nc-green/15 text-nc-green"
+                : "bg-[#e1f6f0] text-nc-teal";
+              return (
+                <article key={mod.title} className={surface}>
+                  <span className="icon-tile-soft">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="h-card mt-6">{mod.title}</h3>
+                  <ul className="mt-6 space-y-3.5">
+                    {mod.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-[0.9375rem] leading-relaxed text-body"
+                      >
+                        <span
+                          aria-hidden
+                          className={`mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full ${bullet}`}
+                        >
+                          <IconCheck className="h-3.5 w-3.5" />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </Container>
       </section>
