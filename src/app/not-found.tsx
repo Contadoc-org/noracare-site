@@ -3,8 +3,12 @@ import { IconArrowRight } from "@/components/icons";
 import { Button } from "@/components/ui/Button";
 import { PageHero } from "@/components/ui/PageHero";
 
+const description =
+  "Esta página não existe ou mudou de endereço. Volte ao início do NoraCare ou procure um assunto na central de ajuda, com guias passo a passo.";
+
 export const metadata: Metadata = {
   title: "Página não encontrada",
+  description,
   robots: { index: false },
 };
 
