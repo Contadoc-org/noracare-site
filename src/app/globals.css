@@ -95,3 +95,41 @@
     @apply px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28;
   }
 }
+
+/* ===== Central de ajuda: fragmentos HTML de src/content/help ===== */
+@layer components {
+  .help-prose {
+    @apply text-base leading-relaxed text-muted;
+  }
+  .help-prose > * + * { @apply mt-4; }
+  .help-prose .lead { @apply text-lg text-nc-navy; }
+  .help-prose .meta { @apply text-sm; }
+  .help-prose h2 { @apply mt-12 scroll-mt-24 border-t border-border pt-8 text-2xl font-bold text-nc-navy; }
+  .help-prose h3 { @apply mt-8 scroll-mt-24 text-lg font-semibold text-nc-navy; }
+  .help-prose strong, .help-prose dt { @apply font-semibold text-nc-navy; }
+  .help-prose a { @apply font-semibold text-nc-blue underline-offset-2 hover:underline; }
+  .help-prose ul { @apply list-disc space-y-1.5 pl-6; }
+  .help-prose ol { @apply list-decimal space-y-1.5 pl-6; }
+  .help-prose ol.steps { @apply list-none space-y-3 pl-0; counter-reset: step; }
+  .help-prose ol.steps > li { @apply relative pl-10; counter-increment: step; }
+  .help-prose ol.steps > li::before {
+    @apply absolute top-0 left-0 flex h-7 w-7 items-center justify-center rounded-full bg-nc-navy text-xs font-bold text-white;
+    content: counter(step);
+  }
+  .help-prose .ui {
+    @apply rounded-md border border-border bg-surface-muted/60 px-1.5 py-0.5 text-[0.92em] font-semibold text-nc-navy; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+  }
+  .help-prose .badge {
+    @apply inline-block rounded-full bg-nc-green/40 px-2.5 py-0.5 text-xs font-semibold text-nc-navy;
+  }
+  .help-prose .callout { @apply rounded-2xl border-l-4 p-4 text-sm; }
+  .help-prose .callout > * + * { @apply mt-2; }
+  .help-prose .callout-tip { @apply border-nc-green-strong bg-nc-green/15; }
+  .help-prose .callout-info { @apply border-nc-blue-bright bg-nc-malibu/10; }
+  .help-prose .callout-warn { @apply border-amber-400 bg-amber-50; }
+  .help-prose .table-wrap { @apply overflow-x-auto rounded-xl border border-border; }
+  .help-prose table { @apply w-full min-w-[32rem] text-sm; border-collapse: collapse; }
+  .help-prose th { @apply bg-surface-muted/60 px-3 py-2 text-left font-semibold text-nc-navy; }
+  .help-prose td { @apply border-t border-border px-3 py-2 align-top; }
+  .help-prose dd { @apply mt-1 mb-4; }
+}

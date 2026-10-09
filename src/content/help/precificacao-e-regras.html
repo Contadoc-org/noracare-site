@@ -1,0 +1,337 @@
+<p class="lead">Aqui você define quanto cada escala paga: a grade de valores por hora ou o valor fixo do mês, as regras gerais para sócios de empresa interna, as bonificações e os ajustes mensais. Esta página também mostra como cada item aparece para o profissional.</p>
+<p class="meta">Para: <span class="badge">Profissional</span> e <span class="badge">Gestão</span> · Onde: <span class="badge">App</span> e <span class="badge">Painel web</span></p>
+
+<h2 id="visao-geral-das-telas">Visão geral das telas</h2>
+<p>Os itens de pagamento ficam no menu <span class="ui">Financeiro</span>. Cada tela tem uma função diferente.</p>
+<table>
+<thead>
+<tr><th>Tela</th><th>Caminho no menu</th><th>Para que serve</th><th>Quem acessa</th></tr>
+</thead>
+<tbody>
+<tr><td>Precificação</td><td><span class="ui">Financeiro › Precificação</span></td><td>Define os valores da escala para cada mês: grade por hora ou valor fixo, observações e a regra do realizado.</td><td>Somente o perfil master</td></tr>
+<tr><td>Regras gerais</td><td><span class="ui">Financeiro › Regras gerais</span></td><td>Define salário mínimo, INSS individual, INSS patronal e valor de corte dos sócios de empresa interna.</td><td>Somente o perfil master</td></tr>
+<tr><td>Bonificações</td><td><span class="ui">Financeiro › Bonificações</span></td><td>Lança uma bonificação de 10%, 20% ou 30% para os profissionais de uma escala, mês a mês.</td><td>Somente o perfil master</td></tr>
+<tr><td>Ajustes mensais</td><td><span class="ui">Financeiro › Ajustes mensais</span></td><td>Lança adicionais e descontos pontuais para um profissional em um mês.</td><td>Perfil master e gestor interno</td></tr>
+</tbody>
+</table>
+<div class="callout callout-info">
+<p>Se outro perfil abrir a tela <span class="ui">Precificação</span> pelo endereço direto, aparece a mensagem <span class="ui">Somente o perfil master pode acessar a precificação das escalas.</span></p>
+</div>
+
+<h2 id="antes-de-comecar">Antes de começar</h2>
+<ul>
+<li>A escala precisa estar cadastrada e ativa em <span class="ui">Locais</span>. Escalas inativas não aparecem na Precificação. Se o setor não tiver escala ativa, a tela mostra <span class="ui">Nenhuma Escala neste setor</span>. Veja <a href="/help/locais-e-empresas">Locais, empresas e permissões globais</a>.</li>
+<li>Os profissionais precisam estar vinculados à escala. Os vínculos são feitos em <span class="ui">Locais</span>. No tipo Fixa, o botão <span class="ui">Adicionar</span> do painel Profissionais também cria o vínculo. A lista de bonificação mostra só quem está vinculado.</li>
+<li>Ajustes mensais só podem ser ligados às escalas em que o profissional teve plantão no mês escolhido.</li>
+</ul>
+
+<h2 id="precificacao">Precificação da escala</h2>
+<p>Para abrir a tela, clique em <span class="ui">Financeiro › Precificação</span>.</p>
+
+<h3>Escolher a escala e o mês</h3>
+<ol class="steps">
+<li>No topo, escolha <span class="ui">Rede</span>, <span class="ui">Local</span>, <span class="ui">Setor</span> e <span class="ui">Escala</span>, nessa ordem. Cada escolha filtra a seguinte.</li>
+<li>Use a navegação de mês do cabeçalho para escolher o mês. Os valores exibidos são os desse mês.</li>
+<li>Com a escala escolhida, a precificação aparece logo abaixo do cabeçalho.</li>
+</ol>
+
+<h3>Mensagens antes de escolher a escala</h3>
+<table>
+<thead>
+<tr><th>Mensagem</th><th>O que significa</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Nenhuma Rede disponível para precificação</span></td><td>Não há Rede ativa com Locais. Cadastre ou ative uma Rede em Locais.</td></tr>
+<tr><td><span class="ui">Não conseguimos carregar suas Redes</span></td><td>Não foi possível buscar as Redes. Verifique a conexão e clique em <span class="ui">Tentar novamente</span>.</td></tr>
+<tr><td><span class="ui">Selecione uma Escala para visualizar a precificação</span></td><td>Falta escolher a escala. Com o setor escolhido, a tela informa quantas escalas ele tem. Sem setor, mostra o caminho <span class="ui">Rede → Local → Setor → Escala</span>.</td></tr>
+<tr><td><span class="ui">Não foi possível carregar as escalas deste setor.</span></td><td>Houve falha ao buscar as escalas do setor. Clique em <span class="ui">Tentar novamente</span>.</td></tr>
+<tr><td><span class="ui">Nenhuma Escala neste setor</span></td><td>O setor não tem escala ativa. Cadastre uma escala em Locais para precificar.</td></tr>
+<tr><td><span class="ui">A escala selecionada foi removida</span></td><td>A escala não aparece mais na lista do setor. Escolha outra.</td></tr>
+<tr><td><span class="ui">Não conseguimos carregar a precificação</span></td><td>Aparece quando a escala e a lista do setor não carregam. Verifique a conexão e clique em <span class="ui">Tentar novamente</span>. Se o problema continuar, revise a escala escolhida.</td></tr>
+</tbody>
+</table>
+
+<h3>Tipo de precificação</h3>
+<p>Na linha <span class="ui">Tipo de precificação</span>, escolha uma opção:</p>
+<ul>
+<li><span class="ui">Por hora</span>: o valor de cada plantão sai da grade de horários. A tela explica: <em>Apuração com base nas horas trabalhadas</em>.</li>
+<li><span class="ui">Fixa</span>: remuneração mensal fixa, como em uma escala de coordenação. A tela explica: <em>Remuneração mensal fixa: Ex. Escala de coordenação</em>. O valor é definido por mês, e não por plantão.</li>
+</ul>
+<p>A troca é salva assim que você escolhe a outra opção. A tela não pede confirmação.</p>
+<p>Logo abaixo, a tela mostra o <span class="ui">Período de apuração financeira</span> da escala, com a data de início e a data de fim. Se a escala não tem competência financeira customizada, com dia de corte, o período é o mês do calendário.</p>
+
+<h3 id="considerar-realizado">Considerar realizado</h3>
+<p>Esta opção aparece só para escalas que exigem check-in e check-out. Nas outras, a tela mostra <em>Esta escala não exige check-in e check-out.</em></p>
+<p>Com <span class="ui">Considerar realizado</span> ligado, o pagamento considera só os plantões com check-in e check-out registrados. Depois, escolha como medir:</p>
+<ul>
+<li><span class="ui">Por plantão</span>: o plantão conta pela duração prevista, desde que a presença registrada atinja o percentual mínimo (veja abaixo). Entrada e saída registradas contam o plantão por inteiro.</li>
+<li><span class="ui">Por horas</span>: paga pelas horas registradas entre o check-in e o check-out, mesmo que passem do horário previsto.</li>
+</ul>
+<p>Em <span class="ui">Por plantão</span>, a tela pergunta: <em>Para receber o valor total do plantão, o profissional deve realizar no mínimo ___% do plantão.</em> Digite um número de 0 a 100. O valor é salvo quando você sai do campo. Se a presença registrada ficar abaixo desse percentual, o plantão não é pago. Um plantão sem entrada e saída registradas também fica como não realizado e não é pago.</p>
+<p>Nas escalas do tipo <span class="ui">Fixa</span> com <span class="ui">Considerar realizado</span> ligado, o valor do mês também fica proporcional ao realizado: o valor mensal é multiplicado pela proporção entre o que foi realizado e o que estava previsto para o titular no mês, com teto de 100%. Se não há plantão previsto no mês, o valor mensal vale inteiro.</p>
+<div class="callout callout-tip">
+<p><strong>Dica:</strong> essa mesma opção aparece no formulário de edição da escala, aberto pelo botão <span class="ui">Editar escala</span>, para o perfil master. Ela é uma configuração única da escala. Veja <a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a>.</p>
+</div>
+
+<h3 id="copiar-mes-anterior">Copiar o mês anterior</h3>
+<p>A linha <span class="ui">Copiar precificação do mês anterior</span> copia os valores do mês anterior para o mês que está aberto.</p>
+<ol class="steps">
+<li>Clique em <span class="ui">Copiar</span>.</li>
+<li>Na janela <span class="ui">Copiar precificação</span>, confirme em <span class="ui">Copiar valores</span>.</li>
+<li>A tela avisa <em>Precificação copiada</em>. Os valores copiados continuam editáveis.</li>
+</ol>
+<div class="callout callout-warn">
+<p><strong>Atenção:</strong> a cópia substitui os valores do mês atual. A janela de confirmação diz: <em>Os valores do mês anterior irão sobrescrever os valores do mês atual.</em></p>
+</div>
+<p>O botão <span class="ui">Copiar</span> fica desativado quando a linha mostra, logo abaixo do título, um destes motivos:</p>
+<ul>
+<li>o mês anterior não tem precificação (<em>O mês anterior não possui precificação.</em>);</li>
+<li>o tipo de precificação está sendo atualizado (<em>Aguarde a atualização do tipo de precificação.</em>);</li>
+<li>a tela ainda verifica os dois meses (<em>Verificando a precificação dos dois meses...</em>) ou não conseguiu verificar (<em>Não foi possível verificar a precificação dos meses.</em>);</li>
+<li>a tela está em modo somente leitura (<em>A cópia não está disponível em modo somente leitura.</em>).</li>
+</ul>
+
+<h2 id="grade-por-hora">Grade por hora</h2>
+<p>No tipo <span class="ui">Por hora</span>, a grade mostra um dia da semana por vez. Cada linha é uma hora, e há duas colunas: diurno e noturno. Os valores são digitados com quatro casas decimais (<em>R$ 0,0000</em>). A alteração vale para o mês exibido.</p>
+
+<h3>Como ler a grade</h3>
+<ul>
+<li>Escolha o dia clicando na sigla: <span class="ui">SEG</span>, <span class="ui">TER</span>, <span class="ui">QUA</span>, <span class="ui">QUI</span>, <span class="ui">SEX</span>, <span class="ui">SAB</span> ou <span class="ui">DOM</span>. As setas ao lado trocam de dia de um em um.</li>
+<li><span class="ui">DIURNO</span> vai das 07:00 às 18:00. <span class="ui">NOTURNO</span> vai das 19:00 às 06:00.</li>
+<li><span class="ui">LÍQUIDO</span> é o valor da hora que o profissional recebe. <span class="ui">BRUTO</span> é o valor da hora de faturamento. <span class="ui">DIF.</span> é o bruto menos o líquido.</li>
+<li>A linha <span class="ui">Média</span> mostra a média das horas que têm valor. Horas zeradas não entram na conta.</li>
+</ul>
+<p>As colunas <span class="ui">BRUTO</span> e <span class="ui">DIF.</span> só aparecem para quem tem acesso a valores brutos.</p>
+
+<h3>Definir o valor de vários horários</h3>
+<ol class="steps">
+<li>Escolha o dia da grade.</li>
+<li>Marque os horários com a caixinha ao lado de cada hora. Para marcar a coluna inteira do dia, clique na caixinha do cabeçalho da coluna. Se a coluna já estiver toda marcada, clicar de novo a desmarca.</li>
+<li>Abaixo da grade, leia <span class="ui">Precifique os N horários selecionados</span> e preencha <span class="ui">Valor líquido (R$)</span> e <span class="ui">Valor bruto (R$)</span>.</li>
+<li>Em <span class="ui">Aplicar valor nos dias</span>, marque os dias da semana que vão receber a mesma configuração.</li>
+<li>Clique em <span class="ui">Aplicar</span>. O botão só fica ativo com horários marcados e pelo menos um valor preenchido. Depois, a seleção e os campos são limpos.</li>
+</ol>
+<div class="callout callout-warn">
+<p><strong>Atenção:</strong> preencha os dois valores. Se um deles ficar vazio, o valor desse campo é gravado como zero em todos os horários selecionados, nos dias marcados.</p>
+</div>
+<div class="callout callout-info">
+<p>A seleção vale pelo horário, não pelo dia. Os horários marcados são copiados para os dias escolhidos em <span class="ui">Aplicar valor nos dias</span>. Ao trocar de dia, os dias marcados voltam a ser só o dia exibido.</p>
+</div>
+
+<h3 id="valor-do-plantao">Como o valor do plantão é calculado</h3>
+<p>Cada plantão usa a faixa da grade do dia da semana e da hora em que ele começa. O valor dessa hora é multiplicado pela duração do plantão.</p>
+<p>Exemplo: um plantão de 12 horas que começa às 19:00 de uma terça-feira usa a faixa <span class="ui">TER</span> das 19:00, no NOTURNO. Se o líquido dessa faixa for R$ 50,0000, o plantão vale R$ 600,00 líquidos (50 × 12).</p>
+<p>Em escalas que pagam pelo previsto, a duração é a prevista. Em escalas que consideram o realizado, veja <a href="#considerar-realizado">Considerar realizado</a>: no modo <em>Por horas</em>, a conta usa as horas registradas; no modo <em>Por plantão</em>, a duração prevista conta quando a presença atinge o mínimo.</p>
+
+<h3>Valor manual de um plantão</h3>
+<p>Em escalas <span class="ui">Por hora</span>, o formulário do plantão tem a opção <span class="ui">Ajuste manual</span>, com a dica <em>Define o valor final manualmente, ignorando adicional e desconto</em>. Use essa opção quando um plantão específico precisa de um valor final diferente da grade. Veja <a href="/help/criar-plantoes">Criar e editar plantões</a>.</p>
+<p>O plantão com valor manual é pago com esse valor, mesmo sem check-in, inclusive em escalas que consideram o realizado.</p>
+
+<h3>Quando uma mudança na grade vale</h3>
+<ul>
+<li>Cada grade vale para um mês de competência, que é o mês de apuração da escala. Se a escala tem competência customizada com dia de corte, o mês de julho, por exemplo, vale para os plantões de 21/06 a 20/07 quando o corte é no dia 21. Sem competência customizada, vale o mês do calendário.</li>
+<li>Ao salvar a grade, os plantões desse mês que ainda não começaram passam a usar os novos valores.</li>
+<li>Plantões que já começaram, ou seja, cujo horário previsto de início já passou, mantêm o valor que tinham. Mudanças posteriores na grade não os alteram.</li>
+</ul>
+
+<h2 id="valor-fixo">Valor fixo (tipo Fixa)</h2>
+<p>No tipo <span class="ui">Fixa</span>, cada profissional recebe um valor por mês. Os valores valem para o mês exibido na tela.</p>
+
+<h3>Valor padrão do mês</h3>
+<p>O cartão <span class="ui">Valor padrão do mês</span> define o valor aplicado a todos os profissionais sem valor próprio naquele mês.</p>
+<ol class="steps">
+<li>Preencha <span class="ui">R$ Líquido/mês</span>. Se o campo <span class="ui">R$ Bruto/mês</span> aparecer, preencha também.</li>
+<li>Clique em <span class="ui">Salvar padrão</span>.</li>
+</ol>
+<p>O botão só fica ativo depois de uma alteração. Um campo deixado vazio é salvo como zero.</p>
+
+<h3>Preços diferentes por profissional</h3>
+<p>A opção <span class="ui">Preços diferentes por profissional</span> liga ou desliga o painel de valores por profissional. Desligada, o painel fica oculto e todos recebem o valor padrão da escala. Ligada, a tela explica: <em>Cada profissional pode ter um valor próprio.</em></p>
+
+<h3>Painel Profissionais</h3>
+<p>Com a opção ligada, o painel <span class="ui">Profissionais</span> lista quem recebe valor fixo nesta escala. Quem não tem valor próprio herda o valor padrão.</p>
+<ol class="steps">
+<li>Para adicionar alguém, digite pelo menos duas letras do nome em <span class="ui">Buscar profissional por nome...</span>. A lista traz até oito resultados: profissionais ativos com perfil médico, enfermeiro ou fisioterapeuta que ainda não estão no painel.</li>
+<li>Clique em <span class="ui">Adicionar</span>. A tela confirma: <em>Profissional adicionado — herdando o valor padrão</em>.</li>
+<li>Para dar um valor próprio, preencha <span class="ui">R$ Líquido/mês</span> (e <span class="ui">R$ Bruto/mês</span>, se aparecer). A etiqueta da linha muda de <span class="ui">Padrão</span> para <span class="ui">Próprio</span>.</li>
+<li>Para voltar ao padrão, clique no ícone de seta circular da linha. Esse ícone aparece só para quem tem valor próprio. Apagar os valores digitados também faz a linha herdar o padrão.</li>
+<li>Para tirar alguém do valor fixo, clique no ícone de lixeira. A tela pede confirmação em <span class="ui">Remover profissional da precificação?</span>, explicando que a pessoa deixa de receber o valor fixo desta escala e que os plantões dela não são alterados. Confirme em <span class="ui">Remover</span>.</li>
+<li>Clique em <span class="ui">Salvar valores</span>. A barra mostra quantas alterações estão pendentes. Ao salvar, a tela informa <em>Valores salvos</em> ou quantos profissionais foram atualizados. Se alguma linha falhar, a tela avisa quantas falharam.</li>
+</ol>
+<p>Se não há ninguém no painel, a tela mostra <em>Nenhum profissional associado a esta escala.</em></p>
+
+<h2 id="observacoes">Observações da escala</h2>
+<p>O campo <span class="ui">Observações</span> guarda orientações sobre a precificação da escala, com até 2.000 caracteres. Ele aparece abaixo da grade ou do valor fixo.</p>
+<ol class="steps">
+<li>Escreva o texto.</li>
+<li>Clique em <span class="ui">Salvar</span>. O botão só fica ativo quando há alteração.</li>
+</ol>
+<p>Depois de salvar, a linha <em>Atualizado em</em> mostra a data da última alteração e quem alterou.</p>
+
+<h2 id="regras-gerais">Regras gerais de pagamento</h2>
+<p>Em <span class="ui">Financeiro › Regras gerais</span>, o perfil master define os parâmetros usados no cálculo de pagamento dos profissionais que são sócios de empresa interna. Para os demais profissionais, valem apenas os valores lançados no cadastro de cada um.</p>
+<table>
+<thead>
+<tr><th>Campo</th><th>Para que serve</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Valor do salário mínimo (R$)</span></td><td>Base da retirada de gestão (pró-labore) do sócio que usa a regra geral.</td></tr>
+<tr><td><span class="ui">INSS Individual</span> (%)</td><td>Percentual do INSS individual, aplicado sobre o salário mínimo.</td></tr>
+<tr><td><span class="ui">INSS Patronal</span> (%)</td><td>Percentual da parte patronal do INSS, aplicado sobre o salário mínimo.</td></tr>
+<tr><td><span class="ui">Valor de corte (R$)</span></td><td>Se a produção do sócio no período for menor que esse valor, não há retirada de gestão e, por isso, não há INSS sobre ela.</td></tr>
+</tbody>
+</table>
+<p>Cada sócio pode ter valores próprios no cadastro dele. Quando há valor próprio, ele vale no lugar da regra geral. Veja <a href="/help/profissionais">Cadastro de profissionais</a>.</p>
+
+<h3>Alterar e salvar</h3>
+<ol class="steps">
+<li>Altere os campos desejados.</li>
+<li>Clique em <span class="ui">Salvar</span>. A tela confirma: <em>Parâmetros de pagamento salvos com sucesso</em>.</li>
+</ol>
+<p>O botão <span class="ui">Salvar</span> só fica ativo quando há alteração e os valores são válidos: salário mínimo e valor de corte maiores que zero, e percentuais de INSS de no máximo 100%.</p>
+<div class="callout callout-info">
+<p><strong>Importante:</strong> a mudança vale só para os cálculos novos. Os cálculos anteriores são preservados.</p>
+</div>
+
+<h3>Histórico de alterações</h3>
+<p>O cartão <span class="ui">Histórico de alterações</span> mostra cada mudança salva: data e hora, quem alterou e, para cada campo que mudou, o valor antigo e o novo. Se ainda não houve mudanças, aparece <em>Nenhuma alteração registrada.</em></p>
+
+<h2 id="bonificacoes">Bonificações</h2>
+<p>Em <span class="ui">Financeiro › Bonificações</span>, você lança um percentual extra para os profissionais de uma escala, mês a mês. Só o perfil master acessa esta tela.</p>
+
+<h3>Como a bonificação é calculada</h3>
+<ul>
+<li>A base é o total que o profissional recebe naquela escala no mês: o valor fixo e os plantões por hora.</li>
+<li>Bonificações e ajustes mensais não entram na base.</li>
+<li>O valor da bonificação é a base multiplicada pelo percentual escolhido (10%, 20% ou 30%), com arredondamento em centavos.</li>
+<li>Se o valor calculado for zero, a bonificação não aparece para o profissional.</li>
+</ul>
+
+<h3>Lançar a bonificação do mês</h3>
+<ol class="steps">
+<li>Escolha o mês com as setas <span class="ui">Mês anterior</span> e <span class="ui">Próximo mês</span>.</li>
+<li>Escolha a escala no seletor <span class="ui">Rede</span> › <span class="ui">Local</span> › <span class="ui">Setor</span> › <span class="ui">Escala</span>.</li>
+<li>A lista traz os profissionais vinculados à escala. Marque a caixinha ao lado de cada nome que vai receber a bonificação.</li>
+<li>Em <span class="ui">Adicional</span>, escolha 10%, 20% ou 30%. O campo só fica habilitado para quem está marcado.</li>
+<li>Se quiser, escreva uma nota em <span class="ui">Observações</span>, com até 500 caracteres.</li>
+<li>Clique em <span class="ui">Salvar</span>. A tela confirma: <em>Bonificações salvas.</em></li>
+</ol>
+<p>Enquanto nenhuma escala estiver escolhida, a tela mostra <em>Selecione uma escala para visualizar os profissionais.</em></p>
+<div class="callout callout-info">
+<p><strong>Atenção aos nomes:</strong> em Bonificações, a coluna <span class="ui">Adicional</span> é o percentual. Em Ajustes mensais, <span class="ui">Adicional</span> é um valor que soma ao total.</p>
+</div>
+
+<h3>Regras de salvamento</h3>
+<ul>
+<li>Todo profissional marcado precisa ter um percentual. Se faltar, a tela mostra <em>Selecione 10%, 20% ou 30% para cada profissional marcado.</em> e não salva.</li>
+<li>A bonificação é mensal e não se repete sozinha. Para pagar no mês seguinte, lance de novo nesse mês.</li>
+<li>Se a escala já tem bonificação salva no mês escolhido, a tela mostra <em>Configuração já salva — edite as linhas e salve novamente para atualizar.</em> Salvar de novo atualiza a configuração daquele mês.</li>
+<li>Se a lista estiver vazia, a tela mostra <em>Nenhum profissional vinculado à escala.</em> Os vínculos são feitos em <a href="/help/locais-e-empresas">Locais, empresas e permissões globais</a>.</li>
+</ul>
+
+<h2 id="ajustes-mensais">Ajustes mensais</h2>
+<p>Em <span class="ui">Financeiro › Ajustes mensais</span>, você lança valores pontuais para um profissional em um mês: um adicional, que soma, ou um desconto, que subtrai. Acessam esta tela o perfil master e o gestor interno.</p>
+
+<h3>Encontrar o profissional</h3>
+<ol class="steps">
+<li>Escolha o mês no campo <span class="ui">Mês</span>. Ao trocar de mês, a tela recarrega os ajustes desse mês.</li>
+<li>No campo <span class="ui">Profissional</span>, digite o nome, o e-mail, o CPF ou o CRM e escolha o resultado.</li>
+<li>O profissional entra com uma linha em branco. Se ele não tem ajustes no mês, a linha aparece no topo da lista. Se já tem, a linha nova entra logo depois da última linha dele.</li>
+</ol>
+
+<h3>Preencher o lançamento</h3>
+<table>
+<thead>
+<tr><th>Campo</th><th>Regra</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Tipo</span></td><td>Obrigatório. <span class="ui">Adicional</span> soma ao valor do profissional. <span class="ui">Desconto</span> subtrai.</td></tr>
+<tr><td><span class="ui">Valor</span></td><td>Obrigatório e maior que zero. Ao digitar, a tela mostra o sinal e o valor: + para adicional e − para desconto.</td></tr>
+<tr><td><span class="ui">Categoria</span></td><td>Opcional. Texto livre para organizar os ajustes. Aparece para o profissional no extrato.</td></tr>
+<tr><td><span class="ui">Descrição</span></td><td>Obrigatória. Explica o motivo do ajuste. Aparece para o profissional no extrato.</td></tr>
+<tr><td><span class="ui">Escalas relacionadas</span></td><td>Opcional. A lista mostra só as escalas em que o profissional teve plantão no mês.</td></tr>
+</tbody>
+</table>
+<p>Se faltar um campo obrigatório, a linha mostra o aviso correspondente: <em>Selecione Adicional ou Desconto.</em>, <em>Informe um valor maior que zero.</em> ou <em>Informe a descrição.</em></p>
+
+<h3>Salvar, duplicar e excluir</h3>
+<ul>
+<li><span class="ui">Salvar</span> grava a linha. O botão só fica ativo quando a linha tem alteração. A tela confirma: <em>Ajuste mensal salvo.</em></li>
+<li>O botão <span class="ui">+</span> cria outra linha para o mesmo profissional. A nova linha já vem com o tipo, a categoria e as escalas da linha de origem. Valor e descrição começam vazios.</li>
+<li>O ícone de lixeira exclui o ajuste. A tela pergunta <em>Excluir ajuste mensal?</em>, e você confirma em <span class="ui">Excluir</span>. Depois, aparece <em>Ajuste mensal excluído.</em> O lançamento sai do mês e fica guardado apenas no histórico de auditoria.</li>
+</ul>
+
+<h3>Agrupar e ler os totais</h3>
+<p>Em <span class="ui">Agrupar por</span>, escolha <span class="ui">Profissional</span> ou <span class="ui">Categoria</span>.</p>
+<ul>
+<li>Por profissional: quem tem mais de um ajuste aparece em um grupo que abre e fecha ao clicar no nome. Quem tem um único ajuste aparece direto na lista. O total do grupo fica ao lado, em vermelho quando é negativo.</li>
+<li>Por categoria: os ajustes são agrupados por categoria, com o total de cada grupo. Ajustes sem categoria ficam em <span class="ui">Sem categoria</span>.</li>
+</ul>
+
+<h3>Trava de saldo negativo</h3>
+<p>Ao criar, editar ou excluir um ajuste, o total do profissional no mês não pode ficar negativo. Esse total é o valor fixo, os plantões por hora de todas as escalas dele e as bonificações do mês, somados aos ajustes já lançados.</p>
+<p>Se a operação deixar o total negativo, a linha mostra em vermelho uma mensagem como: <span class="ui">A operação deixaria o saldo negativo. Base atual: R$ X. Desconto máximo permitido: R$ Y.</span> Ajuste o valor e tente de novo.</p>
+
+<h3>Efeitos nos cálculos</h3>
+<ul>
+<li>O resultado dos ajustes do mês entra no total do profissional.</li>
+<li>Ajustes não mudam o INSS do sócio, que continua calculado só pela produção.</li>
+<li>Ajustes não entram na base da bonificação.</li>
+</ul>
+
+<h2 id="o-que-o-profissional-ve">Como cada item aparece para o profissional</h2>
+<p>O profissional vê só os próprios valores, na tela <span class="ui">Extratos</span> do app. Para o detalhe da tela, veja <a href="/help/extratos-e-remuneracao">Extratos e remuneração</a>.</p>
+<table>
+<thead>
+<tr><th>O que você lançou</th><th>Como aparece para o profissional</th></tr>
+</thead>
+<tbody>
+<tr><td>Grade por hora</td><td>Na seção <span class="ui">Valores por hora</span>, agrupada por escala. Ao abrir uma escala, aparecem os plantões e o valor de cada um. Na tela do plantão, aparece o campo <span class="ui">Valor previsto</span>. Em escalas que consideram o realizado, aparece também o campo <span class="ui">Valor a ser pago</span>. Quando o valor ainda não foi calculado, aparece <span class="ui">A confirmar</span>.</td></tr>
+<tr><td>Plantões já pagos</td><td>Na seção <span class="ui">Plantões já pagos</span>, os plantões do período que já foram pagos.</td></tr>
+<tr><td>Valor fixo do mês</td><td>Na seção <span class="ui">Valores fixos mensais</span>, com uma linha por escala e o valor do mês. Quando a escala considera o realizado, a linha traz a marca <span class="ui">pelo realizado</span>.</td></tr>
+<tr><td>Bonificação</td><td>Na seção <span class="ui">Bonificações</span>, com um cartão por escala, o percentual e o valor. Aparece no mês de referência, e só quando o valor é maior que zero.</td></tr>
+<tr><td>Ajuste mensal</td><td>Na seção <span class="ui">Ajustes mensais</span>, cada ajuste aparece com <span class="ui">Adicional</span> ou <span class="ui">Desconto</span>, a categoria, a descrição e as escalas relacionadas. Desconto aparece em vermelho. O total está em <span class="ui">Resultado dos ajustes</span>.</td></tr>
+<tr><td>Plantão do realizado sem entrada e saída</td><td>O plantão aparece com valor R$ 0 e a marca <span class="ui">Não realizado</span>. O extrato conta esses plantões em <span class="ui">Não realizados</span>. Exceção: plantão com valor manual é pago com esse valor.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-tip">
+<p><strong>Dica:</strong> a seção <span class="ui">Valores por hora</span> só aparece quando há plantões pendentes no período. Se nenhum deles tiver valor para mostrar, a seção exibe <span class="ui">Em breve, seu dinheiro aqui</span>.</p>
+</div>
+
+<h2 id="quem-ve-o-que">Quem vê o quê</h2>
+<table>
+<thead>
+<tr><th>O que</th><th>Quem vê ou altera</th></tr>
+</thead>
+<tbody>
+<tr><td>Tela Precificação (grade, valor fixo, observações e regra do realizado)</td><td>Somente o perfil master.</td></tr>
+<tr><td>Regras gerais e Bonificações</td><td>Somente o perfil master.</td></tr>
+<tr><td>Ajustes mensais</td><td>Perfil master e gestor interno.</td></tr>
+<tr><td>Colunas e campos de valor bruto (faturamento)</td><td>Quem tem acesso a valores brutos: master, gestor interno e visualizador. Na prática, a Precificação é só do master.</td></tr>
+<tr><td>Valores no extrato</td><td>Cada profissional vê só os próprios valores.</td></tr>
+</tbody>
+</table>
+
+<h2 id="duvidas-comuns">Dúvidas comuns</h2>
+<table>
+<thead>
+<tr><th>O que acontece</th><th>O que fazer</th></tr>
+</thead>
+<tbody>
+<tr><td>Não encontro Precificação, Regras gerais ou Bonificações no menu.</td><td>Essas telas são do perfil master. Veja <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</td></tr>
+<tr><td>A bonificação não aparece para o profissional.</td><td>Confira o mês salvo, se o profissional estava marcado e se o percentual foi escolhido. Se o valor calculado for zero, ela não aparece.</td></tr>
+<tr><td>Mudei a grade, e um plantão antigo continua com o valor de antes.</td><td>É o esperado. Plantões que já começaram mantêm o valor que tinham.</td></tr>
+<tr><td>Um valor da grade ficou zerado depois de aplicar.</td><td>Um dos campos estava vazio, e campo vazio grava zero. Preencha os dois valores e aplique de novo.</td></tr>
+<tr><td>O desconto não foi aceito.</td><td>A mensagem de saldo negativo mostra o desconto máximo permitido naquele mês.</td></tr>
+<tr><td>O botão Copiar está desativado.</td><td>O mês anterior pode não ter precificação, ou a tela ainda está verificando os dois meses.</td></tr>
+</tbody>
+</table>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a></li>
+<li><a href="/help/criar-plantoes">Criar e editar plantões</a></li>
+<li><a href="/help/extratos-e-remuneracao">Extratos e remuneração</a></li>
+<li><a href="/help/fechamento">Fechamento mensal: importação, conciliação e pagamento</a></li>
+<li><a href="/help/profissionais">Cadastro de profissionais</a></li>
+</ul>

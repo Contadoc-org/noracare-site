@@ -1,0 +1,206 @@
+<p class="lead">Esta página mostra o que você vê ao abrir o NoraCare como profissional: a tela Início, com o seu próximo plantão, a sua semana e os plantões anteriores, além do menu lateral, que leva às demais áreas do app.</p>
+<p class="meta">Para: <span class="badge">Profissional</span> · Onde: <span class="badge">App</span></p>
+
+<h2 id="cabecalho">Cabeçalho do app</h2>
+<p>No topo das telas do profissional fica uma faixa com três elementos:</p>
+<ul>
+<li><strong>Ícone de menu</strong>, à esquerda, com três linhas. Ele abre o menu lateral.</li>
+<li><strong>Logo ou nome da tela</strong>, no centro. Na tela Início aparece a logo do NoraCare. Nas outras telas aparece o nome da tela em que você está, como <span class="ui">Meus Plantões</span> ou <span class="ui">Escalas</span>.</li>
+<li><strong>Sino</strong>, à direita. Ele leva para as <span class="ui">Notificações</span>. Quando há avisos que você ainda não leu, aparece um círculo vermelho com a quantidade. Acima de nove, o círculo mostra <span class="ui">9+</span>.</li>
+</ul>
+<p>Em algumas telas, como <span class="ui">Meus Plantões</span> e <span class="ui">Extratos</span>, aparece também um ícone de calendário entre o nome da tela e o sino. Ele abre o filtro por período daquela tela.</p>
+<p>Quando você entra como profissional, o app abre na tela Início.</p>
+
+<h2 id="barra-plantao-em-curso">Barra de plantão em curso</h2>
+<p>Quando você registrou a entrada de um plantão, mas ainda não registrou a saída, aparece uma barra logo abaixo do cabeçalho. Ela fica visível em todas as telas do profissional, não só no Início. A barra mostra:</p>
+<ul>
+<li>o texto <span class="ui">Em plantão</span>, seguido do nome do local;</li>
+<li>o tempo decorrido desde a entrada, que anda a cada segundo;</li>
+<li>o botão <span class="ui">Check-out</span>, que leva à tela de check-out desse plantão.</li>
+</ul>
+<p>Se o prazo normal para o check-out já passou, a barra fica amarela e o texto vira <span class="ui">Check-out pendente</span>. O botão continua sendo <span class="ui">Check-out</span>. Você ainda consegue registrar a saída.</p>
+<p>Se houver mais de um plantão com a entrada registrada e a saída ainda em aberto, a barra vira um carrossel. Deslize para o lado para ver cada um. Os pontinhos embaixo mostram qual está em exibição. A barra some quando a saída do plantão é registrada.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se você esquecer o check-out, o sistema fecha o registro sozinho algumas horas depois do fim previsto do plantão. A saída fica com o horário previsto de término e aparece marcada como <span class="ui">Automático</span>, para revisão de quem administra a escala. Por isso, faça o check-out logo que o plantão terminar.</p></div>
+
+<h2 id="tela-inicio">A tela Início</h2>
+<p>A tela Início reúne o seu trabalho em um só lugar. De cima para baixo, ela mostra:</p>
+<ol>
+<li>avisos de permissão, quando alguma permissão está faltando;</li>
+<li>o card <span class="ui">Próximo plantão</span>, quando você tem plantões futuros;</li>
+<li>a seção <span class="ui">Esta semana</span>, também só quando você tem plantões futuros;</li>
+<li>a seção <span class="ui">Plantões anteriores</span>, sempre.</li>
+</ol>
+
+<h3 id="permissoes-pendentes">Avisos de permissão</h3>
+<p>Quando alguma das suas escalas usa o check-in automático e falta alguma permissão no celular, a tela pode mostrar estes avisos:</p>
+<ul>
+<li>uma faixa amarela no topo, com o texto <span class="ui">Permissões pendentes - toque para ajustar</span>. Ao tocar nela, você abre a página de permissões. O <span class="ui">X</span> ao lado esconde a faixa até você voltar ao app;</li>
+<li>um card com o título <em>Libere sua localização o tempo todo</em>, quando o check-in automático está ligado na sua conta. O card explica o que falta e mostra o caminho nas configurações do celular. O botão <span class="ui">Ver permissões</span> abre a página de permissões. Se o celular ainda puder mostrar o pedido de permissão, aparece também o botão <span class="ui">Permitir</span>.</li>
+</ul>
+<p>Quando tudo estiver certo, os avisos somem.</p>
+<div class="callout callout-info"><p><strong>Por que pedimos isso:</strong> o check-in automático registra a sua chegada no local do plantão, mesmo com o app fechado. Para isso, o app precisa da localização precisa, da permissão de localização o tempo todo e de um celular que deixe o app funcionar em segundo plano. A localização é usada só para validar o registro no local do plantão.</p></div>
+<p>O check-in automático funciona quando habilitado pela sua instituição para a escala. Veja <a href="/help/check-in-automatico">Check-in automático</a>.</p>
+<p>Na página <span class="ui">Permissões de localização</span>, cada item aparece com <span class="ui">OK</span> ou <span class="ui">Falta</span>. Os que faltam têm o botão <span class="ui">Corrigir</span>:</p>
+<ul>
+<li><span class="ui">Localização precisa</span>;</li>
+<li><span class="ui">Segundo plano</span>, a permissão de usar a localização o tempo todo. Quando ela falta, a página indica <span class="ui">Permitir o tempo todo</span> (no Android) ou <span class="ui">Sempre</span> (no iPhone);</li>
+<li><span class="ui">Bateria sem restrição</span>, para o celular não limitar o app em segundo plano. No iPhone, esse item aparece como <span class="ui">Atualização em segundo plano</span>.</li>
+</ul>
+<p>Em celulares Android mais novos, aparece também <span class="ui">Alarmes e lembretes</span>. Ele é opcional: ajuda o app a conferir o início e o fim do plantão mesmo sem internet, sem tocar nem mostrar aviso. Você pode usar o check-in automático sem ele. Quando todos os itens estiverem certos, a página mostra <span class="ui">Tudo certo</span>.</p>
+
+<h3 id="proximo-plantao">Próximo plantão</h3>
+<p>O card de destaque mostra o plantão mais próximo que ainda não terminou. Ele pode ser de hoje ou de outro dia. O card traz:</p>
+<ul>
+<li>o dia da semana e a data;</li>
+<li>a rede, quando houver, o local do plantão e o setor com o nome da escala;</li>
+<li>o horário de início e de fim, a duração e o valor. Se o valor ainda não estiver definido, aparece <span class="ui">A confirmar</span>;</li>
+<li>um selo de situação, se houver algo em andamento sobre esse plantão (veja a tabela de selos mais abaixo);</li>
+<li>a frase <em>Profissional fixo:</em>, seguida do nome do titular, quando você está cobrindo o plantão de outra pessoa;</li>
+<li>uma contagem <span class="ui">para o início</span>, que atualiza a cada segundo. Ela some quando o plantão começa.</li>
+</ul>
+<p>O card tem até dois botões:</p>
+<ul>
+<li><span class="ui">Detalhes</span>: abre os detalhes do plantão. Fica sempre disponível.</li>
+<li><span class="ui">Fazer Check-in</span>: aparece só quando o check-in já está liberado para esse plantão. Isso vale a partir de um pouco antes do horário de início, até o fim do plantão. Em escalas que não exigem registro de ponto, ele não aparece. Ao tocar, você vai para a tela de check-in do plantão. Veja <a href="/help/check-in-e-check-out">Check-in e check-out</a>.</li>
+</ul>
+<p>Depois do check-in, o card muda para <em>Plantão em curso</em>. A contagem e o botão <span class="ui">Fazer Check-in</span> somem, e fica só o botão <span class="ui">Detalhes</span>. Para registrar a saída, use o botão <span class="ui">Check-out</span> da barra no topo.</p>
+
+<h3 id="esta-semana">Esta semana</h3>
+<p>A seção lista os plantões que ainda não terminaram, de segunda-feira a domingo da semana atual. O plantão do card de destaque não se repete aqui. Cada linha mostra o dia, o local e a rede, o setor e a escala, os horários, o valor (ou <span class="ui">A confirmar</span>, quando ainda não estiver definido) e os selos.</p>
+<ul>
+<li>Tocar em uma linha abre os detalhes daquele plantão.</li>
+<li>O link <span class="ui">Ver todos</span> leva para <a href="/help/meus-plantoes">Meus plantões</a>.</li>
+<li>Se não houver outros plantões nesta semana, aparece <em>Você não tem mais plantões nesta semana</em>.</li>
+</ul>
+
+<h3 id="plantoes-anteriores">Plantões anteriores</h3>
+<p>Mostra os três plantões mais recentes que já terminaram, dos últimos meses. Cada um traz duas linhas de horário:</p>
+<ul>
+<li><span class="ui">Previsto</span>: o horário combinado na escala.</li>
+<li><span class="ui">Registrado</span>: a entrada e a saída que ficaram registradas, com a forma de registro ao lado (veja a seção abaixo). Quando algum horário está faltando, aparece um traço <span class="ui">—</span> em vermelho.</li>
+</ul>
+<p>Se você pediu revisão de horário, aparece a linha <span class="ui">Proposto</span>, com o horário pedido. Depois que a revisão é decidida, aparece também a linha <span class="ui">Aprovado</span>, com o horário aprovado. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</p>
+<p>Ao lado de cada plantão pode aparecer:</p>
+<ul>
+<li>o botão <span class="ui">Revisar</span>, quando você ainda pode pedir revisão de horário para esse plantão. Ele some depois do prazo para pedir a revisão;</li>
+<li>o selo <span class="ui">Em análise</span>, quando o seu pedido ainda não foi decidido;</li>
+<li>o selo <span class="ui">Revisada</span>, quando o pedido já foi decidido.</li>
+</ul>
+<p>Tocar em uma linha abre os detalhes do plantão. Se ainda não existe plantão anterior, aparece <em>Nenhum plantão anterior</em>. O link <span class="ui">Ver todos</span>, ao lado do título da seção, leva para <a href="/help/meus-plantoes">Meus plantões</a>.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> o botão <span class="ui">Revisar</span> não aparece enquanto a saída do plantão estiver em aberto. Nesse caso, faça o check-out primeiro. Em escalas que não exigem registro de ponto, os horários registrados e o botão <span class="ui">Revisar</span> também não aparecem.</p></div>
+
+<h3 id="formas-de-registro">Formas de registro</h3>
+<p>Nos plantões anteriores, cada horário registrado mostra também como ele foi registrado:</p>
+<table>
+<thead><tr><th>Forma</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Manual</span></td><td>Você registrou o horário no app.</td></tr>
+<tr><td><span class="ui">Passivo</span></td><td>O app registrou o horário sozinho, pelo check-in automático.</td></tr>
+<tr><td><span class="ui">Automático</span></td><td>O sistema fechou a saída porque o check-out não foi feito.</td></tr>
+<tr><td><span class="ui">Gestor</span></td><td>Um gestor da sua instituição lançou o horário.</td></tr>
+</tbody>
+</table>
+
+<h3 id="atualizacao-da-tela">Atualização da tela</h3>
+<p>Para atualizar na hora, puxe a lista para baixo. A tela também se atualiza sozinha enquanto está aberta. Se os plantões não carregarem, aparecem a mensagem <em>Algo deu errado</em>, uma explicação e o botão <span class="ui">Tentar novamente</span>. A mesma mensagem aparece na seção <span class="ui">Plantões anteriores</span>, quando só essa lista não carrega.</p>
+
+<h3 id="quando-nao-ha-plantoes">Quando não há plantões futuros</h3>
+<p>Se você não tem nenhum plantão futuro, o card de destaque e a seção <span class="ui">Esta semana</span> não aparecem. No fim da tela, depois dos plantões anteriores, aparece a mensagem <em>Você não tem plantões agendados</em>. Ela explica que, quando você for escalado ou aceitar um plantão, ele aparece ali.</p>
+
+<h2 id="selos-e-contadores">Selos e contadores</h2>
+<p>Os selos são pequenas etiquetas que mostram a situação de um plantão. O círculo vermelho com número é o contador de notificações que você ainda não leu.</p>
+<table>
+<thead><tr><th>Selo ou contador</th><th>Onde aparece</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Em plantão</span> (verde)</td><td>Esta semana</td><td>Você já fez o check-in desse plantão e ainda não fez o check-out.</td></tr>
+<tr><td><span class="ui">Troca solicitada</span> (amarelo)</td><td>Próximo plantão e Esta semana</td><td>Há um pedido de troca em andamento para esse plantão.</td></tr>
+<tr><td><span class="ui">Passagem solicitada</span> (amarelo)</td><td>Próximo plantão e Esta semana</td><td>Há um pedido de passagem em andamento para esse plantão.</td></tr>
+<tr><td><span class="ui">Anunciado</span> (azul)</td><td>Próximo plantão e Esta semana</td><td>O plantão está publicado para outros profissionais assumirem.</td></tr>
+<tr><td><span class="ui">Em análise</span> (amarelo)</td><td>Plantões anteriores</td><td>Seu pedido de revisão de horário ainda não foi decidido.</td></tr>
+<tr><td><span class="ui">Revisada</span> (verde)</td><td>Plantões anteriores</td><td>Seu pedido de revisão de horário já foi decidido.</td></tr>
+<tr><td><span class="ui">Passivo</span></td><td>Plantões anteriores</td><td>A entrada foi registrada automaticamente pelo app.</td></tr>
+<tr><td><span class="ui">Check-out pendente</span> (barra amarela)</td><td>Barra no topo das telas</td><td>O prazo normal do check-out já passou. Você ainda pode registrar a saída.</td></tr>
+<tr><td>Círculo vermelho com número</td><td>Sino e item Notificações do menu</td><td>Quantidade de notificações que você ainda não leu.</td></tr>
+</tbody>
+</table>
+
+<h2 id="menu-lateral">Menu lateral</h2>
+<p>Para abrir o menu, toque no ícone de três linhas, no canto superior esquerdo. O menu abre por cima da tela. No topo dele aparecem o seu nome e, quando houver, o seu e-mail. A tela em que você está fica destacada, com uma barra colorida à esquerda.</p>
+<p>No fim do menu, em letras pequenas, aparece a versão do app que você está usando.</p>
+
+<h3 id="itens-do-menu">Itens principais</h3>
+<table>
+<thead><tr><th>Item</th><th>Leva para</th><th>Saiba mais</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Início</span></td><td>A tela inicial, com o próximo plantão, a semana e os plantões anteriores.</td><td>Esta página.</td></tr>
+<tr><td><span class="ui">Meus Plantões</span></td><td>Seus plantões por semana e por mês, passados e futuros. Use o ícone de calendário, no topo, para filtrar por um período.</td><td><a href="/help/meus-plantoes">Meus plantões</a></td></tr>
+<tr><td><span class="ui">Escalas</span></td><td>Os plantões das escalas em que você participa, inclusive os de outros profissionais. A tela mostra a semana atual, agrupada por escala; use <span class="ui">Expandir</span> para ver o mês inteiro. Você só consulta: tocar em um plantão de outra pessoa não abre os detalhes.</td><td><a href="/help/escalas-do-profissional">Escalas</a></td></tr>
+<tr><td><span class="ui">Check-in / out</span></td><td>O histórico do mês escolhido, com o horário previsto e o horário registrado de cada plantão. Nessa tela também aparece o botão <span class="ui">Revisar</span>, quando cabe.</td><td><a href="/help/check-in-e-check-out">Check-in e check-out</a></td></tr>
+<tr><td><span class="ui">Oportunidades</span></td><td>Plantões anunciados por outros profissionais, que você pode assumir.</td><td><a href="/help/oportunidades">Oportunidades</a></td></tr>
+<tr><td><span class="ui">Trocas e passagens</span></td><td>Os seus pedidos de troca e de passagem de plantão, em três abas: <span class="ui">Enviadas</span>, <span class="ui">Recebidas</span> e <span class="ui">Concluídas</span>.</td><td><a href="/help/trocas-e-passagens">Trocas e passagens</a></td></tr>
+<tr><td><span class="ui">Extratos</span></td><td>O resumo financeiro dos seus plantões, com escolha de mês e de período.</td><td><a href="/help/extratos-e-remuneracao">Extratos e remuneração</a></td></tr>
+<tr><td><span class="ui">Notificações</span></td><td>Avisos sobre plantões, trocas e mudanças na escala. O número mostra quantos avisos você ainda não leu. Quando há avisos não lidos, o botão <span class="ui">Marcar todas como lidas</span> aparece no topo da lista.</td><td><a href="/help/notificacoes-do-app">Notificações no app</a></td></tr>
+</tbody>
+</table>
+
+<h3 id="rodape-do-menu">Rodapé do menu</h3>
+<table>
+<thead><tr><th>Item</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Perfil</span></td><td>Mostra os seus dados de cadastro e da sua conta, como foto, nome, telefone, e-mail, função, CRM, empresa, biometria e contas bancárias. Você pode trocar a foto e alterar o nome e o telefone. O e-mail, a função e o CRM aparecem só para consulta.</td></tr>
+<tr><td><span class="ui">Preferências</span></td><td>Na seção <span class="ui">Notificações</span>, liga ou desliga os alertas do app, como os de plantões e trocas. Também mostra a seção <span class="ui">Check-in automático</span>, com a chave <span class="ui">Check-in/out passivo</span>: se faltar alguma permissão ao ligá-la, o app leva você para a página de permissões. No celular, o fim da tela também tem o link <span class="ui">Relatar um problema</span>, para enviar um relato sobre algo que não funcionou.</td></tr>
+<tr><td><span class="ui">Sugestões</span></td><td>Envia uma sugestão para o NoraCare. Você pode enviar de forma anônima ou marcar <span class="ui">Desejo me identificar</span>. Só depois de se identificar é que aparece a opção <span class="ui">Pode me contactar para dúvidas relacionadas</span>. Depois do envio, aparece a confirmação e você volta para o Início. Se preferir mandar um áudio, a mesma tela tem um link para o WhatsApp.</td></tr>
+<tr><td><span class="ui">Trocar perfil</span></td><td>Aparece só se a sua conta tem mais de uma forma de acesso. Leva para a escolha de perfil.</td></tr>
+<tr><td><span class="ui">Sair</span></td><td>Encerra a sua sessão neste aparelho.</td></tr>
+</tbody>
+</table>
+<p>Para saber mais sobre o perfil, as preferências e as sugestões, veja <a href="/help/perfil-e-preferencias">Perfil, preferências e sugestões</a>.</p>
+<p>Algumas telas não aparecem no menu, porque se abrem a partir de outras: o <span class="ui">Detalhes do Plantão</span> (ao tocar em um plantão ou no botão <span class="ui">Detalhes</span>), a <span class="ui">Revisão de permanência</span> (pelo botão <span class="ui">Revisar</span>), as <span class="ui">Permissões de localização</span> (pelos avisos da tela Início ou pela seção <span class="ui">Check-in automático</span> em Preferências) e a <span class="ui">Remuneração</span> (pelos cartões da tela Extratos).</p>
+
+<h2 id="trocar-de-perfil">Trocar de perfil</h2>
+<p>Algumas contas têm mais de um perfil de acesso, por exemplo, um perfil de gestão e um perfil de profissional. Nesse caso, o menu mostra o item <span class="ui">Trocar perfil</span>. Se a sua conta tem só um perfil, esse item não aparece. A exceção é o coordenador que pode usar os dois modos, <span class="ui">Gestão de escalas</span> e <span class="ui">Meus Plantões</span>: nesse caso, o item também aparece, para você alternar entre eles.</p>
+<ol class="steps">
+<li>Abra o menu.</li>
+<li>Toque em <span class="ui">Trocar perfil</span>.</li>
+<li>Na tela <span class="ui">Como deseja acessar?</span>, toque na opção que você quer usar. Cada opção leva para a área daquele perfil.</li>
+</ol>
+<p>Para quem atende como profissional, a opção aparece como <span class="ui">Meus Plantões</span>. Para coordenadores que podem usar os dois modos, aparecem as opções <span class="ui">Gestão de escalas</span> e <span class="ui">Meus Plantões</span>. Os demais perfis aparecem com o nome do cargo, como <span class="ui">Gestor Interno</span> ou <span class="ui">Coordenador</span>.</p>
+<p>Se a sua conta tem mais de um perfil, o app pede para escolher um assim que você entra. Ele lembra a escolha até você trocar de perfil ou sair. Saiba mais em <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</p>
+
+<h2 id="sair-do-aplicativo">Sair do aplicativo</h2>
+<ol class="steps">
+<li>Abra o menu.</li>
+<li>Toque em <span class="ui">Sair</span>.</li>
+</ol>
+<p>O app encerra a sua sessão neste aparelho e leva você para a tela de entrada. Não há tela de confirmação: ao tocar em <span class="ui">Sair</span>, você sai na hora. Para usar o app de novo, faça o login.</p>
+<p>Sair não apaga os seus plantões nem os seus registros. Enquanto você estiver fora, este aparelho deixa de receber as notificações do NoraCare.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> se você só quer usar outro perfil, toque em <span class="ui">Trocar perfil</span>, quando ele aparecer no menu, em vez de sair.</p></div>
+
+<h2 id="mensagens-na-tela">Mensagens que você pode ver</h2>
+<table>
+<thead><tr><th>Mensagem</th><th>O que significa</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td><em>Sem perfil de médico vinculado</em></td><td>O perfil em que você entrou não tem dados de médico vinculados.</td><td>Use <span class="ui">Trocar perfil</span> no menu, se ele aparecer. Se não aparecer, toque em <span class="ui">Sair</span> e entre de novo com o perfil correto.</td></tr>
+<tr><td><em>Algo deu errado</em></td><td>Não foi possível carregar os seus plantões.</td><td>Toque em <span class="ui">Tentar novamente</span>. Se o problema continuar, fale com a gente pela página de <a href="/contato">contato</a>.</td></tr>
+<tr><td><em>Você não tem plantões agendados</em></td><td>Não há plantões futuros para você.</td><td>Nada a fazer. O plantão aparece quando você for escalado ou aceitar um.</td></tr>
+<tr><td><em>Você não tem mais plantões nesta semana</em></td><td>Não há outros plantões nesta semana.</td><td>Nada a fazer.</td></tr>
+<tr><td><em>Nenhum plantão anterior</em></td><td>Ainda não há plantões encerrados nos últimos meses.</td><td>Nada a fazer.</td></tr>
+<tr><td><em>Dispositivo Vinculado</em></td><td>A sua conta já está vinculada a outro aparelho.</td><td>Escolha <span class="ui">Substituir</span> ou <span class="ui">Cancelar</span>. Veja a seção abaixo.</td></tr>
+</tbody>
+</table>
+
+<h3 id="aparelho-vinculado">Dispositivo Vinculado</h3>
+<p>Para contas de médico usadas no celular, o app vincula a conta ao aparelho em uso quando a conta ainda não tem nenhum aparelho vinculado. Se você entrar em outro aparelho enquanto o primeiro ainda estiver vinculado, aparece a janela <span class="ui">Dispositivo Vinculado</span>. Ela mostra o nome do aparelho que está vinculado hoje e pergunta se você quer substituí-lo por este aparelho.</p>
+<ul>
+<li>Toque em <span class="ui">Substituir</span> para que este aparelho passe a ser o vinculado à sua conta.</li>
+<li>Toque em <span class="ui">Cancelar</span> para fechar a janela e manter o aparelho que já estava vinculado.</li>
+</ul>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/meus-plantoes">Meus plantões</a></li>
+<li><a href="/help/check-in-e-check-out">Check-in e check-out</a></li>
+<li><a href="/help/check-in-automatico">Check-in automático</a></li>
+<li><a href="/help/notificacoes-do-app">Notificações no app</a></li>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+</ul>

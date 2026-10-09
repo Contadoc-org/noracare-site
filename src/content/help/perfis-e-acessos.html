@@ -1,0 +1,139 @@
+<p class="lead">Cada pessoa que usa o NoraCare tem um <strong>perfil</strong>. O perfil define quais itens aparecem no menu, o que você consegue fazer e quais locais, setores e escalas você enxerga.</p>
+<p class="meta">Para: <span class="badge">Profissional</span> e <span class="badge">Gestão</span> · Onde: <span class="badge">App</span> e <span class="badge">Painel web</span></p>
+
+<h2 id="quais-sao-os-perfis">Quais são os perfis</h2>
+<p>Um mesmo cadastro pode ter mais de um perfil. Por exemplo, um coordenador que também atende como médico tem os dois. No menu do painel, o rodapé mostra o seu nome e o nome do seu perfil: <span class="ui">Master</span>, <span class="ui">Gestor Interno</span>, <span class="ui">Coordenador (Admin)</span>, <span class="ui">Visualizador</span>, <span class="ui">Médico</span>, <span class="ui">Enfermeiro(a)</span> ou <span class="ui">Fisioterapeuta</span>.</p>
+<ul>
+<li><strong>Master:</strong> administra a instituição inteira. Vê todas as redes, locais, setores e escalas. É o único perfil que acessa a <span class="ui">Precificação</span>, as <span class="ui">Regras gerais</span> de pagamento, as <span class="ui">Bonificações</span> e a etapa <span class="ui">Pagamento</span> do fechamento.</li>
+<li><strong>Gestor Interno:</strong> cuida da operação do dia a dia: escalas, aprovações, revisões de ponto, equipe, empresas, relatórios e a importação do fechamento. Não acessa precificação, regras de pagamento nem bonificações.</li>
+<li><strong>Coordenador:</strong> cuida das escalas que coordena. Monta plantões e aprova revisões de ponto, dentro das escalas que coordena. Não convida novas pessoas.</li>
+<li><strong>Visualizador:</strong> acompanha as escalas liberadas para ele, somente para leitura. Não cria, não edita e não exclui nada.</li>
+<li><strong>Profissional:</strong> médico, enfermeiro(a) ou fisioterapeuta. Não usa o painel: trabalha pelo app, com os próprios plantões.</li>
+</ul>
+
+<h2 id="o-que-cada-perfil-ve-no-menu">O que cada perfil vê no menu</h2>
+<p>A tabela mostra, por padrão, os itens do painel que aparecem para cada perfil. Os itens que dependem de permissão, como Dashboard, Escalas, Registros de presença, Profissionais, Locais, Empresas, Relatórios e Auditoria, podem mudar conforme as permissões definidas pela sua instituição. Se um item não aparece para você, ele não está disponível para o seu perfil.</p>
+<table>
+<thead><tr><th>Menu</th><th>Master</th><th>Gestor Interno</th><th>Coordenador</th><th>Visualizador</th><th>Profissional</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Dashboard</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+<tr><td><span class="ui">Escalas › Mensal</span>, <span class="ui">Semanal</span> e <span class="ui">Lista</span></td><td>Sim</td><td>Sim</td><td>Sim, só as escalas que coordena</td><td>Sim, só leitura</td><td>Não</td></tr>
+<tr><td><span class="ui">Aprovações</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Registros de presença › Revisões</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Registros de presença › Registros</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Usuários › Profissionais</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Usuários › Gestores internos</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Usuários › Coordenadores</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Usuários › Visualizadores</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Usuários › Master</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Configurações › Locais</span></td><td>Sim</td><td>Sim, por padrão, só consulta</td><td>Não</td><td>Sim, só consulta</td><td>Não</td></tr>
+<tr><td><span class="ui">Configurações › Empresas</span></td><td>Sim</td><td>Sim, por padrão</td><td>Não</td><td>Não, por padrão</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Ajustes mensais</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Fechamento › Importação</span></td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Precificação</span></td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Regras gerais</span></td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Bonificações</span></td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Financeiro › Fechamento › Pagamento</span></td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td><span class="ui">Relatórios</span></td><td>Sim</td><td>Sim, por padrão</td><td>Não, por padrão</td><td>Não, por padrão</td><td>Não</td></tr>
+<tr><td><span class="ui">Auditoria</span></td><td>Sim</td><td>Sim, por padrão</td><td>Não, por padrão</td><td>Não, por padrão</td><td>Não</td></tr>
+<tr><td><span class="ui">Notificações</span></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+</tbody>
+</table>
+<div class="callout callout-info"><p>Os itens <span class="ui">Relatórios</span> e <span class="ui">Auditoria</span> dependem de uma permissão. Por padrão, o Master e o Gestor Interno têm acesso a eles. Os outros perfis só os veem se a sua instituição liberar, conforme as permissões definidas por ela. Se você precisa de um deles e não o encontra, fale com um master.</p></div>
+<div class="callout callout-info"><p><strong>Por que alguns itens são só do master:</strong> precificação, regras de pagamento e bonificações mexem em valores pagos aos profissionais. Por isso ficam restritos ao perfil master.</p></div>
+<div class="callout callout-info"><p><strong>Auditoria no cadastro de uma pessoa:</strong> o item <span class="ui">Auditoria</span> do menu é diferente da seção <span class="ui">Auditoria</span>, que aparece no cadastro de gestores, coordenadores, visualizadores e masters. Essa seção mostra o histórico de ações em que a pessoa aparece, feitas por ela ou sobre ela. Ela não depende da permissão de Auditoria: o master, o gestor interno e o visualizador a veem, e o coordenador não.</p></div>
+
+<h2 id="o-que-cada-perfil-pode-fazer">O que cada perfil pode fazer</h2>
+<table>
+<thead><tr><th>Ação</th><th>Master</th><th>Gestor Interno</th><th>Coordenador</th><th>Visualizador</th></tr></thead>
+<tbody>
+<tr><td>Criar redes, locais, setores e escalas, na tela <span class="ui">Locais</span></td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td>Editar a estrutura de locais (Rede, Local, Setor e Escala)</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td>Editar o cadastro de uma escala</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td>Criar plantões</td><td>Sim</td><td>Sim</td><td>Sim, nas escalas que coordena</td><td>Não</td></tr>
+<tr><td>Aprovar revisões de ponto</td><td>Sim</td><td>Sim</td><td>Sim, nas escalas que coordena</td><td>Não</td></tr>
+<tr><td>Convidar profissionais (botão <span class="ui">Adicionar</span>)</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Editar profissionais</td><td>Sim</td><td>Sim</td><td>Sim, dentro do seu alcance, sem os dados pessoais</td><td>Não</td></tr>
+<tr><td>Inativar, reativar e excluir profissionais</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Inativar, reativar e excluir gestores, coordenadores e visualizadores</td><td>Sim</td><td>Sim, exceto masters</td><td>Não</td><td>Não</td></tr>
+<tr><td>Cadastrar empresas</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Ver a precificação das escalas</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><td>Ver relatórios</td><td>Sim</td><td>Sim, por padrão</td><td>Não, por padrão</td><td>Não, por padrão</td></tr>
+<tr><td>Ver a tela <span class="ui">Auditoria</span></td><td>Sim</td><td>Sim, por padrão</td><td>Não, por padrão</td><td>Não, por padrão</td></tr>
+</tbody>
+</table>
+
+<h2 id="acesso-por-local-setor-e-escala">Acesso por local, setor e escala</h2>
+<p>A instituição tem quatro níveis, do mais amplo ao mais específico: <span class="ui">Rede</span>, <span class="ui">Local</span>, <span class="ui">Setor</span> e <span class="ui">Escala</span>. Quando o perfil não enxerga a instituição inteira, a seção <span class="ui">Acessos</span> do cadastro de coordenadores e visualizadores define o que a pessoa pode ver ou coordenar. No cadastro de um profissional, a mesma árvore aparece na aba <span class="ui">Escalas</span>, na seção <span class="ui">Escalas vinculadas</span>.</p>
+<p>Você marca os níveis em uma árvore, e marcar um nível mais amplo libera tudo o que está dentro dele. Os itens inativos ficam escondidos. O ícone de olho ao lado do texto da seção mostra também os inativos, que aparecem mais claros.</p>
+<p>A própria seção resume a regra: <em>"Marque uma Rede/Local/Setor para liberar todo o ramo (inclusive futuros) ou selecione escalas específicas."</em> No convite do visualizador, a árvore mostra só Rede e Local.</p>
+
+<h3 id="limite-em-cada-perfil">Como o limite funciona em cada perfil</h3>
+<ul>
+<li><strong>Master:</strong> não tem limite, e por isso a seção Acessos não aparece para ele.</li>
+<li><strong>Gestor Interno:</strong> hoje enxerga todas as redes da instituição. A seção Acessos também não aparece para ele.</li>
+<li><strong>Coordenador:</strong> as escalas marcadas em Acessos são as escalas que ele coordena. Marcar uma Rede, um Local ou um Setor faz ele coordenar as escalas desse ramo, as que já existem e as criadas depois. Ele vê e age só nessas escalas, inclusive em revisões de ponto e registros. No cadastro dele, a aba <span class="ui">Escalas</span> mostra a seção <span class="ui">Escalas Ativas</span>, com as escalas que ele coordena.</li>
+<li><strong>Visualizador:</strong> no convite, você pode marcar só Rede e Local. Ele vê o que está dentro do que foi marcado, sempre em modo de leitura.</li>
+<li><strong>Profissional:</strong> a seção Escalas vinculadas define os setores em que ele atua e as escalas em que está. Marcar uma Rede, um Local ou um Setor coloca o profissional em todas as escalas atuais desse ramo, e as escalas criadas depois nos setores desse ramo também entram. Marcar uma Escala coloca o profissional só nela.</li>
+</ul>
+<div class="callout callout-tip"><p><strong>Dica:</strong> marcar uma Rede ou um Local costuma ser mais prático do que marcar escala por escala. Para visualizadores e profissionais, quem já tem acesso a um ramo passa a alcançar as escalas novas desse ramo sem novo ajuste.</p></div>
+
+<h2 id="quem-pode-mexer-em-quem">Quem pode mexer em quem</h2>
+<ul>
+<li><strong>Master:</strong> pode editar, inativar, reativar e excluir qualquer pessoa, inclusive outros masters.</li>
+<li><strong>Gestor Interno:</strong> pode editar nome, e-mail e CPF de qualquer pessoa, exceto masters. Pode inativar, reativar e excluir gestores internos, coordenadores, visualizadores e profissionais. Não mexe em masters.</li>
+<li><strong>Coordenador:</strong> pode editar os dados profissionais de quem está dentro do seu alcance, como profissão e CRM. Não edita os dados pessoais do profissional, não vê o tipo de vínculo nem a empresa dele, nem as regras de pagamento e as contas bancárias. Pode ajustar as escalas desses profissionais só dentro do que ele mesmo tem, na seção Escalas vinculadas. Não inativa nem exclui profissionais. Não convida pessoas.</li>
+<li><strong>Visualizador:</strong> só consulta.</li>
+</ul>
+<p>Nos cadastros de gestores, coordenadores, visualizadores e masters, quem pode inativar uma pessoa também pode resetar a senha dela. Se a pessoa ainda não fez o primeiro acesso, o botão aparece como <span class="ui">Reenviar convite</span>.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> o último master ativo não pode ser inativado nem excluído. Antes de inativar um master, promova outra pessoa a master.</p></div>
+<div class="callout callout-info"><p>Inativar tira a pessoa das listas ativas e remove o acesso dela. A pessoa pode ser reativada a qualquer momento. <span class="ui">Excluir</span> só aparece para quem já está inativo, e não pode ser desfeito.</p></div>
+
+<h2 id="quem-convida-quem">Quem convida quem</h2>
+<table>
+<thead><tr><th>Quem convida</th><th>Pode convidar, pelo botão <span class="ui">Adicionar</span></th></tr></thead>
+<tbody>
+<tr><td>Master</td><td>Master, Gestor Interno, Coordenador, Visualizador e Profissional (médico, enfermeiro(a) ou fisioterapeuta)</td></tr>
+<tr><td>Gestor Interno</td><td>Coordenador e Profissional (médico, enfermeiro(a) ou fisioterapeuta)</td></tr>
+<tr><td>Coordenador</td><td>Ninguém. Na lista de profissionais, ele não vê o botão <span class="ui">Adicionar</span>.</td></tr>
+<tr><td>Visualizador</td><td>Ninguém</td></tr>
+</tbody>
+</table>
+<p>Essas regras valem por padrão. O botão <span class="ui">Adicionar</span> só aparece quando a pessoa pode convidar aquele perfil e tem acesso à lista correspondente, conforme as permissões definidas pela sua instituição.</p>
+<p>Para dar outro perfil a uma pessoa que já tem cadastro, use o convite. O sistema reconhece o cadastro existente pelo e-mail ou pelo CPF e orienta o próximo passo.</p>
+<div class="callout callout-info"><p>Nas telas de detalhe de gestores, coordenadores, visualizadores e masters, a seção <span class="ui">Função e Status</span> não aparece. Por isso, mudanças de perfil passam pelo convite, e não pela edição do cadastro.</p></div>
+
+<h2 id="quando-uma-tela-nao-esta-liberada">Quando uma tela não está liberada</h2>
+<p>O menu mostra só os itens que o seu perfil pode usar. Se você abrir uma tela pelo endereço e ela não estiver liberada, o app responde de uma destas formas:</p>
+<ul>
+<li>Em algumas telas, mostra o aviso <span class="ui">Acesso restrito</span>, com a frase "Seu perfil não tem permissão para acessar esta área." Em algumas dessas telas, a mensagem é mais específica, como "Somente o perfil master pode acessar a precificação das escalas."</li>
+<li>Em outras, leva você de volta ao Dashboard.</li>
+</ul>
+<p>Se você precisa de uma tela que não aparece para você, fale com um master ou com um gestor interno. Também pode falar com a equipe pela <a href="/contato">página de contato</a>.</p>
+
+<h2 id="como-trocar-de-perfil">Como trocar de perfil</h2>
+<p>Se você tem mais de um perfil, como coordenador e médico, o app pede que você escolha com qual entrar. Depois, você pode trocar pelo menu.</p>
+<ol class="steps">
+<li>No menu do painel ou do app, escolha <span class="ui">Trocar perfil</span>. O item aparece quando você tem mais de uma opção para escolher.</li>
+<li>Na tela de escolha, toque no cartão do perfil que você quer usar. Cada perfil de gestão aparece com o seu nome, como <span class="ui">Master</span> ou <span class="ui">Coordenador</span>. Os perfis clínicos aparecem juntos no cartão <span class="ui">Meus Plantões</span>, que abre o app na visão do profissional. Se você é só coordenador e pode usar os dois modos, a tela mostra os cartões <span class="ui">Gestão de escalas</span> e <span class="ui">Meus Plantões</span>.</li>
+</ol>
+<p>Um coordenador que não tem perfil clínico (médico, enfermeiro(a) ou fisioterapeuta) entra direto na <span class="ui">Gestão de escalas</span>, sem precisar escolher.</p>
+
+<h2 id="o-que-o-profissional-ve-no-app">O que o profissional vê no app</h2>
+<p>O profissional não usa o painel. No app, o menu tem <span class="ui">Início</span>, <span class="ui">Meus Plantões</span>, <span class="ui">Escalas</span>, <span class="ui">Check-in / out</span>, <span class="ui">Oportunidades</span>, <span class="ui">Trocas e passagens</span>, <span class="ui">Extratos</span> e <span class="ui">Notificações</span>. No rodapé do menu ficam <span class="ui">Perfil</span>, <span class="ui">Preferências</span>, <span class="ui">Sugestões</span>, <span class="ui">Trocar perfil</span> e <span class="ui">Sair</span>.</p>
+<ul>
+<li><span class="ui">Escalas</span> mostra, para consulta, os plantões das escalas em que o profissional está, inclusive os de colegas. Veja <a href="/help/escalas-do-profissional">Escalas</a>.</li>
+<li><span class="ui">Check-in / out</span> mostra o que estava previsto para o plantão, o que foi registrado, o que você pediu para revisar e o que foi aprovado. Veja <a href="/help/check-in-e-check-out">Check-in e check-out</a>.</li>
+<li><span class="ui">Oportunidades</span> reúne os plantões anunciados. Veja <a href="/help/oportunidades">Oportunidades</a>.</li>
+<li><span class="ui">Trocas e passagens</span> reúne as trocas e passagens de plantão. Veja <a href="/help/trocas-e-passagens">Trocas e passagens de plantão</a>.</li>
+</ul>
+<p>Remuneração e detalhes do plantão abrem a partir de outras telas, sem item próprio no menu.</p>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/equipe-de-gestao">Gestores, coordenadores, visualizadores e masters</a></li>
+<li><a href="/help/profissionais">Cadastro de profissionais</a></li>
+<li><a href="/help/locais-e-empresas">Locais e empresas</a></li>
+<li><a href="/help/inicio-do-app">Tela inicial e menu do app</a></li>
+<li><a href="/help/glossario">Glossário</a></li>
+</ul>

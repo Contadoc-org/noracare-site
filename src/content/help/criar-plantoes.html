@@ -1,0 +1,248 @@
+<p class="lead">Um plantão é um turno de trabalho dentro de uma escala. Nesta página você aprende a criar, editar e excluir plantões, escolher os profissionais, entender os valores, repetir um plantão em vários dias e copiar uma semana ou um mês inteiro.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">App</span> e <span class="badge">Painel web</span></p>
+
+<h2 id="antes-de-comecar">Antes de começar</h2>
+<p>O que você pode fazer depende do seu perfil. A tabela resume as diferenças. Mais detalhes em <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</p>
+<table>
+<thead><tr><th>Perfil</th><th>Cria, edita e exclui</th><th>Vê os valores</th><th>Copia semana e mês</th><th>Altera adicional, desconto e ajuste manual</th></tr></thead>
+<tbody>
+<tr><td>Master</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>Gestor Interno</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+<tr><td>Coordenador</td><td>Sim, com limites (veja abaixo)</td><td>Parcial, sem o valor final</td><td>Sim</td><td>Não</td></tr>
+<tr><td>Visualizador</td><td>Não</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+</tbody>
+</table>
+<p>O Coordenador não altera plantão já pago. Também não altera horário nem valores de plantão que já começou. Nesses casos, o sistema recusa a mudança e mostra um aviso pedindo um gestor (Master ou Gestor Interno). A exclusão de plantão pago continua permitida, mas fica registrada em auditoria.</p>
+<p>O Visualizador só acompanha: os botões de criar, editar e replicar não ficam disponíveis para ele. Ao copiar uma semana ou um mês, o sistema copia a escala e os horários. Os ajustes financeiros só são copiados pelo Master e pelo Gestor Interno.</p>
+
+<h2 id="criar-um-plantao">Criar um plantão</h2>
+<p>Você pode começar de três formas:</p>
+<ul>
+<li>No celular, toque no <span class="ui">+</span> no topo da tela de <span class="ui">Escalas</span>. Na janela, confira ou escolha a escala e a data.</li>
+<li>Clicando em um dia do calendário, na visão mensal ou semanal. A data já vem preenchida. Na visão semanal, a escala é a da linha em que você clicou. Na visão mensal e no celular, a escala é a escolhida no topo da tela. Se nenhuma escala estiver escolhida, a tela avisa "Selecione uma escala antes de criar plantão".</li>
+<li>No computador, na visão semanal, os dias que já têm plantão mostram um <span class="ui">+</span> tracejado abaixo dos plantões quando você passa o mouse. Ele abre a janela com a data e a escala daquela linha.</li>
+</ul>
+<ol class="steps">
+<li><strong>Escolha a escala.</strong> Em <span class="ui">Rede › Local › Setor › Escala</span>, escolha cada nível. Enquanto nada estiver escolhido, o resumo diz "Selecione a rede, local, setor e escala".</li>
+<li><strong>Confirme a data.</strong> Se você abriu pelo <span class="ui">+</span> do topo, preencha <span class="ui">Data do plantão</span>. Se abriu clicando em um dia, a data já está certa.</li>
+<li><strong>Preencha o horário.</strong> Digite <span class="ui">Hora início</span> e <span class="ui">Hora fim</span> no formato HH:MM. A <span class="ui">Duração</span> aparece sozinha.</li>
+<li><strong>Escolha os profissionais (opcional).</strong> Veja a seção Profissionais, mais abaixo.</li>
+<li><strong>Marque o anúncio (opcional).</strong> Ligue <span class="ui">Plantão anunciado</span> se quiser que outros profissionais possam pegar o plantão.</li>
+<li><strong>Repita o plantão (opcional).</strong> Ligue <span class="ui">Recorrência</span> para criar vários dias de uma vez.</li>
+<li><strong>Confira o Financeiro.</strong> Veja a seção Valores do plantão, mais abaixo.</li>
+<li><strong>Clique em Salvar.</strong> Aparece "Plantão criado com sucesso". Com recorrência, aparece "N plantões criados com sucesso". Para sair sem salvar, use <span class="ui">Cancelar</span>.</li>
+</ol>
+
+<h2 id="campos-do-plantao">Campos do plantão</h2>
+<table>
+<thead><tr><th>Campo</th><th>O que é</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Escala</span></td><td>Obrigatório. A escala que vai receber o plantão.</td></tr>
+<tr><td><span class="ui">Data do plantão</span></td><td>Obrigatório. Aparece só quando você abre pelo <span class="ui">+</span> do topo, no celular. Ao clicar em um dia, a data já vem preenchida.</td></tr>
+<tr><td><span class="ui">Hora início</span> e <span class="ui">Hora fim</span></td><td>Obrigatórios. Formato HH:MM.</td></tr>
+<tr><td><span class="ui">Duração</span></td><td>Calculada automaticamente a partir dos horários. Você não preenche.</td></tr>
+<tr><td><span class="ui">Profissional fixo</span></td><td>Opcional. O profissional titular do plantão.</td></tr>
+<tr><td><span class="ui">Profissional substituto</span></td><td>Opcional. Quem está de fato escalado para o plantão, quando não é o fixo.</td></tr>
+<tr><td><span class="ui">Plantão anunciado</span></td><td>Liga o anúncio: o plantão fica disponível para profissionais pegarem.</td></tr>
+<tr><td><span class="ui">Recorrência</span></td><td>Cria plantões nos dias da semana escolhidos, até uma data final.</td></tr>
+<tr><td><span class="ui">Financeiro</span></td><td>Valor hora e subtotal, além de adicional, desconto, ajuste manual e status de pagamento, quando aplicável.</td></tr>
+<tr><td><span class="ui">Observações internas</span></td><td>Texto interno. Aparece para quem usa a gestão, inclusive Coordenador e Visualizador. Não aparece para os profissionais.</td></tr>
+</tbody>
+</table>
+
+<h2 id="horario">Horário e plantões que viram a noite</h2>
+<p>Os horários de início e de fim não podem ser iguais. Se o fim for menor que o início, o plantão termina no dia seguinte. Por exemplo, início às 19:00 e fim às 07:00 criam um plantão que termina às 07:00 do dia seguinte.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> confira a <span class="ui">Duração</span> antes de salvar. Ela mostra se o plantão ficou com o tamanho certo. Em plantão que vira a noite, a duração aparece com "(noturno)".</p></div>
+
+<h2 id="profissionais">Profissionais</h2>
+<p>Um plantão pode ter dois profissionais: o <strong>fixo</strong> e o <strong>substituto</strong>. Os dois campos são opcionais e listam os profissionais vinculados à escala escolhida. Antes de escolher a escala, o campo mostra "Selecione uma escala primeiro".</p>
+<p>Quem responde pelo plantão é o substituto, quando existe. Sem substituto, quem responde é o profissional fixo.</p>
+<p>O fixo e o substituto não podem ser a mesma pessoa. Se forem, a tela mostra "Profissional fixo e profissional substituto não podem ser o mesmo profissional."</p>
+<p>Se a escala ainda não tiver profissionais cadastrados, o campo <span class="ui">Profissional fixo</span> mostra "Esta escala ainda não tem profissionais cadastrados." Nesse caso, cadastre os profissionais na escala antes de escolher um fixo.</p>
+
+<h3>Atribuir um profissional</h3>
+<ol class="steps">
+<li>Abra o plantão para editar, ou crie um novo.</li>
+<li>No campo <span class="ui">Profissional fixo</span> ou <span class="ui">Profissional substituto</span>, digite o nome e escolha a pessoa na lista.</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+</ol>
+
+<h3>Remover um profissional</h3>
+<ol class="steps">
+<li>Abra o plantão.</li>
+<li>Clique no X dentro do campo do profissional que você quer tirar.</li>
+<li>Clique em <span class="ui">Salvar</span>. O plantão fica sem aquele profissional.</li>
+</ol>
+
+<div class="callout callout-info"><p><strong>Aguardando aceite:</strong> quando existe uma troca enviada para uma pessoa específica, o plantão mostra um aviso amarelo com a palavra <strong>Aguardando aceite</strong>. Enquanto essa pessoa não aceita, a responsabilidade continua com quem já estava escalado. Veja <a href="/help/trocas-e-passagens">Trocas e passagens de plantão</a>.</p></div>
+
+<h2 id="anuncio">Plantão anunciado</h2>
+<p>Quando <span class="ui">Plantão anunciado</span> está ligado, o plantão aparece para os profissionais pegarem. O texto embaixo do botão mostra o que vale naquele momento:</p>
+<ul>
+<li><strong>Disponível para profissionais pegarem:</strong> o plantão está anunciado e não tem substituto.</li>
+<li><strong>Anunciado mesmo com substituto:</strong> o plantão tem substituto, mas outros profissionais ainda podem assumir.</li>
+<li><strong>Anunciado por um profissional:</strong> o próprio profissional anunciou. Desligue o botão para cancelar o anúncio. O plantão mantém a designação atual.</li>
+</ul>
+<p>Ao escolher um substituto em um plantão que já está anunciado, a tela avisa que, se você não desativar o anúncio, outros profissionais poderão assumir o plantão. As opções são <span class="ui">Manter anunciado</span> e <span class="ui">Desativar anúncio</span>. O mesmo aviso aparece ao criar um plantão já anunciado com substituto.</p>
+<p>Para desativar um anúncio feito por um profissional, desligue o botão <span class="ui">Plantão anunciado</span>. A tela pede confirmação em <span class="ui">Desativar anúncio</span>. Depois de confirmar, aparece "Anúncio cancelado".</p>
+<p>Com o plantão anunciado, aparece a opção <span class="ui">Ampliar anúncio para outras escalas</span>. Use-a para escolher outras escalas em que o plantão também será oferecido.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se aparecer a mensagem "Não foi possível carregar as escalas já anunciadas", recarregue a janela antes de mexer nesse campo. Salvar nesse momento pode substituir a seleção que já existe.</p></div>
+
+<h2 id="recorrencia">Criar vários plantões de uma vez (recorrência)</h2>
+<p>A recorrência repete o plantão nos dias da semana que você escolher, até uma data final. É a forma de criar vários plantões de uma vez.</p>
+<ol class="steps">
+<li>Preencha escala, data, horário e profissionais normalmente.</li>
+<li>Ligue <span class="ui">Recorrência</span>. Aparecem os dias: <span class="ui">Seg</span>, <span class="ui">Ter</span>, <span class="ui">Qua</span>, <span class="ui">Qui</span>, <span class="ui">Sex</span>, <span class="ui">Sáb</span> e <span class="ui">Dom</span>.</li>
+<li>Marque os dias em que o plantão acontece. Pelo menos um dia precisa estar marcado.</li>
+<li>Escolha a data final em <span class="ui">Recorrer até</span>. Ao ligar a recorrência, esse campo já vem com a própria data do plantão. Se você não trocar, a recorrência cobre só essa data.</li>
+<li>Confira a linha <span class="ui">Até MM/AAAA</span>, que mostra até qual mês a recorrência vai.</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+</ol>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> a data final não pode ser anterior à data do plantão, e a recorrência vai no máximo até 12 meses. A tela mostra uma mensagem quando algo sai dessas regras.</p></div>
+<p>Ao salvar, o sistema cria um plantão em cada dia escolhido, com o mesmo horário e os mesmos profissionais. Se o primeiro plantão tiver conflito com outro, a tela pede confirmação antes de salvar. Os demais dias não são pulados por conflito: eles são criados e aparecem depois na lista de conflitos.</p>
+
+<h3>Criar recorrência a partir de um plantão já criado</h3>
+<p>Ao editar um plantão que ainda não faz parte de uma série, ligue <span class="ui">Criar recorrência</span>. A tela explica que a opção transforma este plantão em uma série recorrente. Escolha os dias e a data final e clique em <span class="ui">Salvar</span>. Os dias que já têm plantão no mesmo horário também são criados, e esses casos aparecem na lista de conflitos. Ao final, a mensagem informa quantos plantões foram criados na série.</p>
+
+<h2 id="copiar-semana">Copiar a semana</h2>
+<p>Copiar a semana leva os plantões de uma semana para outra semana da mesma escala. Cada plantão copiado mantém o dia da semana e o horário. Só entram plantões ativos, ou seja, os que não foram excluídos.</p>
+<div class="callout callout-info"><p><strong>Só no computador:</strong> o botão <span class="ui">Replicar semana</span> não aparece na visão do celular. No celular, use <span class="ui">Replicar mês</span> na visão mensal.</p></div>
+<ol class="steps">
+<li>Vá em <span class="ui">Escalas › Semanal</span> e encontre a escala e a semana que você quer copiar.</li>
+<li>Clique no botão <span class="ui">Replicar semana</span>, ao lado do nome da escala. Ao passar o mouse sobre o botão, aparece o texto "Replicar semana".</li>
+<li>Na janela <span class="ui">Replicar semana</span>, confira a linha <strong>Semana de origem</strong>. Use as setas para mudar de mês e encontrar as semanas de destino. A janela mostra dois meses por vez.</li>
+<li>Marque uma ou mais semanas de destino. A tela pede para você selecionar uma ou várias semanas.</li>
+<li>Decida se quer copiar os profissionais. A opção <span class="ui">Copiar profissionais</span> vem desligada. Quando ligada, mantém os profissionais que estão ativos e vinculados à escala. Quando desligada, os profissionais dos plantões não são copiados.</li>
+<li>Se você é Master ou Gestor Interno, aparece <span class="ui">Duplicar adicionais, descontos e ajustes manuais</span>, que vem ligada. Desligue se não quiser copiar esses valores.</li>
+<li>Clique em <span class="ui">Replicar em N semana(s)</span>, com N igual ao número de semanas marcadas.</li>
+</ol>
+<p>A cópia acontece de uma só vez: todas as semanas escolhidas são copiadas juntas. Quando termina, aparece a mensagem "N plantão(ões) criado(s)". Se não houver nenhum aviso, a janela fecha sozinha.</p>
+<p>Se alguma semana de destino já tinha plantão no mesmo horário, a cópia é feita mesmo assim. A janela continua aberta com a mensagem "Cópia concluída. Plantões já existentes no mesmo horário:" e a lista desses plantões. Clique em <span class="ui">Concluir</span> para fechar.</p>
+<div class="callout callout-warn"><p><strong>Conflito na agenda profissional:</strong> com <span class="ui">Copiar profissionais</span> ligado, se a cópia leva um profissional para um horário em que ele já tem outro plantão em uma escala ativa, a cópia para e a janela mostra o aviso "A replicação cria conflito em outra escala. Revise os plantões antes de continuar." Revise os plantões. Para copiar mesmo assim, clique em <span class="ui">Replicar mesmo assim</span>.</p></div>
+
+<h2 id="replicar-mes">Replicar o mês</h2>
+<p>Na visão <span class="ui">Escalas › Mensal</span>, o botão <span class="ui">Replicar mês</span> copia os plantões de um mês para outro mês da mesma escala. Esse botão aparece para Master, Gestor Interno e Coordenador, e também no celular, sempre com uma escala escolhida no topo da tela.</p>
+<ol class="steps">
+<li>Escolha a escala no topo da tela e clique em <span class="ui">Replicar mês</span>.</li>
+<li>Escolha o mês de destino. A janela abre no ano do mês seguinte ao de origem, sem mês marcado. Use as setas para mudar de ano.</li>
+<li>Escolha o <strong>Padrão de cópia</strong>. Vem marcado <span class="ui">Por dia do mês</span>, em que o dia 5 vira dia 5. A outra opção é <span class="ui">Por posição do dia da semana</span>, em que a primeira segunda-feira vira a primeira segunda-feira.</li>
+<li>Decida se quer copiar os profissionais, com a mesma regra da cópia de semana. Se você é Master ou Gestor Interno, também aparece <span class="ui">Duplicar adicionais, descontos e ajustes manuais</span>, que vem ligada.</li>
+<li>Confira a linha de resumo, que mostra quantos plantões serão criados e quantas divergências existem. Uma divergência é um plantão que não será copiado porque o dia não existe no mês de destino, como o dia 31 em um mês de 30 dias. A tela mostra o motivo, como "dia inexistente no destino".</li>
+<li>Clique em <span class="ui">Replicar</span>.</li>
+</ol>
+<p>Ao final, a janela mostra o resultado e os plantões que já existiam no mesmo horário no mês de destino. Se houver conflito de profissional (com <span class="ui">Copiar profissionais</span> ligado), a janela pede confirmação em <span class="ui">Replicar mesmo assim</span>, como na cópia de semana.</p>
+
+<h2 id="editar-um-plantao">Editar um plantão</h2>
+<p>Clique no plantão dentro da escala. Abre a janela <strong>Editar Plantão</strong>, com a data logo abaixo do título. Quem só visualiza não tem a opção de editar.</p>
+<p>Você também pode abrir a janela clicando na linha do plantão em <span class="ui">Escalas › Lista</span>, se o seu perfil puder editar. No Dashboard, clicar em uma linha da lista de plantões anunciados também abre a janela do plantão.</p>
+<p>A janela tem estes blocos, de cima para baixo:</p>
+<ul>
+<li><strong>Profissional fixo</strong> e <strong>Profissional substituto</strong>.</li>
+<li><strong>Previsto</strong>: <span class="ui">Hora início</span>, <span class="ui">Hora fim</span> e <span class="ui">Duração</span>.</li>
+<li><strong>Realizado</strong>: entrada e saída, nos campos <span class="ui">Check-in</span> e <span class="ui">Check-out</span>. Master e Gestor Interno podem digitar esses horários direto na janela. Veja <a href="/help/registros-de-presenca">Registros de presença e revisões de ponto</a>.</li>
+<li><strong>Aprovado</strong>: horários aprovados na revisão de ponto. Aparece só depois que a revisão é decidida, e não pode ser alterado aqui.</li>
+<li><strong>Plantão anunciado</strong>, com as mesmas regras de anúncio explicadas acima.</li>
+<li><strong>Aplicar a toda a série</strong>, quando o plantão faz parte de uma série.</li>
+<li><strong>Financeiro</strong> e <strong>Observações internas</strong>.</li>
+<li>A seção <span class="ui">Histórico do plantão</span>, no fim da janela, abre e fecha ao clicar. Ela mostra a linha do tempo do plantão e aparece só em plantão já criado.</li>
+</ul>
+<p>Clique em <span class="ui">Salvar</span> para gravar. Aparece "Plantão atualizado com sucesso". Se a mudança valeu para os próximos plantões da série, aparece "Plantões futuros não iniciados atualizados".</p>
+
+<h3>Editar uma série</h3>
+<p>Quando o plantão faz parte de uma série, a janela mostra o bloco <strong>Recorrência atual</strong>, com um resumo como "Seg, Qua · 6 plantões · última ocorrência" seguido da data. Para mudar só este plantão, deixe <span class="ui">Aplicar a toda a série</span> desligado.</p>
+<p>Para mudar os próximos plantões, ligue <span class="ui">Aplicar a toda a série</span> e salve. A tela pede confirmação em "Atualizar os próximos plantões desta série?". Com <span class="ui">Aplicar aos futuros</span>, a mudança vale só para os plantões futuros e ainda não iniciados. Plantões passados, em andamento ou concluídos são preservados.</p>
+<p>Para tirar um plantão da série sem excluí-lo, use <span class="ui">Desvincular da série</span>. Esse botão não pede confirmação: ao clicar, o plantão sai da série e aparece "Plantão desvinculado da série".</p>
+
+<h3>Plantão já pago</h3>
+<p>Se o plantão está como pago, a tela avisa antes de salvar: "Este plantão já foi pago". A edição fica registrada em auditoria. Quando a mudança afeta horário, profissional ou valores, o profissional do plantão também é avisado. Para continuar, clique em <span class="ui">Continuar e salvar</span>.</p>
+<p>Depois de salvar, aparece o aviso "Plantão pago foi alterado". Você escolhe:</p>
+<ul>
+<li><span class="ui">Manter pago</span>: o plantão continua como pago, e a divergência fica registrada em auditoria.</li>
+<li><span class="ui">Remover status de pago</span>: o plantão deixa de estar como pago. A remoção também fica registrada em auditoria.</li>
+</ul>
+
+<h2 id="excluir-plantao">Excluir um plantão</h2>
+<p>Para tirar um plantão da escala, use <span class="ui">Excluir</span>. O botão fica no canto inferior esquerdo da janela de edição.</p>
+<ol class="steps">
+<li>Abra o plantão e clique em <span class="ui">Excluir</span>.</li>
+<li>Leia a pergunta: "Tem certeza que deseja excluir este plantão?".</li>
+<li>Clique em <span class="ui">Confirmar exclusão</span>, ou em <span class="ui">Cancelar</span> para voltar sem excluir.</li>
+</ol>
+<p>O aviso embaixo da pergunta depende da situação:</p>
+<ul>
+<li>Se <span class="ui">Aplicar a toda a série</span> não está ligado: "Apenas esta ocorrência será excluída."</li>
+<li>Se o plantão é de uma série e <span class="ui">Aplicar a toda a série</span> está ligado: apenas as ocorrências futuras e ainda não iniciadas são excluídas. Plantões passados, em andamento ou concluídos são preservados.</li>
+<li>Se o plantão já foi pago: "Este plantão já foi pago. A exclusão será auditada."</li>
+</ul>
+<p>Depois da confirmação, aparece "Plantão excluído". Em uma série, aparece "Ocorrências futuras não iniciadas excluídas". Se o plantão tinha anúncio aberto, o anúncio também é cancelado.</p>
+<div class="callout callout-info"><p><strong>Importante:</strong> para só retirar o anúncio de um plantão, sem excluí-lo, desligue <span class="ui">Plantão anunciado</span>.</p></div>
+
+<h2 id="financeiro">Valores do plantão (Financeiro)</h2>
+<p>O bloco <span class="ui">Financeiro</span> mostra o valor do plantão. O que aparece depende de a escala ser paga por hora ou de ser uma escala fixa.</p>
+
+<h3>Escala paga por hora</h3>
+<ul>
+<li>Enquanto você digita o horário, o sistema calcula o <span class="ui">Valor hora (R$/h)</span> e o <span class="ui">Subtotal plantão (R$)</span>, com base na precificação da escala.</li>
+<li>Enquanto o horário não estiver preenchido, a tela orienta: "Informe o horário para calcular o valor com base na precificação da escala." Se a escala ainda não tiver precificação, aparece "Configure a precificação da escala para ver o valor." Para alguns perfis, a tela mostra só "Calculado após salvar com base na precificação da escala."</li>
+<li><span class="ui">Adicional (bônus)</span> e <span class="ui">Desconto</span> aparecem só para o Master.</li>
+<li><span class="ui">Ajuste manual</span> define o valor final à mão, ignorando adicional e desconto. Ao ligar, aparecem os campos de valor bruto e valor líquido. Só o Master altera esses valores.</li>
+</ul>
+
+<h3>Escala fixa</h3>
+<p>Na escala fixa, o pagamento é um valor mensal. Por isso, o plantão em geral é coberto por esse valor, e o valor por hora não aparece. Para o Master, um interruptor mostra o modo de pagamento:</p>
+<ul>
+<li><span class="ui">Pagamento Padrão</span>: coberto pelo pacote mensal do profissional.</li>
+<li><span class="ui">Pagamento Avulso</span>: pago por hora, fora do pacote fixo.</li>
+</ul>
+<p>Só o Master troca o modo de pagamento. Para os outros perfis, a tela mostra: "Esse plantão é pago pelo pacote fixo do profissional. Para criar um plantão avulso, solicite a criação ao seu gestor."</p>
+<p>Ao converter um plantão já salvo, a tela pede confirmação: "Converter este plantão em avulso?" ou "Reverter este plantão para fixo?". Quando o plantão tem profissional fixo e vai para avulso, aparece a opção <span class="ui">Descontar do responsável anterior</span>, desligada por padrão. Ela desconta do valor mensal a parte correspondente a este plantão.</p>
+
+<h3>Status de pagamento</h3>
+<p>No bloco Financeiro, o status pode ser <span class="ui">Sem status</span>, <span class="ui">Não pago</span> ou <span class="ui">Pago</span>. Ao marcar Pago, preencha a <span class="ui">Data do pagamento</span>. Sem a data, a tela mostra "Informe a data do pagamento".</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> o Coordenador não altera adicional, desconto nem status de pagamento. Esses campos ficam bloqueados ou escondidos para ele.</p></div>
+
+<h2 id="conflitos">Conflitos de horário</h2>
+<p>Há conflito quando o mesmo profissional tem dois plantões no mesmo horário, mesmo que em escalas diferentes. O sistema avisa em três momentos:</p>
+<ol class="steps">
+<li><strong>Ao escolher o profissional e o horário.</strong> Aparece um aviso amarelo "Conflito de horário", com o outro plantão (escala, dia e horário). Você ainda pode salvar.</li>
+<li><strong>Ao clicar em Salvar.</strong> Aparece a janela "Conflito de horário". Clique em <span class="ui">Manter mesmo assim</span> para salvar, ou em <span class="ui">Cancelar</span> para voltar e ajustar.</li>
+<li><strong>Na cópia de semana ou de mês, com Copiar profissionais ligado.</strong> A cópia para e pede confirmação em <span class="ui">Replicar mesmo assim</span>, como explicado acima.</li>
+</ol>
+<div class="callout callout-info"><p><strong>Importante:</strong> o aviso não considera escalas inativas. Na recorrência, o aviso é feito para a data do plantão. As outras datas são criadas e aparecem depois na lista de conflitos.</p></div>
+
+<h3>Ver e resolver conflitos</h3>
+<p>Na tela de <span class="ui">Escalas › Mensal</span> ou <span class="ui">Escalas › Semanal</span>, abra o bloco <span class="ui">Conflitos</span>. Ele lista os plantões em conflito do filtro e do período escolhidos. Quando não há nenhum, aparece "Nenhum conflito encontrado no filtro atual". No calendário, os plantões em conflito ficam em vermelho, com a legenda <span class="ui">Conflito</span>. No <a href="/help/dashboard">Dashboard</a>, o bloco <span class="ui">Plantões em conflito</span> também leva à lista de conflitos.</p>
+<p>Para resolver, ajuste o horário ou o profissional de um dos plantões pela própria escala e salve.</p>
+
+<h2 id="mensagens">Mensagens de validação</h2>
+<p>Estas são as mensagens que você pode ver ao criar ou editar um plantão:</p>
+<table>
+<thead><tr><th>Mensagem</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Selecione uma escala</td><td>Escolha Rede, Local, Setor e Escala.</td></tr>
+<tr><td>Informe o horário de início / Informe o horário de fim</td><td>Preencha o horário no formato HH:MM.</td></tr>
+<tr><td>Horário de fim deve ser diferente do início</td><td>Os dois horários não podem ser iguais.</td></tr>
+<tr><td>Profissional fixo e profissional substituto não podem ser o mesmo profissional.</td><td>Escolha duas pessoas diferentes, ou limpe um dos campos.</td></tr>
+<tr><td>Informe a data do pagamento</td><td>Ao marcar o plantão como Pago, preencha a data do pagamento.</td></tr>
+<tr><td>Informe a entrada antes da saída / Informe um horário de entrada válido / Informe um horário de saída válido</td><td>No bloco Realizado, preencha entrada e saída no formato HH:MM, com a entrada antes da saída.</td></tr>
+<tr><td>Selecione pelo menos um dia</td><td>Na recorrência, marque ao menos um dia da semana.</td></tr>
+<tr><td>Data final deve ser igual ou posterior à data do plantão</td><td>Escolha uma data a partir da data do plantão.</td></tr>
+<tr><td>Máximo de 12 meses</td><td>A recorrência não pode passar de 12 meses. Escolha uma data final mais próxima.</td></tr>
+<tr><td>Nenhum plantão foi criado — nenhum dia do período corresponde aos dias da semana selecionados.</td><td>Escolha ao menos um dia da semana que caia dentro do período.</td></tr>
+<tr><td>Conflito de horário com outro plantão</td><td>O profissional já tem plantão nesse horário. Ajuste o horário ou o profissional.</td></tr>
+<tr><td>Plantão já pago só pode ser alterado por gestores (admin master ou gestor interno).</td><td>Se você é Coordenador, peça a um gestor para fazer a alteração.</td></tr>
+<tr><td>Coordenador não pode alterar horário ou financeiro de plantão já iniciado. Solicite a um gestor interno ou master.</td><td>Peça a um gestor interno ou master para fazer a alteração.</td></tr>
+<tr><td>Esta escala ainda não tem profissionais cadastrados.</td><td>Cadastre os profissionais na escala antes de escolher um fixo.</td></tr>
+<tr><td>Erro ao buscar profissionais. Tente novamente.</td><td>A lista de profissionais não carregou. Tente de novo em instantes.</td></tr>
+<tr><td>Este plantão já faz parte de uma série</td><td>Aparece ao tentar criar recorrência a partir de um plantão que já está em uma série.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-tip"><p><strong>Dica:</strong> quando algo está errado, a tela rola até o primeiro campo com erro. Erros gerais aparecem em uma caixa vermelha no fim da janela.</p></div>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a></li>
+<li><a href="/help/anuncios-e-aprovacoes">Anúncios, trocas e aprovações</a></li>
+<li><a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a></li>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+</ul>

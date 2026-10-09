@@ -1,0 +1,169 @@
+<p class="lead">O check-in automático registra sua entrada no local durante o plantão e, depois do horário previsto de término, a sua saída, sem você precisar tocar em nada. Ele só funciona quando a sua instituição habilita a opção na escala e as permissões do celular estão prontas.</p>
+<p class="meta">Para: <span class="badge">Profissional</span> e <span class="badge">Gestão</span> · Onde: <span class="badge">App</span> e <span class="badge">Painel web</span></p>
+
+<h2 id="como-funciona">Como funciona</h2>
+<p>O NoraCare usa a localização do seu celular para confirmar se você está no local do plantão. O registro acontece assim:</p>
+<ul>
+<li><strong>Entrada:</strong> durante o horário do plantão, quando o app confirma que você está dentro da área definida para o local.</li>
+<li><strong>Saída:</strong> logo depois do horário previsto de término, se você ainda estiver nessa área.</li>
+</ul>
+<p>Nas <span class="ui">Preferências</span>, a opção aparece como <span class="ui">Check-in/out passivo</span>, dentro da seção <span class="ui">Check-in automático</span>. Nos plantões e no histórico, o registro feito assim aparece com o selo <span class="ui">Passivo</span>. É o mesmo recurso, com dois nomes.</p>
+
+<div class="callout callout-info"><p><strong>Por que assim?</strong> A localização é usada para confirmar se você está na área do local perto do horário do plantão. Assim, o registro reflete a sua presença no local, e você não precisa lembrar de fazer nada.</p></div>
+
+<p>Com o app aberto, ele confere sua posição de tempos em tempos. Com o app fechado ou em segundo plano, o registro depende do sistema do celular e pode falhar em alguns casos. Por isso, o app também avisa você alguns minutos depois do início e do fim previstos (veja <a href="#avisos-do-app">Avisos que o app mostra</a>).</p>
+
+<h2 id="quando-esta-disponivel">Quando está disponível</h2>
+<p>O check-in automático depende da sua instituição. Ele vale para um plantão quando todas estas condições são verdadeiras:</p>
+<ol>
+<li>A escala do plantão tem o check-in/out passivo habilitado pela sua instituição. A opção só aparece para escalas que exigem check-in.</li>
+<li>A escala não inclui verificação biométrica. Biometria e check-in/out passivo não podem estar na mesma escala.</li>
+<li>O local do plantão tem a localização e a área de alcance cadastradas pela gestão.</li>
+<li>Você ainda não tem o check-in daquele plantão registrado.</li>
+<li>A opção <span class="ui">Check-in/out passivo</span>, em Preferências, está ligada. Ela vem ligada por padrão, mas só aparece ativa quando as permissões estão prontas (veja <a href="#como-conferir">Como conferir se está pronto</a>).</li>
+<li>As permissões do celular estão prontas (veja <a href="#permissoes-do-celular">O que o celular precisa</a>).</li>
+</ol>
+<p>Se você não trabalha em escalas com check-in automático, pode desligar a opção. Assim, o cartão de localização deixa de aparecer na tela inicial.</p>
+
+<h3>Casos comuns</h3>
+<table>
+<thead><tr><th>Situação</th><th>O que acontece</th></tr></thead>
+<tbody>
+<tr><td>Você chega dentro da área do local durante o plantão</td><td>A entrada é registrada, se o app conseguir confirmar sua posição. Se a localização estiver imprecisa demais para o tamanho da área do local, o app espera uma leitura melhor.</td></tr>
+<tr><td>Você chega antes do horário de início</td><td>A entrada é registrada depois que o plantão começa, se você ainda estiver no local.</td></tr>
+<tr><td>Você chega depois do fim previsto</td><td>O automático não registra a entrada. Use a tela <span class="ui">Check-in/out</span>.</td></tr>
+<tr><td>Você fica no local depois do fim previsto</td><td>A saída é registrada automaticamente nos minutos seguintes ao fim previsto, se o app confirmar que você continua na área. Se isso não acontecer, o aviso de check-out chega e você registra a saída na tela <span class="ui">Check-in/out</span>.</td></tr>
+<tr><td>Você sai antes do fim do plantão</td><td>A saída não é registrada sozinha. O aviso de check-out chega depois do fim previsto. Toque nele e registre a saída na tela <span class="ui">Check-in/out</span>.</td></tr>
+<tr><td>Você está sem internet</td><td>O registro fica guardado no celular e é enviado quando a conexão voltar.</td></tr>
+<tr><td>Escala com verificação biométrica</td><td>O registro é manual, com a verificação biométrica.</td></tr>
+</tbody>
+</table>
+
+<h2 id="permissoes-do-celular">O que o celular precisa</h2>
+<p>O NoraCare precisa da sua localização precisa, inclusive com o app fechado, para registrar a entrada e a saída no local do plantão. Também precisa de permissão para funcionar em segundo plano e de um celular que não restrinja o app para economizar bateria. Esses ajustes são feitos nas configurações do celular.</p>
+<p>O app não pede permissão de localização ao abrir. Ele só pede quando você toca em um botão como <span class="ui">Permitir</span> ou <span class="ui">Corrigir</span>.</p>
+<p>Para o check-in manual, na tela <span class="ui">Check-in/out</span>, basta a localização precisa com o app aberto. Se ela faltar, ao tentar registrar o check-in ou o check-out, o app mostra a janela <span class="ui">Libere sua localização para o check-in</span>, com o botão <span class="ui">Permitir</span> (quando o celular ainda pode perguntar) ou <span class="ui">Abrir configurações</span>, além de <span class="ui">Cancelar</span>.</p>
+
+<h3>No Android</h3>
+<ol class="steps">
+<li>Em <span class="ui">Configurações › Apps › NoraCARE › Localização</span>, escolha <span class="ui">Permitir o tempo todo</span> e mantenha <span class="ui">Usar local exato</span> ligado.</li>
+<li>Em <span class="ui">Configurações › Apps › NoraCARE › Bateria</span>, escolha <span class="ui">Sem restrições</span> e tire o app da lista de apps dormindo.</li>
+<li>Se aparecer o item <span class="ui">Alarmes e lembretes</span> na tela de permissões (Android 13 ou mais recente), toque em <span class="ui">Abrir configurações</span> e permita. Esse item é opcional: você pode usar o check-in automático sem ele. Com ele, o app confere o início e o fim do plantão mesmo sem internet. É silencioso: não toca, não acende a tela e não mostra notificação.</li>
+</ol>
+
+<h3>No iPhone</h3>
+<ol class="steps">
+<li>Em <span class="ui">Ajustes › NoraCARE › Localização</span>, escolha <span class="ui">Sempre</span> e ative <span class="ui">Localização Exata</span>. Na tela de permissões do NoraCARE, esse item aparece como <span class="ui">Localização precisa</span>.</li>
+<li>Em <span class="ui">Ajustes › NoraCARE › Atualização em segundo plano</span>, deixe a opção ligada.</li>
+</ol>
+
+<p>Além disso, permita as notificações do NoraCare nas configurações do celular. Sem isso, os avisos de check-in e check-out não aparecem.</p>
+
+<div class="callout callout-info"><p><strong>Dica:</strong> os nomes dos menus mudam um pouco conforme o fabricante do celular e a versão do sistema. Se não encontrar um item, procure pelo nome dele na busca de configurações do aparelho.</p></div>
+
+<h2 id="como-conferir">Como conferir se está pronto</h2>
+<ol class="steps">
+<li>Abra o menu (ícone de três traços no canto superior esquerdo) e toque em <span class="ui">Preferências</span>, no rodapé do menu.</li>
+<li>Veja a seção <span class="ui">Check-in automático</span>. A chave <span class="ui">Check-in/out passivo</span> só aparece ligada quando a opção está salva e as permissões estão prontas.</li>
+<li>Se aparecer o link <span class="ui">Falta permissão — ver o que precisa</span>, toque nele para abrir a tela <span class="ui">Permissões de localização</span>.</li>
+<li>Confira a lista. Cada item mostra <span class="ui">OK</span> ou <span class="ui">Falta</span>: <span class="ui">Localização precisa</span>, <span class="ui">Segundo plano</span>, <span class="ui">Bateria sem restrição</span> (no iPhone, <span class="ui">Atualização em segundo plano</span>) e, no Android 13 ou mais recente, <span class="ui">Alarmes e lembretes</span>, que mostra <span class="ui">Opcional</span> quando não está permitido. Quando tudo está certo, aparece o aviso <span class="ui">Tudo certo</span>.</li>
+</ol>
+
+<h3>Ligar pela primeira vez</h3>
+<p>Se você ligar a opção em Preferências sem as permissões prontas, a mudança não é salva. O app leva você para a tela <span class="ui">Permissões de localização</span>. Quando todos os itens ficam OK, e você chegou a essa tela pela própria opção, o check-in automático é ligado sozinho e aparece o aviso <em>“Check-in passivo ativado”</em>.</p>
+<p>Depois de ajustar algo nas configurações do celular, volte ao NoraCare. A tela confere de novo sozinha. Quando um item está em Falta, o botão <span class="ui">Corrigir</span> aparece embaixo dele e tenta abrir o pedido de permissão ou a configuração certa.</p>
+
+<h2 id="avisos-do-app">Avisos que o app mostra</h2>
+
+<h3>Na tela inicial</h3>
+<table>
+<thead><tr><th>Aviso</th><th>Quando aparece</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td><em>Permissões pendentes - toque para ajustar</em>, faixa no topo</td><td>Quando você tem uma escala com check-in automático e falta alguma permissão.</td><td>Toque na faixa para abrir a tela de permissões. O X fecha a faixa, mas ela volta quando você reabre o app ou volta para a tela inicial.</td></tr>
+<tr><td><em>Libere sua localização o tempo todo</em>, cartão com a explicação do que falta</td><td>Quando a opção está ligada em Preferências e falta permissão.</td><td>Toque em <span class="ui">Ver permissões</span>. Se o celular ainda puder perguntar, também aparece <span class="ui">Permitir</span>.</td></tr>
+</tbody>
+</table>
+
+<h3>Em Preferências e na tela de permissões</h3>
+<table>
+<thead><tr><th>Aviso</th><th>Quando aparece</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td><em>Falta permissão — ver o que precisa</em>, link logo abaixo da chave</td><td>Quando a opção está salva, mas falta permissão.</td><td>Toque para abrir a tela de permissões.</td></tr>
+<tr><td><em>Não foi possível atualizar o check-in passivo.</em></td><td>Quando o app não consegue salvar a mudança.</td><td>Tente de novo. Se continuar, fale com a gente pela página de <a href="/contato">contato</a>.</td></tr>
+<tr><td><em>Check-in passivo ativado</em></td><td>Quando a opção é ligada sozinha, depois que as permissões ficam prontas.</td><td>Nada. O check-in automático já está ligado.</td></tr>
+<tr><td><em>Não conseguimos confirmar pelo app: confira se o NoraCARE pode rodar em segundo plano.</em>, no item de bateria ou de atualização em segundo plano (Android e iPhone), e <em>Não conseguimos confirmar “Localização Exata” pelo app: confira em Ajustes › NoraCARE › Localização.</em>, no item de localização (iPhone)</td><td>Quando o item aparece como OK, mas o app não consegue confirmar a configuração.</td><td>Confira a configuração no próprio celular, como nos passos acima. Essa mensagem costuma aparecer em versões antigas do app: atualize o NoraCARE pela loja.</td></tr>
+<tr><td><em>Atualize o aplicativo pela loja para usar os alarmes silenciosos.</em></td><td>No item Alarmes e lembretes, quando o app instalado não tem esse recurso.</td><td>Atualize o NoraCARE pela loja do celular.</td></tr>
+</tbody>
+</table>
+
+<h3>Durante o plantão</h3>
+<table>
+<thead><tr><th>Aviso</th><th>Quando aparece</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><em>Check-in automático realizado — nome da escala</em></td><td>Com o app aberto, quando a entrada é registrada.</td><td>Seu check-in foi feito. Nada a fazer.</td></tr>
+<tr><td>Faixa no topo: <span class="ui">Em plantão</span> · local, com o botão <span class="ui">Check-out</span></td><td>Enquanto há um check-in aberto, em todas as telas do app.</td><td>O plantão está em andamento. O botão leva à tela de check-out.</td></tr>
+<tr><td>Faixa no topo: <span class="ui">Check-out pendente</span> · local</td><td>Quando passa o prazo normal do check-out sem que ele tenha sido registrado.</td><td>Toque em <span class="ui">Check-out</span> para registrar a saída. Veja <a href="/help/check-in-e-check-out">Check-in e check-out</a>.</td></tr>
+</tbody>
+</table>
+<p>Se houver mais de um check-in aberto ao mesmo tempo, a faixa vira um carrossel: deslize para o lado para ver cada plantão. As bolinhas embaixo mostram qual está na tela.</p>
+
+<h3>Notificações</h3>
+<table>
+<thead><tr><th>Notificação</th><th>Quando chega</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td><em>Check-in do plantão</em>: “Seu plantão começou. Toque para registrar o check-in passivo.”</td><td>Alguns minutos depois do início previsto, se o check-in ainda não tiver sido registrado.</td><td>Toque no aviso. Ele abre a tela <span class="ui">Check-in/out</span>, onde você registra o check-in.</td></tr>
+<tr><td><em>Check-out do plantão</em>: “Seu plantão terminou. Toque para registrar o check-out passivo.”</td><td>Alguns minutos depois do fim previsto. Só chega se a saída ainda não tiver sido registrada.</td><td>Toque no aviso e registre a saída na tela <span class="ui">Check-in/out</span>.</td></tr>
+<tr><td><em>Check-in efetuado</em> (“Tenha um bom dia de trabalho.”) ou <em>Check-out efetuado</em> (“Obrigado e bom descanso.”)</td><td>Quando o registro automático é confirmado.</td><td>Nada. O registro está salvo.</td></tr>
+<tr><td><em>NoraCare acompanhando o plantão</em>, notificação fixa no Android</td><td>Perto do horário do plantão, enquanto o app acompanha sua localização para o check-in automático. No iPhone, aparece o indicador de localização em uso na parte de cima da tela.</td><td>É normal. A notificação some quando o acompanhamento termina.</td></tr>
+</tbody>
+</table>
+
+<h2 id="como-resolver">Como resolver</h2>
+
+<h3>O registro não aconteceu</h3>
+<ul>
+<li>Confira se a opção <span class="ui">Check-in/out passivo</span> está ligada e se a tela de permissões mostra <span class="ui">Tudo certo</span>.</li>
+<li>Confirme com a gestão se o plantão está em uma escala com check-in automático. Se não estiver, o registro precisa ser manual.</li>
+<li>Se o plantão está numa escala com check-in automático e tudo está pronto, fale com a gestão da sua instituição. Ela pode conferir a configuração da escala e do local.</li>
+<li>Se precisar, registre pela tela <span class="ui">Check-in/out</span>. Veja <a href="/help/check-in-e-check-out">Check-in e check-out</a>.</li>
+</ul>
+
+<h3>Os avisos não aparecem</h3>
+<ul>
+<li>Confira se as notificações do NoraCare estão permitidas nas configurações do celular.</li>
+<li>No Android, confira se o aviso <span class="ui">Check-in do plantão</span> não foi desligado nas configurações de notificação do NoraCARE.</li>
+<li>Os avisos de check-in e check-out só existem para plantões em escalas com check-in automático e com a opção ligada.</li>
+</ul>
+
+<h3>Estou sem internet</h3>
+<p>O registro fica guardado no celular e é enviado quando a conexão volta. Registros muito antigos que ainda não chegaram são descartados. Nesse caso, faça o registro manualmente ou peça a revisão do horário.</p>
+
+<h3>O celular limita o NoraCare</h3>
+<p>Alguns celulares restringem apps em segundo plano para economizar bateria. Quando isso acontece, o registro automático pode não acontecer. Confira a seção <a href="#permissoes-do-celular">O que o celular precisa</a> e mantenha as configurações de bateria indicadas. Se mesmo assim não funcionar, use o registro manual.</p>
+
+<h3>O horário ficou errado</h3>
+<p>Se o horário registrado não estiver certo, peça revisão em <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</p>
+
+<h3>Quero parar de usar</h3>
+<p>Em <span class="ui">Preferências</span>, desligue <span class="ui">Check-in/out passivo</span>. O registro automático para, mas você continua podendo fazer o check-in e o check-out manualmente.</p>
+
+<div class="callout callout-tip"><p><strong>Dica:</strong> se nada resolver, toque em <span class="ui">Relatar um problema</span>, no fim da tela <span class="ui">Preferências</span>, no aplicativo do celular. Ele abre um formulário para você descrever o que aconteceu.</p></div>
+
+<h2 id="quem-ve-o-que">Quem vê o quê</h2>
+<ul>
+<li><strong>Você</strong> vê a opção em Preferências, os avisos desta página e um selo em cada horário registrado. Os selos mais comuns são: <span class="ui">Passivo</span> (feito automaticamente), <span class="ui">Manual</span> (feito por você no app) e <span class="ui">Gestor</span> (feito pela gestão).</li>
+<li><strong>A gestão</strong> liga o <span class="ui">Check-in/out passivo</span> em cada escala. A opção só aparece para escalas que exigem check-in e não funciona junto com a verificação biométrica.</li>
+<li><strong>A gestão</strong> também vê, no cadastro do profissional, um resumo do aparelho para dar suporte: se o celular está pronto, há quanto tempo foi a última posição conhecida e a precisão dela, e um histórico recente desse resumo. Nessa tela não aparece o ponto exato onde você estava.</li>
+</ul>
+<p>O app envia esse resumo automaticamente, sem nenhuma ação sua. A última posição só entra no resumo quando o Check-in/out passivo está ligado e as permissões estão prontas.</p>
+
+<div class="callout callout-info"><p><strong>Privacidade:</strong> a localização é usada para confirmar o registro dentro da área do local, perto do horário do plantão. O resumo para a gestão mostra só quando a última posição foi feita e com que precisão, não o lugar exato. Para ver como seus dados são tratados, leia a <a href="/privacidade-app">privacidade do app</a>.</p></div>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/app-no-celular">App no celular: instalação, permissões e atualizações</a></li>
+<li><a href="/help/check-in-e-check-out">Check-in e check-out</a></li>
+<li><a href="/help/perfil-e-preferencias">Perfil, preferências e sugestões</a></li>
+<li><a href="/help/notificacoes-do-app">Notificações no app</a></li>
+<li><a href="/help/revisao-de-horario">Pedir revisão de horário</a></li>
+</ul>

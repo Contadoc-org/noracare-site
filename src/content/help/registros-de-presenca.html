@@ -1,0 +1,234 @@
+<p class="lead">Nesta área você acompanha as entradas e saídas registradas pelos profissionais, decide os pedidos de revisão de horário e, quando preciso, corrige um horário. Toda decisão e toda alteração fica registrada no histórico.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+
+<h2 id="o-que-voce-encontra">O que você encontra aqui</h2>
+<p>No <a href="https://app.noracare.com.br">painel web do NoraCare</a>, o menu <span class="ui">Registros de presença</span> tem duas opções:</p>
+<ul>
+<li><strong>Registros</strong> (<span class="ui">Registros de presença › Registros</span>): a lista de todas as entradas e saídas registradas, junto com os pedidos de revisão. Aqui você filtra, abre cada registro e consulta o histórico dele.</li>
+<li><strong>Revisões</strong> (<span class="ui">Registros de presença › Revisões</span>): os pedidos de revisão de horário, separados em pendentes e revisados.</li>
+</ul>
+<p>Quando um profissional acha que o horário registrado não está certo, ele pede uma revisão pelo app. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>. Na tela de revisões, esse pedido aparece como <em>revisão de permanência</em>.</p>
+
+<h2 id="quem-ve-o-que">Quem vê o quê</h2>
+<p>O que aparece para você depende do seu perfil e de uma permissão específica.</p>
+<table>
+<thead><tr><th>Perfil</th><th>Vê as opções do menu</th><th>Conclui revisões</th><th>Ajusta horários</th></tr></thead>
+<tbody>
+<tr><td>Master</td><td>Sim, as duas</td><td>Sim, de todas as escalas</td><td>Sim, de todas as escalas</td></tr>
+<tr><td>Gestor interno</td><td>Sim, as duas, se tiver a permissão (ela vem ligada por padrão)</td><td>Sim, de todas as escalas</td><td>Sim, de todas as escalas</td></tr>
+<tr><td>Coordenador</td><td>Sim, as duas, se tiver a permissão (ela vem ligada por padrão)</td><td>Só das escalas que coordena</td><td>Só das escalas que coordena</td></tr>
+<tr><td>Visualizador</td><td>Não, por padrão</td><td>Não</td><td>Não</td></tr>
+</tbody>
+</table>
+<p>Dentro desse menu, o Visualizador, se receber a permissão, vê apenas <span class="ui">Revisões</span>, e só para consulta: não aparece o botão <span class="ui">Revisar</span>. A opção <span class="ui">Registros</span> não fica disponível para ele.</p>
+
+<div class="callout callout-info"><p><strong>Permissão:</strong> as duas opções do menu dependem da permissão <span class="ui">Aprovar justificativa de horário</span>. Quem administra as permissões pode ligá-la ou desligá-la para cada perfil. Veja <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</p></div>
+
+<p>O coordenador enxerga só os registros e as revisões das escalas que coordena. Registros de outras escalas não aparecem para ele.</p>
+
+<h2 id="registros">Registros: entradas, saídas e pedidos</h2>
+<p>Abra <span class="ui">Registros de presença › Registros</span>. A tela tem o título <em>Registros</em>, os filtros no topo e a lista logo abaixo.</p>
+
+<h3 id="filtros">Filtros</h3>
+<ul>
+<li><span class="ui">Status</span>: mostra só os registros de um status. A opção padrão é <span class="ui">Todos os status</span>.</li>
+<li><span class="ui">Profissional</span>: mostra só os registros de uma pessoa. A opção padrão é <span class="ui">Todos os profissionais</span>.</li>
+<li><span class="ui">De</span> e <span class="ui">Até</span>: filtram pela data em que cada registro começou (a entrada, ou o início pedido na revisão). Ao escolher a data em <span class="ui">De</span>, o calendário de <span class="ui">Até</span> abre sozinho. Para apagar uma data, clique no ícone de X que aparece ao lado dela.</li>
+<li><span class="ui">Escalas</span>: abra o seletor e marque as escalas que quer ver. Com mais de uma marcada, aparecem os registros de todas elas. Ao lado do título há um botão de opções. A opção <span class="ui">Inativos</span> mostra também as escalas inativas no seletor, que ficam escondidas por padrão.</li>
+</ul>
+
+<h3 id="status-dos-registros">Status dos registros</h3>
+<p>Cada registro tem um status:</p>
+<table>
+<thead><tr><th>Status</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Em aberto</span></td><td>A entrada foi registrada e a saída ainda não.</td></tr>
+<tr><td><span class="ui">Concluído</span></td><td>Entrada e saída foram registradas.</td></tr>
+<tr><td><span class="ui">Fechado automático — revisar</span></td><td>O sistema registrou a saída sozinho. Confira esse horário. Veja <a href="/help/registros-de-presenca#fechamento-automatico">Fechamento automático da saída</a>.</td></tr>
+<tr><td><span class="ui">Solicitado</span></td><td>Pedido de revisão que ainda não foi decidido.</td></tr>
+<tr><td><span class="ui">Revisado</span></td><td>Pedido de revisão já decidido.</td></tr>
+</tbody>
+</table>
+
+<h3 id="como-ler-a-lista">Como ler a lista</h3>
+<p>Os registros mais recentes aparecem primeiro. Em telas largas, a lista é uma tabela. Em telas menores, cada registro vira um cartão. As colunas são:</p>
+<ul>
+<li><span class="ui">Solicitado em</span>: data e hora do registro. Em uma revisão, é quando o pedido foi feito. Em um check-in, é a hora da entrada.</li>
+<li><span class="ui">Profissional</span> e <span class="ui">Rede &gt; Local &gt; Setor &gt; Escala</span>: quem é e em qual escala está o plantão.</li>
+<li><span class="ui">Entrada &gt; Saída</span>: a data, a hora e a forma de cada um dos dois horários.</li>
+<li><span class="ui">Tipo</span>: <em>Registro de check-in/out</em> ou <em>Revisão de permanência</em>.</li>
+<li><span class="ui">Tipo de check-in</span>: a forma como a entrada foi registrada (veja a próxima seção). Nas revisões, aparece um traço.</li>
+<li><span class="ui">Situação</span>: o status do registro.</li>
+</ul>
+
+<h3 id="formas-de-registro">Formas de registro</h3>
+<p>Cada horário mostra como foi registrado:</p>
+<table>
+<thead><tr><th>Forma</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><strong>Manual</strong></td><td>O profissional registrou o horário no app, tocando no botão de check-in ou de check-out.</td></tr>
+<tr><td><strong>Passivo</strong></td><td>O app registrou o horário sozinho, sem o profissional tocar no botão. Por exemplo, quando a localização mostra a entrada ou a saída dentro da área definida para o local. Veja <a href="/help/check-in-automatico">Check-in automático</a>.</td></tr>
+<tr><td><strong>Gestor</strong></td><td>Um gestor ajustou o horário.</td></tr>
+<tr><td><strong>Automático</strong></td><td>O sistema fechou a saída porque ela não foi registrada no prazo. Essa forma aparece só na saída.</td></tr>
+</tbody>
+</table>
+
+<h3 id="paginas-e-lista-vazia">Páginas e lista vazia</h3>
+<p>Quando a lista tem mais de uma página, use os botões de página no fim da lista. Se nenhum registro bater com os filtros, aparece a mensagem <em>Nenhum registro encontrado com os filtros selecionados.</em> Nesse caso, mude os filtros ou o período.</p>
+
+<h3 id="abrir-um-registro">Abrir um registro de check-in/out</h3>
+<p>A janela se chama <em>Detalhes do Check-in/out</em>. Ela mostra o local, o status e a forma de cada horário, além do <span class="ui">Histórico de alterações</span>.</p>
+<ol class="steps">
+<li>Clique no registro na lista.</li>
+<li>Para corrigir, altere os campos <span class="ui">Entrada proposta</span> e <span class="ui">Saída proposta</span>. Depois do nome, cada campo mostra a forma daquele horário, por exemplo <em>Entrada proposta · Manual</em>. Digite só os números: os dois pontos aparecem sozinhos. Por exemplo, 0800 vira 08:00.</li>
+<li>Clique em <span class="ui">Salvar horários</span>.</li>
+<li>Veja a mensagem <em>Horários atualizados. A alteração foi registrada no histórico.</em></li>
+</ol>
+
+<p>Para fechar a janela sem salvar, clique no X no canto superior direito.</p>
+
+<div class="callout callout-warn"><p><strong>Atenção:</strong> ao salvar, só o horário muda. A data continua a mesma do registro. A saída precisa ser depois da entrada. Se não for, o sistema recusa a alteração.</p></div>
+
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se o registro estiver como <em>Fechado automático — revisar</em>, salvar tira essa marcação. O status passa a <em>Concluído</em>, mesmo que o horário seja o mesmo. Confira antes de salvar.</p></div>
+
+<div class="callout callout-info"><p>Se o registro ainda estiver <em>Em aberto</em>, a saída fica em branco e você pode salvar só a entrada. Depois de salvar, o botão <span class="ui">Salvar horários</span> some enquanto a janela estiver aberta. Para fazer outro ajuste no mesmo registro, feche a janela e abra o registro de novo.</p></div>
+
+<h2 id="revisoes">Revisões de permanência</h2>
+<p>Abra <span class="ui">Registros de presença › Revisões</span>. A tela se chama <em>Revisões de permanência</em> e tem duas abas: <span class="ui">Pendente</span> e <span class="ui">Revisada</span>.</p>
+
+<h3 id="abas-e-avisos">Abas e avisos</h3>
+<ul>
+<li><span class="ui">Pendente</span>: pedidos esperando decisão. Quando há pedidos, aparece ao lado do título um aviso amarelo com a quantidade, como <em>3 pendentes</em>.</li>
+<li><span class="ui">Revisada</span>: pedidos já decididos. Cada cartão mostra também o horário <em>Aprovado</em>.</li>
+</ul>
+<p>O seletor de escalas funciona como na tela de Registros: marque as escalas para filtrar as revisões.</p>
+<p>Quando não há nada para mostrar, a aba Pendente diz <em>Nenhuma revisão pendente</em>, com a frase <em>Todas as revisões foram processadas</em>. Na aba Revisada, a tela diz <em>Nenhuma revisão encontrada</em>. Se a lista não carregar, aparece <em>Erro ao carregar revisões</em>, com o botão <span class="ui">Tentar novamente</span>.</p>
+<p>Quando a lista tem mais de uma página, use os botões de página no fim dela.</p>
+
+<h3 id="como-ler-um-pedido">Como ler um pedido</h3>
+<p>Cada pedido mostra:</p>
+<ul>
+<li>o nome do profissional e o status: <em>Pendente</em> ou <em>Revisada</em>;</li>
+<li>o link <span class="ui">Plantão</span>, com a data do plantão. Clique nele para abrir os detalhes do plantão;</li>
+<li>o caminho do plantão: Rede › Local › Setor › Escala;</li>
+<li>uma tabela de horários com estas linhas:
+<ul>
+<li><strong>Previsto</strong>: o horário planejado na escala.</li>
+<li><strong>Realizado</strong>: o horário que o check-in e o check-out registraram.</li>
+<li><strong>Solicitado</strong>: o horário que o profissional pediu.</li>
+<li><strong>Aprovado</strong>: o horário que ficou valendo. Só aparece nas revisões já decididas.</li>
+</ul>
+</li>
+<li>as colunas <span class="ui">ENTRADA</span>, <span class="ui">SAÍDA</span>, <span class="ui">DURAÇÃO</span> e <span class="ui">DIFERENÇA</span> (em telas menores, <span class="ui">DIF.</span>). A diferença mostra quanto a linha tem a mais (em verde, com sinal de mais) ou a menos (em vermelho, com sinal de menos) em relação à linha anterior preenchida. Por exemplo, <em>+01h30</em>;</li>
+<li>a caixa <span class="ui">JUSTIFICATIVA DO PROFISSIONAL</span>, com o motivo escrito pelo profissional e a data entre parênteses. Se não houver, aparece <em>Nenhuma justificativa fornecida</em>;</li>
+<li>o link <span class="ui">Ver histórico</span>, que mostra o que já foi feito no pedido.</li>
+</ul>
+<p>Quando um horário cai em outro dia, a data aparece junto da hora. Por exemplo, <em>07:00 · 10/10</em>.</p>
+
+<h3 id="concluir-uma-revisao">Concluir uma revisão</h3>
+<p>Na aba <span class="ui">Pendente</span>, clique em <span class="ui">Revisar</span>. Abre a janela <em>Revisar solicitação</em>.</p>
+<ol class="steps">
+<li>Confira os horários e a justificativa do profissional.</li>
+<li>Confira as datas de <span class="ui">ENTRADA *</span> e <span class="ui">SAÍDA *</span>. Elas já vêm com as datas pedidas. Os campos com * são obrigatórios.</li>
+<li>Digite o horário de entrada e o de saída, no formato HH:mm. Os dois campos de horário começam <strong>em branco</strong>, mesmo quando você vai aceitar o pedido.</li>
+<li>Se quiser, escreva uma observação no campo <em>Observação (opcional)...</em>. Ela aparece como <span class="ui">OBSERVAÇÕES DO COORDENADOR</span>.</li>
+<li>Clique em <span class="ui">Marcar como revisada</span>.</li>
+<li>Veja a mensagem <em>Revisão de permanência concluída com os horários exibidos.</em> O pedido sai da aba Pendente e passa para a aba Revisada.</li>
+</ol>
+
+<div class="callout callout-info"><p>Os horários digitados são a decisão. Se forem iguais aos pedidos, vale o horário pedido. Se forem diferentes, vale o que você digitou. Mudar a data também conta como ajuste. Nesse caso, o histórico registra <em>Revisão de permanência concluída com ajuste</em>.</p></div>
+
+<div class="callout callout-info"><p>Concluir a revisão não altera os registros de check-in e check-out. Ela define o horário aprovado do plantão.</p></div>
+
+<div class="callout callout-warn"><p>Não existe botão para recusar um pedido. Toda revisão concluída fica como <em>Revisada</em>. Se o horário pedido não procede, digite o horário que você considera correto e explique isso na observação.</p></div>
+
+<p>Se algum campo estiver vazio, aparece a mensagem <em>Preencha as datas e os horários de entrada e saída</em>. Se o horário digitado não for válido, aparece <em>Informe horários válidos</em>. Se o sistema não conseguir concluir, aparece um aviso, e o pedido continua pendente com a janela aberta. Para sair sem decidir, clique em <span class="ui">Cancelar</span>. Nada é salvo.</p>
+
+<h3 id="alerta-de-permanencia-menor">Alerta de permanência menor</h3>
+<p>Se os horários que você vai aprovar derem menos tempo do que o check-in e o check-out registraram, o sistema pede confirmação antes de concluir. Aparece a janela <em>Permanência menor que a comprovada</em>, com as duas durações. Clique em <span class="ui">Rever horários</span> para voltar, ou em <span class="ui">Concluir mesmo assim</span> para seguir com a decisão.</p>
+<p>Esse alerta só aparece quando há check-in e check-out registrados. Ele existe porque o registro é a prova do que aconteceu. Aprovar um tempo menor é permitido, mas precisa ser uma decisão consciente.</p>
+
+<h3 id="revisoes-na-tela-de-registros">Revisões na tela Registros</h3>
+<p>Os pedidos de revisão também aparecem na lista de <span class="ui">Registros</span>, com o tipo <em>Revisão de permanência</em>. Ao abrir um deles, a janela mostra o mesmo conteúdo e o botão <span class="ui">Concluir revisão</span>. Nela, o status aparece como <em>Revisão pendente</em>, ou como <em>Revisado</em> quando a revisão já foi decidida.</p>
+<p>Os campos de horário também começam em branco. Digite a entrada e a saída antes de concluir. Se faltar algum horário, aparece <em>Informe horários válidos</em>. Em um pedido já revisado, a janela só mostra a consulta.</p>
+<p>Enquanto o pedido estiver pendente, a janela também tem o campo de observação, como na tela de Revisões. O link <span class="ui">Plantão</span> abre os detalhes do plantão.</p>
+
+<h3 id="historico-do-pedido">Histórico do pedido</h3>
+<p>No cartão da aba Pendente ou Revisada, clique em <span class="ui">Ver histórico</span>. Na janela de revisão e na tela Registros, o histórico já aparece na parte de baixo. Ele lista as ações feitas no pedido, e cada uma mostra quem fez e a data e a hora.</p>
+<table>
+<thead><tr><th>Ação no histórico</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><em>Solicitação de revisão criada</em></td><td>O profissional pediu a revisão.</td></tr>
+<tr><td><em>Revisão de permanência concluída</em></td><td>A revisão foi concluída com os horários pedidos.</td></tr>
+<tr><td><em>Revisão de permanência concluída com ajuste</em></td><td>A revisão foi concluída com horários diferentes dos pedidos.</td></tr>
+</tbody>
+</table>
+<p>Quando o nome de quem fez a ação não está disponível, aparece <em>Responsável não identificado</em>. Na tela Registros, se o pedido ou o registro não tiver nenhuma ação, aparece <em>Sem histórico registrado.</em></p>
+
+<h2 id="ajuste-manual">Ajuste manual de horários</h2>
+<p>Você pode corrigir diretamente os horários de um plantão. Isso serve, por exemplo, para um plantão que nunca teve registro pelo app. Há dois lugares para fazer isso:</p>
+<ul>
+<li><strong>Em <span class="ui">Registros</span></strong>: abra um registro de check-in/out e altere os horários, como descrito em <a href="/help/registros-de-presenca#abrir-um-registro">Abrir um registro de check-in/out</a>. Vale para registros que já existem.</li>
+<li><strong>Em <span class="ui">Escalas › Lista</span></strong>: a tabela mostra as colunas <span class="ui">Check-in</span> e <span class="ui">Check-out</span> de cada plantão do mês. Altere o horário direto na tabela e clique em <span class="ui">Salvar</span>. O botão só fica ativo depois de você mudar um horário. O coordenador também pode fazer isso, mas só nas escalas que coordena. A mensagem <em>Check-in/out atualizado com sucesso.</em> confirma a alteração. Para abrir essa lista, é preciso a permissão <span class="ui">Visualizar dados (calendário, escalas)</span>. Quem tem essa permissão abre a lista, mas só Master, Gestor interno e Coordenador podem alterar os horários; o Visualizador apenas consulta. Veja <a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a>.</li>
+</ul>
+
+<h3 id="criar-o-registro-que-faltava">Criar um registro que faltava</h3>
+<p>Se o plantão não tem nenhum registro de check-in e check-out, a tabela de <span class="ui">Escalas › Lista</span> permite criar esse registro. Para a criação, valem estas regras:</p>
+<ul>
+<li>só Master e Gestor interno podem criar o registro. O coordenador corrige registros que já existem, mas não cria um novo. Se ele salvar um horário em um plantão sem registro, aparece a mensagem <em>Plantão sem registro de check-in/out: peça a criação à gestão</em>;</li>
+<li>é obrigatório informar a entrada;</li>
+<li>o plantão precisa ter um profissional alocado, porque o registro fica no nome dele;</li>
+<li>o mês do plantão já precisa estar publicado.</li>
+</ul>
+<p>O registro criado aparece em <span class="ui">Registros</span>, com o histórico <em>Inclusão manual de horários de check-in/out</em>.</p>
+
+<div class="callout callout-warn"><p>O ajuste muda o horário registrado. Confira antes de salvar. A observação só existe nas revisões. Quando o ajuste nasce de um pedido do profissional, conclua a revisão com uma observação, em vez de só alterar o horário.</p></div>
+
+<div class="callout callout-info"><p>Se o plantão já estiver pago, o valor pago é mantido. A mudança de horário não cria débito, reembolso nem dívida. Ela só fica registrada no histórico.</p></div>
+
+<h2 id="fechamento-automatico">Fechamento automático da saída</h2>
+<p>Quando um profissional faz o check-in e não faz o check-out, o registro fica <em>Em aberto</em>. Se a saída não for registrada algumas horas depois do fim previsto do plantão, o sistema fecha o registro sozinho:</p>
+<ul>
+<li>a saída fica com o horário previsto para o fim do plantão;</li>
+<li>o status passa a <em>Fechado automático — revisar</em>;</li>
+<li>o histórico registra <em>Check-out automático (2h sem conclusão)</em>.</li>
+</ul>
+
+<h3 id="o-que-fazer-com-o-fechamento">O que fazer</h3>
+<ol class="steps">
+<li>Filtre por <span class="ui">Status</span> e escolha <em>Fechado automático — revisar</em> para ver todos esses registros.</li>
+<li>Abra o registro e confira a saída. Se precisar, confirme o horário com o profissional.</li>
+<li>Se o horário estiver errado, digite a saída correta e clique em <span class="ui">Salvar horários</span>.</li>
+<li>Se o horário estiver certo, salve assim mesmo. O registro deixa de estar marcado como fechado automático e passa a <em>Concluído</em>.</li>
+</ol>
+
+<div class="callout callout-tip"><p>Enquanto o registro estiver <em>Em aberto</em>, a saída fica em branco. Ela aparece quando o profissional faz o check-out ou quando o sistema fecha o registro.</p></div>
+
+<h2 id="o-que-fica-no-historico">O que fica no histórico</h2>
+<p>Toda alteração feita por um gestor e toda decisão de revisão ficam registradas. Abra o registro ou o pedido e veja a seção <span class="ui">Histórico de alterações</span>. Cada linha mostra a ação, quem fez e a data e a hora.</p>
+
+<h3 id="historico-dos-registros">Nos registros de check-in/out</h3>
+<table>
+<thead><tr><th>Ação no histórico</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td><em>Check-in realizado</em></td><td>O profissional registrou a entrada.</td></tr>
+<tr><td><em>Check-out realizado</em></td><td>O profissional registrou a saída.</td></tr>
+<tr><td><em>Check-out automático (2h sem conclusão)</em></td><td>O sistema fechou a saída. Veja <a href="/help/registros-de-presenca#fechamento-automatico">Fechamento automático da saída</a>.</td></tr>
+<tr><td><em>Edição direta de horários de check-in/out</em></td><td>Um gestor alterou horários que já existiam.</td></tr>
+<tr><td><em>Inclusão manual de horários de check-in/out</em></td><td>Um gestor criou o registro que faltava.</td></tr>
+</tbody>
+</table>
+
+<h3 id="historico-das-revisoes">Nos pedidos de revisão</h3>
+<p>As ações de um pedido estão listadas em <a href="/help/registros-de-presenca#historico-do-pedido">Histórico do pedido</a>.</p>
+
+<p>Para ver as ações de todo o painel em uma só tela, veja <a href="/help/auditoria-e-notificacoes">Auditoria e notificações do painel</a>.</p>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/revisao-de-horario">Pedir revisão de horário</a>: como o profissional pede uma revisão pelo app.</li>
+<li><a href="/help/check-in-e-check-out">Check-in e check-out</a>: como o profissional registra entrada e saída.</li>
+<li><a href="/help/check-in-automatico">Check-in automático</a>: os registros feitos pelo app sem toque no botão.</li>
+<li><a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a>: onde ajustar check-in e check-out na tabela.</li>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>: quem vê e decide o quê.</li>
+</ul>
