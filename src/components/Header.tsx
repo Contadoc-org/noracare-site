@@ -130,7 +130,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Entrar no app
+                Entrar no painel
               </Button>
               <Button href="/contato" variant="primary" size="lg" onClick={() => setOpen(false)}>
                 Falar com vendas

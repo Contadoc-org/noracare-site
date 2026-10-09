@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DownloadApp } from "@/components/DownloadApp";
 import { CTA } from "@/components/sections/CTA";
 import {
   featureIcons,
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
 
 const modules = [
   {
-    title: "Admin web",
+    title: "Painel de gestão",
+    access: "Navegador",
     icon: IconChart,
     items: [
       "Gestão de redes, unidades, setores e escalas",
@@ -42,6 +44,7 @@ const modules = [
   },
   {
     title: "App do profissional",
+    access: "Android e iOS",
     icon: IconDevice,
     featured: true,
     items: [
@@ -70,7 +73,9 @@ export default function ProdutoPage() {
         eyebrow="Produto"
         title="Uma suíte operacional para a jornada completa do plantão"
         description="O NoraCare conecta gestão, coordenação e profissionais em fluxos auditáveis — da montagem da escala ao fechamento financeiro."
-      />
+      >
+        <DownloadApp />
+      </PageHero>
 
       <section className="surface-light section-pad">
         <Container>
@@ -117,7 +122,8 @@ export default function ProdutoPage() {
         <Container>
           <SectionHeading
             eyebrow="Superfícies"
-            title="Admin, app e compliance no mesmo produto"
+            title="Navegador, app e compliance no mesmo produto"
+            description="A gestão usa o painel no navegador e também pode usar o app. Os profissionais usam só o app, no Android ou no iOS."
           />
           <div className="mt-14 grid gap-5 sm:mt-16 lg:grid-cols-3 lg:items-stretch">
             {modules.map((mod) => {
@@ -130,9 +136,14 @@ export default function ProdutoPage() {
                 : "bg-[#e1f6f0] text-nc-teal";
               return (
                 <article key={mod.title} className={surface}>
-                  <span className="icon-tile-soft">
-                    <Icon className="h-5 w-5" />
-                  </span>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="icon-tile-soft">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    {mod.access ? (
+                      <span className="chip chip-blue">{mod.access}</span>
+                    ) : null}
+                  </div>
                   <h3 className="h-card mt-6">{mod.title}</h3>
                   <ul className="mt-6 space-y-3.5">
                     {mod.items.map((item) => (

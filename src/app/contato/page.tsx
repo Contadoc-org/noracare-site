@@ -3,9 +3,9 @@ import { ContactForm } from "@/components/ContactForm";
 import {
   IconArrowRight,
   IconChat,
-  IconDevice,
   IconExternal,
   IconMail,
+  IconMonitor,
 } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
@@ -92,10 +92,10 @@ export default function ContatoPage() {
 
               <li className={rowClass}>
                 <span className="icon-tile-soft">
-                  <IconDevice className="h-5 w-5" />
+                  <IconMonitor className="h-5 w-5" />
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className={termClass}>App</p>
+                  <p className={termClass}>Painel web</p>
                   <p className="mt-1">
                     <a
                       href={siteConfig.appUrl}
