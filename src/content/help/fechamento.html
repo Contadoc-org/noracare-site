@@ -244,7 +244,7 @@
 <tr><td><span class="ui">Pró-labore</span> e <span class="ui">Dividendo</span></td><td>Valores que a empresa paga ao sócio. Aparecem só na aba Sócios.</td></tr>
 <tr><td><span class="ui">Nota fiscal</span></td><td>Valor que o terceirizado recebe mediante nota fiscal. Aparece só na aba Terceirizados.</td></tr>
 <tr><td><span class="ui">Fonte pagadora</span></td><td>A empresa interna que paga a nota fiscal. Aparece só na aba Terceirizados.</td></tr>
-<tr><td><span class="ui">Nota anexada?</span></td><td><em>Sim</em> quando o profissional já anexou a nota fiscal do mês. Aparece só na aba Terceirizados.</td></tr>
+<tr><td><span class="ui">Nota anexada?</span></td><td><em>Sim</em> quando a nota fiscal do mês já está anexada. Aparece só na aba Terceirizados.</td></tr>
 </tbody>
 </table>
 <p>Em <span class="ui">Agrupar por</span>, escolha <span class="ui">Por empresa</span> ou <span class="ui">Por categoria</span>. Por empresa, cada grupo mostra o total. Os sócios aparecem sob a própria empresa, e os terceirizados, sob a fonte pagadora.</p>
@@ -253,12 +253,21 @@
 <h3>Terceirizados: nota fiscal e fonte pagadora</h3>
 <p>Para um terceirizado receber pela remessa do mês, três itens precisam estar em ordem:</p>
 <ol class="steps">
-<li><strong>Nota fiscal do mês anexada.</strong> A nota em PDF é do profissional e só pode ser enviada depois que termina o período financeiro de todas as escalas dele. A caixa da nota fica na tela <a href="/help/extratos-e-remuneracao">Extratos</a> dele, no app, mas o envio da nota fiscal pelo app ainda não está disponível. Enquanto a nota não estiver anexada, ele fica de fora da remessa bancária. Quando a nota está anexada, a coluna <span class="ui">Nota anexada?</span> mostra <em>Sim</em>, e o valor da coluna <span class="ui">Nota fiscal</span> vira um link: clique para baixar o PDF no painel web.</li>
+<li><strong>Nota fiscal do mês anexada.</strong> O profissional entrega a nota à gestão, e a gestão anexa o PDF nesta tela (veja <a href="#anexar-nota-fiscal">Anexar, trocar ou remover a nota fiscal</a>). Enquanto a nota não estiver anexada, ele fica de fora da remessa bancária. Quando a nota está anexada, a coluna <span class="ui">Nota anexada?</span> mostra <em>Sim</em>, e o valor da coluna <span class="ui">Nota fiscal</span> vira um link: clique para baixar o PDF.</li>
 <li><strong>Empresa externa completa.</strong> A empresa precisa ter razão social, CNPJ válido e uma conta bancária ou chave PIX cadastrada.</li>
 <li><strong>Fonte pagadora.</strong> É a empresa interna que vai pagar. Preencha no cadastro da empresa externa, em <span class="ui">Configurações › Empresas</span>, no campo <span class="ui">Fonte pagadora</span>. O campo que aparece no perfil do profissional não vale para a remessa.</li>
 </ol>
 <p>Quem não cumpre algum desses itens continua na listagem, mas fica de fora da remessa bancária e da planilha ContaAzul. Quando falta a fonte pagadora, a célula <span class="ui">Fonte pagadora</span> aparece em vermelho, com o texto <em>Sem fonte pagadora</em>. Quando falta a nota ou a conta da empresa, o aviso que aparece logo após o download informa o motivo.</p>
 <div class="callout callout-tip"><p><strong>Dica:</strong> se a fonte pagadora mudar depois que um terceirizado já entrou na remessa do mês, esse mês continua com a fonte da época. Quem só aparece na listagem segue a fonte atual.</p></div>
+
+<h3 id="anexar-nota-fiscal">Anexar, trocar ou remover a nota fiscal</h3>
+<p>Na aba <span class="ui">Terceirizados</span>, a coluna <span class="ui">Nota fiscal</span> de quem tem empresa externa mostra as ações da nota do mês escolhido. Só o perfil Master faz essas ações.</p>
+<ol class="steps">
+<li>Sem nota: clique em <span class="ui">Anexar</span> e escolha o arquivo em PDF (até 10 MB).</li>
+<li>Com nota: clique em <span class="ui">Trocar</span> para enviar outro PDF no lugar, ou em <span class="ui">Remover</span> e confirme para apagar a nota.</li>
+<li>Se o mês já tinha sido exportado, exporte de novo para o arquivo levar a mudança.</li>
+</ol>
+<p>Depois de anexada, a nota aparece como <em>recebida</em> no app do profissional. Quem anexou, trocou ou removeu fica registrado na <a href="/help/auditoria-e-notificacoes">Auditoria</a>.</p>
 
 <h3>Exportar pagamentos</h3>
 <p>Ao clicar em <span class="ui">Exportar pagamentos</span>, o botão mostra <em>Exportando…</em> e o arquivo da aba aberta é baixado. Ele traz, quando há pagamentos elegíveis:</p>
