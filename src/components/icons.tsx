@@ -174,6 +174,10 @@ export function IconDevice({ className = "h-5 w-5" }: IconProps) {
   return <Stroke className={className}><rect x="6.5" y="3" width="11" height="18" rx="2.5" /><path d="M10.5 18h3" /></Stroke>;
 }
 
+export function IconMonitor({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M9 20h6M12 16v4" /></Stroke>;
+}
+
 export function IconExternal({ className = "h-4 w-4" }: IconProps) {
   return <Stroke className={className}><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></Stroke>;
 }
@@ -184,6 +188,26 @@ export function IconClock({ className = "h-5 w-5" }: IconProps) {
 
 export function IconBook({ className = "h-5 w-5" }: IconProps) {
   return <Stroke className={className}><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v15H7.5A2.5 2.5 0 0 0 5 20.5v-15Z" /><path d="M5 20.5A2.5 2.5 0 0 1 7.5 18H19v3H7.5" /></Stroke>;
+}
+
+/* Logos das lojas: simplificados, preenchidos, sem imagem externa (bloco "Baixe o app"). */
+export function IconApple({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" />
+    </svg>
+  );
+}
+
+export function IconGooglePlay({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden>
+      <path fill="#00d7fe" d="M3.5 2.5v19L13 12z" />
+      <path fill="#00f076" d="M3.5 2.5 13 12l2.6-2.85z" />
+      <path fill="#ff3a44" d="M3.5 21.5 13 12l2.6 2.85z" />
+      <path fill="#ffbc00" d="M15.6 9.15 20.8 12l-5.2 2.85L13 12z" />
+    </svg>
+  );
 }
 
 export const featureIcons = {

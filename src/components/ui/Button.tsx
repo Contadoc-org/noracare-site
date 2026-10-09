@@ -42,6 +42,7 @@ type ButtonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  "aria-label"?: string;
 };
 
 export function Button({
@@ -55,6 +56,7 @@ export function Button({
   type = "button",
   disabled,
   onClick,
+  "aria-label": ariaLabel,
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`.trim();
 
@@ -65,6 +67,7 @@ export function Button({
         className={classes}
         target={target}
         rel={rel}
+        aria-label={ariaLabel}
         onClick={onClick as MouseEventHandler<HTMLAnchorElement> | undefined}
       >
         {children}
@@ -77,6 +80,7 @@ export function Button({
       type={type}
       className={classes}
       disabled={disabled}
+      aria-label={ariaLabel}
       onClick={onClick as MouseEventHandler<HTMLButtonElement> | undefined}
     >
       {children}

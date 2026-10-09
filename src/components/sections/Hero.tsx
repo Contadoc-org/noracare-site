@@ -1,3 +1,4 @@
+import { DownloadApp } from "@/components/DownloadApp";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { IconArrowRight, IconCheck } from "@/components/icons";
@@ -115,6 +116,8 @@ export function Hero() {
               </li>
             ))}
           </ul>
+
+          <DownloadApp className="mt-10" />
         </div>
 
         <div

@@ -9,6 +9,9 @@ export const siteConfig = {
   url: "https://site.noracare.com.br",
   host: "site.noracare.com.br",
   appUrl: "https://app.noracare.com.br",
+  /** Lojas do app em produção (bloco "Baixe o app"). */
+  appStoreUrl: "https://apps.apple.com/app/id6800445169",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.noracare.app",
   locale: "pt_BR",
   /** Contato único do site (mailto do formulário e links públicos). */
   email: "contato@contadoc.com.br",
@@ -87,17 +90,17 @@ export const personas = [
   {
     title: "Gestores e masters",
     description:
-      "Visão da rede inteira, governança de acessos, indicadores e compliance operacional.",
+      "Visão da rede inteira no painel do navegador, com governança de acessos, indicadores e compliance operacional. Pode usar também o app.",
   },
   {
     title: "Coordenadores",
     description:
-      "Operação diária das escalas, anúncios, trocas e revisão de ponto no escopo autorizado.",
+      "Operação diária das escalas, anúncios, trocas e revisão de ponto no escopo autorizado, no navegador ou no app.",
   },
   {
     title: "Profissionais de saúde",
     description:
-      "Plantões, check-in, oportunidades anunciadas, financeiro e preferências em um app moderno.",
+      "Plantões, check-in, oportunidades anunciadas, financeiro e preferências no app Android e iOS.",
   },
 ] as const;
 
@@ -125,6 +128,6 @@ export const steps = [
 export const stats = [
   { value: "100%", label: "Rastreabilidade de plantões" },
   { value: "4 níveis", label: "de acesso organizacional" },
-  { value: "Web + mobile", label: "para gestores e plantonistas" },
+  { value: "Híbrido", label: "navegador e app Android e iOS" },
   { value: "Auditoria", label: "em ações críticas" },
 ] as const;

@@ -66,7 +66,8 @@ export default function SobrePage() {
               ponto e remuneração.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-body">
-              O produto combina admin web e app mobile, com segurança,
+              O produto tem acesso híbrido: painel no navegador para a gestão e
+              app Android e iOS para os profissionais, com segurança,
               permissões hierárquicas e relatórios que fecham o ciclo entre
               operação e financeiro.
             </p>
@@ -90,7 +91,7 @@ export default function SobrePage() {
               <li className={specRow}>
                 <span className="text-sm text-muted-soft">Canais</span>
                 <strong className="font-semibold text-heading sm:text-right">
-                  Web admin + app
+                  Navegador + app Android e iOS
                 </strong>
               </li>
               <li className={specRow}>

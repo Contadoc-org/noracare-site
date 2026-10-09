@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { legalLinks, navLinks, siteConfig } from "@/lib/site";
 import { Container } from "@/components/ui/Container";
+import { DownloadApp } from "@/components/DownloadApp";
 
 const linkClass =
   "inline-flex min-h-11 items-center rounded text-sm text-white/70 transition hover:text-white sm:min-h-0 sm:py-1";
@@ -87,10 +88,14 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className={linkClass}
                 >
-                  Acessar o app
+                  Acessar o painel
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div className="col-span-2 sm:col-span-3 lg:col-span-4">
+            <DownloadApp />
           </div>
         </div>
 
