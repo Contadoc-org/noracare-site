@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { siteConfig } from "@/lib/site";
+import { appStores, homeDescription, homeTitle, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -20,10 +20,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    default: homeTitle,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: homeDescription,
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -31,28 +31,17 @@ export const metadata: Metadata = {
   keywords: [
     "NoraCare",
     "gestão de plantões",
-    "escala médica",
-    "check-in hospitalar",
-    "software para hospitais",
+    "escalas médicas",
+    "escalas hospitalares",
+    "check-in biométrico",
     "gestão de equipes de saúde",
-    "plantão médico",
-    "relatórios hospitalares",
+    "software para hospitais",
+    "relatórios financeiros hospitalares",
+    "trocas de plantão",
   ],
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
-  },
+  // Canonical e openGraph são por página (a home está em page.tsx): aqui vazariam para o 404.
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — ${siteConfig.tagline}`,
-    description: siteConfig.description,
   },
   robots: {
     index: true,
@@ -65,9 +54,14 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png" }],
+  appleWebApp: {
+    title: siteConfig.name,
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  other: {
+    "apple-itunes-app": `app-id=${appStores.appStoreId}`,
   },
   category: "healthcare",
 };
@@ -83,18 +77,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgId = `${siteConfig.url}/#organization`;
+  const sameAs = Object.values(siteConfig.social).filter(Boolean);
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
-    url: siteConfig.url,
-    description: siteConfig.description,
-    email: siteConfig.email,
-    telephone: siteConfig.phoneE164,
-    logo: `${siteConfig.url}/logo-mark.svg`,
-    sameAs: [
-      ...Object.values(siteConfig.social).filter(Boolean),
-      siteConfig.whatsappUrl,
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: siteConfig.name,
+        url: siteConfig.url,
+        description: siteConfig.description,
+        email: siteConfig.email,
+        telephone: siteConfig.phoneE164,
+        // PNG quadrado (512 px); só perfis oficiais, sem o WhatsApp (contato, não identidade).
+        logo: `${siteConfig.url}/icon.png`,
+        ...(sameAs.length ? { sameAs } : {}),
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteConfig.url}/#website`,
+        url: siteConfig.url,
+        name: siteConfig.name,
+        description: homeDescription,
+        inLanguage: "pt-BR",
+        publisher: { "@id": orgId },
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: siteConfig.name,
+        description: homeDescription,
+        url: siteConfig.appUrl,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, Android, iOS",
+        installUrl: [appStores.appStoreUrl, appStores.playStoreUrl],
+        sameAs: [appStores.appStoreUrl, appStores.playStoreUrl],
+        publisher: { "@id": orgId },
+      },
     ],
   };
 

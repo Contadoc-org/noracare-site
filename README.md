@@ -53,8 +53,8 @@ Edite `src/lib/site.ts`:
 Assets em `public/`:
 
 - `logo-light.svg` / `logo-dark.svg` / `logo-mark.svg`
-- `favicon.png` / `icon.png`
-- OG image gerada em runtime via `src/app/opengraph-image.tsx`
+
+Ícones e imagens de compartilhamento ficam em `src/app/`: `icon.png` (512), `icon.svg`, `favicon.ico`, `apple-icon.png` e `opengraph-image.png` / `twitter-image.png` (1200x630, arte estática, mesma imagem nos dois).
 
 ## SEO checklist
 

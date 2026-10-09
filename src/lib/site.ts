@@ -128,3 +128,35 @@ export const stats = [
   { value: "Web + mobile", label: "para gestores e plantonistas" },
   { value: "Auditoria", label: "em ações críticas" },
 ] as const;
+
+/** Lojas oficiais do app (banner do Safari, manifest e JSON-LD). */
+export const appStores = {
+  appStoreId: "6800445169",
+  appStoreUrl: "https://apps.apple.com/app/id6800445169",
+  playPackage: "com.noracare.app",
+  playStoreUrl:
+    "https://play.google.com/store/apps/details?id=com.noracare.app",
+} as const;
+
+/** Título e descrição da home: metadata da raiz e Open Graph da home (src/app/page.tsx). */
+export const homeTitle = `${siteConfig.name} — ${siteConfig.tagline}`;
+export const homeDescription =
+  "Plataforma para hospitais e redes de saúde organizarem escalas, plantões, check-in biométrico, trocas e relatórios financeiros, com rastreabilidade.";
+
+/**
+ * Open Graph comum às páginas com openGraph próprio. Um openGraph de página
+ * substitui o da raiz (inclusive a imagem da convenção), então a imagem é
+ * declarada aqui. Arquivo: src/app/opengraph-image.png (1200x630).
+ */
+export const ogDefaults = {
+  siteName: siteConfig.name,
+  locale: siteConfig.locale,
+  images: [
+    {
+      url: "/opengraph-image.png",
+      width: 1200,
+      height: 630,
+      alt: "NoraCare — Gestão inteligente de plantões e equipes de saúde",
+    },
+  ],
+};

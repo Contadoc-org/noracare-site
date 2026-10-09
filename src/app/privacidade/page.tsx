@@ -3,13 +3,23 @@ import Link from "next/link";
 import { IconClock } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Política de privacidade do site";
+const description =
+  "Como o site institucional NoraCare coleta, usa e protege dados de visitantes e contatos, e como exercer seus direitos pela LGPD.";
 
 export const metadata: Metadata = {
-  title: "Privacidade",
-  description: `Política de privacidade do site institucional ${siteConfig.name}.`,
+  title,
+  description,
   alternates: { canonical: "/privacidade" },
-  robots: { index: true, follow: true },
+  openGraph: {
+    ...ogDefaults,
+    type: "website",
+    url: `${siteConfig.url}/privacidade`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
+  },
 };
 
 export default function PrivacidadePage() {

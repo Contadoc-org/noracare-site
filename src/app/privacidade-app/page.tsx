@@ -3,17 +3,22 @@ import Link from "next/link";
 import { IconClock } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Política de privacidade do app";
+const description =
+  "Como a NoraCare trata dados pessoais no app e na plataforma operacional: cadastro, ponto, check-in, segurança e direitos pela LGPD.";
 
 export const metadata: Metadata = {
-  title: "Privacidade do app",
-  description: `Política de privacidade do aplicativo e da plataforma operacional ${siteConfig.name}.`,
+  title,
+  description,
   alternates: { canonical: "/privacidade-app" },
-  robots: { index: true, follow: true },
   openGraph: {
-    title: `Privacidade do app | ${siteConfig.name}`,
-    description: `Como o app e a plataforma ${siteConfig.name} tratam dados pessoais de profissionais e gestores.`,
+    ...ogDefaults,
+    type: "website",
     url: `${siteConfig.url}/privacidade-app`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
   },
 };
 
