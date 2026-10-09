@@ -1,6 +1,6 @@
 import { IconApple, IconGooglePlay } from "@/components/icons";
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/lib/site";
+import { appStores } from "@/lib/site";
 
 /** Bloco "Baixe o app" com os links das lojas (produção). Usar em superfícies escuras. */
 export function DownloadApp({ className = "" }: { className?: string }) {
@@ -15,7 +15,7 @@ export function DownloadApp({ className = "" }: { className?: string }) {
       </p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Button
-          href={siteConfig.appStoreUrl}
+          href={appStores.appStoreUrl}
           variant="ghost"
           size="md"
           target="_blank"
@@ -27,7 +27,7 @@ export function DownloadApp({ className = "" }: { className?: string }) {
           Baixar na App Store
         </Button>
         <Button
-          href={siteConfig.playStoreUrl}
+          href={appStores.playStoreUrl}
           variant="ghost"
           size="md"
           target="_blank"

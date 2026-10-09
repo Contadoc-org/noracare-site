@@ -9,9 +9,6 @@ export const siteConfig = {
   url: "https://site.noracare.com.br",
   host: "site.noracare.com.br",
   appUrl: "https://app.noracare.com.br",
-  /** Lojas do app em produção (bloco "Baixe o app"). */
-  appStoreUrl: "https://apps.apple.com/app/id6800445169",
-  playStoreUrl: "https://play.google.com/store/apps/details?id=com.noracare.app",
   locale: "pt_BR",
   /** Contato único do site (mailto do formulário e links públicos). */
   email: "contato@contadoc.com.br",
