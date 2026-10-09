@@ -132,6 +132,60 @@ export function IconCheck({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
+/* Traço 1.6–1.8, viewBox 24, aria-hidden: puramente decorativos. */
+function Stroke({ className, children }: IconProps & { children: React.ReactNode }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {children}
+    </svg>
+  );
+}
+
+export function IconChevronDown({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><path d="m6 9 6 6 6-6" /></Stroke>;
+}
+
+export function IconChevronRight({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><path d="m9 6 6 6-6 6" /></Stroke>;
+}
+
+export function IconSearch({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><circle cx="11" cy="11" r="6.5" /><path d="m16 16 4 4" /></Stroke>;
+}
+
+export function IconMail({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="m4 7 8 6 8-6" /></Stroke>;
+}
+
+export function IconChat({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><path d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5Z" /></Stroke>;
+}
+
+export function IconDevice({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><rect x="6.5" y="3" width="11" height="18" rx="2.5" /><path d="M10.5 18h3" /></Stroke>;
+}
+
+export function IconExternal({ className = "h-4 w-4" }: IconProps) {
+  return <Stroke className={className}><path d="M14 4h6v6M20 4l-9 9M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></Stroke>;
+}
+
+export function IconClock({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></Stroke>;
+}
+
+export function IconBook({ className = "h-5 w-5" }: IconProps) {
+  return <Stroke className={className}><path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v15H7.5A2.5 2.5 0 0 0 5 20.5v-15Z" /><path d="M5 20.5A2.5 2.5 0 0 1 7.5 18H19v3H7.5" /></Stroke>;
+}
+
 export const featureIcons = {
   calendar: IconCalendar,
   shield: IconShield,

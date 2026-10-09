@@ -1,9 +1,12 @@
+import type { ReactNode } from "react";
+
 type SectionHeadingProps = {
   eyebrow?: string;
-  title: string;
-  description?: string;
+  title: ReactNode;
+  description?: ReactNode;
   align?: "left" | "center";
-  light?: boolean;
+  as?: "h1" | "h2";
+  className?: string;
 };
 
 export function SectionHeading({
@@ -11,29 +14,19 @@ export function SectionHeading({
   title,
   description,
   align = "center",
-  light = false,
+  as: Title = "h2",
+  className = "",
 }: SectionHeadingProps) {
-  const alignClass = align === "center" ? "mx-auto text-center" : "text-left";
-  const titleColor = light ? "text-white" : "text-nc-navy";
-  const descColor = light ? "text-white/75" : "text-muted";
-  const eyeColor = light ? "text-nc-green" : "text-nc-blue";
+  const alignClass = align === "center" ? "mx-auto text-center items-center" : "items-start text-left";
 
   return (
-    <div className={`max-w-2xl ${alignClass}`}>
-      {eyebrow ? (
-        <p
-          className={`mb-3 text-xs font-semibold uppercase tracking-[0.18em] ${eyeColor}`}
-        >
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2
-        className={`text-balance text-3xl font-bold tracking-tight sm:text-4xl ${titleColor}`}
-      >
-        {title}
-      </h2>
+    <div
+      className={`flex max-w-3xl flex-col ${alignClass} ${className}`.trim()}
+    >
+      {eyebrow ? <p className="eyebrow mb-5">{eyebrow}</p> : null}
+      <Title className={Title === "h1" ? "h-display" : "h-section"}>{title}</Title>
       {description ? (
-        <p className={`mt-4 text-base leading-relaxed sm:text-lg ${descColor}`}>
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-body sm:text-lg">
           {description}
         </p>
       ) : null}

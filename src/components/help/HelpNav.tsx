@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { IconSearch } from "@/components/icons";
 import { helpSections } from "@/content/help/nav";
 
 const normalize = (text: string) =>
   text.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
-export function HelpNav() {
+/** A navegação é renderizada duas vezes (celular e desktop): cada campo precisa de id próprio. */
+export function HelpNav({ searchId = "help-search" }: { searchId?: string }) {
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const q = normalize(query.trim());
@@ -26,21 +28,24 @@ export function HelpNav() {
 
   return (
     <nav aria-label="Central de ajuda" className="text-sm">
-      <label htmlFor="help-search" className="sr-only">
+      <label htmlFor={searchId} className="sr-only">
         Buscar na ajuda
       </label>
-      <input
-        id="help-search"
-        type="search"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        placeholder="Buscar na ajuda…"
-        className="w-full rounded-xl border border-border bg-white px-3 py-2.5 text-nc-navy placeholder:text-muted-soft focus:outline-none focus:ring-2 focus:ring-[var(--ring)]"
-      />
-      <div className="mt-6 space-y-6">
+      <div className="relative">
+        <IconSearch className="pointer-events-none absolute top-1/2 left-3.5 h-[1.125rem] w-[1.125rem] -translate-y-1/2 text-muted-soft" />
+        <input
+          id={searchId}
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Buscar na ajuda…"
+          className="input pl-10"
+        />
+      </div>
+      <div className="mt-7 space-y-7">
         {sections.map((section) => (
           <div key={section.title}>
-            <p className="px-3 text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
+            <p className="px-3 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-muted-soft">
               {section.title}
             </p>
             <ul className="mt-2 space-y-0.5">
@@ -52,10 +57,10 @@ export function HelpNav() {
                     <Link
                       href={href}
                       aria-current={active ? "page" : undefined}
-                      className={`block rounded-lg px-3 py-1.5 leading-snug transition ${
+                      className={`relative flex min-h-11 items-center rounded-lg px-3 py-2 leading-snug transition lg:min-h-0 lg:py-1.5 ${
                         active
-                          ? "bg-nc-navy font-semibold text-white"
-                          : "text-muted hover:bg-surface-muted hover:text-nc-navy"
+                          ? "bg-nc-blue/[0.07] font-semibold text-heading before:absolute before:top-2 before:bottom-2 before:left-0 before:w-0.5 before:rounded-full before:bg-nc-blue before:content-['']"
+                          : "text-body hover:bg-surface-muted/80 hover:text-heading"
                       }`}
                     >
                       {page.title}
@@ -67,7 +72,7 @@ export function HelpNav() {
           </div>
         ))}
         {sections.length === 0 ? (
-          <p className="px-3 text-muted">Nada encontrado para “{query}”.</p>
+          <p className="px-3 text-body">Nada encontrado para “{query}”.</p>
         ) : null}
       </div>
     </nav>

@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import {
+  IconArrowRight,
+  IconChat,
+  IconDevice,
+  IconExternal,
+  IconMail,
+} from "@/components/icons";
 import { Container } from "@/components/ui/Container";
+import { PageHero } from "@/components/ui/PageHero";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -15,72 +23,89 @@ export const metadata: Metadata = {
   },
 };
 
+const rowClass =
+  "group relative flex items-center gap-4 rounded-xl p-4 transition hover:bg-surface-muted/50";
+const termClass =
+  "font-mono text-[11px] uppercase tracking-[0.14em] text-muted-soft";
+const linkClass =
+  "text-[0.9375rem] font-semibold text-heading break-words transition group-hover:text-nc-blue after:absolute after:inset-0 after:content-['']";
+const trailClass =
+  "hidden h-4 w-4 shrink-0 text-muted-soft transition sm:block group-hover:translate-x-0.5 group-hover:text-nc-blue";
+
 export default function ContatoPage() {
   return (
-    <section className="bg-mesh-light section-pad">
-      <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-nc-blue">
-            Contato
-          </p>
-          <h1 className="mt-3 text-balance text-4xl font-bold tracking-tight text-nc-navy sm:text-5xl">
-            Vamos conversar sobre a sua operação
-          </h1>
-          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
-            Conte sobre a estrutura da rede, o volume de plantões e os desafios
-            de escala, ponto e financeiro. Retornamos com uma demonstração
-            alinhada ao seu contexto.
-          </p>
+    <>
+      <PageHero
+        eyebrow="Contato"
+        title="Vamos conversar sobre a sua operação"
+        description="Conte sobre a estrutura da rede, o volume de plantões e os desafios de escala, ponto e financeiro. Retornamos com uma demonstração alinhada ao seu contexto."
+        overlap
+      />
 
-          <dl className="mt-10 space-y-5">
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
-                WhatsApp
-              </dt>
-              <dd className="mt-1.5">
-                <a
-                  href={siteConfig.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg font-semibold text-nc-navy hover:text-nc-blue"
-                >
-                  {siteConfig.phoneDisplay}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
-                E-mail
-              </dt>
-              <dd className="mt-1.5">
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-lg font-semibold text-nc-navy hover:text-nc-blue"
-                >
-                  {siteConfig.email}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-nc-blue">
-                App
-              </dt>
-              <dd className="mt-1.5">
-                <a
-                  href={siteConfig.appUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg font-semibold text-nc-navy hover:text-nc-blue"
-                >
-                  {siteConfig.appUrl.replace("https://", "")}
-                </a>
-              </dd>
-            </div>
-          </dl>
-        </div>
+      <section className="surface-light pb-20 sm:pb-28">
+        <Container className="relative -mt-20 grid items-start gap-6 sm:-mt-28 lg:-mt-32 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
+          <ContactForm />
 
-        <ContactForm />
-      </Container>
-    </section>
+          <div className="card min-w-0 p-2 sm:p-3 lg:sticky lg:top-28">
+            <ul className="divide-y divide-border">
+              <li className={rowClass}>
+                <span className="icon-tile-soft">
+                  <IconChat className="h-5 w-5" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className={termClass}>WhatsApp</p>
+                  <p className="mt-1">
+                    <a
+                      href={siteConfig.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      {siteConfig.phoneDisplay}
+                    </a>
+                  </p>
+                </div>
+                <IconExternal className={trailClass} />
+              </li>
+
+              <li className={rowClass}>
+                <span className="icon-tile-soft">
+                  <IconMail className="h-5 w-5" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className={termClass}>E-mail</p>
+                  <p className="mt-1">
+                    <a href={`mailto:${siteConfig.email}`} className={linkClass}>
+                      {siteConfig.email}
+                    </a>
+                  </p>
+                </div>
+                <IconArrowRight className={trailClass} />
+              </li>
+
+              <li className={rowClass}>
+                <span className="icon-tile-soft">
+                  <IconDevice className="h-5 w-5" />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className={termClass}>App</p>
+                  <p className="mt-1">
+                    <a
+                      href={siteConfig.appUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      {siteConfig.appUrl.replace("https://", "")}
+                    </a>
+                  </p>
+                </div>
+                <IconExternal className={trailClass} />
+              </li>
+            </ul>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }

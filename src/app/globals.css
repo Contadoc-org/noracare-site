@@ -1,27 +1,49 @@
 @import "tailwindcss";
 
-/* ===== NoraCare brand design system ===== */
+/* =====================================================================
+   NoraCare — design system (layout moderno, out/2026)
+   Contexto claro é o padrão. Dentro de `.surface-dark` (ou `.on-dark`)
+   os tokens semânticos (--heading, --body, --line, --focus) trocam para
+   o modo escuro, então `text-heading`, `text-body`, `border-line`,
+   `.eyebrow`, `.chip-*` e o foco se adaptam sozinhos.
+   ===================================================================== */
 :root {
-  --background: #f3f5fa;
+  --background: #f7f9fc;
   --foreground: #0a153a;
   --surface: #ffffff;
-  --surface-muted: #e2e8f4;
-  --border: #d6deef;
-  --muted: #45486a;
-  --muted-soft: #7276b9;
+  --surface-muted: #eef2f9;
+  --border: #e3e8f2;
+  --border-strong: #cdd6e8;
+  --border-input: #8a93b2; /* contorno de campo: ≥3:1 no branco (WCAG 1.4.11) */
+  --muted: #4a5072; /* texto corrido no claro: ~7.8:1 no branco */
+  --muted-soft: #697092; /* meta/placeholder: ≥4.5:1 no branco */
 
+  --nc-night: #060d27;
   --nc-dark: #0d1a48;
   --nc-navy: #0a153a;
   --nc-blue: #203aba;
   --nc-blue-bright: #3a58d6;
   --nc-green: #92e0cd;
   --nc-green-strong: #86efb6;
+  --nc-teal: #0e7c6b; /* verde legível em fundo claro (~5:1) */
   --nc-light: #6aadff;
   --nc-malibu: #5db1fd;
 
-  --ring: color-mix(in srgb, var(--nc-green) 55%, transparent);
-  --shadow-soft: 0 18px 50px -24px rgb(10 21 58 / 0.35);
-  --shadow-card: 0 10px 30px -18px rgb(13 26 72 / 0.22);
+  /* Tokens semânticos (trocam em .surface-dark / .on-dark) */
+  --heading: var(--nc-navy);
+  --body: var(--muted);
+  --line: var(--border);
+  --focus: var(--nc-blue);
+}
+
+.surface-dark,
+.on-dark {
+  --heading: #ffffff;
+  --body: rgb(255 255 255 / 0.72);
+  --line: rgb(255 255 255 / 0.1);
+  --focus: var(--nc-green);
+  color: #ffffff;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -30,106 +52,276 @@
   --color-surface: var(--surface);
   --color-surface-muted: var(--surface-muted);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-border-input: var(--border-input);
   --color-muted: var(--muted);
   --color-muted-soft: var(--muted-soft);
 
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-line: var(--line);
+
+  --color-nc-night: var(--nc-night);
   --color-nc-dark: var(--nc-dark);
   --color-nc-navy: var(--nc-navy);
   --color-nc-blue: var(--nc-blue);
   --color-nc-blue-bright: var(--nc-blue-bright);
   --color-nc-green: var(--nc-green);
   --color-nc-green-strong: var(--nc-green-strong);
+  --color-nc-teal: var(--nc-teal);
   --color-nc-light: var(--nc-light);
   --color-nc-malibu: var(--nc-malibu);
 
-  --font-sans: var(--font-plus-jakarta);
-  --font-display: var(--font-plus-jakarta);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme {
+  --radius-card: 1.25rem;
+  --radius-panel: 1.75rem;
+
+  --shadow-xs: 0 1px 2px rgb(10 21 58 / 0.06);
+  --shadow-card: 0 1px 2px rgb(10 21 58 / 0.04), 0 8px 24px -12px rgb(10 21 58 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(10 21 58 / 0.04), 0 24px 48px -20px rgb(10 21 58 / 0.3);
+  --shadow-glow: 0 0 0 1px rgb(146 224 205 / 0.35), 0 16px 40px -16px rgb(146 224 205 / 0.55);
+  --shadow-panel: 0 40px 100px -40px rgb(0 0 0 / 0.7), inset 0 1px 0 0 rgb(255 255 255 / 0.08);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem; /* âncoras (/#solucoes, sumário da ajuda) abaixo do cabeçalho fixo */
   }
 
   body {
-    background: var(--background);
+    /* Faixa escura atrás do cabeçalho translúcido: no topo ele fica noturno, ao rolar vira vidro. */
+    background: var(--background) linear-gradient(var(--nc-night), var(--nc-night)) no-repeat top / 100% 4.5rem;
     color: var(--foreground);
-    font-family: var(--font-sans), system-ui, sans-serif;
+    font-family: var(--font-sans);
     text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--nc-green) 45%, white);
+    background: color-mix(in srgb, var(--nc-green) 55%, white);
     color: var(--nc-navy);
   }
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .bg-hero-grid {
-    background-image:
-      radial-gradient(circle at 18% 22%, rgb(146 224 205 / 0.18), transparent 34%),
-      radial-gradient(circle at 82% 12%, rgb(106 173 255 / 0.16), transparent 30%),
-      radial-gradient(circle at 70% 78%, rgb(32 58 186 / 0.22), transparent 38%),
-      linear-gradient(160deg, #0a153a 0%, #0d1a48 48%, #162955 100%);
-  }
-
-  .bg-mesh-light {
-    background-image:
-      radial-gradient(circle at 0% 0%, rgb(146 224 205 / 0.18), transparent 42%),
-      radial-gradient(circle at 100% 20%, rgb(93 177 253 / 0.12), transparent 38%),
-      linear-gradient(180deg, #f8faff 0%, #f3f5fa 100%);
-  }
-
-  .glass-panel {
-    background: rgb(255 255 255 / 0.72);
-    border: 1px solid rgb(255 255 255 / 0.55);
-    box-shadow: var(--shadow-card);
-    backdrop-filter: blur(14px);
-  }
-
-  .section-pad {
-    @apply px-5 py-20 sm:px-8 sm:py-24 lg:px-10 lg:py-28;
+  /* Foco visível único: azul no claro, verde no escuro (ver --focus). */
+  :where(a, button, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
   }
 }
 
-/* ===== Central de ajuda: fragmentos HTML de src/content/help ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== Superfícies e padrões de seção ===== */
 @layer components {
-  .help-prose {
-    @apply text-base leading-relaxed text-muted;
+  /* Ritmo vertical das seções. O respiro horizontal é do <Container>. */
+  .section-pad {
+    @apply py-20 sm:py-24 lg:py-32;
   }
-  .help-prose > * + * { @apply mt-4; }
-  .help-prose .lead { @apply text-lg text-nc-navy; }
-  .help-prose .meta { @apply text-sm; }
-  .help-prose h2 { @apply mt-12 scroll-mt-24 border-t border-border pt-8 text-2xl font-bold text-nc-navy; }
-  .help-prose h3 { @apply mt-8 scroll-mt-24 text-lg font-semibold text-nc-navy; }
-  .help-prose strong, .help-prose dt { @apply font-semibold text-nc-navy; }
-  .help-prose a { @apply font-semibold text-nc-blue underline-offset-2 hover:underline; }
-  .help-prose ul { @apply list-disc space-y-1.5 pl-6; }
-  .help-prose ol { @apply list-decimal space-y-1.5 pl-6; }
-  .help-prose ol.steps { @apply list-none space-y-3 pl-0; counter-reset: step; }
-  .help-prose ol.steps > li { @apply relative pl-10; counter-increment: step; }
+
+  .surface-dark {
+    background-color: var(--nc-night);
+    background-image:
+      radial-gradient(60rem 36rem at 88% -12%, rgb(32 58 186 / 0.55), transparent 62%),
+      radial-gradient(42rem 28rem at -6% 0%, rgb(146 224 205 / 0.13), transparent 60%),
+      linear-gradient(180deg, #081236 0%, #060d27 100%);
+  }
+
+  .surface-light {
+    background-color: var(--background);
+    background-image:
+      radial-gradient(48rem 28rem at 0% 0%, rgb(146 224 205 / 0.16), transparent 60%),
+      radial-gradient(40rem 26rem at 100% 0%, rgb(93 177 253 / 0.1), transparent 60%);
+  }
+
+  /* Malha de linhas finas com fade radial. Use dentro de um pai `relative overflow-hidden`. */
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, currentColor 7%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, currentColor 7%, transparent) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 65% at 50% 0%, #000 25%, transparent 75%);
+  }
+
+  .hairline {
+    @apply h-px w-full bg-linear-to-r from-transparent via-line to-transparent;
+  }
+
+  /* ===== Tipografia ===== */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-nc-blue/15 bg-nc-blue/[0.06] px-3 py-1 font-mono text-[0.6875rem] font-medium tracking-[0.16em] text-nc-blue uppercase;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply size-1.5 rounded-full bg-current;
+  }
+  :is(.surface-dark, .on-dark) .eyebrow {
+    @apply border-white/12 bg-white/[0.06] text-nc-green;
+  }
+
+  .h-display {
+    @apply font-display text-[2.5rem] leading-[1.04] font-extrabold tracking-[-0.04em] text-balance text-heading sm:text-6xl xl:text-[4.25rem];
+  }
+  .h-section {
+    @apply font-display text-[2rem] leading-[1.08] font-bold tracking-[-0.035em] text-balance text-heading sm:text-[2.5rem] lg:text-5xl;
+  }
+  .h-card {
+    @apply font-display text-lg leading-snug font-semibold tracking-[-0.015em] text-heading sm:text-xl;
+  }
+  .text-lead {
+    @apply text-lg leading-relaxed text-body sm:text-xl sm:leading-relaxed;
+  }
+  .text-gradient {
+    @apply bg-linear-to-r from-nc-green via-[#8fd8ec] to-nc-malibu bg-clip-text text-transparent;
+  }
+
+  /* ===== Cartões ===== */
+  .card {
+    @apply rounded-card border border-border bg-surface shadow-card;
+  }
+  .card-muted {
+    @apply rounded-card border border-border bg-surface-muted/60;
+  }
+  .card-dark {
+    @apply rounded-card border border-white/10 bg-white/[0.04] shadow-[inset_0_1px_0_0_rgb(255_255_255/0.06)];
+  }
+  .card-hover {
+    @apply transition duration-300 ease-out hover:-translate-y-1 hover:border-border-strong hover:shadow-lift;
+  }
+  .card-dark.card-hover {
+    @apply hover:border-white/20 hover:bg-white/[0.06] hover:shadow-none;
+  }
+
+  /* Ícone em quadro (24px dentro). */
+  .icon-tile {
+    @apply inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-nc-navy to-nc-blue text-nc-green shadow-[0_8px_20px_-10px_rgb(32_58_186/0.7)] ring-1 ring-white/10 ring-inset;
+  }
+  .icon-tile-soft {
+    @apply inline-flex size-11 shrink-0 items-center justify-center rounded-xl bg-nc-blue/[0.07] text-nc-blue ring-1 ring-nc-blue/15 ring-inset;
+  }
+  :is(.surface-dark, .on-dark) .icon-tile-soft {
+    @apply bg-white/[0.07] text-nc-green ring-white/12;
+  }
+
+  /* Selos de status. Claro por padrão; escuro dentro de .surface-dark/.on-dark. */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs leading-none font-semibold whitespace-nowrap;
+  }
+  .chip-green {
+    @apply bg-[#e1f6f0] text-[#0b6455];
+  }
+  .chip-blue {
+    @apply bg-nc-blue/[0.08] text-nc-blue;
+  }
+  .chip-amber {
+    @apply bg-amber-100 text-amber-800;
+  }
+  .chip-neutral {
+    @apply bg-surface-muted text-muted;
+  }
+  :is(.surface-dark, .on-dark) .chip-green {
+    @apply bg-nc-green/15 text-nc-green;
+  }
+  :is(.surface-dark, .on-dark) .chip-blue {
+    @apply bg-nc-malibu/15 text-nc-malibu;
+  }
+  :is(.surface-dark, .on-dark) .chip-amber {
+    @apply bg-amber-400/15 text-amber-200;
+  }
+  :is(.surface-dark, .on-dark) .chip-neutral {
+    @apply bg-white/[0.08] text-white/75;
+  }
+
+  /* Campo de formulário (input, textarea, busca). */
+  .input {
+    @apply block min-h-12 w-full rounded-xl border border-border-input bg-white px-4 py-3 text-[0.9375rem] text-foreground shadow-xs transition outline-none placeholder:text-muted-soft hover:border-nc-blue/70 focus:border-nc-blue focus:ring-4 focus:ring-nc-blue/15;
+  }
+
+  /* Entrada animada no carregamento (hero). Atraso via style={{ animationDelay: "120ms" }}. */
+  .animate-in {
+    @apply motion-safe:animate-fade-up;
+  }
+}
+
+/* ===== Texto longo: central de ajuda (src/content/help) e páginas legais ===== */
+@layer components {
+  :is(.help-prose, .prose-nc) {
+    @apply text-base leading-[1.75] text-body;
+  }
+  :is(.help-prose, .prose-nc) > * + * { @apply mt-5; }
+  :is(.help-prose, .prose-nc) .lead { @apply text-lg leading-relaxed text-heading sm:text-xl; }
+  :is(.help-prose, .prose-nc) .meta { @apply flex flex-wrap items-center gap-1.5 text-sm text-muted-soft; }
+  :is(.help-prose, .prose-nc) h2 {
+    @apply mt-14 border-t border-border pt-10 font-display text-2xl leading-tight font-bold tracking-[-0.025em] text-heading sm:text-[1.75rem];
+  }
+  :is(.help-prose, .prose-nc) h3 { @apply mt-9 font-display text-lg font-semibold tracking-[-0.015em] text-heading; }
+  :is(.help-prose, .prose-nc) h2 + *, :is(.help-prose, .prose-nc) h3 + * { @apply mt-3; }
+  :is(.help-prose, .prose-nc) :is(strong, dt) { @apply font-semibold text-heading; }
+  :is(.help-prose, .prose-nc) a {
+    @apply font-semibold text-nc-blue underline decoration-nc-blue/30 decoration-2 underline-offset-[3px] transition-colors hover:decoration-nc-blue;
+  }
+  :is(.help-prose, .prose-nc) ul { @apply list-disc space-y-2 pl-6 marker:text-nc-blue/50; }
+  :is(.help-prose, .prose-nc) ol { @apply list-decimal space-y-2 pl-6 marker:font-semibold marker:text-nc-blue; }
+  :is(.help-prose, .prose-nc) li > :is(ul, ol) { @apply mt-2; }
+
+  .help-prose ol.steps { @apply list-none space-y-4 pl-0; counter-reset: step; }
+  .help-prose ol.steps > li { @apply relative min-h-8 pl-12; counter-increment: step; }
   .help-prose ol.steps > li::before {
-    @apply absolute top-0 left-0 flex h-7 w-7 items-center justify-center rounded-full bg-nc-navy text-xs font-bold text-white;
-    content: counter(step);
+    @apply absolute top-0 left-0 flex size-8 items-center justify-center rounded-lg bg-linear-to-br from-nc-navy to-nc-blue font-mono text-xs font-semibold text-nc-green shadow-[0_6px_16px_-8px_rgb(32_58_186/0.8)];
+    content: counter(step, decimal-leading-zero);
   }
   .help-prose .ui {
-    @apply rounded-md border border-border bg-surface-muted/60 px-1.5 py-0.5 text-[0.92em] font-semibold text-nc-navy; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+    @apply rounded-md border border-border-strong bg-surface-muted px-1.5 py-px text-[0.9em] font-semibold text-heading shadow-[inset_0_-1px_0_var(--border-strong)];
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
-  .help-prose .badge {
-    @apply inline-block rounded-full bg-nc-green/40 px-2.5 py-0.5 text-xs font-semibold text-nc-navy;
+  .help-prose .badge { @apply inline-flex items-center rounded-full bg-[#e1f6f0] px-2.5 py-0.5 text-xs font-semibold text-[#0b6455]; }
+  .help-prose .callout {
+    @apply rounded-2xl border p-4 text-[0.9375rem] leading-relaxed sm:p-5;
   }
-  .help-prose .callout { @apply rounded-2xl border-l-4 p-4 text-sm; }
   .help-prose .callout > * + * { @apply mt-2; }
-  .help-prose .callout-tip { @apply border-nc-green-strong bg-nc-green/15; }
-  .help-prose .callout-info { @apply border-nc-blue-bright bg-nc-malibu/10; }
-  .help-prose .callout-warn { @apply border-amber-400 bg-amber-50; }
-  .help-prose .table-wrap { @apply overflow-x-auto rounded-xl border border-border; }
+  .help-prose .callout-tip { @apply border-nc-teal/20 bg-[#effaf6] shadow-[inset_3px_0_0_0_var(--nc-teal)]; }
+  .help-prose .callout-info { @apply border-nc-blue/15 bg-[#f1f4fe] shadow-[inset_3px_0_0_0_var(--nc-blue)]; }
+  .help-prose .callout-warn { @apply border-amber-300/60 bg-amber-50 shadow-[inset_3px_0_0_0_var(--color-amber-500)]; }
+  .help-prose .table-wrap { @apply overflow-x-auto rounded-xl border border-border bg-white shadow-xs; }
   .help-prose table { @apply w-full min-w-[32rem] text-sm; border-collapse: collapse; }
-  .help-prose th { @apply bg-surface-muted/60 px-3 py-2 text-left font-semibold text-nc-navy; }
-  .help-prose td { @apply border-t border-border px-3 py-2 align-top; }
-  .help-prose dd { @apply mt-1 mb-4; }
+  .help-prose th { @apply bg-surface-muted px-4 py-2.5 text-left text-xs font-semibold tracking-wide text-heading uppercase; }
+  .help-prose td { @apply border-t border-border px-4 py-3 align-top; }
+  .help-prose tbody tr:nth-child(even) td { @apply bg-surface-muted/35; }
+  .help-prose dl { @apply rounded-xl border border-border bg-white px-5 shadow-xs; }
+  .help-prose dt { @apply pt-4; }
+  .help-prose dd + dt { @apply border-t border-border; }
+  .help-prose dd { @apply mt-1 mb-0 pb-4; }
 }
