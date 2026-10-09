@@ -132,7 +132,7 @@ export const stats = [
 /** Lojas oficiais do app (banner do Safari, manifest e JSON-LD). */
 export const appStores = {
   appStoreId: "6800445169",
-  appStoreUrl: "https://apps.apple.com/app/id6800445169",
+  appStoreUrl: "https://apps.apple.com/br/app/nora-care-gest%C3%A3o-de-escalas/id6800445169",
   playPackage: "com.noracare.app",
   playStoreUrl:
     "https://play.google.com/store/apps/details?id=com.noracare.app",
