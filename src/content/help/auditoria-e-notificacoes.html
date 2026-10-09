@@ -1,0 +1,196 @@
+<p class="lead">A Auditoria mostra quem fez cada ação registrada no sistema, o que foi feito e quando. A central de Notificações reúne os avisos enviados à sua conta, como novas candidaturas, pedidos de revisão de horário e contestações de alocação.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+
+<h2 id="quem-ve-cada-tela">Quem vê cada tela</h2>
+<p>O menu mostra apenas os itens liberados para o seu perfil. Veja como cada perfil enxerga estas duas telas, por padrão:</p>
+<table>
+<thead><tr><th>Tela</th><th>Master</th><th>Gestor interno</th><th>Coordenador</th><th>Visualizador</th></tr></thead>
+<tbody>
+<tr><td><strong>Auditoria</strong></td><td>Sim</td><td>Sim, por padrão</td><td>Não, por padrão</td><td>Não, por padrão</td></tr>
+<tr><td><strong>Notificações</strong></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não aparece</td></tr>
+</tbody>
+</table>
+<div class="callout callout-info"><p>Se a <span class="ui">Auditoria</span> não aparece para você, a permissão não está liberada para o seu perfil. Conforme as permissões definidas pela sua instituição, ela pode ser liberada. Fale com o Master da sua instituição.</p></div>
+
+<h2 id="auditoria">Auditoria</h2>
+<p>A Auditoria é o histórico das ações feitas no sistema, como cadastros, alterações, desativações, restaurações, pagamentos e check-ins. Use a tela para descobrir quem fez uma mudança, o que mudou e quando. Para abrir, clique em <span class="ui">Auditoria</span> no menu.</p>
+<p>Quem tem acesso vê os registros de toda a instituição, inclusive de escalas que não coordena.</p>
+
+<h3 id="o-que-a-auditoria-registra">O que a auditoria registra</h3>
+<p>Cada registro responde a três perguntas:</p>
+<ul>
+<li><strong>Quem:</strong> a pessoa que fez a ação, mostrada depois da palavra <span class="ui">por</span>.</li>
+<li><strong>O quê:</strong> a ação feita, como <span class="ui">Criação de plantão</span> ou <span class="ui">Rede desativada</span>, e o item que foi afetado.</li>
+<li><strong>Quando:</strong> a data e a hora, no horário de Brasília.</li>
+</ul>
+<p>Entre as ações registradas estão:</p>
+<ul>
+<li>criação, alteração, cancelamento e pagamento de plantões;</li>
+<li>anúncios de plantões, candidaturas e trocas;</li>
+<li>check-in e check-out, inclusive as edições feitas pela gestão;</li>
+<li>cadastro de profissionais e de usuários, e mudanças de acesso;</li>
+<li>redes, locais, setores, escalas e empresas, inclusive desativações e restaurações;</li>
+<li>regras de pagamento, bonificações e ajustes mensais;</li>
+<li>pedidos de revisão de ponto e a análise deles;</li>
+<li>alertas de plantão sem cobertura.</li>
+</ul>
+
+<h3 id="como-pesquisar">Como pesquisar</h3>
+<ol class="steps">
+<li>Abra <span class="ui">Auditoria</span> no menu.</li>
+<li>Se quiser, preencha um ou mais filtros no topo da tela. A lista se atualiza sozinha.</li>
+<li>Veja os registros, do mais recente para o mais antigo.</li>
+<li>Se houver mais de uma página, use a paginação no fim da lista.</li>
+</ol>
+<p>Os filtros são estes:</p>
+<table>
+<thead><tr><th>Filtro</th><th>Para que serve</th><th>Como usar</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Tipo de Entidade</span></td><td>Mostra só um tipo de item: Check-in, Médico, Profissional Fixo, Função, Rede, Config. de Preço, Slot de Preço, Escala, Setor, Plantão, Anúncio, Troca de Plantão, Especialidade, Revisão de Permanência, Local ou Usuário.</td><td>Escolha uma opção. Com <span class="ui">Todos</span>, aparecem todos os tipos.</td></tr>
+<tr><td><span class="ui">Ação</span></td><td>Mostra só uma ação.</td><td>Digite parte do nome para encontrar mais rápido. A busca ignora acentos e maiúsculas. Algumas ações não aparecem nessa lista. Nesse caso, use os outros filtros.</td></tr>
+<tr><td><span class="ui">ID do Ator (Usuário)</span></td><td>Mostra o que uma pessoa fez.</td><td>Cole o ID completo de quem fez a ação. Para copiar esse ID a partir de um registro, clique em <span class="ui">(copiar ID)</span> ao lado de <em>por Nome</em>.</td></tr>
+<tr><td><span class="ui">ID da Entidade</span></td><td>Mostra só os registros do próprio item.</td><td>Cole o ID completo do item. Para copiá-lo a partir de um registro, clique em <span class="ui">(copiar ID)</span> ao lado do nome do item. Se o item não tiver nome na lista, clique no próprio ID.</td></tr>
+<tr><td><span class="ui">Data De</span> e <span class="ui">Data Até</span></td><td>Limitam a lista a um período.</td><td>Ao escolher a Data De, o calendário da Data Até abre sozinho. A Data Até inclui o dia inteiro escolhido.</td></tr>
+<tr><td><span class="ui">Limpar</span></td><td>Remove todos os filtros de uma vez.</td><td>Aparece quando algum filtro está preenchido.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-tip"><p><strong>Dica:</strong> para ver as ações registradas no próprio plantão, copie o ID dele em um registro e cole no filtro <span class="ui">ID da Entidade</span>. Para ver também os anúncios, as trocas e os check-ins ligados a ele, use o <span class="ui">Histórico do plantão</span>, descrito mais abaixo.</p></div>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> os filtros de ID só funcionam com o ID completo. Enquanto ele estiver incompleto, a lista fica vazia e aparece um aviso pedindo o ID completo.</p></div>
+<p>Se nada aparecer, confira o período e se ainda há algum filtro preenchido. Se a lista não carregar, aparece uma mensagem de erro com o botão <span class="ui">Tentar novamente</span>.</p>
+
+<h3 id="como-ler-cada-registro">Como ler cada registro</h3>
+<ul>
+<li>Cada linha começa com a data e a hora, seguidas de uma etiqueta com o tipo de item, como <span class="ui">Plantão</span> ou <span class="ui">Escala</span>.</li>
+<li>Depois vem o nome do item. Quando o nome não está disponível, aparece o ID do item.</li>
+<li>A ação aparece em destaque, seguida de <em>por Nome</em>, com o link <span class="ui">(copiar ID)</span> para copiar o ID de quem fez.</li>
+<li>Quando a ação alterou dados, aparece uma seta na linha. Clique na linha para ver os quadros <span class="ui">Anterior</span> (como estava) e <span class="ui">Novo</span> (como ficou).</li>
+</ul>
+<p>Nos quadros, campo sem valor aparece com um traço (—), e respostas de sim ou não aparecem como <em>Sim</em> e <em>Não</em>. Se o item foi restaurado depois e o registro da restauração está na mesma página da lista, a linha da desativação mostra <span class="ui">Restaurada em</span>, com a data e a hora da restauração.</p>
+
+<h3 id="restaurar-item-desativado">Restaurar um item desativado</h3>
+<p>Só o Master vê o botão <span class="ui">Restaurar</span>. Ele aparece, do lado direito, nas linhas <span class="ui">Rede desativada</span>, <span class="ui">Local desativado</span>, <span class="ui">Setor desativado</span> e <span class="ui">Escala desativada</span>.</p>
+<ol class="steps">
+<li>Clique em <span class="ui">Restaurar</span> na linha do item.</li>
+<li>Confira o título da janela que abre: <em>Restaurar rede?</em>, <em>Restaurar local?</em>, <em>Restaurar setor?</em> ou <em>Restaurar escala?</em>.</li>
+<li>Escolha uma das opções da tabela abaixo.</li>
+</ol>
+<table>
+<thead><tr><th>Item</th><th>Opções na janela</th></tr></thead>
+<tbody>
+<tr><td>Rede, local ou setor</td><td><span class="ui">Cancelar</span>, <span class="ui">Só esta rede</span> (ou <span class="ui">Só este local</span> ou <span class="ui">Só este setor</span>) e <span class="ui">Restaurar tudo</span>.</td></tr>
+<tr><td>Escala</td><td><span class="ui">Cancelar</span> e <span class="ui">Restaurar</span>.</td></tr>
+</tbody>
+</table>
+<p><span class="ui">Restaurar tudo</span> também traz de volta os itens que foram desativados junto com ele. A opção <span class="ui">Só esta rede</span>, ou a equivalente para local ou setor, restaura só o item escolhido. Escalas não têm essa escolha: a janela restaura apenas a própria escala.</p>
+<p>Alguns casos impedem a restauração. Nesses casos, o sistema mostra o motivo e nada é alterado:</p>
+<ul>
+<li>Se o item que o contém ainda está desativado, restaure primeiro esse item de nível acima. Por exemplo, um local só volta quando a rede a que ele pertence estiver ativa.</li>
+<li>Se já existe um item ativo com o mesmo nome, o sistema avisa que o nome está em uso.</li>
+<li>Se outra pessoa restaurou o item antes de você, o sistema avisa que ele já foi restaurado.</li>
+</ul>
+<p>Quando a restauração funciona, aparece uma confirmação, como <em>Rede restaurada com sucesso</em>, e o botão some dessa linha enquanto você continua na tela. A restauração também fica registrada na Auditoria, em uma nova linha.</p>
+<div class="callout callout-info"><p>Esta tela só restaura itens desativados. Linhas como <span class="ui">Rede excluída</span> ou <span class="ui">Local excluído</span> aparecem na lista, mas não têm o botão <span class="ui">Restaurar</span>.</p></div>
+
+<h3 id="historico-do-plantao">Histórico do plantão</h3>
+<p>Dentro de um plantão, a seção <span class="ui">Histórico do plantão</span> mostra o que já aconteceu com ele, do mais antigo para o mais recente: criação e edições, anúncios, trocas e check-ins ligados a ele. Cada linha mostra a ação, o tipo de item, há quanto tempo aconteceu (por exemplo, <em>há 2 dias</em>) e por quem foi feita.</p>
+<p>Ao editar um plantão, clique em <span class="ui">Histórico do plantão</span> para abrir a lista. Na tela de detalhes do plantão, a lista já aparece nessa seção. Essa seção aparece para Master, Gestor interno, Coordenador e Visualizador. Se o plantão tiver muitos registros, a lista pode não mostrar os mais recentes. Quando ainda não há registros, aparece <em>Nenhum evento registrado para este plantão.</em> Para criar e editar plantões, veja <a href="/help/criar-plantoes">Criar e editar plantões</a>.</p>
+
+<h3 id="auditoria-no-cadastro-de-uma-pessoa">Auditoria no cadastro de uma pessoa</h3>
+<p>Nos cadastros de gestores internos, coordenadores, visualizadores e masters há um cartão <span class="ui">Auditoria</span> perto do fim da página. Ele mostra as ações em que aquela pessoa aparece como autora (quem fez) ou como alvo. Para abrir, use o menu <span class="ui">Usuários</span>, escolha <span class="ui">Gestores internos</span>, <span class="ui">Coordenadores</span>, <span class="ui">Visualizadores</span> ou <span class="ui">Master</span> e clique na pessoa. Esses itens do menu aparecem só para Master e Gestor interno. O Visualizador chega a esse cartão pelo nome de quem anunciou um plantão, na lista <span class="ui">Plantões Anunciados</span> do Dashboard. Se a pessoa for coordenador, o cartão fica na aba <span class="ui">Cadastro</span>.</p>
+<p>O cartão não depende da permissão de Auditoria. Ele aparece para o Master, para o Gestor interno e para o Visualizador. O Coordenador não vê o cartão.</p>
+<p>Cada linha mostra o nome da ação, o tipo de item, há quanto tempo aconteceu e por quem foi feita. O cartão não mostra o antes e o depois de cada ação; para isso, use a tela <span class="ui">Auditoria</span>. Use <span class="ui">Carregar mais</span> para ver os registros mais antigos. Se não houver nenhum registro, aparece <em>Nenhuma atividade registrada</em>.</p>
+
+<h2 id="notificacoes">Notificações</h2>
+<p>A central de notificações do painel mostra os avisos enviados à sua conta. Cada pessoa vê só os próprios avisos. Para abrir, clique em <span class="ui">Notificações</span> no menu. O item aparece para o Master, o Gestor interno e o Coordenador.</p>
+<p>O menu não mostra quantos avisos estão sem leitura. Para achar os pendentes, use o filtro <span class="ui">Status</span>.</p>
+
+<h3 id="quais-avisos-chegam-a-voce">Quais avisos chegam a você</h3>
+<p>Os avisos sobre plantões e escalas vão para os responsáveis pela escala: os coordenadores da escala e os gestores internos com acesso a ela. O Master não entra nessa lista, então não recebe esses avisos. As contestações de alocação vão só para os coordenadores da escala. A tabela mostra os avisos mais comuns para a gestão:</p>
+<table>
+<thead><tr><th>Aviso</th><th>Tipo</th><th>Quando chega</th><th>Ao clicar, abre</th></tr></thead>
+<tbody>
+<tr><td><strong>Nova solicitação de revisão</strong></td><td>Alteração de Escala</td><td>Um profissional pediu revisão de horário de um plantão. O texto diz quem pediu.</td><td><span class="ui">Registros de presença › Revisões</span></td></tr>
+<tr><td><strong>Nova candidatura</strong></td><td>Solicitação de Troca</td><td>Um profissional se candidatou a um plantão anunciado.</td><td><span class="ui">Aprovações</span></td></tr>
+<tr><td><strong>Plantão anunciado</strong></td><td>Plantão Aberto</td><td>Um plantão da escala foi anunciado. O texto diz quem anunciou.</td><td><span class="ui">Escalas › Mensal</span>, no mês do plantão. Se a escala do plantão não estiver escolhida, selecione-a.</td></tr>
+<tr><td><strong>Plantão aceito</strong></td><td>Plantão Aberto</td><td>Alguém aceitou um plantão anunciado.</td><td>Os detalhes do plantão</td></tr>
+<tr><td><strong>Troca realizada</strong></td><td>Confirmação de Troca</td><td>Um plantão passou de um profissional para outro por meio de troca. O texto diz quem passou para quem.</td><td>Os detalhes do plantão</td></tr>
+<tr><td><strong>Plantão sem cobertura</strong></td><td>Alerta Operacional</td><td>Um plantão da escala está sem cobertura nas próximas 48 horas. Cada plantão gera esse aviso uma só vez.</td><td>Os detalhes do plantão</td></tr>
+<tr><td><strong>Alocação contestada</strong></td><td>Alocação Contestada</td><td>Um profissional informou que o plantão foi alocado incorretamente.</td><td>Os detalhes do plantão. Os botões para resolver ficam nesta linha; veja a seção de contestações.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-tip"><p><strong>Dica:</strong> o tipo nem sempre mostra o assunto. A <em>Nova candidatura</em>, por exemplo, aparece como Solicitação de Troca. Leia o título antes de filtrar.</p></div>
+
+<h3 id="tipos-de-aviso">Tipos de aviso</h3>
+<p>O filtro <span class="ui">Tipo</span> traz estas opções:</p>
+<table>
+<thead><tr><th>Tipo</th><th>O que reúne</th></tr></thead>
+<tbody>
+<tr><td>Alteração de Escala</td><td>Mudanças em escalas e pedidos de revisão de horário.</td></tr>
+<tr><td>Solicitação de Troca</td><td>Pedidos de troca de plantão e novas candidaturas a plantões anunciados.</td></tr>
+<tr><td>Confirmação de Troca</td><td>Trocas já realizadas.</td></tr>
+<tr><td>Plantão Aberto</td><td>Plantões anunciados e aceitos, e resultados de candidaturas.</td></tr>
+<tr><td>Alerta Operacional</td><td>Avisos que pedem atenção, como plantão sem cobertura.</td></tr>
+<tr><td>Alocação Contestada</td><td>Plantões que um profissional informou estarem alocados de forma incorreta.</td></tr>
+<tr><td>Onboarding</td><td>Avisos de integração ao sistema.</td></tr>
+<tr><td>Manual</td><td>Avisos criados à mão. No momento, o painel não permite criar avisos novos.</td></tr>
+</tbody>
+</table>
+
+<h3 id="lista-e-filtros">Lista e filtros</h3>
+<ul>
+<li>Os avisos aparecem do mais recente para o mais antigo.</li>
+<li>Cada linha mostra a data e a hora, o tipo, o status (<span class="ui">Lida</span> ou <span class="ui">Não lida</span>), o título, o canal de envio e o começo do texto.</li>
+<li>O canal mostra como o aviso foi enviado: <span class="ui">App</span>, quando ele ficou só dentro do sistema, ou <span class="ui">App + Push</span>, quando também chegou ao celular. Um traço (—) aparece quando não há registro de envio.</li>
+<li>Em telas grandes, o topo mostra a quantidade de notificações.</li>
+<li>Quando há mais de uma página, a paginação aparece no fim da lista.</li>
+</ul>
+<table>
+<thead><tr><th>Filtro</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Tipo</span></td><td>Mostra os avisos de um tipo, ou de <span class="ui">Todos os tipos</span>. Este filtro vale para todas as páginas.</td></tr>
+<tr><td><span class="ui">Status</span></td><td>Mostra só <span class="ui">Lida</span> ou só <span class="ui">Não lida</span>. Este filtro vale só para os avisos da página que você está vendo.</td></tr>
+<tr><td><span class="ui">Limpar filtros</span></td><td>Aparece quando algum filtro está ativo. Remove os dois filtros.</td></tr>
+</tbody>
+</table>
+<p>Enquanto a lista carrega, aparecem linhas de espera. Se ela não carregar, aparece a mensagem <em>Erro ao carregar notificações</em>, com o botão <span class="ui">Tentar novamente</span>. Sem nenhum aviso, aparece <em>Nenhuma notificação</em>, com o texto <em>Notificações do sistema aparecerão aqui</em>. Com filtros que não encontram nada, aparece <em>Nenhuma notificação encontrada</em>, com a sugestão de ajustar os filtros.</p>
+
+<h2 id="marcar-como-lida-e-abrir">Marcar como lida e abrir o item</h2>
+<p>Nesta tela não existe botão para marcar um aviso como lido, nem para marcar todos de uma vez. Um aviso passa a ser lido de duas formas:</p>
+<ul>
+<li>quando você clica nele e ele leva a algum lugar;</li>
+<li>quando você resolve uma contestação de alocação pelos botões do próprio aviso.</li>
+</ul>
+<p>Avisos que não levam a lugar nenhum não podem ser abertos aqui. Por isso, continuam como <span class="ui">Não lida</span>.</p>
+<ol class="steps">
+<li>Clique no aviso.</li>
+<li>O sistema abre o assunto ligado a ele, conforme a tabela de avisos mostrada acima. Se o aviso ainda não estava lido, ele passa a ser lido.</li>
+</ol>
+<p>Abrir um aviso que já foi lido não muda o status dele.</p>
+
+<h2 id="contestacoes-de-alocacao">Contestações de alocação</h2>
+<p>Quando um profissional informa que foi alocado de forma incorreta em um plantão, o aviso <em>Alocação contestada</em> chega aos coordenadores da escala. Você pode decidir direto na linha do aviso, sem abrir o plantão.</p>
+<table>
+<thead><tr><th>Botão</th><th>O que acontece</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Desvincular</span></td><td>O profissional sai do plantão, e o plantão continua na escala.</td></tr>
+<tr><td><span class="ui">Remover plantão</span></td><td>O plantão sai da escala.</td></tr>
+</tbody>
+</table>
+<p>Nos dois casos, o profissional recebe um aviso com a decisão. Os botões aparecem para quem recebeu o aviso e tem um destes perfis: Master, Gestor interno ou Coordenador. Na prática, o aviso chega só aos coordenadores da escala, e cada um resolve apenas as contestações das escalas que coordena. Os botões somem assim que o aviso fica como lido.</p>
+<ol class="steps">
+<li>Leia o aviso <em>Alocação contestada</em> e confira o plantão.</li>
+<li>Clique em <span class="ui">Desvincular</span> ou em <span class="ui">Remover plantão</span>.</li>
+<li>Espere a confirmação, que aparece como <em>Profissional desvinculado.</em> ou <em>Plantão removido.</em> Enquanto isso, o botão mostra <em>Desvinculando...</em> ou <em>Removendo...</em>.</li>
+</ol>
+<p>Depois de resolvido, o aviso fica como lido.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> ao clicar no aviso para abrir o plantão, ele fica como lido e os botões deixam de aparecer. Decida antes de abrir o plantão.</p></div>
+<div class="callout callout-tip"><p><strong>Dica:</strong> cada contestação só pode ser resolvida uma vez. Se ela já foi resolvida, ou se o profissional já não está no plantão, o sistema mostra o motivo e não altera nada.</p></div>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+<li><a href="/help/equipe-de-gestao">Gestores, coordenadores, visualizadores e masters</a></li>
+<li><a href="/help/registros-de-presenca">Registros de presença e revisões de ponto</a></li>
+<li><a href="/help/anuncios-e-aprovacoes">Anúncios, trocas e aprovações</a></li>
+<li><a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a></li>
+</ul>

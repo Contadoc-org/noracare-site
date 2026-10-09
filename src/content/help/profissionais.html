@@ -1,0 +1,254 @@
+<p class="lead">A tela <span class="ui">Usuários › Profissionais</span> reúne os médicos, enfermeiros e fisioterapeutas da sua instituição. Aqui você busca na lista, convida uma pessoa nova, abre a ficha para ver e editar os dados, acompanha as escalas e os locais em que ela atua e pode inativar, reativar ou excluir o cadastro.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+
+<h2 id="quem-pode-usar">Quem pode usar esta tela</h2>
+<p>O item <span class="ui">Profissionais</span> aparece dentro de <span class="ui">Usuários › Profissionais</span> para quem tem a permissão de gestão de profissionais: Master, Gestor interno e Coordenador. Por padrão, o Visualizador não vê esse item, conforme as permissões definidas pela sua instituição. Quem não tem acesso é levado de volta ao <a href="/help/dashboard">Dashboard</a>.</p>
+<p>Veja o que cada perfil consegue fazer nesta tela:</p>
+<table>
+<thead><tr><th>O que você pode fazer</th><th>Master</th><th>Gestor interno</th><th>Coordenador</th><th>Visualizador</th></tr></thead>
+<tbody>
+<tr><td>Ver a lista e as fichas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>Adicionar profissional (convite)</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Editar dados pessoais</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Editar dados profissionais (conselho, nome abreviado, especialidades e pós-graduações)</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+<tr><td>Ver e editar Relação, Regras de pagamento e Contas Bancárias</td><td>Sim</td><td>Sim</td><td>Não aparecem</td><td>Só ver</td></tr>
+<tr><td>Ver as observações internas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim, só na lista</td></tr>
+<tr><td>Editar as observações internas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+<tr><td>Editar as escalas vinculadas</td><td>Sim</td><td>Sim</td><td>Só nas escalas do seu alcance</td><td>Não</td></tr>
+<tr><td>Trocar a foto</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
+<tr><td>Inativar, reativar e excluir</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Restaurar um profissional excluído (na lista)</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Reenviar convite ou resetar senha</td><td>Sim</td><td>Sim, exceto de Master</td><td>Sim, nos perfis de profissionais de saúde</td><td>Não</td></tr>
+</tbody>
+</table>
+<div class="callout callout-info"><p><strong>Por que o coordenador tem limites:</strong> dados pessoais e informações de pagamento ficam restritos para proteger as pessoas e os valores pagos a elas. Quando você está usando o perfil de Coordenador, o botão <span class="ui">Adicionar</span> não aparece nesta lista.</p></div>
+
+<h2 id="lista-de-profissionais">Lista de profissionais</h2>
+<p>A tela abre com o título <span class="ui">Profissionais</span> e a lista dos profissionais. Logo acima da lista, a linha de contagem mostra quantos profissionais foram encontrados e quais deles estão na página atual, por exemplo: <em>Exibindo 1–25 de 120 profissionais</em>. Use as setas no fim da lista para ver as demais páginas.</p>
+
+<h3 id="colunas">Colunas da lista</h3>
+<table>
+<thead><tr><th>Coluna</th><th>O que mostra</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Nome do médico</span></td><td>Nome do profissional, com a profissão logo abaixo. A coluna tem esse título para todas as profissões. Clique no nome para abrir a ficha. Ao lado do nome podem aparecer os selos <span class="ui">Inativa</span> (profissional inativo) e <span class="ui">Excluído</span>. Passe o mouse sobre o nome para ver as observações internas, quando houver e se você tiver acesso a elas.</td></tr>
+<tr><td><span class="ui">Especialidade</span></td><td>Até duas especialidades. Se houver mais, aparece <strong>+</strong> seguido da quantidade restante.</td></tr>
+<tr><td><span class="ui">Empresa</span></td><td>Nome da empresa vinculada. Quando você pode abrir empresas, o nome é um link para a empresa. Para o Coordenador, aparece só o nome.</td></tr>
+<tr><td><span class="ui">Escalas</span></td><td>Quantidade de escalas em que o profissional está vinculado. Passe o mouse sobre o número para ver a lista, com cada escala no formato Rede &gt; Local &gt; Setor &gt; Escala.</td></tr>
+<tr><td><span class="ui">1º Plantão</span></td><td>Data do primeiro plantão dele.</td></tr>
+<tr><td><span class="ui">Última atuação</span></td><td>Mostra há quantos dias foi o último plantão que já aconteceu, junto com a data. Passe o mouse (ou toque) no ⓘ ao lado do título para ver a explicação.</td></tr>
+<tr><td><span class="ui">Atividade</span></td><td>Selo que resume a última atuação: <span class="ui">Atuante</span> (menos de 30 dias), <span class="ui">Atenção</span> (entre 30 e 60 dias) e <span class="ui">Crítico</span> (mais de 60 dias). Se a pessoa não tem nenhum plantão que já aconteceu, a coluna mostra um traço (—).</td></tr>
+<tr><td><span class="ui">Último acesso</span></td><td>Há quanto tempo a pessoa entrou no sistema pela última vez, ou <span class="ui">Nunca</span>.</td></tr>
+<tr><td><span class="ui">Status</span></td><td><span class="ui">Ativo</span>, <span class="ui">Inativo</span> ou <span class="ui">Excluído</span>.</td></tr>
+</tbody>
+</table>
+
+<h3 id="buscar-e-filtrar">Buscar e filtrar</h3>
+<p>No campo de busca, digite parte do nome do profissional ou a identificação interna que a sua instituição usa para ele. A lista atualiza sozinha enquanto você digita. Para apagar o texto, clique no <strong>X</strong> ao lado do campo.</p>
+<p>Abaixo da busca há os filtros:</p>
+<table>
+<thead><tr><th>Filtro</th><th>Opções</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Todas as Redes</span>, <span class="ui">Todos os Locais</span> e <span class="ui">Todos os Setores</span></td><td>Lista com as redes, os locais e os setores cadastrados</td><td>Mostra só os profissionais vinculados àquela rede, local ou setor. Ao escolher uma rede, a lista de locais passa a mostrar só os locais dela. Trocar a rede limpa os filtros de local e de setor.</td></tr>
+<tr><td><span class="ui">Todas as Atividades</span></td><td><span class="ui">Atuante</span>, <span class="ui">Atenção</span> e <span class="ui">Crítico</span></td><td>Mostra só quem está nessa faixa de atividade.</td></tr>
+<tr><td><span class="ui">Ativos</span> (situação)</td><td><span class="ui">Ativos</span>, <span class="ui">Inativos</span>, <span class="ui">Excluídos</span> e <span class="ui">Todos</span></td><td><span class="ui">Ativos</span> é o padrão. <span class="ui">Inativos</span> mostra só os inativos. <span class="ui">Excluídos</span> mostra só os excluídos. <span class="ui">Todos</span> mostra ativos e inativos; os excluídos aparecem somente em <span class="ui">Excluídos</span>.</td></tr>
+</tbody>
+</table>
+<p>À esquerda do botão <span class="ui">Adicionar</span> há um botão com ícone de olho. Ele é um atalho para ver os inativos. Enquanto o olho está riscado, os inativos estão ocultos. Ao clicar, o olho fica aberto e a situação passa para <span class="ui">Todos</span>. Clique de novo para voltar a <span class="ui">Ativos</span>.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> a busca encontra partes do nome. Digitar só o primeiro sobrenome já ajuda a achar a pessoa.</p></div>
+
+<h3 id="mensagens-da-lista">Mensagens da lista</h3>
+<ul>
+<li><span class="ui">Nenhum profissional encontrado</span>: nenhum cadastro bate com a busca ou com os filtros. Limpe a busca ou volte a situação para <span class="ui">Ativos</span>.</li>
+<li><span class="ui">Erro ao carregar profissionais</span>: a lista não carregou. Clique em <span class="ui">Tentar novamente</span>.</li>
+</ul>
+<p>Em telas estreitas, como no celular, cada profissional aparece em um cartão com as mesmas informações da tabela.</p>
+
+<h2 id="convidar-profissional">Convidar um profissional</h2>
+<p>Use o convite para cadastrar uma pessoa nova ou para dar um novo perfil clínico (médico, enfermeiro ou fisioterapeuta) a uma pessoa que já está no sistema. O botão <span class="ui">Adicionar</span>, no alto da lista, abre a tela <span class="ui">Convidar Profissional</span>. Ele aparece para Master e Gestor interno.</p>
+
+<h3 id="passo-a-passo">Passo a passo</h3>
+<ol class="steps">
+<li>Clique em <span class="ui">Adicionar</span>.</li>
+<li>No campo <span class="ui">E-mail</span>, digite o e-mail da pessoa. O sistema procura se ela já tem cadastro. Enquanto essa busca não termina, o restante do formulário não aparece e o botão de envio fica bloqueado.</li>
+<li>Se a pessoa for nova, escolha a <span class="ui">Profissão</span>. Se ela já tiver cadastro, escolha o perfil no campo <span class="ui">Selecionar perfil</span>.</li>
+<li>Preencha os campos que aparecerem. Os obrigatórios estão na tabela abaixo. Para médico, enfermeiro e fisioterapeuta, aparecem também as seções <span class="ui">Relação</span>, <span class="ui">Contas Bancárias</span> e <span class="ui">Acessos</span>. A seção <span class="ui">Regras de pagamento</span> aparece quando o vínculo é de sócio com empresa interna. Também aparecem a foto de perfil (opcional), as observações internas e o endereço.</li>
+<li>Clique em <span class="ui">Enviar Convite</span>.</li>
+</ol>
+<p>Na seção <span class="ui">Acessos</span>, marque as redes, os locais, os setores ou as escalas em que o profissional vai atuar. Marcar uma escala também o inclui no calendário dela. Depois, você pode mudar essas escolhas na aba <span class="ui">Escalas</span> da ficha.</p>
+
+<h3 id="campos-obrigatorios">Campos obrigatórios</h3>
+<p>Ao clicar em <span class="ui">Enviar Convite</span>, o sistema confere os campos. Se algum obrigatório estiver vazio ou errado, aparece a mensagem <em>Revise os campos obrigatórios</em>, com a lista do que falta, e a tela rola até o primeiro campo com erro.</p>
+<table>
+<thead><tr><th>Campo</th><th>Quando é obrigatório</th><th>Mensagem que você verá</th></tr></thead>
+<tbody>
+<tr><td>Profissão</td><td>Sempre. Se a pessoa já tem cadastro, vale o perfil escolhido em <span class="ui">Selecionar perfil</span>.</td><td>Selecione a profissão</td></tr>
+<tr><td>E-mail</td><td>Sempre</td><td>E-mail é obrigatório, ou E-mail inválido</td></tr>
+<tr><td>Nome completo</td><td>Sempre. Quando a pessoa já tem cadastro, o nome é preenchido sozinho.</td><td>Nome é obrigatório</td></tr>
+<tr><td>CPF</td><td>Só para pessoa nova</td><td>CPF é obrigatório, ou CPF inválido</td></tr>
+<tr><td>Cidade e UF</td><td>Só para pessoa nova</td><td>Cidade é obrigatória, ou Estado (UF) é obrigatório</td></tr>
+<tr><td>CRM, COREN ou CREFITO, conforme a profissão, e a UF desse registro</td><td>Para médico, enfermeiro e fisioterapeuta</td><td>CRM é obrigatório (ou COREN ou CREFITO, conforme a profissão). Também é obrigatória a UF do conselho, como em UF do CRM é obrigatória.</td></tr>
+<tr><td>Empresa</td><td>Quando você escolhe um tipo de vínculo (Sócio ou Terceirizado)</td><td>Empresa é obrigatória quando um vínculo é selecionado</td></tr>
+<tr><td>Fonte pagadora</td><td>Quando a empresa escolhida é externa (no vínculo Terceirizado)</td><td>Fonte pagadora é obrigatória</td></tr>
+<tr><td>Telefone</td><td>Não é obrigatório. Se preencher, use 10 ou 11 números.</td><td>Telefone inválido (10 ou 11 dígitos)</td></tr>
+<tr><td>Data de nascimento</td><td>Não é obrigatória. Se preencher, a data precisa estar completa.</td><td>Data de nascimento inválida</td></tr>
+<tr><td>Nome abreviado</td><td>Não é obrigatório, mas não pode ser igual ao de outro profissional.</td><td>Nome abreviado já em uso</td></tr>
+</tbody>
+</table>
+<p>O tipo de vínculo é opcional. Se você não escolher nenhum, a empresa também não é exigida. Especialidades e pós-graduações também não são obrigatórias no convite: você pode incluí-las agora ou depois, na ficha.</p>
+<p>Se você trocar a profissão depois de já ter preenchido o formulário, a tela pede confirmação com o aviso de que a troca limpa os campos específicos (CRM, especialidades, funções e vínculo). Para continuar com a troca, clique em <span class="ui">Trocar mesmo assim</span>. Para manter o que já preencheu, clique em <span class="ui">Cancelar</span>.</p>
+
+<h3 id="quando-a-pessoa-ja-tem-cadastro">Quando a pessoa já tem cadastro</h3>
+<p>Se o e-mail já existe no sistema, a tela mostra um cartão com o nome da pessoa e os perfis que ela já tem. Há três situações:</p>
+<ul>
+<li><strong>Cadastro ativo.</strong> O cartão mostra <span class="ui">Adicionando perfil a</span> seguido do nome, e a linha <span class="ui">Perfis atuais</span> com os perfis que a pessoa já tem. Escolha o novo perfil em <span class="ui">Selecionar perfil</span>. Só aparecem perfis que a pessoa ainda não tem. Se ela já tiver todos, a tela diz: <em>Esta pessoa já tem todos os perfis disponíveis aqui</em>.</li>
+<li><strong>Cadastro desativado.</strong> O cartão diz <span class="ui">Usuário atualmente desativado</span>. Ao enviar o convite, o cadastro é reativado com o perfil escolhido.</li>
+<li><strong>Perfil clínico já ativo.</strong> Se a pessoa já atua como médico, enfermeiro ou fisioterapeuta, o formulário some e abre a janela <span class="ui">Conflito de profissão clínica</span>.</li>
+</ul>
+<p>Na janela <span class="ui">Conflito de profissão clínica</span> você tem três opções:</p>
+<ul>
+<li><span class="ui">Editar perfil existente</span>: abre a ficha dessa pessoa, onde você pode ajustar o cadastro.</li>
+<li><span class="ui">Remover perfil clínico</span>: inativa o perfil atual, que continua podendo ser restaurado. Antes de confirmar, a tela mostra o impacto: os plantões futuros ligados a esse perfil são reabertos, os vínculos de escala são removidos e os setores são desvinculados. Para confirmar, digite o e-mail da pessoa no campo <span class="ui">E-mail de confirmação</span>. O botão <span class="ui">Remover perfil clínico</span> só fica ativo depois que o e-mail confere.</li>
+<li><span class="ui">Cancelar</span>: fecha a janela sem alterar nada.</li>
+</ul>
+<p>Depois de remover o perfil clínico, o formulário volta a aparecer para você cadastrar a nova profissão.</p>
+<p>Se a pessoa já tem cadastro, os dados pessoais já existentes são aproveitados, e a seção <span class="ui">Dados pessoais e cadastro</span> não aparece. O endereço continua na tela, mas não é obrigatório. A seção <span class="ui">Perfis atuais desta pessoa</span> lista os perfis dela. Quem tem permissão pode remover um perfil com o botão <span class="ui">Remover</span>. Nesse caso, só aquele perfil é desativado: a pessoa e os outros perfis continuam como estão. Para perfis clínicos (médico, enfermeiro ou fisioterapeuta), a remoção pede o e-mail da pessoa para confirmar.</p>
+
+<h3 id="depois-do-convite">Depois de enviar</h3>
+<ul>
+<li>Quando o convite dá certo, aparece a mensagem <span class="ui">Convite enviado com sucesso</span> e você volta para a lista.</li>
+<li>Se a pessoa é nova, ela recebe um e-mail para ativar a conta. O passo a passo dela está em <a href="/help/primeiro-acesso">Primeiro acesso e login</a>.</li>
+<li>Se a pessoa foi cadastrada, mas algum item extra (especialidade, pós-graduação, conta bancária ou foto) não foi salvo, aparece um aviso com a quantidade de itens que falharam. Abra a ficha e adicione esses itens manualmente.</li>
+<li>Se o convite falhar, a mensagem de erro aparece logo acima dos botões <span class="ui">Cancelar</span> e <span class="ui">Enviar Convite</span>, e o que você preencheu continua na tela.</li>
+</ul>
+<p>Para desistir, clique em <span class="ui">Cancelar</span>. O formulário é limpo e você volta para a lista.</p>
+
+<h3 id="importados-sem-convite">Profissionais importados sem convite</h3>
+<p>Alguns profissionais foram trazidos de outro sistema e ainda não receberam convite. Na lista, eles têm uma caixa de seleção na primeira coluna. Na ficha, aparece um selo de aviso informando que o cadastro foi importado e ainda não recebeu convite. Para Master e Gestor interno:</p>
+<ul>
+<li>Na lista, marque os profissionais que quer convidar. A caixa do topo marca todos os importados sem convite que aparecem nesta página. Depois clique em <span class="ui">Convidar selecionados</span>.</li>
+<li>Na ficha, clique em <span class="ui">Convidar</span>. Ao enviar, aparece a mensagem de que o link para criar a senha vale por 48 horas.</li>
+<li>No envio em lote, a tela informa quantos convites foram enviados. Se algum falhar, a mensagem mostra o nome e o motivo, e esse profissional continua marcado para você tentar de novo.</li>
+</ul>
+
+<h2 id="ficha-do-profissional">Ficha do profissional</h2>
+<p>Para abrir a ficha, clique no nome do profissional na lista. A ficha tem duas abas: <span class="ui">Cadastro</span> e <span class="ui">Escalas</span>. Para voltar à lista, clique em <span class="ui">Profissionais</span>, no alto da página.</p>
+
+<h3 id="cabecalho-da-ficha">Cabeçalho</h3>
+<ul>
+<li><strong>Nome, e-mail e foto.</strong> Quem pode alterar a foto clica nela para trocar a imagem.</li>
+<li><strong>Registro profissional.</strong> Logo abaixo do nome aparecem o conselho (CRM, COREN ou CREFITO), o número e a UF. Se o registro não estiver cadastrado, aparece a profissão.</li>
+<li><strong>Selos.</strong> <span class="ui">Inativa</span> quando o profissional está inativo e <span class="ui">Arquivada</span> quando ele foi excluído. O selo de importado sem convite também aparece aqui.</li>
+<li><strong>1º Cadastro.</strong> A data em que o cadastro foi criado.</li>
+<li><strong>Botão de convite ou senha</strong>, logo abaixo do e-mail: <span class="ui">Reenviar convite</span>, <span class="ui">Resetar senha</span> ou <span class="ui">Convidar</span>. Veja a seção <a href="#reenviar-convite-e-resetar-senha">Reenviar convite e resetar senha</a>.</li>
+</ul>
+
+<h3 id="dados-pessoais">Dados pessoais e cadastro</h3>
+<p>Este bloco traz o nome completo, o <span class="ui">Email</span>, o telefone, a data de nascimento e o CPF. Os campos <span class="ui">Nome completo</span>, <span class="ui">Email</span> e <span class="ui">CPF</span> são obrigatórios. Quem não pode editar (Coordenador e Visualizador) vê os campos bloqueados.</p>
+<ul>
+<li>Se você trocar o e-mail, a pessoa que usava o endereço antigo recebe um aviso, e a sessão atual dela é encerrada. Por isso, confira o endereço antes de salvar.</li>
+<li>O CPF só é conferido quando você o altera. Se o número for inválido, aparece <em>CPF inválido</em>.</li>
+</ul>
+
+<h3 id="dados-profissionais">Dados profissionais</h3>
+<ul>
+<li><strong>Conselho e UF.</strong> Quem gerencia profissionais pode corrigir o número e a UF do registro. Para os demais, o campo aparece bloqueado com a frase <em>não pode ser alterado após cadastro</em>.</li>
+<li><strong>Nome abreviado.</strong> É o nome curto usado para identificar o profissional. Pouco depois de você digitar, a tela confirma se o nome está disponível. Se já estiver em uso, mostra por quem, com um link para a ficha dessa pessoa.</li>
+<li><strong>Especialidades.</strong> Você escolhe a especialidade em uma lista pronta. Ao incluir, a tela pede o RQE (registro de qualificação de especialista), que é obrigatório para salvar. Não é possível criar uma especialidade nova pela tela; escolha uma da lista. Use o ícone de lápis para editar o RQE e o de lixeira para remover. Antes de remover, a tela pede confirmação.</li>
+<li><strong>Pós Graduações.</strong> Funciona do mesmo jeito, com a carga horária no lugar do RQE. Para salvar a pós-graduação, a carga horária é obrigatória.</li>
+</ul>
+<p>Para incluir uma especialidade ou uma pós-graduação, use o bloco <span class="ui">Pós e Especialidades</span>. Escolha o tipo, <span class="ui">Especialidade</span> ou <span class="ui">Pós Graduação</span>, e selecione o nome na lista. A especialidade pede o RQE, e a pós-graduação pede a carga horária.</p>
+
+<h3 id="observacoes-internas">Observações internas</h3>
+<p>Este bloco traz a identificação interna que a sua instituição usa para o profissional (o número ou a sigla que ela usa para ele) e um campo de observações. As observações são notas internas da equipe e não aparecem para o profissional. O bloco aparece para quem pode gerenciar profissionais: Master, Gestor interno e Coordenador. Na lista, as observações também aparecem ao passar o mouse sobre o nome, para quem tem acesso a elas.</p>
+
+<h3 id="relacao-com-empresa">Relação com a empresa</h3>
+<p>Este bloco mostra como o profissional se relaciona com a empresa. Ele não aparece para o Coordenador. Há duas opções em <span class="ui">Tipo de vínculo</span>:</p>
+<ul>
+<li><span class="ui">Sócio</span>: o profissional é sócio de uma empresa interna. O campo seguinte é <span class="ui">Empresa interna</span>.</li>
+<li><span class="ui">Terceirizado</span>: o profissional tem uma empresa externa própria (PJ) que emite nota fiscal para a empresa interna. O campo seguinte é <span class="ui">Empresa externa</span>.</li>
+</ul>
+<p>Depois de escolher o tipo, selecione a empresa. Se ela ainda não existir, use <span class="ui">Cadastrar nova empresa interna</span> ou <span class="ui">Cadastrar nova empresa externa</span>. Quando a empresa já está vinculada, aparecem os links <span class="ui">Histórico contratual</span> e <span class="ui">Editar empresa</span>, e a linha <span class="ui">Alteração contratual de entrada</span>, que mostra a alteração registrada ou a frase <em>não registrada</em>.</p>
+<p>Para empresa externa, é preciso informar a <span class="ui">Fonte pagadora</span>, que é a empresa interna que paga por ela. Se faltar, aparece o aviso <em>Empresa externa incompleta</em>, com a orientação de adicionar a fonte pagadora.</p>
+<p>Depois de vincular uma empresa interna (no vínculo de Sócio), a tela pergunta se você quer registrar a alteração contratual pela qual o profissional entrou. Você pode escolher <span class="ui">Agora não</span> ou <span class="ui">Registrar</span>.</p>
+
+<h3 id="regras-de-pagamento">Regras de pagamento</h3>
+<p>Este bloco aparece só quando o vínculo de Sócio com empresa interna já está salvo, e não aparece para o Coordenador. Ele traz a <span class="ui">Regra de pagamento</span> (uma das opções prontas ou uma personalizada), além das opções de pró-labore e de desconto de INSS. Para entender como essas regras afetam os valores, veja <a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a>.</p>
+
+<h3 id="contas-bancarias">Contas Bancárias</h3>
+<p>Este bloco lista as contas do profissional e não aparece para o Coordenador. Para adicionar uma conta, clique em <span class="ui">Adicionar</span>. Escolha o tipo:</p>
+<ul>
+<li><strong>PIX</strong>: escolha o tipo de chave (CPF, CNPJ, E-mail, Telefone ou Chave Aleatória) e informe a chave. O CNPJ não aparece para o sócio de empresa interna.</li>
+<li><strong>TED</strong>: informe o banco, a agência e o número da conta.</li>
+</ul>
+<p>Em todos os casos, informe o nome do titular, sem números. Ative <span class="ui">Conta principal</span> para indicar a conta principal. Para salvar uma conta, o CPF do profissional precisa estar cadastrado. Se o vínculo for Terceirizado, o documento exigido é o CNPJ da empresa vinculada. Se faltar, a tela avisa antes de salvar.</p>
+<p>Em cada conta, use <span class="ui">Editar conta</span> para mudar os dados ou <span class="ui">Excluir conta</span> para apagá-la. Antes de excluir, a tela pede confirmação.</p>
+
+<h3 id="endereco">Endereço</h3>
+<p>Informe o CEP. Ao preenchê-lo, a tela busca o endereço e completa os campos, que você pode revisar. <span class="ui">Cidade</span> e <span class="ui">UF</span> são obrigatórios. A UF é escolhida em uma lista de estados. O botão <span class="ui">Buscar coordenadas pelo CEP</span> preenche a latitude e a longitude, que podem ser ajustadas à mão.</p>
+
+<h3 id="check-in-passivo">Check-in passivo no aparelho</h3>
+<p>Este bloco mostra o <span class="ui">Último retrato</span> enviado pelo aplicativo do profissional, com o aparelho e o aplicativo instalado, se a localização está liberada e quando foi recebida a última posição. A posição não aparece com coordenadas, só o horário e a precisão. A primeira linha é o estado:</p>
+<ul>
+<li><span class="ui">Pronto</span>: o aparelho está preparado para o check-in automático.</li>
+<li><span class="ui">Falta:</span> seguido do que ainda precisa ser ajustado no celular. Por exemplo, permitir a localização <em>Sempre</em> no iPhone, ou <em>O tempo todo</em> no Android.</li>
+<li><span class="ui">Sem dados do aparelho</span>: o aplicativo ainda não enviou nada.</li>
+</ul>
+<p>Clique em <span class="ui">Ver histórico</span> para ver os últimos 30 dias, com até 200 retratos mais recentes. Se a tela não carregar o histórico, use o link <span class="ui">Tentar novamente</span>.</p>
+<div class="callout callout-info"><p>Esta seção é só de leitura. Para entender o funcionamento do check-in automático, veja <a href="/help/check-in-automatico">Check-in automático</a>. Para as permissões do celular, veja <a href="/help/app-no-celular">App no celular</a>.</p></div>
+
+<h2 id="editar-um-profissional">Editar um profissional</h2>
+<p>Na ficha não existe um botão de edição separado. Os campos já estão disponíveis: basta alterar o que precisa. Quando algo muda em um bloco, aparecem os botões <span class="ui">Cancelar</span> e <span class="ui">Salvar</span> no fim desse bloco. Clique em <span class="ui">Salvar</span> para gravar só aquele bloco. Clique em <span class="ui">Cancelar</span> para voltar ao que estava salvo.</p>
+<p>Se algo não puder ser salvo, a mensagem aparece junto do bloco, como <em>Erro ao salvar. Tente novamente.</em> Se o e-mail ou o CPF já pertencerem a outro cadastro, a mensagem aparece no próprio campo. Para saber quem pode alterar cada bloco, veja a tabela em <a href="#quem-pode-usar">Quem pode usar esta tela</a>.</p>
+
+<h2 id="escalas-e-locais-vinculados">Escalas e locais vinculados</h2>
+<p>A aba <span class="ui">Escalas</span> mostra em quais locais, setores e escalas o profissional atua. Quem tem permissão de gestão vê o bloco <span class="ui">Escalas vinculadas</span>. Os demais veem a mensagem de que as escalas vinculadas ficam visíveis apenas para perfis administrativos com permissão de gestão.</p>
+<p>O bloco é uma árvore com quatro níveis: <strong>Rede</strong>, <strong>Local</strong>, <strong>Setor</strong> e <strong>Escala</strong>. A tela resume a regra assim: <em>Marque uma Rede/Local/Setor para liberar todo o ramo (inclusive futuros) ou selecione escalas específicas.</em> Na prática:</p>
+<ul>
+<li>Marcar uma Rede, um Local ou um Setor libera todo o ramo, inclusive as escalas criadas depois.</li>
+<li>Enquanto o item de cima estiver marcado, os itens de baixo ficam marcados e travados. Para tirar um deles, desmarque o item de cima.</li>
+<li>Marcar todas as escalas de um setor, uma por uma, não marca o setor. Para liberar o setor inteiro, marque o setor.</li>
+<li>Marcar uma escala também a inclui no calendário dela.</li>
+<li>O botão de olho ao lado da árvore mostra ou oculta as estruturas inativas.</li>
+</ul>
+<p>Depois de mudar a seleção, clique em <span class="ui">Salvar</span>. Se der erro, aparece <em>Erro ao salvar escalas. Tente novamente.</em></p>
+<p>Clique no nome de uma escala para abrir a visão mensal dela, no menu <span class="ui">Escalas › Mensal</span>. Veja mais em <a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a>.</p>
+<div class="callout callout-info"><p><strong>Para o Coordenador:</strong> ele vê e altera só o ramo onde tem vínculos. Os outros ramos ficam escondidos.</p></div>
+<p>Abaixo das escalas aparece o bloco <span class="ui">Vínculos de valor fixo</span>, com os vínculos ativos do profissional, o valor efetivo de cada um e o período de vigência. Se não houver nenhum, a tela mostra <em>Nenhum vínculo de valor fixo ativo.</em> Esse bloco aparece só para profissionais de saúde, e apenas para quem gerencia profissionais. Veja também <a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a>.</p>
+
+<h2 id="situacao-inativar-reativar-excluir">Situação: inativar, reativar e excluir</h2>
+<p>A situação do profissional fica no bloco <span class="ui">Status do profissional</span>, no fim da aba <span class="ui">Cadastro</span>. Esse bloco aparece só para Master e Gestor interno. A frase do bloco muda conforme a situação:</p>
+<ul>
+<li><strong>Ativo:</strong> <em>Profissional ativo. Use Inativar para suspender o acesso e os vínculos visíveis.</em></li>
+<li><strong>Inativo:</strong> <em>Este profissional está inativo. Reative ou exclua abaixo.</em></li>
+<li><strong>Arquivado (excluído):</strong> <em>Este profissional foi arquivado. Apenas leitura.</em></li>
+</ul>
+
+<h3 id="inativar">Inativar</h3>
+<p>Inativar tira o profissional das listas do dia a dia e remove o acesso dele. A ação pode ser desfeita depois, com a reativação. Ao clicar em <span class="ui">Inativar profissional</span>, a tela pede confirmação com a frase <em>O profissional perde o acesso e some das listagens ativas, mas pode ser reativado a qualquer momento.</em> Antes de confirmar, ela mostra o que está ligado a ele: plantões, contas bancárias, setores, vínculos de escala e trocas de plantão pendentes. Quando o profissional é o último ativo de uma empresa externa, aparece a opção <em>Também inativar</em>, seguida do nome da empresa. Marque essa opção se quiser inativar a empresa junto.</p>
+
+<h3 id="reativar">Reativar</h3>
+<p>Para reativar um profissional inativo, clique em <span class="ui">Reativar</span>. A reativação não acontece se já existir outro profissional ativo que conflite com ele. Nesse caso, a tela mostra o aviso <em>Não é possível reativar</em>, com o nome do profissional ativo que já existe e um botão para abrir o cadastro dele.</p>
+
+<h3 id="excluir">Excluir</h3>
+<p>O botão <span class="ui">Excluir</span> só aparece depois que o profissional já está inativo. Primeiro inative; depois, se for o caso, exclua. Ao clicar, a tela pede confirmação com a frase <em>Esta ação não pode ser desfeita</em> e mostra o que ainda está ligado a ele, como plantões ativos, contas bancárias, vínculos de setor, vínculos de escala, trocas pendentes e aparelhos registrados. Depois de excluir, a ficha passa a ser somente leitura e o profissional sai das listas do dia a dia. Para encontrá-lo depois, use o filtro <span class="ui">Excluídos</span>. Na lista, Master e Gestor interno ainda veem o link <span class="ui">Restaurar</span> junto ao nome de quem foi excluído.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> antes de excluir, pense se não basta inativar. Se a intenção for só afastar o profissional por um tempo, use <span class="ui">Inativar</span>: ele pode ser reativado depois.</p></div>
+
+<h2 id="reenviar-convite-e-resetar-senha">Reenviar convite e resetar senha</h2>
+<p>No cabeçalho da ficha, logo abaixo do e-mail, o botão muda conforme o caso:</p>
+<ul>
+<li><span class="ui">Reenviar convite</span>: a pessoa ainda não entrou no sistema. Ao confirmar, ela recebe um novo e-mail para ativar a conta, com uma senha temporária.</li>
+<li><span class="ui">Resetar senha</span>: a pessoa já entrou antes. Ao confirmar, ela recebe um e-mail com instruções.</li>
+<li><span class="ui">Convidar</span>: o profissional foi importado e ainda não recebeu convite. Esse botão é só para Master e Gestor interno. Veja a seção <a href="#importados-sem-convite">Profissionais importados sem convite</a>.</li>
+</ul>
+<p>Antes de enviar, a tela pede confirmação. A ação afeta todos os perfis vinculados a este e-mail. Quando o e-mail sai, aparece a mensagem <em>Email enviado para</em> seguida do endereço da pessoa.</p>
+<p>O botão só aparece para quem pode gerenciar aquele perfil. Por exemplo, o Gestor interno não reenvia convite nem reseta a senha de um Master. O Coordenador vê o botão nos perfis de profissionais de saúde.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> se a pessoa não encontrar o e-mail de ativação, use <span class="ui">Reenviar convite</span> para mandar um novo. Confira antes se o e-mail cadastrado está certo, na seção <span class="ui">Dados pessoais e cadastro</span>.</p></div>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+<li><a href="/help/equipe-de-gestao">Gestores, coordenadores, visualizadores e masters</a></li>
+<li><a href="/help/locais-e-empresas">Locais, empresas e permissões globais</a></li>
+<li><a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a></li>
+<li><a href="/help/primeiro-acesso">Primeiro acesso e login</a></li>
+</ul>

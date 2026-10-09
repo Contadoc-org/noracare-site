@@ -1,0 +1,275 @@
+<p class="lead">Aqui você monta a estrutura de redes, locais e setores da sua instituição, com endereço e a área usada no check-in. Também aprende a cadastrar e manter as empresas e a entender quem pode ver e alterar cada parte.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+
+<h2 id="estrutura">Como a estrutura é organizada</h2>
+<p>Os locais de trabalho ficam em uma árvore com quatro níveis. Cada nível fica dentro do nível de cima.</p>
+<table>
+<thead>
+<tr><th>Nível</th><th>O que representa</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Rede</strong></td><td>O grupo que reúne um ou mais locais.</td></tr>
+<tr><td><strong>Local</strong></td><td>Uma unidade física, com endereço e área de check-in.</td></tr>
+<tr><td><strong>Setor</strong></td><td>Uma área dentro do local, como uma UTI ou um pronto-socorro.</td></tr>
+<tr><td><strong>Escala</strong></td><td>Uma escala de plantões do setor, com os profissionais e coordenadores vinculados a ela.</td></tr>
+</tbody>
+</table>
+<p>Na tela, clique na linha de uma rede, de um local ou de um setor para abrir ou fechar o que está dentro dele.</p>
+
+<h2 id="acessar-locais">Acessar a tela Locais</h2>
+<ol class="steps">
+<li>Entre no painel web com a sua conta. Veja <a href="/help/primeiro-acesso">Primeiro acesso e login</a>.</li>
+<li>No menu, abra <span class="ui">Configurações › Locais</span>.</li>
+</ol>
+<div class="callout callout-info"><p>Se você não vê <span class="ui">Locais</span> no menu, o seu perfil não tem acesso a essa tela ou falta uma permissão. Veja <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</p></div>
+
+<h2 id="quem-pode-ver-e-alterar">Quem pode ver e alterar</h2>
+<table>
+<thead>
+<tr><th>Perfil</th><th>O que faz na tela Locais</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Master</strong></td><td>Vê tudo e pode criar, editar, inativar, reativar e excluir redes, locais, setores e escalas. Também pode mover uma escala para outro setor e abrir a precificação de cada escala.</td></tr>
+<tr><td><strong>Gestor interno</strong></td><td>Vê a árvore e abre cada item em modo de consulta, pelo ícone de informação. Nas redes, locais e setores, a janela de consulta mostra só o botão <span class="ui">Fechar</span>. Não cria nem altera nada. Só acessa a tela se tiver a permissão de visualizar redes, locais e setores. Por padrão, essa permissão já vem liberada para o gestor interno, conforme as permissões definidas pela sua instituição. Sem ela, o sistema leva você para a página inicial do painel.</td></tr>
+<tr><td><strong>Visualizador</strong></td><td>Vê a árvore só para consulta, sem botões de ação.</td></tr>
+</tbody>
+</table>
+<p>Coordenadores não têm acesso à tela Locais. Para entender cada perfil, veja <a href="/help/equipe-de-gestao">Gestores, coordenadores, visualizadores e masters</a>.</p>
+
+<h2 id="cadastrar-rede">Cadastrar uma rede</h2>
+<ol class="steps">
+<li>Role até o fim da árvore e clique em <span class="ui">Nova Rede</span>. Quando ainda não existe nenhuma rede, a tela mostra <em>Nenhuma organização cadastrada</em> e o mesmo botão.</li>
+<li>Preencha o <span class="ui">Nome da rede</span>. É o único campo obrigatório.</li>
+<li>Se quiser, preencha o campo de identificador. Se deixar em branco, o sistema gera um sozinho. O campo <span class="ui">ID</span> fica bloqueado, porque é gerado pelo sistema.</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+</ol>
+
+<h2 id="editar-rede-e-setor">Editar uma rede ou um setor</h2>
+<p>Na linha da rede ou do setor, clique no lápis. Você pode mudar o nome e o identificador. Para pausar o item, use a chave <span class="ui">Ativa</span> (na rede) ou <span class="ui">Ativo</span> (no setor), explicada em <a href="#inativar">Inativar</a>.</p>
+
+<h2 id="cadastrar-local">Cadastrar um local</h2>
+<ol class="steps">
+<li>Na linha da rede, clique no ícone <strong>+</strong>. O ícone só aparece em redes ativas.</li>
+<li>No formulário <span class="ui">Novo Local</span>, confira a <span class="ui">Rede</span>. Ela já vem preenchida com a rede que você escolheu. Todo local precisa pertencer a uma rede.</li>
+<li>Preencha o <span class="ui">Nome</span>. Depois, preencha o endereço: <span class="ui">Rua</span>, <span class="ui">Nº</span>, <span class="ui">Bairro</span>, <span class="ui">UF</span> e <span class="ui">Cidade</span> são obrigatórios. O <span class="ui">CEP</span> e o <span class="ui">Compl.</span> são opcionais.</li>
+<li>Clique em <span class="ui">Buscar coordenadas pelo CEP</span> para preencher a latitude e a longitude. Você também pode digitá-las.</li>
+<li>Preencha o <span class="ui">Raio de alcance (m)</span>, em metros, e confira o <span class="ui">Fuso horário</span>.</li>
+<li>Se quiser, use <span class="ui">Anotações</span> para observações internas sobre o local.</li>
+<li>Clique em <span class="ui">Adicionar</span>.</li>
+</ol>
+<p>Quando o CEP e o endereço estiverem completos, o sistema também tenta preencher as coordenadas sozinho ao sair do campo <span class="ui">Nº</span>. Confira o resultado antes de salvar.</p>
+<p>Ao salvar, a tela confirma com a mensagem <em>Local criado com sucesso</em>.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> ao digitar o CEP, o sistema busca o endereço e pode preencher rua, bairro, UF e cidade. Confira antes de salvar.</p><p>Se não achar as coordenadas do CEP, a tela avisa com a mensagem <em>Coordenadas não encontradas para este CEP — informe manualmente.</em> Nesse caso, digite a latitude e a longitude.</p></div>
+
+<h3 id="endereco-e-area-do-check-in">Endereço e área do check-in</h3>
+<p>O endereço identifica o local. A área do check-in é definida pela latitude, pela longitude e pelo raio de alcance. Na hora do check-in, o sistema confere se a pessoa está dentro dessa área.</p>
+<ul>
+<li>O raio é a distância máxima, em metros, permitida para o check-in a partir do ponto do local.</li>
+<li>Latitude e longitude erradas deixam a área do check-in no lugar errado. Confira antes de salvar.</li>
+<li>Se o local ficar sem latitude e longitude, o sistema não consegue fazer essa conferência.</li>
+</ul>
+
+<h2 id="editar-local">Editar um local</h2>
+<ol class="steps">
+<li>Na linha do local, clique no lápis.</li>
+<li>Altere o que precisar. O formulário tem quatro blocos: <span class="ui">IDENTIFICAÇÃO</span>, <span class="ui">ENDEREÇO</span>, <span class="ui">GEOLOCALIZAÇÃO</span> e <span class="ui">CONFIGURAÇÕES</span>.</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+</ol>
+<ul>
+<li><strong>IDENTIFICAÇÃO</strong>: o <span class="ui">Nome</span> e o identificador. O campo <span class="ui">ID</span> aparece bloqueado, porque é gerado pelo sistema.</li>
+<li><strong>ENDEREÇO</strong>: <span class="ui">CEP</span>, <span class="ui">Rua</span>, <span class="ui">Nº</span>, <span class="ui">Complemento</span>, <span class="ui">Bairro</span>, <span class="ui">UF</span> e <span class="ui">Cidade</span>.</li>
+<li><strong>GEOLOCALIZAÇÃO</strong>: <span class="ui">Latitude</span>, <span class="ui">Longitude</span> e <span class="ui">Raio de alcance (m)</span>, em metros. Latitude e longitude aceitam vírgula ou ponto como separador.</li>
+<li><strong>CONFIGURAÇÕES</strong>: <span class="ui">Anotações</span>, <span class="ui">Fuso horário</span> e a chave <span class="ui">Ativo</span>.</li>
+</ul>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se o local estiver inativo, os campos ficam bloqueados. Reative o local para editar os demais campos.</p><p>Se a rede estiver inativa, a chave <span class="ui">Ativo</span> do local também fica bloqueada, e aparece o link <em>Reativar rede primeiro →</em>.</p></div>
+
+<h2 id="cadastrar-setor">Cadastrar um setor</h2>
+<ol class="steps">
+<li>Na linha do local, clique no ícone <strong>+</strong>. O ícone só aparece em locais ativos.</li>
+<li>No formulário <span class="ui">Novo Setor</span>, o local aparece preenchido e não pode ser trocado. Preencha o <span class="ui">Nome do setor</span>, que é obrigatório.</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+</ol>
+
+<h3 id="escalas-no-setor">Escalas dentro do setor</h3>
+<p>Na linha de um setor ativo, o ícone <strong>+</strong> adiciona uma escala. Esse ícone só aparece para o Master.</p>
+<p>Clique no nome de uma escala para abrir o calendário dela na tela <span class="ui">Escalas</span>. Veja <a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a>.</p>
+<p>Para o Master, cada escala tem mais duas ações:</p>
+<ul>
+<li><strong>Lápis</strong>: abre a edição da escala, com campos como <span class="ui">Nome da escala</span>, <span class="ui">Descrição</span>, a chave <span class="ui">Ativo</span> e as regras de check-in e de visibilidade. Veja <a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a>.</li>
+<li><strong>Ícone de cifrão</strong>: abre a precificação da escala. Veja <a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a>.</li>
+</ul>
+<p>Na edição da escala, o Master também pode mover a escala para outro setor. Em <span class="ui">Mover escala</span>, escolha o setor de destino, clique em <span class="ui">Mover escala</span> e confirme a mudança. Para inativar a escala, desligue a chave <span class="ui">Ativo</span> e clique em <span class="ui">Salvar</span>.</p>
+
+<h2 id="inativar">Inativar uma rede, um local ou um setor</h2>
+<p>Inativar esconde o item e tudo o que está dentro dele dos profissionais. Os dados ficam guardados, e você pode reativar depois. Uma escala também pode ser inativada pela chave <span class="ui">Ativo</span> na edição dela.</p>
+<ol class="steps">
+<li>Na linha do item, clique no lápis.</li>
+<li>Desligue a chave <span class="ui">Ativa</span> (na rede) ou <span class="ui">Ativo</span> (no local e no setor).</li>
+<li>Clique em <span class="ui">Salvar</span>.</li>
+<li>Leia o aviso com o título <span class="ui">Inativar rede</span>, <span class="ui">Inativar local</span> ou <span class="ui">Inativar setor</span>. No bloco <span class="ui">IMPACTO REAL</span>, a tela mostra quantos plantões ativos serão afetados e quantos itens dentro do item também serão inativados.</li>
+<li>Digite o nome exato do item e clique em <span class="ui">Inativar</span>.</li>
+</ol>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se houver plantões ativos, o aviso aparece em destaque. Confira o impacto antes de confirmar.</p></div>
+<p>Um item inativo aparece com a etiqueta <em>Inativa</em>. Ele fica escondido da lista, a menos que você marque <span class="ui">Inativos</span> nas opções de visualização.</p>
+
+<h2 id="reativar">Reativar</h2>
+<ol class="steps">
+<li>Abra as opções de visualização (ícone de olho) e marque <span class="ui">Inativos</span>.</li>
+<li>Clique no lápis do item inativo.</li>
+<li>Ligue a chave <span class="ui">Ativa</span> ou <span class="ui">Ativo</span> e clique em <span class="ui">Salvar</span>.</li>
+<li>A tela pergunta se você quer restaurar também o que foi desativado junto com o item. Escolha <span class="ui">Restaurar tudo</span> para voltar tudo. Para restaurar só o item, use <span class="ui">Só esta rede</span>, <span class="ui">Só este local</span> ou <span class="ui">Só este setor</span>. Essa opção aparece só para o Master.</li>
+</ol>
+<div class="callout callout-warn"><p><strong>Ordem importa:</strong> para reativar um local, a rede precisa estar ativa. Para reativar um setor, o local precisa estar ativo. Se não estiver, a chave fica bloqueada e aparece o link <em>Reativar rede primeiro →</em> ou <em>Reativar local primeiro →</em>.</p><p>Se já existir outro item ativo com o mesmo nome, a tela mostra <em>Não é possível reativar</em>. Ela oferece, quando possível, um botão para ir até o item ativo. Renomeie ou desative o duplicado primeiro e tente de novo.</p></div>
+
+<h2 id="excluir-permanentemente">Excluir permanentemente</h2>
+<p>Excluir de vez apaga o item da estrutura e não pode ser desfeito. Por isso, essa opção só existe para itens que já estão inativos, e só o Master pode usá-la. A lixeira só aparece em itens inativos.</p>
+<ol class="steps">
+<li>Marque <span class="ui">Inativos</span> nas opções de visualização. Na linha do item inativo, clique na lixeira.</li>
+<li>Leia o <span class="ui">Resumo de impacto</span>, digite o nome exato do item para liberar a exclusão e clique em <span class="ui">Excluir</span>.</li>
+<li>Se houver plantões ligados ao item, aparece uma segunda confirmação, com o bloco <span class="ui">Impacto operacional</span>. Digite o nome de novo e clique em <span class="ui">Excluir permanentemente</span>.</li>
+</ol>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> se houver plantões ligados, todo o histórico deles será perdido e deixará de aparecer nos relatórios. Para preservar esses dados, deixe o item inativo.</p></div>
+
+<h2 id="opcoes-de-visualizacao">Opções de visualização</h2>
+<p>Ao lado do título <em>Locais</em>, o ícone de olho abre as opções de visualização:</p>
+<ul>
+<li><span class="ui">Inativos</span>: mostra também os itens inativos.</li>
+<li>A opção de identificadores, com uma caixa para cada nível (Rede, Local, Setor e Escala). Quando marcada, o nome aparece seguido do identificador e do número de ID, quando o item tem identificador.</li>
+<li><span class="ui">Mostrar nº de profissionais por escala</span>: mostra quantos profissionais e coordenadores estão vinculados a cada escala.</li>
+</ul>
+
+<h2 id="empresas">Empresas</h2>
+<p>Empresas são as organizações ligadas aos profissionais. Existem dois tipos:</p>
+<ul>
+<li><strong>Internas</strong>: empresas do grupo. Podem ser indicadas como fonte pagadora de empresas externas.</li>
+<li><strong>Externas</strong>: empresas terceirizadas, que prestam serviço. Podem ter dados bancários e uma fonte pagadora.</li>
+</ul>
+<p>Abra a tela em <span class="ui">Configurações › Empresas</span>. Ela tem duas abas, <span class="ui">Internas</span> e <span class="ui">Externas</span>, e começa na aba Internas. A busca procura pela razão social, pelo nome fantasia ou pelo CNPJ, sempre dentro da aba escolhida.</p>
+<p>Cada empresa da lista mostra uma etiqueta com o tipo (<em>Interna</em> ou <em>Externa</em>) e a quantidade de médicos vinculados (ou <em>Sem médicos</em>).</p>
+
+<h3 id="quem-acessa-empresas">Quem acessa</h3>
+<ul>
+<li>O Master tem acesso completo.</li>
+<li>O Gestor interno e o Visualizador veem a tela se tiverem a permissão de listar empresas. Por padrão, só o Gestor interno a tem, conforme as permissões definidas pela sua instituição. Sem ela, a tela mostra <em>Acesso restrito</em>.</li>
+<li>Coordenadores não têm acesso.</li>
+<li>Abrir a página de detalhes de uma empresa exige a permissão de editar empresas.</li>
+</ul>
+
+<h3 id="cadastrar-empresa">Cadastrar uma empresa</h3>
+<ol class="steps">
+<li>Clique em <span class="ui">Nova Empresa</span>.</li>
+<li>Escolha se a empresa é interna ou externa com a chave do formulário, que mostra <span class="ui">Empresa interna</span> ou <span class="ui">Empresa externa</span>. A aba em que você está já sugere o tipo. Veja a tabela abaixo.</li>
+<li>Preencha a <span class="ui">Razão social</span> e o <span class="ui">CNPJ</span>. Os dois são obrigatórios. O <span class="ui">Nome fantasia</span> é opcional.</li>
+<li>Se a empresa for externa, preencha, se quiser, os dados bancários e a <span class="ui">Fonte pagadora</span>.</li>
+<li>Clique em <span class="ui">Criar</span>.</li>
+</ol>
+<div class="callout callout-info"><p><strong>CNPJ já cadastrado:</strong> antes de salvar, o formulário procura o CNPJ.</p><p>Se ele for de uma empresa ativa, o formulário passa a editar essa empresa, com o título <em>Editar Empresa Existente</em>, e mostra um aviso com o nome dela. Use <span class="ui">Limpar</span> se não for a empresa certa.</p><p>Se for de uma empresa inativa, o aviso informa que ela será reativada ao salvar. Se for de uma empresa arquivada, o aviso informa que ela será reativada com os dados que você informar.</p></div>
+
+<h3 id="interna-ou-externa">Interna ou externa</h3>
+<table>
+<thead>
+<tr><th>Tipo</th><th>O que aparece no formulário</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Interna</strong></td><td>Não mostra dados bancários nem fonte pagadora. Se você marcar a empresa como interna, a fonte pagadora já escolhida é removida.</td></tr>
+<tr><td><strong>Externa</strong></td><td>Mostra dados bancários (opcionais) e o campo <span class="ui">Fonte pagadora</span>, que busca apenas empresas internas.</td></tr>
+</tbody>
+</table>
+<p>Ao cadastrar uma empresa externa, os dados bancários são banco, agência, tipo de conta (<span class="ui">Conta corrente</span> ou <span class="ui">Conta poupança</span>) e número da conta.</p>
+<p>Depois de salvar, esses dados ficam no bloco <span class="ui">Dados bancários</span>, com o botão <span class="ui">Editar</span>. Nessa janela, você escolhe a forma de pagamento: TED (banco, agência, conta e nome do titular) ou PIX (tipo e chave).</p>
+<p>A fonte pagadora é a empresa interna que faz o pagamento da empresa externa. Se ela ficar inativa ou deixar de ser interna, o campo mostra um aviso para você escolher outra. Para tirar a fonte pagadora, use o botão × ao lado dela.</p>
+
+<h3 id="editar-empresa">Editar uma empresa</h3>
+<ol class="steps">
+<li>Na lista, clique no lápis ao lado da empresa. Ou clique na empresa para abrir a página de detalhes e use o botão <span class="ui">Editar</span>.</li>
+<li>Altere os dados e clique em <span class="ui">Salvar</span>.</li>
+</ol>
+
+<h3 id="pagina-de-detalhes">Página de detalhes</h3>
+<p>Ao clicar em uma empresa na lista, você abre a página de detalhes. Ela mostra:</p>
+<ul>
+<li><strong>Dados da empresa</strong>: CNPJ, dados bancários (quando preenchidos), a fonte pagadora (quando houver) e as observações.</li>
+<li><strong>Observações</strong>: você pode editar o texto direto nessa página. Quando houver alteração, aparecem os botões <span class="ui">Cancelar</span> e <span class="ui">Salvar</span> no bloco.</li>
+<li><strong>Alterações contratuais</strong>: aparecem só em empresas internas, com as mudanças registradas, com data e descrição. Para registrar uma nova, clique em <span class="ui">Nova alteração</span>, preencha a <span class="ui">Data</span> e a <span class="ui">Descrição</span> e clique em <span class="ui">Salvar</span>.</li>
+<li><strong>Profissionais vinculados</strong>: quem está ligado à empresa, com as abas <span class="ui">Ativos</span>, <span class="ui">Inativos</span> e <span class="ui">Todos</span>. Cada pessoa aparece com a marca <em>Interno</em> ou <em>Externo</em>, conforme o tipo de vínculo. Clique no nome para abrir a página dela.</li>
+</ul>
+<p>Quem pode editar a empresa vê os botões de alteração, como <span class="ui">Editar</span> e <span class="ui">Nova alteração</span>. Sem a permissão de editar empresas, a página mostra <em>Acesso restrito</em>.</p>
+
+<h3 id="remover-pela-lista">Remover pela lista</h3>
+<p>Na lista, a lixeira ao lado da empresa abre o aviso <em>Remover empresa</em>. Ao confirmar com <span class="ui">Remover</span>, a empresa é desativada: sai da lista de ativas, e os profissionais vinculados ficam sem empresa. É o mesmo efeito de <span class="ui">Inativar empresa</span> no formulário.</p>
+<p>Para ver as inativas, use o botão de olho na lista, que tem a indicação <em>Exibir inativas</em> ou <em>Ocultar inativas</em>. Quando as inativas aparecem, elas ficam mais claras e com a etiqueta <em>Inativa</em>.</p>
+
+<h3 id="inativar-e-reativar-empresa">Inativar e reativar</h3>
+<p>No formulário da empresa, o botão <span class="ui">Inativar empresa</span> a desativa. Antes de confirmar, o aviso mostra quantos profissionais ficarão sem empresa ativa visível. Se outras empresas usam esta como fonte pagadora, o aviso mostra em vermelho <em>Bloqueado</em>, com o número dessas empresas. Confira antes de confirmar: ao inativar, essas empresas ficam sem fonte pagadora.</p>
+<p>Para reativar uma empresa inativa, mostre as inativas com o botão de olho, clique no lápis da empresa e depois em <span class="ui">Reativar</span>.</p>
+
+<h3 id="excluir-empresa">Excluir de vez</h3>
+<p>Só é possível excluir de vez uma empresa que já está inativa. No formulário dela, clique em <span class="ui">Excluir</span>. O aviso mostra quantos profissionais ficarão sem vínculo de empresa e informa que a ação não pode ser desfeita.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> a empresa excluída fica arquivada e deixa de aparecer nas listas.</p><p>Se você cadastrar o mesmo CNPJ depois, o formulário avisa que a empresa arquivada será reativada com os dados que você informar.</p></div>
+
+<h3 id="importar-csv">Importar empresas por planilha (CSV)</h3>
+<p>A importação em lote funciona só no painel web. Quem pode cadastrar empresas vê o botão <span class="ui">Importar CSV</span>.</p>
+<p>Antes de importar, confira a planilha:</p>
+<ul>
+<li>Cada linha precisa ter a <strong>razão social</strong> e o <strong>CNPJ</strong>.</li>
+<li>Na coluna que indica se a empresa é interna ou externa, escreva <em>interna</em> ou <em>externa</em>. Em branco, a empresa vira externa.</li>
+<li>A coluna da fonte pagadora é opcional e precisa indicar uma empresa interna já cadastrada.</li>
+<li>Se o CNPJ já for de uma empresa ativa, a linha dá erro com a mensagem <em>CNPJ já cadastrado</em>. A empresa existente não é alterada.</li>
+<li>Se o CNPJ for de uma empresa inativa, ela é reativada. Os dados da planilha não são aplicados a ela. Ajuste depois, pelo formulário.</li>
+<li>Se o CNPJ for de uma empresa arquivada, a linha dá erro. Antes de importar, reative a empresa: cadastre o mesmo CNPJ em <span class="ui">Nova Empresa</span>, como explicado em <a href="#excluir-empresa">Excluir de vez</a>.</li>
+</ul>
+<ol class="steps">
+<li>Clique em <span class="ui">Importar CSV</span>.</li>
+<li>Clique em <span class="ui">Baixar modelo CSV</span>, preencha a planilha modelo com os dados das empresas e salve o arquivo em CSV.</li>
+<li>Clique em <span class="ui">Selecionar arquivo</span> e escolha a sua planilha. Você também pode arrastar o arquivo para a área tracejada.</li>
+<li>Clique em <span class="ui">Importar</span>, no fim da janela.</li>
+</ol>
+<p>Ao final, a tela mostra quantas empresas foram importadas. Se alguma linha tiver erro, ela lista cada uma com o motivo, por exemplo: <em>linha 4: CNPJ já cadastrado</em>. Corrija essas linhas e importe de novo só o que faltou.</p>
+<p>Se o arquivo escolhido não for CSV, a tela avisa que o arquivo é inválido e pede um arquivo CSV.</p>
+
+<h2 id="permissoes-e-efeitos">O que cada permissão libera</h2>
+<p>Além do perfil, o que você vê nestas telas depende das permissões liberadas para você. As permissões globais são o conjunto de permissões que cada perfil recebe por padrão.</p>
+<div class="callout callout-info"><p>Neste momento, a tela de permissões globais não aparece no menu. A tabela abaixo mostra o efeito de cada permissão nas telas de Locais e Empresas.</p></div>
+<table>
+<thead>
+<tr><th>Permissão</th><th>O que libera</th></tr>
+</thead>
+<tbody>
+<tr><td>Visualizar redes, locais e setores</td><td>Para o Gestor interno, mostra <span class="ui">Locais</span> no menu e a árvore em modo de consulta. Por padrão, o Gestor interno tem essa permissão, conforme as permissões definidas pela sua instituição. Sem ela, a tela não abre e o sistema leva você para a página inicial do painel. Master e Visualizador veem a tela sem precisar dessa permissão.</td></tr>
+<tr><td>Listar empresas</td><td>Mostra <span class="ui">Empresas</span> no menu e a lista. Sem ela, a tela mostra <em>Acesso restrito</em>.</td></tr>
+<tr><td>Criar empresa</td><td>Mostra os botões <span class="ui">Nova Empresa</span> e <span class="ui">Importar CSV</span>.</td></tr>
+<tr><td>Editar empresa</td><td>Mostra o lápis nas listas, o botão <span class="ui">Editar</span> na página de detalhes, o botão <span class="ui">Nova alteração</span> (em empresas internas) e a edição das observações. Também é preciso para abrir a página de detalhes e para inativar, reativar ou excluir a empresa pelo formulário. Sem ela, a página de detalhes fica bloqueada.</td></tr>
+<tr><td>Desativar empresa</td><td>Mostra a lixeira na lista, para desativar a empresa.</td></tr>
+</tbody>
+</table>
+<p>Em Locais, criar, editar, inativar, reativar e excluir redes, locais, setores e escalas não depende de permissão. Essas ações são exclusivas do Master.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> se um botão descrito aqui não aparece para você, confira o seu perfil em <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>. Se faltar uma permissão, fale com o Master da sua instituição.</p></div>
+
+<h2 id="mensagens-comuns">Mensagens comuns</h2>
+<table>
+<thead>
+<tr><th>Mensagem</th><th>O que fazer</th></tr>
+</thead>
+<tbody>
+<tr><td><em>Nome é obrigatório</em> ou <em>Nome do setor é obrigatório</em></td><td>Preencha o nome.</td></tr>
+<tr><td><em>Razão social é obrigatória.</em> ou <em>CNPJ é obrigatório.</em></td><td>Preencha os dois campos da empresa. O CNPJ precisa estar completo.</td></tr>
+<tr><td><em>Rede é obrigatória</em></td><td>Escolha a rede à qual o local pertence.</td></tr>
+<tr><td><em>Rua é obrigatória</em>, <em>Nº é obrigatório</em>, <em>Bairro é obrigatório</em>, <em>UF é obrigatória</em> ou <em>Cidade é obrigatória</em></td><td>Complete o endereço do local.</td></tr>
+<tr><td><em>CEP deve ter 8 dígitos.</em></td><td>Confira o CEP digitado.</td></tr>
+<tr><td><em>Não é possível reativar</em></td><td>Já existe outro item ativo com esse nome. Renomeie ou desative o duplicado e tente de novo.</td></tr>
+<tr><td><em>Nome em uso</em></td><td>O nome escolhido já pertence a outro item ativo. Escolha outro nome ou abra o item existente.</td></tr>
+<tr><td><em>Nome já em uso por outra entidade ativa — renomeie antes de restaurar.</em></td><td>Troque o nome de um dos dois itens e tente de novo.</td></tr>
+<tr><td><em>Entidade ainda está ativa. Desative-a primeiro.</em></td><td>Inative o item antes de excluir de vez.</td></tr>
+<tr><td><em>Não foi possível verificar o impacto da exclusão. Tente novamente.</em></td><td>Tente de novo em instantes.</td></tr>
+<tr><td><em>Acesso restrito</em></td><td>Aparece na tela Empresas quando faltam permissões. Na lista, a tela explica que só o Master ou o Gestor interno podem gerenciar empresas. Veja a tabela de permissões acima.</td></tr>
+</tbody>
+</table>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+<li><a href="/help/equipe-de-gestao">Gestores, coordenadores, visualizadores e masters</a></li>
+<li><a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a></li>
+<li><a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a></li>
+<li><a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a></li>
+</ul>

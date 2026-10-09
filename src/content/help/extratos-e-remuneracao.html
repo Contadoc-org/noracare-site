@@ -1,0 +1,229 @@
+<p class="lead">A tela Extratos mostra quanto você tem a receber em um período: valores fixos mensais, plantões pagos por hora, bonificações e ajustes. Você pode trocar de mês ou escolher datas específicas para conferir cada parte.</p>
+<p class="meta">Para: <span class="badge">Profissional</span> · Onde: <span class="badge">App</span> e <span class="badge">navegador</span></p>
+
+<h2 id="como-abrir-o-extrato">Como abrir o extrato</h2>
+<ol class="steps">
+<li>Abra o menu tocando no ícone de três traços, no canto superior esquerdo.</li>
+<li>Toque em <span class="ui">Extratos</span>.</li>
+</ol>
+<p>A tela abre no mês atual. Os valores se atualizam sozinhos enquanto a tela está aberta. Para atualizar na hora, puxe a tela para baixo.</p>
+<p>Se os valores não carregarem, aparece a mensagem <span class="ui">Algo deu errado</span>, com o botão <span class="ui">Tentar novamente</span>.</p>
+
+<h2 id="escolher-o-periodo">Escolher o período</h2>
+<h3>Navegar por mês</h3>
+<p>No topo da tela aparecem o nome e o ano do mês, por exemplo <span class="ui">Junho 2026</span>. Toque em <span class="ui">‹</span> para ver o mês anterior, ou em <span class="ui">›</span> para ver o próximo.</p>
+
+<h3>Escolher datas específicas</h3>
+<ol class="steps">
+<li>Toque no ícone de calendário no canto superior direito, ao lado do sino de notificações.</li>
+<li>Na janela <span class="ui">Filtrar por período</span>, digite a <span class="ui">Data de início</span> e a <span class="ui">Data de fim</span> no formato dd/mm/aaaa. Ou toque no ícone de calendário ao lado de cada campo e escolha o dia.</li>
+<li>Toque em <span class="ui">Aplicar</span>.</li>
+</ol>
+<p>O botão <span class="ui">Aplicar</span> só fica ativo quando as duas datas estão válidas e a data de fim é igual ou posterior à data de início. Para fechar a janela sem filtrar, toque em <span class="ui">Cancelar</span>.</p>
+<p>Com um período personalizado, a navegação por mês some e aparece a faixa com as duas datas. Para voltar ao mês, toque em <span class="ui">Limpar</span>.</p>
+
+<h3>Período financeiro da escala</h3>
+<p>Algumas escalas têm um período financeiro próprio, que não coincide com o mês do calendário. Quando isso acontece, a linha do valor fixo mostra as datas desse período, por exemplo <em>5 a 04/10/2026</em>.</p>
+<p>Quando o período escolhido é um mês inteiro, do dia 1 ao último dia, cada escala usa o período financeiro dela. Em outros intervalos, valem as datas que você escolheu.</p>
+<div class="callout callout-tip">
+<p><strong>Dica:</strong> para conferir o fechamento de um mês, use as setas. Os valores fixos são calculados mês a mês. Por isso, um período que começa no meio do mês pode incluir o valor fixo inteiro daquele mês, mas só conta os plantões que caem nas datas escolhidas.</p>
+</div>
+
+<h2 id="entenda-o-resumo">Entenda o resumo</h2>
+<p>Logo abaixo da navegação de mês, ficam quatro cards com o resumo do período.</p>
+<table>
+<thead>
+<tr><th>Card</th><th>O que mostra</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Saldo bruto</span></td><td>Tudo o que você tem a receber no período: valores fixos, plantões por hora e bonificações. Vem antes de adiantamentos, custos e ajustes.</td></tr>
+<tr><td><span class="ui">Custos societários</span></td><td>Para sócios, a contribuição previdenciária (INSS) sobre a retirada de gestão. Fica zerado quando a produção do período está abaixo do valor de corte da sociedade. Para quem não é sócio, aparece zerado (R$ 0,00).</td></tr>
+<tr><td><span class="ui">Adiantamentos</span></td><td>Os plantões já pagos no período. Como esse dinheiro já foi recebido, ele é descontado do saldo.</td></tr>
+<tr><td><span class="ui">Saldo líquido</span></td><td>O que sobra a receber no período, depois de custos e adiantamentos e somando o resultado dos ajustes.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-info">
+<p>Os cards se encaixam assim: <strong>Saldo líquido</strong> = Saldo bruto + resultado dos ajustes − Custos societários − Adiantamentos.</p>
+</div>
+
+<h3>Contadores</h3>
+<p>Abaixo dos cards, uma linha de contadores resume os plantões:</p>
+<ul>
+<li><span class="ui">Plantoes</span>: quantos plantões do período aparecem no extrato. Plantões de escala fixa que já fazem parte do valor fixo mensal não entram nessa contagem.</li>
+<li><span class="ui">Pagos</span>: plantões já marcados como pagos.</li>
+<li><span class="ui">Pendentes</span>: plantões ainda não pagos, inclusive os que ainda vão acontecer. Aparece só quando há algum.</li>
+<li><span class="ui">Não realizados</span>: plantões já terminados, em escala paga pelo realizado, sem entrada e saída registradas. Aparece só quando há algum.</li>
+<li><span class="ui">+Bonus</span>: total de bonificações do período. Aparece quando há.</li>
+<li><span class="ui">-Desc</span>: total de descontos dos plantões do período. Aparece quando há.</li>
+</ul>
+
+<h2 id="previsto-x-realizado">Previsto x realizado</h2>
+<p>Cada escala tem uma forma de pagamento, que diz se o valor segue o previsto ou o realizado:</p>
+<ul>
+<li><strong>Previsto:</strong> o plantão vale pelas horas previstas na escala, sem depender do registro de presença. O valor fixo do mês é pago inteiro, salvo desconto de plantão convertido.</li>
+<li><strong>Realizado:</strong> o valor depende do que de fato aconteceu. Um plantão só conta depois que a entrada e a saída estão registradas. O valor fixo do mês fica proporcional aos plantões realizados em relação aos previstos, em plantões ou em horas, conforme a escala.</li>
+</ul>
+<p>Nas escalas pagas pelo realizado, a linha do valor fixo mostra <span class="ui">pelo realizado</span>. Na tela de detalhes do plantão, aparece também a linha <span class="ui">Valor a ser pago</span>.</p>
+<div class="callout callout-info">
+<p>Plantões feitos por outro profissional, por troca ou cobertura, não contam como realizados para você. Enquanto o mês está em andamento, o valor fixo pelo realizado pode mudar conforme as presenças forem registradas.</p>
+</div>
+
+<h2 id="remuneracao-por-escala">Remuneração por escala</h2>
+<p>Os valores são agrupados por escala, para você ver quanto cada uma rende no período.</p>
+<table>
+<thead>
+<tr><th>Seção</th><th>Como aparece por escala</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Valores fixos mensais</span></td><td>Uma linha por escala e por mês, com o valor a pagar.</td></tr>
+<tr><td><span class="ui">Valores por hora</span></td><td>Um grupo por escala, com o total e a lista dos plantões.</td></tr>
+<tr><td><span class="ui">Bonificações</span></td><td>Um card por escala, com o percentual e o valor.</td></tr>
+<tr><td><span class="ui">Plantões já pagos</span></td><td>Um grupo por escala, com o total e a lista dos plantões.</td></tr>
+<tr><td><span class="ui">Ajustes mensais</span></td><td>Não é agrupado por escala. Cada ajuste mostra as escalas relacionadas a ele.</td></tr>
+</tbody>
+</table>
+
+<h2 id="valores-fixos-mensais">Valores fixos mensais</h2>
+<p>Esta seção aparece quando alguma das suas escalas paga valor fixo no mês. Cada linha mostra a rede e a unidade, o setor e a escala, o período financeiro (quando há), a indicação <span class="ui">pelo realizado</span> (quando for o caso) e o valor a pagar naquele mês.</p>
+<p>O total da seção aparece ao lado do título <span class="ui">Valores fixos mensais</span>. Toque no título para recolher ou abrir a lista.</p>
+<p>Se um plantão da sua escala fixa foi convertido para pagamento por hora, ou seja, saiu do valor fixo, e a instituição marcou que ele desconta do seu valor fixo, aparece a linha <span class="ui">Desconto de plantão convertido</span>, com o valor descontado naquele mês.</p>
+
+<h2 id="valores-por-hora">Valores por hora</h2>
+<p>Esta seção reúne os plantões ainda não pagos que valem por hora, agrupados por escala. Plantões de escala fixa que já fazem parte do valor fixo mensal não aparecem aqui. Os grupos começam fechados: toque no nome da escala para ver os plantões dela. Em cada linha você vê:</p>
+<ul>
+<li>a data: o dia, a abreviação do dia da semana (por exemplo, <em>SEG</em>) e o mês;</li>
+<li>o horário e a duração, por exemplo <em>07:00 - 19:00 (12h)</em>;</li>
+<li>o valor do plantão.</li>
+</ul>
+<p>Nas escalas pagas pelo previsto, o valor vem das horas previstas. Nas escalas pagas pelo realizado, o cálculo depende da presença: em algumas escalas conta o tempo entre a entrada e a saída; em outras, conta o plantão inteiro, desde que a presença atinja o mínimo da escala. Se o plantão tiver bônus ou desconto próprio, ele já aparece somado ou subtraído no valor.</p>
+<p>Plantões que ainda não aconteceram aparecem mais apagados. Em escala paga pelo realizado, um plantão só entra no valor depois que a presença for registrada. Plantões sem valor calculado não aparecem na lista, a não ser que estejam marcados como Não realizado.</p>
+<p>Se o período tem plantões ainda não pagos, mas nenhum deles aparece na lista, a seção mostra a mensagem <span class="ui">Em breve, seu dinheiro aqui</span>, com a orientação de que os valores aparecem assim que você concluir plantões no período. Se não há nenhum plantão ainda não pago, a seção nem aparece.</p>
+
+<h3>Quando um plantão aparece como "Não realizado"</h3>
+<p>Em escalas pagas pelo realizado, um plantão já terminado só é pago se a entrada e a saída estiverem registradas. Sem esses registros, ele aparece com a marca <span class="ui">Não realizado</span>, em vermelho, e vale R$ 0,00.</p>
+<div class="callout callout-tip">
+<p><strong>Dica:</strong> se a entrada ou a saída não foi registrada, peça a revisão de horário. Depois que ela for aprovada, o plantão pode passar a contar. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</p>
+</div>
+
+<h3>Ver os detalhes de um plantão</h3>
+<p>Toque em um plantão da lista para abrir a tela dele. Na área de informações, você vê:</p>
+<ul>
+<li><span class="ui">Valor previsto</span>: o valor calculado para o plantão. Aparece <span class="ui">A confirmar</span> quando ainda não há valor calculado.</li>
+<li><span class="ui">Valor a ser pago</span>: aparece nas escalas pagas pelo realizado. Antes de a presença ser registrada, mostra o mesmo valor previsto. Depois, mostra o valor calculado pela presença.</li>
+<li><span class="ui">Pagamento</span>: <span class="ui">Pago</span> ou <span class="ui">Pendente</span>.</li>
+<li><span class="ui">Registrado</span>: a entrada e a saída registradas, quando a escala controla o horário.</li>
+</ul>
+
+<h2 id="plantoes-ja-pagos">Plantões já pagos</h2>
+<p>Esta seção lista os plantões do período que a instituição já marcou como pagos, agrupados por escala. Toque no nome da escala para ver os plantões dela. Esses valores já foram recebidos. Por isso, aparecem no card <span class="ui">Adiantamentos</span> e são descontados do <span class="ui">Saldo líquido</span>.</p>
+
+<h2 id="bonificacoes">Bonificações</h2>
+<p>Quando a sua instituição habilita uma bonificação em percentual para uma escala, ela aparece nesta seção, com o nome da escala, o percentual e o valor calculado. Toque no título para recolher a lista.</p>
+<ul>
+<li>A base é o que você recebe naquela escala no mês: valor fixo e plantões por hora. Ajustes mensais não entram na base.</li>
+<li>A bonificação aparece no mês de referência configurado.</li>
+<li>Se o valor calculado for zero, a bonificação não aparece.</li>
+</ul>
+
+<h2 id="ajustes-mensais">Ajustes mensais</h2>
+<p>Ajustes são valores que a instituição lança para um mês específico. Eles aparecem nesta seção quando existem no período:</p>
+<ul>
+<li><span class="ui">Adicional</span> soma ao seu valor.</li>
+<li><span class="ui">Desconto</span> subtrai do seu valor.</li>
+</ul>
+<p>Cada ajuste mostra o tipo, a categoria, a descrição e, quando houver, as escalas relacionadas. No fim da lista, <span class="ui">Resultado dos ajustes</span> mostra a soma final. Toque no título <span class="ui">Ajustes mensais</span> para recolher ou abrir a lista.</p>
+<p>O resultado dos ajustes entra no <span class="ui">Saldo líquido</span>, mas não muda os custos societários.</p>
+
+<h2 id="nota-fiscal">Enviar nota fiscal</h2>
+<p>Quem tem vínculo com empresa externa recebe mediante nota fiscal. Por isso, esse profissional vê o box <span class="ui">Enviar nota fiscal</span> logo abaixo dos cards do resumo. Se o seu vínculo for com empresa interna, o box não aparece.</p>
+
+<h3>Quando você pode enviar</h3>
+<p>A nota de um mês só pode ser enviada a partir do dia seguinte ao fim do período financeiro de todas as suas escalas. Até lá, o box mostra uma mensagem de espera com a data em que o período termina.</p>
+
+<h3>Como enviar</h3>
+<ol class="steps">
+<li>Toque em <span class="ui">Enviar nota fiscal</span>.</li>
+<li>Escolha o arquivo em PDF.</li>
+<li>Aguarde a confirmação <span class="ui">Nota fiscal enviada</span>.</li>
+</ol>
+<ul>
+<li>A nota vale para o mês em que começa o período que você está vendo. Para enviar a nota de outro mês, troque o mês com as setas, sem período filtrado.</li>
+<li>Só são aceitos arquivos em PDF. Arquivos muito grandes também são recusados, e a mensagem informa o tamanho máximo.</li>
+<li>Cada mês aceita uma única nota. Se precisar trocar, toque na lixeira ao lado do nome do arquivo e envie a nova. A exclusão acontece na hora, sem pedir confirmação.</li>
+<li>Toque no nome do arquivo para abrir o PDF em outra aba.</li>
+</ul>
+<div class="callout callout-warn">
+<p><strong>Atenção:</strong> no app do celular, o envio e a abertura da nota não estão disponíveis. Ao tocar em <span class="ui">Enviar nota fiscal</span> ou no nome do arquivo, a tela mostra a mensagem <em>Envio de nota fiscal disponível na versão web.</em> Para enviar ou abrir a nota, use a versão web em <a href="https://app.noracare.com.br">app.noracare.com.br</a>.</p>
+</div>
+
+<h2 id="remuneracao-de-socios">Remuneração de sócios</h2>
+<p>Se você é sócio de uma empresa interna, os cards do resumo abrem uma página extra, o <strong>demonstrativo de distribuição</strong>. Para abri-la, toque em qualquer um dos quatro cards. A página não aparece no menu. Para os demais profissionais, os cards não abrem nada.</p>
+<p>No topo do demonstrativo aparecem o nome da sociedade, o seu primeiro nome e o mês de referência. O texto explica que os valores seguem o contrato social e o acordo de sócios da sociedade. Para voltar ao extrato, toque em <span class="ui">Voltar</span>.</p>
+
+<h3>Resultado atribuível ao sócio</h3>
+<table>
+<thead>
+<tr><th>Linha</th><th>O que significa</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Produção do período apurada</span></td><td>O que você produziu no período, com valores fixos e plantões. As bonificações aparecem em outra linha.</td></tr>
+<tr><td><span class="ui">(−) Custos societários atribuíveis ao sócio</span></td><td>INSS individual e patronal sobre a retirada de gestão.</td></tr>
+<tr><td><span class="ui">Bonificações</span></td><td>Aparece quando há bonificação no período.</td></tr>
+<tr><td><span class="ui">Ajustes mensais</span></td><td>Aparece quando há ajustes no período. Adicionais somam e descontos subtraem.</td></tr>
+<tr><td><span class="ui">(−) Antecipações já recebidas na competência</span></td><td>Os plantões já pagos no período, que você já recebeu.</td></tr>
+<tr><td><span class="ui">Resultado líquido atribuível</span></td><td>O resultado do período que cabe a você, depois de tudo acima.</td></tr>
+</tbody>
+</table>
+
+<h3>Composição da retirada</h3>
+<ul>
+<li><span class="ui">Retirada por atividade de gestão (pró-labore)</span>: a retirada de gestão, já descontado o INSS individual.</li>
+<li><span class="ui">Distribuição de lucros</span>: o restante do resultado líquido, depois da retirada.</li>
+</ul>
+<p>O <span class="ui">Total a receber</span>, no fim do bloco, é o valor final do mês. Ele é o mesmo que o resultado líquido atribuível.</p>
+
+<h3>Memória de cálculo detalhada</h3>
+<p>A memória já vem aberta. Toque em <span class="ui">Memória de cálculo detalhada</span> para recolher ou abrir. Ela explica:</p>
+<ul>
+<li><strong>Custos societários:</strong> a contribuição previdenciária individual e a patronal sobre a retirada de gestão, com o percentual de cada uma.</li>
+<li><strong>Base da retirada de gestão:</strong> a base é fixada conforme o contrato da sociedade e corresponde ao valor mínimo legal para administrador. Se a produção do período ficar abaixo do valor de corte da sociedade, não há retirada de gestão nem INSS sobre ela, e todo o resultado vai como distribuição de lucros.</li>
+<li><strong>Antecipações:</strong> valores adiantados por conta de distribuição futura, compensados nesta apuração.</li>
+<li><strong>Fundamento da distribuição desproporcional:</strong> a divisão dos lucros segue a produção individual prevista no contrato da sociedade. A lei permite dividir os lucros em proporção diferente da participação no capital quando o contrato assim estabelece.</li>
+</ul>
+
+<h2 id="quem-ve-o-que">Quem vê o quê</h2>
+<table>
+<thead>
+<tr><th>O que</th><th>Quem vê</th></tr>
+</thead>
+<tbody>
+<tr><td>Resumo, valores fixos, valores por hora, plantões já pagos, bonificações e ajustes</td><td>Você, com os seus próprios valores. Os valores de outros profissionais não aparecem aqui.</td></tr>
+<tr><td>Valores de um mês</td><td>Só aparecem depois que a escala daquele mês é publicada pela sua instituição.</td></tr>
+<tr><td>Enviar nota fiscal</td><td>Quem tem vínculo com empresa externa.</td></tr>
+<tr><td>Demonstrativo de distribuição</td><td>Quem é sócio de uma empresa interna.</td></tr>
+</tbody>
+</table>
+
+<h2 id="duvidas-comuns">Dúvidas comuns</h2>
+<table>
+<thead>
+<tr><th>O que você vê</th><th>O que significa</th></tr>
+</thead>
+<tbody>
+<tr><td>Os cards aparecem zerados.</td><td>Não há valores no período, ou o mês ainda não foi publicado pela sua instituição.</td></tr>
+<tr><td>Um plantão não aparece na lista por hora.</td><td>Se ele já foi pago, aparece em <span class="ui">Plantões já pagos</span>. Se faz parte do valor fixo mensal de uma escala fixa, o valor já está em <span class="ui">Valores fixos mensais</span>. Plantões sem valor calculado também não aparecem na lista, a não ser que estejam como Não realizado.</td></tr>
+<tr><td><span class="ui">A confirmar</span> no <span class="ui">Valor previsto</span> de um plantão, na tela de detalhes.</td><td>Ainda não há valor calculado para ele.</td></tr>
+<tr><td><span class="ui">Não realizado</span> em um plantão.</td><td>O plantão já terminou, a escala paga pelo realizado e não há entrada e saída registradas. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</td></tr>
+<tr><td>Não vejo o box <span class="ui">Enviar nota fiscal</span>.</td><td>Ele aparece só para vínculo com empresa externa.</td></tr>
+<tr><td>Não vejo o demonstrativo de distribuição.</td><td>Ele aparece só para sócios de empresa interna.</td></tr>
+</tbody>
+</table>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/meus-plantoes">Meus plantões</a></li>
+<li><a href="/help/check-in-e-check-out">Check-in e check-out</a></li>
+<li><a href="/help/revisao-de-horario">Pedir revisão de horário</a></li>
+<li><a href="/help/escalas-do-profissional">Escalas</a></li>
+<li><a href="/help/app-no-celular">App no celular: instalação, permissões e atualizações</a></li>
+</ul>

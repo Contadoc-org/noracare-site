@@ -1,0 +1,316 @@
+<p class="lead">Os relatórios mostram em tabelas os plantões, os valores, os cadastros e a configuração das escalas da sua instituição. Na maioria deles, você escolhe o período e as escalas, clica em <span class="ui">Filtrar</span> e, se precisar, baixa o resultado para o Excel.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">App</span> e <span class="badge">Painel web</span></p>
+
+<h2 id="onde-ficam">Onde ficam os relatórios</h2>
+<p>No menu lateral, clique em <span class="ui">Relatórios</span>. A tela mostra um cartão para cada relatório, com o nome e uma frase sobre o que ele mostra. Clique no cartão para abrir o relatório.</p>
+<p>Em todos os relatórios, o botão <span class="ui">Voltar</span>, no topo, leva você de volta a essa lista.</p>
+<p>Você só vê os cartões liberados para o seu perfil. Se um cartão não aparece para você, esse relatório não está liberado para o seu perfil.</p>
+
+<h2 id="quem-ve">Quem vê cada relatório</h2>
+<p>Para abrir a área de relatórios, o seu perfil precisa da permissão <span class="ui">Ver relatórios</span>. O Master sempre tem essa permissão. O Gestor interno já a recebe por padrão. Coordenador e Visualizador só veem o menu quando o Master ou o Gestor interno libera a permissão para eles. Veja também <a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a>.</p>
+<p>Médicos, enfermeiros e fisioterapeutas não têm o item <span class="ui">Relatórios</span> no menu. Por isso, o relatório <span class="ui">Configurações das escalas</span> não aparece para eles.</p>
+<p>A tabela considera que a permissão <span class="ui">Ver relatórios</span> foi liberada para o Coordenador e para o Visualizador.</p>
+<table>
+<thead>
+<tr><th>Relatório</th><th>Master</th><th>Gestor interno</th><th>Coordenador</th><th>Visualizador</th></tr>
+</thead>
+<tbody>
+<tr><td>Apuração</td><td>Sim</td><td>Sim</td><td>Sim, sem valores, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Por Médico</td><td>Sim</td><td>Sim</td><td>Sim, sem valores, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Grupo de usuários</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Profissionais</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Dados Bancários</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
+<tr><td>Plantões</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Escalas</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Configurações das escalas</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Financeiro</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+<tr><td>Financeiro Consolidado</td><td>Sim</td><td>Sim</td><td>Sim, só das suas escalas</td><td>Sim</td></tr>
+</tbody>
+</table>
+
+<div class="callout callout-info"><p>Coordenador vê só os dados das escalas em que está vinculado como coordenador. Nas tabelas <span class="ui">Por Médico</span> e <span class="ui">Apuração</span>, ele não vê valores: a coluna some ou aparece com um traço (—).</p></div>
+
+<h2 id="lista-de-relatorios">Lista de relatórios</h2>
+<p>A seguir estão os dez relatórios, na mesma ordem dos cartões. Cada um responde a uma pergunta diferente. Se não souber qual usar, veja a seção <span class="ui">Qual relatório usar</span>, mais abaixo nesta página.</p>
+
+<h3>Apuração</h3>
+<p>Mostra o valor bruto de cada profissional (ou de cada escala), com uma coluna por mês. Serve para acompanhar a evolução dos últimos meses.</p>
+<ul>
+<li><span class="ui">Período Início</span> e <span class="ui">Período Fim</span>: escolha o mês e o ano, digitando ou pelo seletor de mês. Os campos já vêm com os últimos 6 meses, até o mês atual. Ao lado aparece <span class="ui">Máx. 6 meses</span>.</li>
+<li><span class="ui">Agrupar por</span>: <span class="ui">Profissional</span> (padrão) ou <span class="ui">Escala</span>.</li>
+<li>Escalas (opcional) e depois <span class="ui">Filtrar</span>.</li>
+</ul>
+<p>O resultado tem uma linha por profissional (ou por escala), uma coluna por mês e a coluna <span class="ui">Total</span>. A última linha, <span class="ui">TOTAL</span>, soma cada mês.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> se o mês final passar de 6 meses a partir do mês inicial, a tela considera só os meses permitidos.</p></div>
+
+<h3>Por Médico</h3>
+<p>Resume, para cada profissional, a quantidade de plantões, as horas e o valor total. Também mostra quantos plantões já foram pagos e quantos estão pendentes.</p>
+<ul>
+<li><span class="ui">Médico</span>: digite pelo menos três letras do nome ou do CRM e escolha a pessoa. O relatório passa a mostrar só ela. Para tirar o filtro, clique no × do campo.</li>
+<li><span class="ui">De</span> e <span class="ui">Até</span>: o período. Se estiverem vazios, vale o mês atual.</li>
+<li>Escalas (opcional) e depois <span class="ui">Filtrar</span>.</li>
+</ul>
+<p>As colunas são <span class="ui">Profissional</span>, <span class="ui">Especialidade</span>, <span class="ui">Registro profissional</span>, <span class="ui">Plantões</span>, <span class="ui">Horas</span>, <span class="ui">Valor Total</span>, <span class="ui">Pagos</span> e <span class="ui">Pendentes</span>. A última linha, <span class="ui">TOTAL</span>, soma as colunas.</p>
+<ul>
+<li><strong>Horas</strong>: soma da duração prevista dos plantões.</li>
+<li><strong>Pagos</strong>: plantões já marcados como pagos. <strong>Pendentes</strong>: os demais.</li>
+<li><strong>Valor Total</strong>: soma do valor bruto dos plantões e das bonificações do período. Essa coluna não aparece para o Coordenador.</li>
+</ul>
+<div class="callout callout-info"><p>Em escalas que pagam pelo realizado, plantões sem check-in e check-out não entram nas horas nem nos valores. Eles continuam na coluna <span class="ui">Plantões</span>. Para entender esse modo, veja <a href="/help/check-in-e-check-out">Check-in e check-out</a>.</p></div>
+
+<h3>Grupo de usuários</h3>
+<p>Lista os usuários do sistema, com o perfil, as escalas em que estão, a empresa e as observações internas. Aparece só para Master e Gestor interno, porque traz observações internas e dados pessoais.</p>
+<ul>
+<li><span class="ui">Gestor</span>, <span class="ui">Coordenador</span>, <span class="ui">Profissionais</span>, <span class="ui">Visualizador</span> e <span class="ui">Master</span>: marque um ou mais perfis. Em <span class="ui">Profissionais</span> entram médicos, enfermeiros e fisioterapeutas. Sem marcar nenhum, aparecem todos.</li>
+<li><span class="ui">Somente ativos</span>: deixa de fora os usuários inativos.</li>
+<li>Escalas (opcional).</li>
+<li><span class="ui">Agrupar por</span>: <span class="ui">Empresa</span>, <span class="ui">Escala</span> ou <span class="ui">Profissional</span>.</li>
+</ul>
+<p>Sem agrupamento, cada usuário aparece uma vez, com todas as escalas em que está. Ao agrupar por <span class="ui">Escala</span>, ele aparece em cada grupo de escala em que está. As colunas são <span class="ui">Tipo</span>, <span class="ui">Nome</span>, <span class="ui">Especialidade</span>, <span class="ui">Código</span>, <span class="ui">Rede &gt; Local &gt; Setor &gt; Escala</span>, <span class="ui">Email</span>, <span class="ui">Empresa</span>, <span class="ui">Tipo de empresa</span>, <span class="ui">Alteração contratual</span> e <span class="ui">Observação interna</span>.</p>
+<p>Ao exportar com agrupamento, o Excel mostra cada grupo seguido do subtotal de usuários.</p>
+
+<h3>Profissionais</h3>
+<p>Lista os profissionais de saúde cadastrados: médicos, enfermeiros e fisioterapeutas. Mostra os dados de cadastro, a empresa e o último acesso. Para cadastrar ou editar alguém, veja <a href="/help/profissionais">Cadastro de profissionais</a>.</p>
+<ul>
+<li><span class="ui">De</span> e <span class="ui">Até</span>: filtram pela data de cadastro do profissional. Se os campos estiverem vazios, a lista traz todos.</li>
+<li>Escalas (opcional): mostra só os profissionais vinculados às escalas escolhidas.</li>
+</ul>
+<p>As colunas são <span class="ui">Data de cadastro</span>, <span class="ui">Nome</span>, <span class="ui">Especialidade</span>, <span class="ui">RQE</span>, <span class="ui">Email</span>, <span class="ui">Contato</span>, <span class="ui">Registro profissional</span>, <span class="ui">Data de nascimento</span>, <span class="ui">Idade</span>, <span class="ui">Empresa</span>, <span class="ui">Data de alteração contratual</span>, <span class="ui">Tipo de empresa</span>, <span class="ui">Último acesso</span>, <span class="ui">Acessou há</span>, <span class="ui">Categoria atual</span>, <span class="ui">INSS individual</span> e <span class="ui">INSS patronal</span>.</p>
+<p>Coordenadores veem só os profissionais das suas escalas.</p>
+
+<h3>Dados Bancários</h3>
+<p>Lista as contas bancárias cadastradas pelos profissionais. Aparece só para Master e Gestor interno. Não tem período.</p>
+<ul>
+<li>Escalas (opcional): sem escolher escalas, aparecem todas as contas. Com escalas escolhidas, aparecem só os profissionais vinculados a elas.</li>
+<li>Clique em <span class="ui">Filtrar</span>.</li>
+</ul>
+<p>Cada conta vira uma linha. Quem tem mais de uma conta aparece mais de uma vez, e a conta principal aparece com <span class="ui">Favorita</span> igual a <em>Sim</em>. As colunas são <span class="ui">Nome</span>, <span class="ui">Especialidade</span>, <span class="ui">Favorita</span>, <span class="ui">Transação</span>, <span class="ui">Tipo de Documento</span>, <span class="ui">Documento</span>, <span class="ui">Chave Pix</span>, <span class="ui">Banco</span>, <span class="ui">Agência</span>, <span class="ui">Conta</span>, <span class="ui">Tipo de conta</span>, <span class="ui">Nome / Razão Social</span> e <span class="ui">Observações</span>.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> estes dados são pessoais e financeiros. Baixe o arquivo só quando precisar e guarde-o com cuidado.</p></div>
+
+<h3>Plantões</h3>
+<p>Mostra uma linha por plantão cujo início está no período escolhido. Use para conferir plantão a plantão, com horários, local, responsável e valor final.</p>
+<p>Os filtros são os mesmos do relatório Financeiro, descritos em <span class="ui">Filtros comuns</span>: período, escalas, profissionais, dias da semana, horários previstos e agrupamento. Em <span class="ui">Agrupar por</span> você escolhe <span class="ui">Empresa</span>, <span class="ui">Escala</span>, <span class="ui">Profissional</span>, <span class="ui">Dia</span> ou <span class="ui">Semana</span>.</p>
+<p>As colunas são <span class="ui">Início</span>, <span class="ui">Dia início</span>, <span class="ui">Fim</span>, <span class="ui">Duração</span>, <span class="ui">Rede</span>, <span class="ui">Local</span>, <span class="ui">Setor</span>, <span class="ui">Código</span>, <span class="ui">Escala</span>, <span class="ui">Responsável</span>, <span class="ui">Especialidade</span>, <span class="ui">Registro profissional</span>, <span class="ui">Valor final</span> e <span class="ui">Observações</span>.</p>
+<ul>
+<li><strong>Valor final</strong>: o valor do plantão depois de desconto e adicional.</li>
+<li><strong>Observações</strong>: anotações internas sobre o plantão, com data e autor.</li>
+<li>Clicar no nome da <span class="ui">Escala</span> abre a escala no calendário mensal. Clicar no nome do <span class="ui">Responsável</span> abre o cadastro dele.</li>
+</ul>
+<p>Esse relatório não tem linha de totais. Para ver somas, use <span class="ui">Agrupar por</span>: cada grupo mostra a quantidade de plantões e o total de duração e de valor final.</p>
+
+<h3>Escalas</h3>
+<p>Mostra o calendário mensal dos plantões. Cada mês aparece em um bloco. Em cada dia, aparecem as escalas, com os horários e os nomes dos profissionais.</p>
+<ul>
+<li><span class="ui">De</span> e <span class="ui">Até</span>: o período. Se estiverem vazios, vale o mês atual.</li>
+<li>Escalas (opcional) e depois <span class="ui">Filtrar</span>.</li>
+<li>O campo <span class="ui">Buscar linhas ou grupos por nome ou código</span> mostra só o que combina com o texto digitado.</li>
+</ul>
+<p>No computador, cada mês vira uma grade com os dias da semana. No celular, cada dia aparece em uma linha. Clique no nome da escala para abrir a escala no calendário mensal (veja <a href="/help/escalas-visualizacoes">Escalas: mensal, semanal e lista</a>). Clique no nome do profissional para abrir o cadastro dele.</p>
+<p>No Excel, os meses saem em blocos, com os dias da semana nas colunas.</p>
+
+<h3>Configurações das escalas</h3>
+<p>Mostra o cadastro de cada escala: regras, parâmetros e equipe. Não tem período, porque mostra a configuração atual.</p>
+<ul>
+<li><span class="ui">Status</span>: <span class="ui">Ativas</span> (padrão), <span class="ui">Inativas</span> ou <span class="ui">Todas</span>.</li>
+<li><span class="ui">Tipo de precificação</span>: <span class="ui">Todas</span> (padrão), <span class="ui">Por hora</span> ou <span class="ui">Fixa</span>.</li>
+<li><span class="ui">Agrupar por</span>: <span class="ui">Rede</span>, <span class="ui">Local</span> ou <span class="ui">Setor</span>.</li>
+<li>Escalas (opcional) e depois <span class="ui">Filtrar</span>. O resultado só aparece depois de clicar em <span class="ui">Filtrar</span>.</li>
+</ul>
+<p>As colunas reúnem a identificação da escala (<span class="ui">Rede</span>, <span class="ui">Local</span>, <span class="ui">Setor</span>, <span class="ui">Código</span>, <span class="ui">Escala</span>, <span class="ui">ID</span>, <span class="ui">Ativo?</span> e <span class="ui">Descrição</span>), a equipe (<span class="ui">Coordenadores</span> e <span class="ui">Profissionais associados</span>), as regras de ponto (<span class="ui">Exige check-in?</span>, <span class="ui">Inclui verificação biométrica?</span>, <span class="ui">Check-in/out passivo?</span>, <span class="ui">Considerar realizado?</span> e <span class="ui">Exige aprovação do coordenador?</span>), as datas de visualização (<span class="ui">Visibilidade (dias antes)</span> e <span class="ui">Visualização liberada até</span>), o pagamento (<span class="ui">Tipo de precificação</span>, <span class="ui">Tipo</span> e <span class="ui">Dia do pagamento</span>) e a competência (<span class="ui">Competência financeira customizada?</span> e <span class="ui">Dia de corte</span>). Também há a coluna <span class="ui">Observações internas</span>.</p>
+<p>Essa coluna não aparece para médicos, enfermeiros e fisioterapeutas. Para mudar a configuração de uma escala, veja <a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a>.</p>
+
+<h3>Financeiro</h3>
+<p>Mostra uma linha por plantão do período, com o valor previsto, o que foi comprovado no ponto, o valor final e a situação do pagamento. É o relatório mais completo para conferir pagamentos.</p>
+<div class="callout callout-info"><p><strong>Atenção:</strong> este é o relatório <span class="ui">Financeiro</span>, da lista de relatórios. Não confunda com o menu <span class="ui">Financeiro</span>, onde ficam as regras de pagamento, os ajustes e o fechamento.</p></div>
+<p>Os filtros são os mesmos do relatório Plantões. Em <span class="ui">Agrupar por</span> você escolhe <span class="ui">Empresa</span>, <span class="ui">Escala</span>, <span class="ui">Profissional</span>, <span class="ui">Dia</span>, <span class="ui">Semana</span> ou <span class="ui">Origem</span>.</p>
+<p>As colunas estão organizadas assim:</p>
+<table>
+<thead>
+<tr><th>Grupo de colunas</th><th>Colunas</th></tr>
+</thead>
+<tbody>
+<tr><td>Profissional</td><td><span class="ui">Profissional</span>, <span class="ui">Especialidade</span>, <span class="ui">Registro profissional</span>, <span class="ui">Email</span></td></tr>
+<tr><td>Empresa</td><td><span class="ui">Empresa (Razão social)</span>, <span class="ui">Tipo de empresa</span></td></tr>
+<tr><td>Quando</td><td><span class="ui">Mês</span>, <span class="ui">Dia início</span>, <span class="ui">Início previsto</span>, <span class="ui">Fim previsto</span></td></tr>
+<tr><td>Escala e origem</td><td><span class="ui">Origem</span>, <span class="ui">Código</span>, <span class="ui">Rede &gt; Local &gt; Setor &gt; Escala</span>, <span class="ui">Considerar realizado?</span></td></tr>
+<tr><td>Previsto</td><td><span class="ui">Duração prevista</span>, <span class="ui">Valor previsto</span></td></tr>
+<tr><td>Registro de ponto</td><td><span class="ui">Check-in</span>, <span class="ui">Método do check-in</span>, <span class="ui">Check-out</span>, <span class="ui">Método do check-out</span></td></tr>
+<tr><td>Revisão aprovada</td><td><span class="ui">Entrada (aprovada)</span>, <span class="ui">Saída (aprovada)</span></td></tr>
+<tr><td>Comprovado</td><td><span class="ui">Permanência comprovada</span>, <span class="ui">Valor comprovado</span></td></tr>
+<tr><td>Pagamento</td><td><span class="ui">Desconto</span>, <span class="ui">Adicional</span>, <span class="ui">Valor final</span>, <span class="ui">Pagamento</span>, <span class="ui">Data de pagamento</span>, <span class="ui">Saldo líquido</span></td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Origem</strong>: <em>Pega Plantão</em> para plantões trazidos do Pega Plantão, e <em>Nora Care</em> para os criados no NoraCare.</li>
+<li><strong>Pagamento</strong>: mostra <em>Pago</em>, <em>Não pago</em> ou um traço (—).</li>
+<li>Escalas de tipo <span class="ui">Fixa</span>, com valor mensal fixo, aparecem com uma linha por mês. Nelas, a coluna de dia mostra <em>Valor fixo mensal</em> e não há horários.</li>
+</ul>
+<p>Esse relatório não tem linha de totais. Para ver somas, use <span class="ui">Agrupar por</span>: cada grupo mostra a quantidade de registros e os totais das colunas de valor e de horas.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> no computador, passe o mouse sobre o nome de algumas colunas para ver uma explicação curta: <span class="ui">Origem</span>, <span class="ui">Considerar realizado?</span>, <span class="ui">Check-in</span>, <span class="ui">Check-out</span>, <span class="ui">Entrada (aprovada)</span>, <span class="ui">Saída (aprovada)</span> e <span class="ui">Permanência comprovada</span>.</p></div>
+
+<h3>Financeiro Consolidado</h3>
+<p>Mostra uma linha por profissional, com o total do período: quantidade de plantões e horas, valor previsto, valor comprovado e quanto ainda falta pagar. No fim da tabela, uma linha soma os valores de todos.</p>
+<p>Os filtros são os mesmos do relatório Financeiro, sem o agrupamento. Além disso, há duas opções que você liga e desliga:</p>
+<ul>
+<li><span class="ui">Incluir dados bancários</span>: acrescenta as colunas <span class="ui">Transação</span>, <span class="ui">Tipo de Documento</span>, <span class="ui">Documento</span>, <span class="ui">Chave Pix</span>, <span class="ui">Banco</span>, <span class="ui">Agência</span>, <span class="ui">Conta</span>, <span class="ui">Operação</span>, <span class="ui">Nome / Razão Social</span> e <span class="ui">Observações</span>.</li>
+<li><span class="ui">Valores brutos</span>: acrescenta a coluna <span class="ui">Valor bruto</span>, logo depois de <span class="ui">Valor previsto</span>. É o faturamento, antes de descontos e adicionais de pagamento.</li>
+</ul>
+<p>As colunas são <span class="ui">Profissional</span>, <span class="ui">Especialidade</span>, <span class="ui">Email</span>, <span class="ui">Registro profissional</span>, <span class="ui">Razão social</span>, <span class="ui">Alteração contratual</span>, <span class="ui">CNPJ</span>, <span class="ui">CPF</span>, <span class="ui">Nº de plantões</span>, <span class="ui">Horas previstas</span>, <span class="ui">Valor previsto</span>, <span class="ui">Ajustes mensais</span>, <span class="ui">Permanência comprovada</span>, <span class="ui">Valor comprovado</span>, <span class="ui">Diferença</span>, <span class="ui">% comprovado</span>, <span class="ui">Plantões pagos</span>, <span class="ui">Saldo líquido</span>, <span class="ui">Categoria atual</span>, <span class="ui">Pró-labore</span>, <span class="ui">INSS Individual</span> e <span class="ui">INSS Patronal</span>.</p>
+<ul>
+<li><span class="ui">Valor previsto</span> soma os plantões, as parcelas de escalas fixas e as bonificações do período.</li>
+<li><span class="ui">Ajustes mensais</span> são os ajustes lançados nos meses do período, no menu <span class="ui">Financeiro › Ajustes mensais</span>. Valores negativos aparecem em vermelho.</li>
+<li><span class="ui">Plantões pagos</span> é o valor dos plantões já pagos, e não a quantidade.</li>
+<li><span class="ui">Saldo líquido</span> é o valor previsto menos os plantões pagos: quanto ainda falta pagar.</li>
+</ul>
+
+<h2 id="filtros-comuns">Filtros comuns</h2>
+
+<h3>Período (De e Até)</h3>
+<ul>
+<li>Escolha a data inicial em <span class="ui">De</span> e a final em <span class="ui">Até</span>. Depois de escolher a data inicial, o calendário de <span class="ui">Até</span> abre sozinho.</li>
+<li>Se os campos estiverem vazios, o período é o mês atual, do dia 1 ao último dia. A tela mostra essas datas como sugestão. Em <span class="ui">Profissionais</span>, sem datas, a lista traz todos.</li>
+<li>Para apagar uma data, clique no × dentro do campo.</li>
+<li>Se a data inicial for depois da final, aparece a mensagem <em>A data inicial deve ser anterior ou igual à data final.</em> e o botão <span class="ui">Filtrar</span> fica desligado.</li>
+</ul>
+
+<h3>Escalas</h3>
+<ul>
+<li>As escalas aparecem em árvore: <span class="ui">Rede</span>, depois <span class="ui">Local</span>, <span class="ui">Setor</span> e <span class="ui">Escala</span>. Clique na seta para abrir cada nível. Marcar um nível marca todas as escalas dentro dele.</li>
+<li>Com a lista fechada, as escalas escolhidas aparecem como etiquetas. Clique no × da etiqueta para tirar a escala do filtro.</li>
+<li>Se você não escolher nenhuma escala, o relatório traz todas.</li>
+<li>No botão com ícone de olho, ao lado da lista, ficam as opções <span class="ui">Códigos</span> e <span class="ui">Inativos</span>. <span class="ui">Códigos</span> mostra a identificação ao lado do nome de cada rede, local, setor e escala, e você pode marcar só os níveis que quer. <span class="ui">Inativos</span> mostra as escalas inativas na lista.</li>
+</ul>
+<div class="callout callout-info"><p>Escalas inativas não aparecem na lista até você marcar <span class="ui">Inativos</span>. Nos relatórios <span class="ui">Plantões</span>, <span class="ui">Financeiro</span> e <span class="ui">Financeiro Consolidado</span>, os plantões dessas escalas só entram no resultado quando a opção está marcada.</p></div>
+
+<h3>Profissionais e médico</h3>
+<ul>
+<li>Em <span class="ui">Plantões</span>, <span class="ui">Financeiro</span> e <span class="ui">Financeiro Consolidado</span>, digite o nome (pelo menos duas letras) no campo <span class="ui">Profissionais</span> e clique no resultado para incluir. Cada profissional escolhido vira uma etiqueta. Clique nela para tirar.</li>
+<li>Em <span class="ui">Por Médico</span>, o campo se chama <span class="ui">Médico</span>, e o relatório mostra só essa pessoa.</li>
+<li>Entre <span class="ui">Plantões</span>, <span class="ui">Financeiro</span> e <span class="ui">Financeiro Consolidado</span>, os profissionais escolhidos continuam selecionados quando você troca de relatório.</li>
+</ul>
+
+<h3>Dias da semana e horários</h3>
+<ul>
+<li><span class="ui">Dias da semana</span>: marque um ou mais dias, de domingo (D) a sábado (S). O relatório mostra só os plantões que começam nesses dias.</li>
+<li><span class="ui">Início previsto às</span> e <span class="ui">Fim previsto às</span>: digite o horário no formato HH:mm. O relatório mostra só os plantões com esse horário exato.</li>
+</ul>
+<div class="callout callout-warn"><p>Se o horário estiver fora do formato, aparece <em>Use HH:mm</em> no campo e a mensagem <em>Informe horários válidos no formato HH:mm.</em>. O botão <span class="ui">Filtrar</span> fica desligado até corrigir.</p></div>
+
+<h3>Agrupar por</h3>
+<p>Junta as linhas em grupos, como por <span class="ui">Empresa</span> ou por <span class="ui">Escala</span>. Cada grupo mostra quantos registros tem e os totais das colunas de valor e de horas. Clique no nome do grupo para mostrar ou esconder as linhas dele.</p>
+
+<h3>Filtrar</h3>
+<p>Depois de mudar qualquer filtro, clique em <span class="ui">Filtrar</span>. A tabela só muda quando você clica. Antes da primeira consulta, a tela mostra <em>Selecione os filtros e clique em Filtrar</em>.</p>
+
+<h3>Buscar na tela</h3>
+<p>Em <span class="ui">Plantões</span>, <span class="ui">Financeiro</span>, <span class="ui">Escalas</span>, <span class="ui">Grupo de usuários</span>, <span class="ui">Configurações das escalas</span> e na <span class="ui">Apuração</span> agrupada por escala, há o campo <span class="ui">Buscar linhas ou grupos por nome ou código</span>. Ele filtra só o que já está na tela, sem refazer a consulta. O arquivo Excel não muda com a busca.</p>
+
+<h3>Como o período é contado</h3>
+<p>Nos relatórios <span class="ui">Plantões</span>, <span class="ui">Financeiro</span>, <span class="ui">Financeiro Consolidado</span> e <span class="ui">Escalas</span>, um plantão entra no período pelo dia em que começa. Um plantão que começa à noite no último dia de um mês e termina no dia seguinte fica no mês em que começou.</p>
+<p>Nos relatórios <span class="ui">Por Médico</span> e <span class="ui">Apuração</span>, quando você escolhe um mês inteiro (do dia 1 ao último dia), cada escala com <span class="ui">Dia de corte</span> usa o próprio período de fechamento. Por isso, o total de um mês pode não bater com o do Financeiro, que usa as datas escolhidas. Veja o dia de corte de cada escala em <span class="ui">Configurações das escalas</span>.</p>
+
+<h2 id="exportar-excel">Exportar para o Excel</h2>
+<ol class="steps">
+<li>Clique em <span class="ui">Filtrar</span> e confira o resultado na tela.</li>
+<li>No topo da tela, clique em <span class="ui">Exportar .xlsx</span>. Em <span class="ui">Por Médico</span> e <span class="ui">Apuração</span>, o botão se chama <span class="ui">Exportar XLSX</span>.</li>
+<li>Aguarde. Enquanto o arquivo é preparado, o botão mostra <span class="ui">Exportando…</span> ou <span class="ui">Gerando…</span>.</li>
+<li>O arquivo é baixado para o seu computador. Abra-o no Excel ou em outro programa de planilhas.</li>
+</ol>
+<div class="callout callout-tip"><p><strong>Dica:</strong> o botão só fica ativo depois de clicar em <span class="ui">Filtrar</span> e quando há resultados na tela.</p></div>
+<p>O arquivo tem duas abas. A aba <span class="ui">Parâmetros</span> mostra o nome do relatório, o período, os filtros usados e a data e a hora em que o arquivo foi gerado. A aba <span class="ui">Dados</span> traz as linhas do relatório.</p>
+<p>A exportação é feita com os filtros aplicados, e não com o que você digitou na busca da tela.</p>
+<p>A exportação funciona no navegador (versão web). Se você tocar no botão de exportar pelo celular, aparece um aviso dizendo que o recurso está disponível só na versão web.</p>
+
+<h2 id="como-ler-valores">Como ler os valores</h2>
+<table>
+<thead>
+<tr><th>Termo</th><th>O que significa</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="ui">Valor previsto</span></td><td>Quanto o plantão vale pelo horário previsto, com desconto e adicional, se houver.</td></tr>
+<tr><td><span class="ui">Permanência comprovada</span></td><td>Quantas horas o profissional ficou na unidade, pelo check-in e check-out ou pelo horário aprovado depois de uma revisão.</td></tr>
+<tr><td><span class="ui">Valor comprovado</span></td><td>A parte do valor previsto proporcional à permanência comprovada. Se a permanência for maior que a prevista, o valor comprovado fica acima do previsto.</td></tr>
+<tr><td><span class="ui">Valor final</span></td><td>O valor do plantão depois de desconto e adicional. Nas escalas que consideram o realizado, ele acompanha o tempo comprovado.</td></tr>
+<tr><td><span class="ui">Saldo líquido</span></td><td>Quanto ainda falta pagar. Plantões já pagos ficam com zero no Financeiro.</td></tr>
+<tr><td><span class="ui">Diferença</span></td><td>Valor comprovado menos valor previsto. Fica negativa quando o profissional comprovou menos do que estava previsto.</td></tr>
+<tr><td><span class="ui">% comprovado</span></td><td>Quanto do valor previsto foi comprovado, em porcentagem.</td></tr>
+<tr><td><span class="ui">Valor bruto</span> e <span class="ui">Valor Total</span></td><td>O faturamento, antes de descontos e adicionais de pagamento. A coluna <span class="ui">Valor Total</span> do Por Médico e os valores da Apuração também são valores brutos.</td></tr>
+<tr><td><span class="ui">Considerar realizado?</span></td><td><em>Sim</em>: o pagamento considera o que foi realmente cumprido, conforme a regra da escala. <em>Não</em>: o valor segue o horário previsto. Um traço (—) quer dizer que a escala não exige check-in e check-out.</td></tr>
+<tr><td><span class="ui">Pró-labore</span>, <span class="ui">INSS Individual</span> e <span class="ui">INSS Patronal</span></td><td>Valores definidos pelas regras de pagamento de cada profissional. Veja <a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a>.</td></tr>
+</tbody>
+</table>
+
+<h2 id="como-ler-ponto">Como ler o registro de ponto</h2>
+<p>Nas colunas <span class="ui">Check-in</span> e <span class="ui">Check-out</span>, o método diz como o horário foi registrado:</p>
+<ul>
+<li><strong>Manual</strong>: o próprio profissional registrou o horário.</li>
+<li><strong>Passivo</strong>: o aplicativo registrou o horário sozinho, sem ação do profissional. Veja <a href="/help/check-in-automatico">Check-in automático</a>.</li>
+<li><strong>Gestor</strong>: um gestor lançou o horário.</li>
+<li><strong>Automático</strong>: o sistema encerrou o registro sem o check-out do profissional. Esse método aparece só no check-out.</li>
+</ul>
+<p>Quando um coordenador aprova uma revisão de permanência, as colunas <span class="ui">Entrada (aprovada)</span> e <span class="ui">Saída (aprovada)</span> mostram os horários aprovados. A permanência comprovada e o valor comprovado passam a considerar esses horários. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</p>
+
+<h2 id="dicas-gerais">Dicas gerais</h2>
+<ul>
+<li>Nomes sublinhados nas tabelas abrem o cadastro do profissional ou da empresa, ou a escala no calendário mensal. Escalas inativas aparecem sem sublinhado e sem link.</li>
+<li>Nos relatórios com <span class="ui">De</span> e <span class="ui">Até</span>, o período continua o mesmo ao trocar de relatório. Ao atualizar a página, ele volta ao padrão: o mês atual (em Profissionais, sem datas).</li>
+<li>As escalas escolhidas ficam guardadas no seu navegador, mesmo depois que você sai da página.</li>
+<li>Em <span class="ui">Por Médico</span>, <span class="ui">Apuração</span> e <span class="ui">Configurações das escalas</span>, tabelas longas são divididas em páginas: use os botões de página embaixo da tabela. Em <span class="ui">Plantões</span>, <span class="ui">Financeiro</span>, <span class="ui">Financeiro Consolidado</span> e <span class="ui">Profissionais</span>, o botão <span class="ui">Mostrar mais 200 linhas</span>, embaixo da tabela, mostra o restante.</li>
+<li>Se um número parecer estranho, confira antes o período, as escalas e os filtros de pessoa.</li>
+</ul>
+
+<h2 id="qual-usar">Qual relatório usar</h2>
+<table>
+<thead>
+<tr><th>Pergunta</th><th>Relatório para usar</th></tr>
+</thead>
+<tbody>
+<tr><td>Quanto cada profissional tem a receber e quanto ainda falta pagar?</td><td>Financeiro Consolidado, olhando <span class="ui">Saldo líquido</span></td></tr>
+<tr><td>Quais plantões ainda não foram pagos?</td><td>Financeiro, na coluna <span class="ui">Pagamento</span> (<em>Não pago</em>)</td></tr>
+<tr><td>Como foi cada plantão, com horário, ponto e valores?</td><td>Financeiro</td></tr>
+<tr><td>Quanto foi comprovado em relação ao previsto?</td><td>Financeiro Consolidado, olhando <span class="ui">Diferença</span> e <span class="ui">% comprovado</span></td></tr>
+<tr><td>Quantos plantões e horas cada profissional fez?</td><td>Por Médico</td></tr>
+<tr><td>Quanto o valor mudou nos últimos meses?</td><td>Apuração</td></tr>
+<tr><td>Quem está escalado em cada dia?</td><td>Escalas</td></tr>
+<tr><td>Quantos plantões cada empresa ou escala teve?</td><td>Plantões ou Financeiro, agrupados por <span class="ui">Empresa</span> ou <span class="ui">Escala</span></td></tr>
+<tr><td>Quais profissionais estão cadastrados e quando entraram?</td><td>Profissionais</td></tr>
+<tr><td>Quem tem acesso ao sistema e a quais escalas está ligado?</td><td>Grupo de usuários</td></tr>
+<tr><td>Quais contas bancárias estão cadastradas?</td><td>Dados Bancários</td></tr>
+<tr><td>Como cada escala está configurada?</td><td>Configurações das escalas</td></tr>
+</tbody>
+</table>
+
+<h2 id="mensagens-da-tela">Mensagens da tela</h2>
+<table>
+<thead>
+<tr><th>Mensagem</th><th>O que significa e o que fazer</th></tr>
+</thead>
+<tbody>
+<tr><td><em>Selecione os filtros e clique em Filtrar</em></td><td>Ainda não há resultado. Escolha os filtros e clique em <span class="ui">Filtrar</span>.</td></tr>
+<tr><td><em>Nenhum registro no período selecionado.</em></td><td>Não há linhas com esses filtros. Amplie o período ou tire alguma escala ou profissional.</td></tr>
+<tr><td><em>Nenhum registro encontrado.</em></td><td>Não há profissionais com esses filtros, no relatório Profissionais. Confira as datas e as escalas.</td></tr>
+<tr><td><em>Nenhum dado encontrado para o período selecionado</em>, com <em>Tente ajustar o filtro de período</em> ou <em>Tente ajustar os filtros ou o período</em></td><td>Aparece em Por Médico e Apuração. Ajuste o período ou os filtros e clique em <span class="ui">Filtrar</span>.</td></tr>
+<tr><td><em>Nenhuma conta bancária encontrada.</em></td><td>Não há contas para as escalas escolhidas. Tire a escala do filtro ou confira o cadastro.</td></tr>
+<tr><td><em>Nenhum usuário encontrado para os filtros selecionados.</em></td><td>Nenhum usuário combina com os perfis, o status e as escalas escolhidos.</td></tr>
+<tr><td><em>Nenhuma escala encontrada para os filtros selecionados.</em></td><td>Nenhuma escala combina com o status e os demais filtros. Tente <span class="ui">Todas</span> em Status.</td></tr>
+<tr><td><em>Falha ao carregar o relatório.</em></td><td>Os dados não chegaram. Tente de novo em instantes.</td></tr>
+<tr><td><em>Algo deu errado</em>, com o botão <span class="ui">Tentar novamente</span></td><td>Aparece em Por Médico e Apuração. Clique em <span class="ui">Tentar novamente</span>.</td></tr>
+<tr><td><em>A data inicial deve ser anterior ou igual à data final.</em></td><td>As datas estão invertidas. Corrija o período. O botão <span class="ui">Filtrar</span> fica desligado até corrigir.</td></tr>
+<tr><td><em>Use HH:mm</em> e <em>Informe horários válidos no formato HH:mm.</em></td><td>O horário está fora do formato. Digite no formato HH:mm, por exemplo 19:00.</td></tr>
+<tr><td><em>Nenhum profissional encontrado</em></td><td>A busca não achou ninguém com esse texto. Tente outro nome.</td></tr>
+<tr><td><em>Falha ao buscar profissionais.</em></td><td>A busca falhou. Tente de novo.</td></tr>
+<tr><td><em>Falha ao exportar. Tente novamente.</em> ou <em>Falha ao exportar XLSX. Tente novamente.</em></td><td>O arquivo não foi gerado. Clique de novo no botão de exportar.</td></tr>
+<tr><td><em>Disponível apenas na versão web.</em> ou <em>Disponível na versão web.</em></td><td>A exportação só funciona no navegador. Abra o painel pelo computador para baixar o arquivo.</td></tr>
+<tr><td><span class="ui">Mostrar mais 200 linhas</span></td><td>Aparece embaixo da tabela quando há mais linhas do que as exibidas. Clique para ver o restante.</td></tr>
+<tr><td><em>N registro(s)</em>, <em>N conta(s)</em>, <em>N usuário(s)</em> e <em>N escala(s)</em></td><td>Quantidade de linhas do resultado atual.</td></tr>
+</tbody>
+</table>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/fechamento">Fechamento mensal: importação, conciliação e pagamento</a></li>
+<li><a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a></li>
+<li><a href="/help/registros-de-presenca">Registros de presença e revisões de ponto</a></li>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+<li><a href="/help/glossario">Glossário</a></li>
+</ul>

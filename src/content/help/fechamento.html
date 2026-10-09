@@ -1,0 +1,290 @@
+<p class="lead">Todo mês, o pagamento dos profissionais passa por quatro passos: importar os relatórios do Pega Plantão, conferir as pendências, importar os plantões válidos e exportar os arquivos de pagamento. Aqui você encontra cada tela, o que fazer com as pendências e como corrigir um mês importado com erro.</p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+
+<h2 id="visao-geral">Visão geral</h2>
+<p>O fechamento fica no menu <span class="ui">Financeiro › Fechamento</span>, com duas telas:</p>
+<table>
+<thead><tr><th>Tela</th><th>Para que serve</th><th>Quem acessa</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Financeiro › Fechamento › Importação</span></td><td>Enviar os relatórios do Pega Plantão, conferir as pendências e importar os plantões do mês.</td><td>Master e Gestor Interno</td></tr>
+<tr><td><span class="ui">Financeiro › Fechamento › Pagamento</span></td><td>Conferir quanto cada profissional tem a receber no mês e exportar os arquivos de pagamento.</td><td>Somente Master</td></tr>
+</tbody>
+</table>
+<p>Na prática, o fechamento segue esta ordem:</p>
+<ol class="steps">
+<li>Anexe os relatórios <strong>Financeiro</strong> e <strong>Profissionais</strong> e clique em <span class="ui">Verificar</span>.</li>
+<li>Confira a <span class="ui">Conciliação do fechamento</span> e resolva as pendências que puder, no Pega Plantão ou no NoraCare.</li>
+<li>Na <span class="ui">Planilha pré-fechada</span>, clique em <span class="ui">Importar</span>. Os plantões válidos entram em um <strong>lote</strong>.</li>
+<li>Em <span class="ui">Financeiro › Fechamento › Pagamento</span>, confira os valores e exporte os arquivos do mês.</li>
+</ol>
+<p>Cada importação cria um lote: um conjunto de plantões com número próprio, que aparece no histórico. O Gestor Interno importa, confere e remove lotes. O Master faz tudo isso e também exporta os pagamentos.</p>
+<p>Não existe botão para fechar ou reabrir o mês. Se uma importação saiu errada, remova o lote no histórico e importe de novo. Veja <a href="#historico">Histórico de importações e remoção de lote</a>.</p>
+
+<h2 id="antes-de-comecar">Antes de começar</h2>
+<ul>
+<li>Exporte <strong>dois</strong> relatórios do Pega Plantão, ambos em planilha .xlsx: <strong>Financeiro</strong> e <strong>Profissionais</strong>. Os dois são obrigatórios.</li>
+<li>No relatório Financeiro, marque a opção <strong>incluir dados bancários</strong>. Sem ela, o sistema não encontra o CPF nem a chave PIX dos profissionais. Se ninguém tiver esses dados, o fechamento fica bloqueado. Se só algumas pessoas estiverem sem eles, os plantões delas ficam de fora, com erro.</li>
+<li>O período do fechamento vem do cabeçalho do relatório Financeiro. Você não precisa digitar datas.</li>
+<li>A importação é feita no painel web. No aplicativo, não é possível escolher as planilhas.</li>
+</ul>
+<div class="callout callout-tip"><p><strong>Dica:</strong> a conferência fica guardada só na tela aberta. Se você recarregar a página do navegador, precisará anexar os arquivos e verificar de novo.</p></div>
+
+<h2 id="importar-relatorios">1. Importar os relatórios</h2>
+<p>Abra <span class="ui">Financeiro › Fechamento › Importação</span>. A tela tem duas seções:</p>
+<ul>
+<li><span class="ui">Movimento do mês</span>: o relatório Financeiro, com os plantões e os valores.</li>
+<li><span class="ui">Cadastros</span>: o relatório Profissionais, com nome, e-mail, telefone, CRM e data de nascimento.</li>
+</ul>
+<ol class="steps">
+<li>Em cada seção, clique em <span class="ui">Selecionar arquivo</span> e escolha a planilha. Para trocar, use <span class="ui">Substituir arquivo</span>. Para tirar, use <span class="ui">Remover arquivo</span>.</li>
+<li>Com os dois arquivos anexados, o botão <span class="ui">Verificar</span> fica disponível. Clique nele.</li>
+<li>Espere a verificação terminar. Arquivos grandes demoram alguns minutos. Enquanto o botão mostrar carregamento, não clique de novo.</li>
+</ol>
+<p>Se você escolher um arquivo que não seja .xlsx, a tela mostra <em>Envie uma planilha no formato .xlsx.</em> Se o arquivo não for o relatório esperado, por exemplo o Financeiro no lugar do Profissionais, a conferência mostra o erro na lista. Nesse caso, o fechamento não avança até você enviar o relatório certo.</p>
+<p>Se aparecer uma mensagem de erro ao verificar, tente de novo. Se o problema continuar, fale com o suporte do NoraCare.</p>
+
+<h2 id="conciliacao">2. Conciliar: conferir a verificação</h2>
+<p>Conciliar é comparar o que veio do Pega Plantão com o que já existe no NoraCare. Depois de verificar, abre a tela <span class="ui">Conciliação do fechamento</span>. Ela mostra o período verificado, o resultado da conferência e a lista de plantões e pendências, linha por linha.</p>
+<p>Se a tela aparecer com a mensagem <em>Nenhuma verificação ativa</em>, volte à Importação e verifique os arquivos de novo.</p>
+
+<h3>Selos e botões</h3>
+<p>No topo da tela, um selo mostra a situação geral:</p>
+<ul>
+<li><span class="ui">Pronto para importar</span> (verde): nenhum erro e nenhuma inconsistência de tipo, dia, horário ou valor. Avisos podem existir.</li>
+<li><span class="ui">Revisão necessária</span> (amarelo): há plantões fora das regras de tipo, dia, horário ou valor.</li>
+</ul>
+<p>Se houver erros, mas nenhuma inconsistência de tipo, dia, horário ou valor, nenhum selo aparece. Nesse caso, veja as linhas com erro na lista.</p>
+<table>
+<thead><tr><th>Botão</th><th>Quando aparece</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Voltar</span></td><td>Sempre</td><td>Volta para a Importação. Os arquivos continuam anexados.</td></tr>
+<tr><td><span class="ui">Baixar planilha verificadora</span></td><td>Sempre, no painel web</td><td>Baixa uma planilha .xlsx com cinco abas: <em>Parâmetros</em> (período e situação geral), <em>Plantões</em>, <em>Profissionais</em>, <em>Avisos e erros</em> e <em>Verificação de tags e valores</em>.</td></tr>
+<tr><td><span class="ui">Cancelar</span></td><td>Quando há plantões fora das regras de tipo, dia, horário ou valor</td><td>Descarta esta tentativa. Nenhum plantão é importado. Fica apenas o registro da decisão de cancelar, na auditoria.</td></tr>
+<tr><td><span class="ui">Avançar</span></td><td>Quando não há erros nem inconsistências</td><td>Leva para a <span class="ui">Planilha pré-fechada</span>. Avisos podem existir.</td></tr>
+<tr><td><span class="ui">Avançar mesmo assim</span></td><td>Quando há linhas com erro, e não há inconsistências de tipo, dia, horário ou valor</td><td>Leva para a planilha pré-fechada. As linhas com erro ficam de fora.</td></tr>
+<tr><td><span class="ui">Prosseguir mesmo assim</span></td><td>Quando há plantões fora das regras de tipo, dia, horário ou valor. Aparece também quando há erros ao mesmo tempo.</td><td>Leva para a planilha pré-fechada aceitando essas inconsistências. A decisão fica registrada no histórico do lote.</td></tr>
+</tbody>
+</table>
+<p>Os botões de avanço só aparecem quando o problema não está no arquivo em si, como um relatório trocado ou sem dados bancários.</p>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> quando há linhas com erro e o avanço é permitido, a tela mostra quantas ficarão de fora e o valor total delas. Essas linhas não são importadas.</p></div>
+
+<h3>Como ler a lista</h3>
+<p>A lista mostra os plantões do Financeiro que têm erro ou aviso, e também as pendências que não se ligam a um plantão específico, como um problema no relatório Profissionais. Plantões que têm só inconsistência de tipo, dia, horário ou valor não aparecem nela: ficam na parte de cima da conciliação, na verificação de tipos, dias, horários e valores descrita abaixo. Cada linha mostra:</p>
+<ul>
+<li><span class="ui">Situação</span>: <strong>Erro</strong> (o plantão não entra), <strong>Aviso</strong> (o plantão entra, mas vale conferir) ou <strong>OK</strong>.</li>
+<li><span class="ui">Motivo</span>: o que foi encontrado. Se a linha tiver erro e aviso, a tela mostra só o erro.</li>
+<li><span class="ui">Linha</span>: o número da linha no relatório Financeiro. Use esse número para achar o plantão no Pega Plantão.</li>
+<li><span class="ui">Data</span>, <span class="ui">Horário</span>, <span class="ui">Escala</span>, <span class="ui">Profissional</span> e <span class="ui">Valor</span>.</li>
+</ul>
+<p>Por padrão, a lista mostra só as pendências (erro e aviso). Para ver tudo, mude o filtro <span class="ui">Situação</span> para <span class="ui">Todas</span>. Os demais controles são:</p>
+<ul>
+<li><span class="ui">Situação</span>: <span class="ui">Pendências (erro + aviso)</span>, <span class="ui">Todas</span>, <span class="ui">Erro</span>, <span class="ui">Aviso</span> ou <span class="ui">OK</span>.</li>
+<li><span class="ui">Agrupar por</span>: <span class="ui">Por tipo</span> (agrupa pelo assunto da pendência), <span class="ui">Por profissional</span> ou <span class="ui">Sem agrupamento</span>.</li>
+<li><span class="ui">Profissional</span> e <span class="ui">Setor, escala ou relatório</span>: campos para buscar pelo texto digitado.</li>
+<li><span class="ui">Colunas</span>: mostra ou esconde colunas como <span class="ui">Relatório de origem</span>, <span class="ui">Rede</span>, <span class="ui">Local</span>, <span class="ui">Setor</span>, <span class="ui">CPF</span> e <span class="ui">Duração</span>.</li>
+</ul>
+<p>Clique no título de uma coluna para ordenar a lista. Se houver mais de uma página, use a paginação embaixo da lista para ver as demais linhas.</p>
+<p>Na parte de baixo, os totais mostram quantos plantões e quanto valor há na lista filtrada. Ao marcar linhas, aparece a soma delas. A seleção só soma valores: ela não escolhe o que será importado.</p>
+
+<h3>Verificação de tipos, dias, horários e valores</h3>
+<p>O sistema confere cada plantão com as regras de tipo cadastradas. Cada regra diz em quais dias e em que horário um tipo de plantão costuma começar, e se ele precisa ter valor. Quando um plantão foge da regra, ele aparece como <strong>aviso</strong>, na parte de cima da conciliação, em uma tabela com o profissional, o local, a data e a hora, o tipo, o valor, as condições não atendidas e o que era esperado. As condições que podem aparecer são:</p>
+<ul>
+<li><strong>Dia da semana</strong>: o plantão caiu em um dia diferente do previsto.</li>
+<li><strong>Hora de início</strong>: o plantão começou fora da faixa de horário prevista.</li>
+<li><strong>Valor zerado</strong>: o plantão está sem valor. Escalas de coordenação não são marcadas por isso.</li>
+</ul>
+<p>Alguns detalhes: para conferir o dia da semana, um plantão de tipo noturno que começa de madrugada conta como do dia anterior. Tipos que não estão nas regras não são verificados. Regras inativas também não são aplicadas.</p>
+<p>No topo dessa parte, os totais mostram quantos plantões há no arquivo, quantos foram verificados e quantas inconsistências existem, com a contagem de cada condição. Use <span class="ui">Agrupar inconsistências por</span> para organizar a lista por condição não atendida, por tipo, por profissional ou sem agrupamento.</p>
+<p>Para consultar as regras, use o botão <span class="ui">Regras de tipo</span>, no topo da tela Importação. Ele mostra cada tipo, os dias, o início previsto, se o valor é exigido, os sinônimos e se a regra está ativa. Nessa janela, as regras são só para consulta. Se alguma estiver desatualizada, fale com o suporte do NoraCare.</p>
+
+<h2 id="pendencias">Pendências: o que fazer</h2>
+<p>Esta seção explica as pendências mais comuns. Os textos da tela trazem o nome da pessoa, a escala e o motivo exato. Em geral, a solução é corrigir o dado no Pega Plantão, exportar o relatório de novo e verificar outra vez. Quando o dado certo está no NoraCare, corrija lá.</p>
+<p>Avisos não impedem a importação, mas as inconsistências de tipo, dia, horário ou valor pedem a confirmação de <span class="ui">Prosseguir mesmo assim</span>. Erros de um plantão, ou de todos os plantões de uma pessoa, deixam só esses plantões de fora. Erros do arquivo inteiro, como um relatório trocado, impedem o avanço.</p>
+
+<h3>Profissional que não está nos relatórios</h3>
+<p>Um profissional pode aparecer no Financeiro com plantões e não estar no relatório Profissionais. O resultado depende de o Financeiro trazer ou não os dados bancários dele:</p>
+<ul>
+<li><strong>Se o Financeiro traz o CPF e a chave PIX:</strong> ele entra na importação só com nome, CRM, CPF e chave PIX, com aviso. Depois, complete e-mail, telefone e data de nascimento no cadastro do NoraCare.</li>
+<li><strong>Se o Financeiro não traz o CPF:</strong> os plantões dele ficam de fora, com erro. Inclua a pessoa no relatório Profissionais ou confira a conta favorita dela no Pega Plantão. Depois, exporte os relatórios de novo e verifique outra vez.</li>
+</ul>
+<table>
+<thead><tr><th>O que aparece (resumo)</th><th>Situação na lista</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Pessoa com plantões que “não consta no relatório de profissionais”</td><td>Erro</td><td>Os plantões dela ficam de fora. Inclua-a no relatório Profissionais ou traga os dados bancários dela no Financeiro, exporte de novo e verifique.</td></tr>
+<tr><td>Profissional novo que “não está no relatório Profissionais”, com “será cadastrado só com nome, CRM, CPF e chave PIX”</td><td>Aviso</td><td>A pessoa entra com esses dados. Complete e-mail, telefone e data de nascimento no cadastro.</td></tr>
+<tr><td>Pessoa que “está sem CPF”: a linha bancária do Financeiro não traz o documento (CPF)</td><td>Erro</td><td>No Pega Plantão, cadastre a conta favorita (PIX) do profissional, exporte o Financeiro de novo com a opção incluir dados bancários marcada e verifique.</td></tr>
+<tr><td>Pessoa que “aparece com mais de um CPF no Financeiro”</td><td>Erro</td><td>Cada profissional precisa de um único CPF. Confira as contas bancárias dos plantões dele no Pega Plantão.</td></tr>
+<tr><td>“Plantão não importado” com a mensagem de que a pessoa “tem pendência de cadastro”, seguida do motivo</td><td>Erro</td><td>Todos os plantões dela ficam de fora até o motivo ser resolvido. Se não der para resolver agora, importe sem ela, avançando pelo botão disponível.</td></tr>
+<tr><td>Pessoa que está no relatório Profissionais, mas não no Financeiro, “será ignorado”</td><td>Aviso</td><td>Ela não entra na importação, porque não tem plantões no Financeiro. Confira se não faltou algum plantão no relatório.</td></tr>
+</tbody>
+</table>
+
+<h3>Conflitos com o cadastro do NoraCare</h3>
+<table>
+<thead><tr><th>O que aparece (resumo)</th><th>Situação na lista</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Pessoa “já está cadastrado(a) no NoraCare com outro CPF”</td><td>Erro</td><td>Corrija o CPF em um dos lados, no Pega Plantão ou no cadastro do NoraCare, e verifique outra vez.</td></tr>
+<tr><td>E-mail do Pega Plantão que já pertence a outra pessoa no NoraCare</td><td>Erro</td><td>Corrija o e-mail no Pega Plantão ou no cadastro de quem já usa esse e-mail. A mensagem diz quem é a outra pessoa.</td></tr>
+<tr><td>CRM que “já pertence a outro profissional cadastrado no NoraCare”</td><td>Erro</td><td>Confira qual cadastro está certo. O CRM é único entre profissionais ativos. A mensagem diz quem é o dono do CRM.</td></tr>
+<tr><td>“Conflito de pré-cadastro”: o CPF ou o e-mail já pertence a um convite pendente</td><td>Erro</td><td>Conclua ou cancele esse convite no NoraCare antes de importar.</td></tr>
+<tr><td>CPF, e-mail ou CRM que “aparece em mais de um profissional novo do Financeiro”</td><td>Erro</td><td>Corrija no Pega Plantão, para que cada profissional novo tenha o seu próprio dado.</td></tr>
+<tr><td>Pessoa que “casou com o cadastro do NoraCare” pelo nome e outro dado</td><td>Aviso</td><td>A pessoa foi ligada ao cadastro que já existia. A mensagem diz qual CPF ficou. Confira o CPF no cadastro depois de importar.</td></tr>
+<tr><td>Identificação interna do profissional diferente entre o Pega Plantão e o NoraCare</td><td>Aviso</td><td>Ao importar, o valor do Pega Plantão substitui o do NoraCare. Se o do NoraCare estiver certo, ajuste no Pega Plantão antes de importar.</td></tr>
+<tr><td>Pessoa que “já tem acesso ao NoraCare, mas sem perfil clínico”</td><td>Aviso</td><td>A importação cria o perfil para receber os plantões. Nome, CPF e e-mail dela não mudam.</td></tr>
+</tbody>
+</table>
+
+<h3>Escalas</h3>
+<table>
+<thead><tr><th>O que aparece (resumo)</th><th>Situação na lista</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Plantão exportado sem a identificação da escala</td><td>Erro</td><td>No Pega Plantão, use na escala a mesma identificação que ela tem no NoraCare. Exporte o Financeiro de novo.</td></tr>
+<tr><td>Identificação de escala que nenhuma escala do NoraCare tem</td><td>Erro</td><td>Cadastre a escala no NoraCare com essa identificação, ou corrija no Pega Plantão para a identificação que a escala já tem. Veja <a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a>.</td></tr>
+<tr><td>“Escala divergente”: resumo dos plantões de uma escala que não bate com o NoraCare</td><td>Aviso</td><td>A mensagem mostra a escala com o mesmo nome que já existe no NoraCare. Corrija a identificação, como acima.</td></tr>
+</tbody>
+</table>
+
+<h3>Plantões</h3>
+<table>
+<thead><tr><th>O que aparece (resumo)</th><th>Situação na lista</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>“Plantão começa em” uma data “fora do período do relatório”</td><td>Erro</td><td>Exporte o Financeiro do mês certo ou confira o período no cabeçalho. Um plantão que começa dentro do período entra, mesmo que termine no mês seguinte.</td></tr>
+<tr><td>Plantão que “veio sem horas no Pega Plantão e não pode ser importado”</td><td>Erro</td><td>Corrija a duração no Pega Plantão e exporte o Financeiro de novo.</td></tr>
+<tr><td>Plantões “sem responsável” que “será(ão) importado(s) como aberto(s)”</td><td>Aviso</td><td>Os plantões entram na escala em aberto, sem profissional.</td></tr>
+<tr><td>Período que “já tem … plantão(ões) importado(s) do Pega Plantão”, com o número do lote</td><td>Não aparece na lista. Aparece na janela <span class="ui">Período já importado</span>, ao clicar em <span class="ui">Importar</span></td><td>Importar de novo cria outro lote, e os plantões ficam duplicados. Se essa não for a intenção, cancele essa janela e remova o lote antigo no histórico antes de importar.</td></tr>
+<tr><td>Relatório Profissionais com “cadastro possivelmente defasado”</td><td>Aviso</td><td>O relatório foi gerado antes do fim do período. Se precisar dos dados mais recentes, gere o relatório de novo no Pega Plantão.</td></tr>
+</tbody>
+</table>
+
+<h3>Avisos sobre cadastros existentes</h3>
+<table>
+<thead><tr><th>O que aparece (resumo)</th><th>Situação na lista</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Profissional excluído ou arquivado que “será reativado pela importação”</td><td>Aviso</td><td>O cadastro volta a ficar ativo. Confira se a pessoa precisa continuar no NoraCare.</td></tr>
+<tr><td>Profissional que “não possui e-mail no Pega Plantão”</td><td>Aviso</td><td>A pessoa entra com um e-mail provisório. Quando um e-mail real chegar em uma importação futura, ele substitui o provisório.</td></tr>
+<tr><td>Profissionais “NÃO SÓCIOS” ou novos que “serão cadastrados sem empresa vinculada”</td><td>Aviso</td><td>Vincule a empresa certa no perfil de cada um, em <span class="ui">Usuários › Profissionais</span>. Sem empresa, a pessoa não entra nas regras de sócio nem na remessa de pagamento.</td></tr>
+</tbody>
+</table>
+
+<h2 id="pre-fechada">3. Planilha pré-fechada e importação</h2>
+<p>Ao avançar, você chega à <span class="ui">Planilha pré-fechada</span>. Ela mostra só o que vai entrar: os plantões válidos (OK e avisos). Os plantões com erro não aparecem nesta lista. No topo, aparece o período de referência.</p>
+<ul>
+<li>Os totais mostram <em>Plantões: X de Y</em>, o valor da lista e <em>Fora desta importação</em>, com a quantidade e o valor dos plantões que ficam de fora.</li>
+<li>Os filtros <span class="ui">Situação</span>, <span class="ui">Agrupar por</span>, <span class="ui">Profissional</span>, <span class="ui">Setor, escala ou relatório</span> e <span class="ui">Colunas</span> funcionam como na conciliação. Por padrão, a lista mostra todas as situações e não agrupa.</li>
+<li>Clique no título de uma coluna para ordenar a lista. Se houver mais de uma página, a paginação embaixo da lista mostra as demais linhas.</li>
+<li>O botão <span class="ui">Voltar</span> retorna à conciliação.</li>
+</ul>
+<p>Para importar, clique em <span class="ui">Importar</span>. Se nenhum plantão for válido, esse botão fica desabilitado. Antes de gravar, o sistema pede confirmação:</p>
+<ol class="steps">
+<li>Se o período já tiver plantões importados, aparece a janela <span class="ui">Período já importado</span>. Confirme com <span class="ui">Importar mesmo assim</span> ou cancele.</li>
+<li>Se todos os plantões forem válidos, a janela pergunta: <em>Você confirma a importação dos plantões?</em> Clique em <span class="ui">Aceitar e importar</span>.</li>
+<li>Se houver plantões com erro, a janela <span class="ui">Confirmar importação parcial</span> informa quantos plantões e quanto valor ficarão de fora. Clique em <span class="ui">Aceitar e importar</span> para seguir.</li>
+</ol>
+<p>Ao terminar, aparece o quadro <span class="ui">Importação concluída</span>, com os números do lote: profissionais criados e atualizados, profissionais já migrados, contas bancárias, vínculos com escalas, plantões substituídos, plantões importados e valor importado. O item <span class="ui">Plantões substituídos</span> fica sempre em zero, porque nada é substituído. O botão <span class="ui">Importar</span> some, e <span class="ui">Voltar</span> leva de volta para a Importação.</p>
+<p>Se a importação não for concluída, a tela mostra <em>A verificação mudou. Revise novamente; nenhum dado foi gravado.</em> quando a conferência mudou desde a última verificação. Nos outros casos, mostra <em>A importação não foi concluída. Nenhum dado foi gravado.</em> Se outra importação estiver em andamento, por exemplo em outra aba, a nova é recusada com essa mesma mensagem geral. Aguarde a outra terminar e tente de novo.</p>
+
+<h3>O que a importação faz</h3>
+<ul>
+<li>Cria um lote com os plantões válidos. Cada lote tem um número curto, como #A1B2C3, e aparece no histórico.</li>
+<li>Não substitui nada. Importar o mesmo período de novo cria outro lote, e os plantões ficam duplicados.</li>
+<li>Cria os profissionais novos e atualiza os existentes com os dados do Pega Plantão. Campo vazio no Pega Plantão não apaga o que já existe no NoraCare.</li>
+<li>Registra a conta bancária ou a chave PIX de cada profissional, a partir da linha bancária do Financeiro. Quem já entrou no NoraCare com a própria conta não tem a conta alterada.</li>
+<li>Liga o profissional às escalas em que ele trabalhou, quando ainda não estava ligado.</li>
+<li>Plantões do tipo <em>Plantão Antecipado</em> entram marcados como pagos, porque já foram pagos por fora do sistema. Os demais entram como pendentes de pagamento.</li>
+</ul>
+
+<h2 id="historico">Histórico de importações e remoção de lote</h2>
+<p>Ao lado de <span class="ui">Regras de tipo</span>, no topo da tela Importação, fica o botão <span class="ui">Histórico de importações</span>. Ele lista todos os lotes, do mais recente para o mais antigo, com as colunas <span class="ui">Lote</span>, <span class="ui">Quando</span>, <span class="ui">Período</span>, <span class="ui">Quem</span>, <span class="ui">Arquivos</span>, <span class="ui">Totais</span>, <span class="ui">Situação</span> e <span class="ui">Ações</span>.</p>
+<ul>
+<li>Em <span class="ui">Totais</span>, aparecem os plantões, os profissionais novos, os cadastros atualizados e os vínculos do lote. Se o lote tinha inconsistências de tipo, dia, horário ou valor, a linha informa a quantidade e que você prosseguiu com elas.</li>
+<li><span class="ui">Ver detalhes</span>: mostra os cadastros que a importação atualizou e quais campos mudaram. Mostra até 200 cadastros.</li>
+<li><span class="ui">Remover</span>: apaga os plantões do lote. Só aparece em lotes ativos.</li>
+</ul>
+<div class="callout callout-warn"><p><strong>Atenção:</strong> remover um lote apaga os plantões dele, inclusive os que já têm ponto batido. Também saem os registros de ponto, as revisões de horário, os anúncios, as disputas e as trocas ligados a esses plantões. Cadastros de profissionais, vínculos e escalas ficam. Não dá para desfazer.</p></div>
+<p>Um lote removido continua na lista, marcado como removido, com a data, quem removeu e quantos plantões foram apagados. Um lote não pode ser removido duas vezes.</p>
+
+<h3>Como corrigir um mês importado com erro</h3>
+<ol class="steps">
+<li>Abra o <span class="ui">Histórico de importações</span> e clique em <span class="ui">Remover</span> no lote errado. Confirme com <span class="ui">Remover plantões</span>.</li>
+<li>Corrija o que faltou no Pega Plantão e exporte os relatórios Financeiro e Profissionais de novo.</li>
+<li>Anexe os arquivos novos, verifique e importe.</li>
+</ol>
+<p>Se o período já tiver plantões importados e você não quiser duplicá-los, não importe de novo sem remover antes o lote antigo. A própria verificação avisa quando isso acontece.</p>
+
+<h2 id="pagamento">Pagamento: conferir e exportar</h2>
+<p>Abra <span class="ui">Financeiro › Fechamento › Pagamento</span>. A tela se chama <span class="ui">Pagamentos</span> e mostra, para o mês escolhido, o valor de cada profissional. Ela considera todas as escalas. Para entender como cada valor é calculado, veja <a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a>.</p>
+<ol class="steps">
+<li>Escolha o mês no seletor do topo da tabela. A lista é atualizada sozinha: não há botão de filtrar.</li>
+<li>Escolha a aba: <span class="ui">Sócios</span> ou <span class="ui">Terceirizados</span>.</li>
+<li>Confira os valores. Use <span class="ui">Colunas</span> para escolher quais colunas aparecem e a ordem delas.</li>
+<li>Clique em <span class="ui">Exportar pagamentos</span>. O arquivo compactado (.zip) da aba escolhida é baixado.</li>
+</ol>
+
+<h3>Sócios e terceirizados</h3>
+<ul>
+<li><strong>Sócios</strong> são profissionais ligados a uma empresa interna. Recebem por pró-labore e dividendo. Ficam na aba <span class="ui">Sócios</span>.</li>
+<li><strong>Terceirizados</strong> são profissionais ligados a uma empresa externa, ou prestadores. Recebem pela nota fiscal que emitem. Ficam na aba <span class="ui">Terceirizados</span>.</li>
+</ul>
+<p>Só aparecem profissionais com algum valor no mês. Se ninguém tiver valor na competência escolhida, a tela mostra <em>Nenhum profissional encontrado na competência selecionada.</em></p>
+
+<h3>Colunas da tela</h3>
+<table>
+<thead><tr><th>Coluna</th><th>O que mostra</th></tr></thead>
+<tbody>
+<tr><td><span class="ui">Nome</span></td><td>Nome do profissional. Leva ao cadastro dele.</td></tr>
+<tr><td><span class="ui">Especialidade</span></td><td>Escondida por padrão. Pode ser mostrada em <span class="ui">Colunas</span>.</td></tr>
+<tr><td><span class="ui">Empresa</span></td><td>Empresa do profissional, com o CNPJ logo abaixo.</td></tr>
+<tr><td><span class="ui">Categoria atual</span></td><td>Para sócios, a regra de pagamento cadastrada, como <em>Sócio padrão</em> ou <em>Personalizado</em>. Para terceirizados, aparece sempre <em>Externo</em>.</td></tr>
+<tr><td><span class="ui">Saldo bruto</span></td><td>Total do mês, sem contar as bonificações.</td></tr>
+<tr><td><span class="ui">Plantões antecipados</span></td><td>Valor dos plantões já marcados como pagos. Para sócios, esse valor é descontado do dividendo.</td></tr>
+<tr><td><span class="ui">Custos societários</span></td><td>Custos da empresa aplicados pelas regras do sócio. Para terceirizados aparece <em>—</em>.</td></tr>
+<tr><td><span class="ui">Bonificações</span></td><td>Bônus lançados nos plantões do mês.</td></tr>
+<tr><td><span class="ui">Ajustes mensais</span></td><td>Ajustes lançados no mês. Valores negativos aparecem em vermelho.</td></tr>
+<tr><td><span class="ui">Saldo líquido</span></td><td>Resultado do mês depois dos descontos e acréscimos.</td></tr>
+<tr><td><span class="ui">Pró-labore</span> e <span class="ui">Dividendo</span></td><td>Valores que a empresa paga ao sócio. Aparecem só na aba Sócios.</td></tr>
+<tr><td><span class="ui">Nota fiscal</span></td><td>Valor que o terceirizado recebe mediante nota fiscal. Aparece só na aba Terceirizados.</td></tr>
+<tr><td><span class="ui">Fonte pagadora</span></td><td>A empresa interna que paga a nota fiscal. Aparece só na aba Terceirizados.</td></tr>
+<tr><td><span class="ui">Nota anexada?</span></td><td><em>Sim</em> quando o profissional já enviou a nota fiscal do mês pela versão web do NoraCare. Aparece só na aba Terceirizados.</td></tr>
+</tbody>
+</table>
+<p>Em <span class="ui">Agrupar por</span>, escolha <span class="ui">Por empresa</span> ou <span class="ui">Por categoria</span>. Por empresa, cada grupo mostra o total. Os sócios aparecem sob a própria empresa, e os terceirizados, sob a fonte pagadora.</p>
+<p>A escolha de colunas e a ordem ficam salvas para o seu usuário, neste navegador.</p>
+
+<h3>Terceirizados: nota fiscal e fonte pagadora</h3>
+<p>Para um terceirizado receber pela remessa do mês, três itens precisam estar em ordem:</p>
+<ol class="steps">
+<li><strong>Nota fiscal do mês anexada.</strong> O profissional envia a nota em PDF, pela versão web do NoraCare, na tela <a href="/help/extratos-e-remuneracao">Extratos</a> dele, depois que termina o período financeiro de todas as escalas dele. Na coluna <span class="ui">Nota anexada?</span>, aparece <em>Sim</em>. Quando a nota está anexada, o valor da coluna <span class="ui">Nota fiscal</span> vira um link: clique para baixar o PDF.</li>
+<li><strong>Empresa externa completa.</strong> A empresa precisa ter razão social, CNPJ válido e uma conta bancária ou chave PIX cadastrada.</li>
+<li><strong>Fonte pagadora.</strong> É a empresa interna que vai pagar. Preencha no cadastro da empresa externa, em <span class="ui">Configurações › Empresas</span>, no campo <span class="ui">Fonte pagadora</span>. O campo que aparece no perfil do profissional não vale para a remessa.</li>
+</ol>
+<p>Quem não cumpre algum desses itens continua na listagem, mas fica de fora da remessa bancária e da planilha ContaAzul. Quando falta a fonte pagadora, a célula <span class="ui">Fonte pagadora</span> aparece em vermelho, com o texto <em>Sem fonte pagadora</em>. Quando falta a nota ou a conta da empresa, o aviso que aparece logo após o download informa o motivo.</p>
+<div class="callout callout-tip"><p><strong>Dica:</strong> se a fonte pagadora mudar depois que um terceirizado já entrou na remessa do mês, esse mês continua com a fonte da época. Quem só aparece na listagem segue a fonte atual.</p></div>
+
+<h3>Exportar pagamentos</h3>
+<p>Ao clicar em <span class="ui">Exportar pagamentos</span>, o botão mostra <em>Exportando…</em> e o arquivo da aba aberta é baixado. Ele traz, quando há pagamentos elegíveis:</p>
+<ul>
+<li>Para cada empresa interna com pagamento no mês: o <strong>arquivo de remessa bancária</strong> (CSV, no formato do Santander), que o banco usa para fazer as transferências em lote, e a <strong>planilha ContaAzul</strong>, para conciliar no ContaAzul.</li>
+<li>Na aba <span class="ui">Sócios</span>, uma planilha (.xlsx) por empresa com as <strong>regras</strong> aplicadas a cada sócio.</li>
+<li>Na aba <span class="ui">Terceirizados</span>, uma <strong>listagem</strong> (.xlsx) de todos os terceirizados do mês, inclusive os que estão sem fonte pagadora.</li>
+</ul>
+<p>Se não houver nada a exportar naquela aba, nenhum arquivo é baixado. Logo após o download, a tela pode mostrar avisos com quem ficou de fora da remessa e o motivo.</p>
+<div class="callout callout-info"><p><strong>Data de pagamento:</strong> o arquivo de remessa traz como data de pagamento o último dia útil do mês seguinte ao da competência. A data nunca cai em sábado, domingo ou feriado nacional.</p></div>
+
+<h3>Exportações anteriores</h3>
+<p>Cada exportação grava uma <strong>foto do momento</strong>: os arquivos, as regras e a listagem como estavam naquela hora. Para revê-las, clique em <span class="ui">Exportações anteriores</span>, no topo da tela.</p>
+<p>A janela lista as exportações da competência escolhida. Cada uma mostra a data e a hora, quem exportou, a aba (<em>Sócios</em>, <em>Externos</em> ou <em>Ambos</em>) e a quantidade de empresas e de linhas. Na lista, <em>Externos</em> é o lote da aba <span class="ui">Terceirizados</span>. Ao abrir uma exportação, aparecem as empresas, com a quantidade de sócios e de externos (os terceirizados) de cada uma.</p>
+<ul>
+<li><span class="ui">Arquivos</span>: baixa de novo o pacote daquela empresa (.zip), com a remessa e a planilha ContaAzul. Nos terceirizados, o botão só aparece quando há remessa.</li>
+<li><span class="ui">Regras (XLSX)</span>: baixa a planilha de regras dos sócios daquela empresa.</li>
+<li><span class="ui">Listagem (XLSX)</span>: baixa a listagem de terceirizados daquela exportação.</li>
+</ul>
+<p>Corrigir um cadastro depois de exportar não muda a foto. Para pagar com os dados corrigidos, exporte de novo.</p>
+
+<h2 id="veja-tambem">Veja também</h2>
+<ul>
+<li><a href="/help/profissionais">Cadastro de profissionais</a></li>
+<li><a href="/help/locais-e-empresas">Locais, empresas e permissões globais</a></li>
+<li><a href="/help/configurar-escala">Configuração, histórico e justificativas da escala</a></li>
+<li><a href="/help/precificacao-e-regras">Precificação, regras de pagamento, bonificações e ajustes</a></li>
+<li><a href="/help/perfis-e-acessos">Perfis e níveis de acesso</a></li>
+</ul>
