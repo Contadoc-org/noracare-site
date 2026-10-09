@@ -1,5 +1,5 @@
 <p class="lead">Todo mês, o pagamento dos profissionais passa por quatro passos: importar os relatórios do Pega Plantão, conferir as pendências, importar os plantões válidos e exportar os arquivos de pagamento. Aqui você encontra cada tela, o que fazer com as pendências e como corrigir um mês importado com erro.</p>
-<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+<p class="meta">Para: <span class="badge">Gestão</span> e <span class="badge">Profissional</span> · Onde: <span class="badge">Painel web</span> (gestão) e <span class="badge">App</span> (profissional)</p>
 
 <h2 id="visao-geral">Visão geral</h2>
 <p>O fechamento fica no menu <span class="ui">Financeiro › Fechamento</span>, com duas telas:</p>
@@ -244,7 +244,7 @@
 <tr><td><span class="ui">Pró-labore</span> e <span class="ui">Dividendo</span></td><td>Valores que a empresa paga ao sócio. Aparecem só na aba Sócios.</td></tr>
 <tr><td><span class="ui">Nota fiscal</span></td><td>Valor que o terceirizado recebe mediante nota fiscal. Aparece só na aba Terceirizados.</td></tr>
 <tr><td><span class="ui">Fonte pagadora</span></td><td>A empresa interna que paga a nota fiscal. Aparece só na aba Terceirizados.</td></tr>
-<tr><td><span class="ui">Nota anexada?</span></td><td><em>Sim</em> quando o profissional já enviou a nota fiscal do mês pela versão web do NoraCare. Aparece só na aba Terceirizados.</td></tr>
+<tr><td><span class="ui">Nota anexada?</span></td><td><em>Sim</em> quando o profissional já anexou a nota fiscal do mês. Aparece só na aba Terceirizados.</td></tr>
 </tbody>
 </table>
 <p>Em <span class="ui">Agrupar por</span>, escolha <span class="ui">Por empresa</span> ou <span class="ui">Por categoria</span>. Por empresa, cada grupo mostra o total. Os sócios aparecem sob a própria empresa, e os terceirizados, sob a fonte pagadora.</p>
@@ -253,7 +253,7 @@
 <h3>Terceirizados: nota fiscal e fonte pagadora</h3>
 <p>Para um terceirizado receber pela remessa do mês, três itens precisam estar em ordem:</p>
 <ol class="steps">
-<li><strong>Nota fiscal do mês anexada.</strong> O profissional envia a nota em PDF, pela versão web do NoraCare, na tela <a href="/help/extratos-e-remuneracao">Extratos</a> dele, depois que termina o período financeiro de todas as escalas dele. Na coluna <span class="ui">Nota anexada?</span>, aparece <em>Sim</em>. Quando a nota está anexada, o valor da coluna <span class="ui">Nota fiscal</span> vira um link: clique para baixar o PDF.</li>
+<li><strong>Nota fiscal do mês anexada.</strong> A nota em PDF é do profissional e só pode ser enviada depois que termina o período financeiro de todas as escalas dele. A caixa da nota fica na tela <a href="/help/extratos-e-remuneracao">Extratos</a> dele, no app, mas o envio da nota fiscal pelo app ainda não está disponível. Enquanto a nota não estiver anexada, ele fica de fora da remessa bancária. Quando a nota está anexada, a coluna <span class="ui">Nota anexada?</span> mostra <em>Sim</em>, e o valor da coluna <span class="ui">Nota fiscal</span> vira um link: clique para baixar o PDF no painel web.</li>
 <li><strong>Empresa externa completa.</strong> A empresa precisa ter razão social, CNPJ válido e uma conta bancária ou chave PIX cadastrada.</li>
 <li><strong>Fonte pagadora.</strong> É a empresa interna que vai pagar. Preencha no cadastro da empresa externa, em <span class="ui">Configurações › Empresas</span>, no campo <span class="ui">Fonte pagadora</span>. O campo que aparece no perfil do profissional não vale para a remessa.</li>
 </ol>
