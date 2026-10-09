@@ -11,18 +11,22 @@ import {
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { features, siteConfig } from "@/lib/site";
+import { features, ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Produto: escalas, check-in, trocas e relatórios";
+const description =
+  "Conheça os módulos do NoraCare: escalas, check-in biométrico, trocas, acessos hierárquicos e relatórios financeiros para redes de saúde.";
 
 export const metadata: Metadata = {
-  title: "Produto",
-  description:
-    "Conheça os módulos do NoraCare: escalas, check-in biométrico, trocas, acessos hierárquicos e relatórios financeiros para redes de saúde.",
+  title,
+  description,
   alternates: { canonical: "/produto" },
   openGraph: {
-    title: `Produto | ${siteConfig.name}`,
-    description:
-      "Módulos completos para gestão de plantões e equipes de saúde.",
+    ...ogDefaults,
+    type: "website",
     url: `${siteConfig.url}/produto`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
   },
 };
 

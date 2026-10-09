@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { IconChat, IconChevronRight } from "@/components/icons";
 import { helpPages } from "@/content/help/nav";
 import { getHelpPage } from "@/lib/help";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,17 +14,61 @@ export function generateStaticParams() {
   return helpPages.map((page) => ({ slug: page.slug }));
 }
 
+/** Resumo do índice em até ~155 caracteres, cortado numa cláusula completa (fora de parênteses). */
+function metaDescription(summary: string) {
+  if (summary.length <= 155) return summary.replace(/\.?$/, ".");
+  const head = summary.slice(0, 156);
+  let depth = 0;
+  let end = -1;
+  for (let i = 0; i < head.length; i++) {
+    const c = head[i];
+    if (c === "(") depth++;
+    else if (c === ")") depth = Math.max(0, depth - 1);
+    else if (
+      depth === 0 &&
+      i >= 120 &&
+      ((/[,;:]/.test(c) && head[i + 1] === " ") || head.startsWith(" e ", i))
+    ) {
+      end = i;
+    }
+  }
+  if (end > 0) return `${head.slice(0, end).replace(/[,;:\s]+$/, "")}.`;
+  return `${head.slice(0, head.lastIndexOf(" ")).replace(/[,;:(\s]+$/, "")}…`;
+}
+
+/** Título curto (até ~60 caracteres com o sufixo) e descrição fechada para os artigos que não cabem na regra geral. */
+const seoOverrides: Record<string, { title?: string; description?: string }> = {
+  "app-no-celular": { title: "App no celular: instalação e permissões" },
+  fechamento: { title: "Fechamento mensal: importação e pagamento" },
+  "precificacao-e-regras": { title: "Precificação e regras de pagamento" },
+  "configurar-escala": { title: "Configurar escala e histórico" },
+  "equipe-de-gestao": { title: "Gestores, coordenadores e masters" },
+  "visao-geral": {
+    description:
+      "Apresenta o NoraCare para quem nunca usou: painel web da gestão, app do profissional, perfis de acesso e um guia de por onde começar.",
+  },
+  glossario: {
+    description:
+      "Glossário dos termos do app e do painel NoraCare, em ordem alfabética, como plantão, escala, troca, passagem, competência e conciliação.",
+  },
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = getHelpPage((await params).slug);
   if (!page) return {};
+  const override = seoOverrides[page.slug] ?? {};
+  const title = override.title ?? page.title;
+  const description = override.description ?? metaDescription(page.summary);
   return {
-    title: `${page.title} · Ajuda`,
-    description: page.summary || undefined,
+    title: `${title} · Ajuda`,
+    description,
     alternates: { canonical: `/help/${page.slug}` },
     openGraph: {
-      title: `${page.title} | Ajuda ${siteConfig.name}`,
-      description: page.summary || undefined,
+      ...ogDefaults,
+      type: "article",
       url: `${siteConfig.url}/help/${page.slug}`,
+      title: `${title} | Ajuda ${siteConfig.name}`,
+      description,
     },
   };
 }

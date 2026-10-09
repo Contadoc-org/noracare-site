@@ -4,17 +4,22 @@ import { IconHierarchy, IconShield, IconUsers } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Quem somos e nossa missão";
+const description =
+  "Conheça a história, a missão e os valores da NoraCare: gestão de plantões e equipes de saúde para redes hospitalares brasileiras.";
 
 export const metadata: Metadata = {
-  title: "Sobre",
-  description:
-    "Conheça a NoraCare: plataforma de gestão de plantões e equipes de saúde para redes hospitalares brasileiras.",
+  title,
+  description,
   alternates: { canonical: "/sobre" },
   openGraph: {
-    title: `Sobre | ${siteConfig.name}`,
-    description: siteConfig.description,
+    ...ogDefaults,
+    type: "website",
     url: `${siteConfig.url}/sobre`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
   },
 };
 

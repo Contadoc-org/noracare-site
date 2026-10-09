@@ -3,18 +3,22 @@ import Link from "next/link";
 import { IconClock } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Exclusão de conta e dados";
+const description =
+  "Passo a passo para solicitar a exclusão da sua conta e dos dados pessoais no app NoraCare, pela própria tela do app ou por e-mail.";
 
 export const metadata: Metadata = {
-  title: "Exclusão de dados",
-  description: `Como solicitar a exclusão da conta e dos dados pessoais no aplicativo ${siteConfig.name}.`,
+  title,
+  description,
   alternates: { canonical: "/exclusao-de-dados" },
-  robots: { index: true, follow: true },
   openGraph: {
-    title: `Exclusão de dados | ${siteConfig.name}`,
-    description:
-      "Passo a passo para excluir conta e dados pessoais do app NoraCare.",
+    ...ogDefaults,
+    type: "website",
     url: `${siteConfig.url}/exclusao-de-dados`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
   },
 };
 
@@ -125,7 +129,7 @@ export default function ExclusaoDeDadosPage() {
                     {index + 1}
                   </span>
                   <div className="min-w-0">
-                    <p className="font-semibold text-heading">{step.title}</p>
+                    <h3 className="mt-0 font-sans text-[1rem] leading-[1.75] font-semibold tracking-normal text-heading">{step.title}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-body">
                       {step.description}
                     </p>
@@ -145,7 +149,7 @@ export default function ExclusaoDeDadosPage() {
                     {index + 1}
                   </span>
                   <div className="min-w-0">
-                    <p className="font-semibold text-heading">{step.title}</p>
+                    <h3 className="mt-0 font-sans text-[1rem] leading-[1.75] font-semibold tracking-normal text-heading">{step.title}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-body">
                       {step.description}
                     </p>
@@ -155,9 +159,9 @@ export default function ExclusaoDeDadosPage() {
             </ol>
 
             <div className="rounded-card border border-nc-blue/15 bg-[#f1f4fe] p-5 shadow-[inset_3px_0_0_0_var(--nc-blue)] sm:p-6">
-              <p className="text-sm font-semibold text-heading">
+              <h3 className="mt-0 font-sans text-sm font-semibold tracking-normal text-heading">
                 Modelo de mensagem
-              </p>
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-body">
                 “Solicito a exclusão da minha conta no NoraCare e a eliminação dos
                 dados pessoais associados ao e-mail [seu e-mail], nome [seu nome],

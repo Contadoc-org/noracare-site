@@ -9,17 +9,22 @@ import {
 } from "@/components/icons";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { siteConfig } from "@/lib/site";
+import { ogDefaults, siteConfig } from "@/lib/site";
+
+const title = "Contato e demonstração";
+const description =
+  "Fale com a equipe NoraCare para agendar uma demonstração, tirar dúvidas comerciais ou pedir suporte para a sua rede de saúde.";
 
 export const metadata: Metadata = {
-  title: "Contato",
-  description:
-    "Fale com a equipe NoraCare para demonstração, comercial ou suporte.",
+  title,
+  description,
   alternates: { canonical: "/contato" },
   openGraph: {
-    title: `Contato | ${siteConfig.name}`,
-    description: "Solicite uma demonstração ou fale com o time NoraCare.",
+    ...ogDefaults,
+    type: "website",
     url: `${siteConfig.url}/contato`,
+    title: `${title} | ${siteConfig.name}`,
+    description,
   },
 };
 
@@ -37,15 +42,17 @@ export default function ContatoPage() {
     <>
       <PageHero
         eyebrow="Contato"
-        title="Vamos conversar sobre a sua operação"
+        title="Fale com a NoraCare sobre a sua operação"
         description="Conte sobre a estrutura da rede, o volume de plantões e os desafios de escala, ponto e financeiro. Retornamos com uma demonstração alinhada ao seu contexto."
         overlap
       />
 
       <section className="surface-light pb-20 sm:pb-28">
         <Container className="relative -mt-20 grid items-start gap-6 sm:-mt-28 lg:-mt-32 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8">
+          <h2 className="sr-only">Formulário de contato</h2>
           <ContactForm />
 
+          <h2 className="sr-only">Outros canais de contato</h2>
           <div className="card min-w-0 p-2 sm:p-3 lg:sticky lg:top-28">
             <ul className="divide-y divide-border">
               <li className={rowClass}>

@@ -66,7 +66,7 @@ export function Hero() {
             className="h-display mt-6 max-w-2xl animate-in"
             style={{ animationDelay: "60ms" }}
           >
-            Operação de plantões com clareza, controle e{" "}
+            Gestão de plantões com clareza, controle e{" "}
             <span className="text-gradient">confiança</span>
           </h1>
 
