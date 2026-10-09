@@ -1,8 +1,8 @@
 <p class="lead">A tela <span class="ui">Usuários › Profissionais</span> reúne os médicos, enfermeiros e fisioterapeutas da sua instituição. Aqui você busca na lista, convida uma pessoa nova, abre a ficha para ver e editar os dados, acompanha as escalas e os locais em que ela atua e pode inativar, reativar ou excluir o cadastro.</p>
-<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span></p>
+<p class="meta">Para: <span class="badge">Gestão</span> · Onde: <span class="badge">Painel web</span> e <span class="badge">App</span></p>
 
 <h2 id="quem-pode-usar">Quem pode usar esta tela</h2>
-<p>O item <span class="ui">Profissionais</span> aparece dentro de <span class="ui">Usuários › Profissionais</span> para quem tem a permissão de gestão de profissionais: Master, Gestor interno e Coordenador. Por padrão, o Visualizador não vê esse item, conforme as permissões definidas pela sua instituição. Quem não tem acesso é levado de volta ao <a href="/help/dashboard">Dashboard</a>.</p>
+<p>O item <span class="ui">Profissionais</span> aparece dentro de <span class="ui">Usuários › Profissionais</span> para quem tem a permissão de gestão de profissionais: Master, Gestor interno e Coordenador. Por padrão, o Visualizador não vê esse item, conforme as permissões definidas pela sua instituição. No celular, o caminho é o mesmo, pelo menu lateral do app. Quem não tem acesso é levado de volta ao <a href="/help/dashboard">Dashboard</a>. Esta tela é só da gestão: quem tem apenas o perfil de profissional de saúde não a acessa. Para o que o profissional vê no próprio celular, veja <a href="/help/inicio-do-app">Tela inicial e menu do app</a>.</p>
 <p>Veja o que cada perfil consegue fazer nesta tela:</p>
 <table>
 <thead><tr><th>O que você pode fazer</th><th>Master</th><th>Gestor interno</th><th>Coordenador</th><th>Visualizador</th></tr></thead>
@@ -12,7 +12,7 @@
 <tr><td>Editar dados pessoais</td><td>Sim</td><td>Sim</td><td>Não</td><td>Não</td></tr>
 <tr><td>Editar dados profissionais (conselho, nome abreviado, especialidades e pós-graduações)</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
 <tr><td>Ver e editar Relação, Regras de pagamento e Contas Bancárias</td><td>Sim</td><td>Sim</td><td>Não aparecem</td><td>Só ver</td></tr>
-<tr><td>Ver as observações internas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim, só na lista</td></tr>
+<tr><td>Ver as observações internas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim, só na lista do painel web</td></tr>
 <tr><td>Editar as observações internas</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
 <tr><td>Editar as escalas vinculadas</td><td>Sim</td><td>Sim</td><td>Só nas escalas do seu alcance</td><td>Não</td></tr>
 <tr><td>Trocar a foto</td><td>Sim</td><td>Sim</td><td>Sim</td><td>Não</td></tr>
@@ -30,10 +30,10 @@
 <table>
 <thead><tr><th>Coluna</th><th>O que mostra</th></tr></thead>
 <tbody>
-<tr><td><span class="ui">Nome do médico</span></td><td>Nome do profissional, com a profissão logo abaixo. A coluna tem esse título para todas as profissões. Clique no nome para abrir a ficha. Ao lado do nome podem aparecer os selos <span class="ui">Inativa</span> (profissional inativo) e <span class="ui">Excluído</span>. Passe o mouse sobre o nome para ver as observações internas, quando houver e se você tiver acesso a elas.</td></tr>
+<tr><td><span class="ui">Nome do médico</span></td><td>Nome do profissional, com a profissão logo abaixo. A coluna tem esse título para todas as profissões. Clique no nome para abrir a ficha. Ao lado do nome podem aparecer os selos <span class="ui">Inativa</span> (profissional inativo) e <span class="ui">Excluído</span>. Passe o mouse sobre o nome para ver as observações internas, quando houver e se você tiver acesso a elas. No celular, a observação não aparece na lista: quem pode vê-la encontra o texto no bloco Observações internas da ficha.</td></tr>
 <tr><td><span class="ui">Especialidade</span></td><td>Até duas especialidades. Se houver mais, aparece <strong>+</strong> seguido da quantidade restante.</td></tr>
 <tr><td><span class="ui">Empresa</span></td><td>Nome da empresa vinculada. Quando você pode abrir empresas, o nome é um link para a empresa. Para o Coordenador, aparece só o nome.</td></tr>
-<tr><td><span class="ui">Escalas</span></td><td>Quantidade de escalas em que o profissional está vinculado. Passe o mouse sobre o número para ver a lista, com cada escala no formato Rede &gt; Local &gt; Setor &gt; Escala.</td></tr>
+<tr><td><span class="ui">Escalas</span></td><td>Quantidade de escalas em que o profissional está vinculado. Passe o mouse sobre o número para ver a lista, com cada escala no formato Rede &gt; Local &gt; Setor &gt; Escala. No celular, essa lista não abre: veja as escalas na aba Escalas da ficha.</td></tr>
 <tr><td><span class="ui">1º Plantão</span></td><td>Data do primeiro plantão dele.</td></tr>
 <tr><td><span class="ui">Última atuação</span></td><td>Mostra há quantos dias foi o último plantão que já aconteceu, junto com a data. Passe o mouse (ou toque) no ⓘ ao lado do título para ver a explicação.</td></tr>
 <tr><td><span class="ui">Atividade</span></td><td>Selo que resume a última atuação: <span class="ui">Atuante</span> (menos de 30 dias), <span class="ui">Atenção</span> (entre 30 e 60 dias) e <span class="ui">Crítico</span> (mais de 60 dias). Se a pessoa não tem nenhum plantão que já aconteceu, a coluna mostra um traço (—).</td></tr>
@@ -159,7 +159,7 @@
 <p>Para incluir uma especialidade ou uma pós-graduação, use o bloco <span class="ui">Pós e Especialidades</span>. Escolha o tipo, <span class="ui">Especialidade</span> ou <span class="ui">Pós Graduação</span>, e selecione o nome na lista. A especialidade pede o RQE, e a pós-graduação pede a carga horária.</p>
 
 <h3 id="observacoes-internas">Observações internas</h3>
-<p>Este bloco traz a identificação interna que a sua instituição usa para o profissional (o número ou a sigla que ela usa para ele) e um campo de observações. As observações são notas internas da equipe e não aparecem para o profissional. O bloco aparece para quem pode gerenciar profissionais: Master, Gestor interno e Coordenador. Na lista, as observações também aparecem ao passar o mouse sobre o nome, para quem tem acesso a elas.</p>
+<p>Este bloco traz a identificação interna que a sua instituição usa para o profissional (o número ou a sigla que ela usa para ele) e um campo de observações. As observações são notas internas da equipe e não aparecem para o profissional. O bloco aparece para quem pode gerenciar profissionais: Master, Gestor interno e Coordenador. Na lista do painel web, as observações também aparecem ao passar o mouse sobre o nome, para quem tem acesso a elas. No celular, elas aparecem só neste bloco da ficha.</p>
 
 <h3 id="relacao-com-empresa">Relação com a empresa</h3>
 <p>Este bloco mostra como o profissional se relaciona com a empresa. Ele não aparece para o Coordenador. Há duas opções em <span class="ui">Tipo de vínculo</span>:</p>
