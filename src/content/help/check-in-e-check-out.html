@@ -47,8 +47,7 @@
 <li>O check-out só é aceito a partir do horário previsto de início do plantão. Se você tentar antes, a tela mostra <span class="ui">Fora da janela de check-out</span>, com as datas de <span class="ui">Abertura</span> e de <span class="ui">Fechamento</span> da janela.</li>
 <li>Depois do prazo normal de check-out, que a escala define e é contado a partir do fim previsto, a faixa mostra <span class="ui">Check-out pendente</span>, em tom âmbar. Isso não impede o check-out: o botão continua sendo <span class="ui">Check-out</span>. Faça o check-out assim que possível.</li>
 <li>Se você fizer o check-out depois do prazo normal, o sistema grava a hora em que você tocou no botão. Logo após o check-out, a tela mostra <span class="ui">Horas registradas parecem atípicas</span>, com o botão <span class="ui">Solicitar revisão</span>. Peça a revisão e explique o motivo.</li>
-<li>Se o check-out não for feito, o sistema fecha o registro sozinho algumas horas depois do fim previsto (veja <em>Esqueci o check-out</em>). Depois disso, o app não aceita mais o check-out desse plantão.</li>
-<li>O check-out nunca é aceito depois de 30 dias do fim previsto do plantão. Se você tentar depois disso, a tela mostra <em>A janela de check-out deste plantão encerrou</em>. Na tela de sucesso do check-in, o aviso <span class="ui">Janela de check-out encerrada</span> aparece no lugar do botão <span class="ui">Fazer Check-out</span>. Procure a coordenação para registrar ou ajustar o ponto.</li>
+<li>Se o check-out não for feito, o sistema fecha o registro sozinho algumas horas depois do fim previsto (veja <em>Esqueci o check-out</em>). Depois disso, se você tentar o check-out, a janela <span class="ui">Check-out já registrado</span> mostra <em>O check-out deste plantão já foi registrado. Se o horário estiver errado, peça revisão de horário.</em></li>
 </ul>
 
 <h3>Esqueci o check-out</h3>
@@ -93,7 +92,7 @@
 <h2 id="sem-internet">Sem internet</h2>
 <p>O check-in e o check-out manuais precisam de internet no momento da confirmação. Eles não ficam guardados no aparelho para serem enviados depois.</p>
 <ul>
-<li>Se a conexão cair ao confirmar, aparece uma janela de <span class="ui">Erro</span>, com o botão <span class="ui">Tentar novamente</span>.</li>
+<li>Se a conexão cair ao confirmar, aparece a janela <span class="ui">Erro</span> com a mensagem <em>Sem conexão. Verifique sua internet e tente novamente.</em> e o botão <span class="ui">Tentar novamente</span>.</li>
 <li>Antes de tentar de novo, confira na lista do mês, no menu <span class="ui">Check-in / out</span>, se a entrada ou a saída já aparece. Se aparecer, o registro foi feito e não precisa ser refeito.</li>
 <li>Quando a internet voltar, toque em <span class="ui">Tentar novamente</span> e confirme de novo.</li>
 </ul>
@@ -148,13 +147,14 @@
 <tr><td><span class="ui">Verificação Biométrica Necessária</span></td><td>A escala exige selfie, e você não tem biometria cadastrada.</td><td>Toque em <span class="ui">Cadastrar biometria</span> e faça o cadastro.</td></tr>
 <tr><td><span class="ui">Erro</span>: <em>Falha na verificação facial. Tente novamente.</em></td><td>A selfie não foi reconhecida.</td><td>Toque em <span class="ui">Tentar novamente</span>. Se continuar, procure a coordenação.</td></tr>
 <tr><td><span class="ui">Erro</span>: <em>GPS não disponível — tempo esgotado</em></td><td>O aparelho não conseguiu ler a sua posição a tempo.</td><td>Toque em <span class="ui">Tentar novamente</span>.</td></tr>
+<tr><td><span class="ui">Erro</span>: <em>Sem conexão. Verifique sua internet e tente novamente.</em></td><td>A internet caiu na hora de confirmar.</td><td>Confira a lista do mês. Se o horário não aparecer, toque em <span class="ui">Tentar novamente</span> quando a conexão voltar.</td></tr>
 <tr><td><span class="ui">Erro</span>, com outra mensagem</td><td>O registro não foi concluído. Pode ser falha de internet ou instabilidade do sistema.</td><td>Confira a lista do mês. Se o horário não aparecer, toque em <span class="ui">Tentar novamente</span>.</td></tr>
 <tr><td><span class="ui">Erro</span>, com a mensagem de que o local não tem geolocalização configurada</td><td>O local ainda não tem a localização cadastrada, então o check-in não é aceito.</td><td>Avise a coordenação.</td></tr>
 <tr><td><span class="ui">Check-out pendente</span> (aviso de outro plantão)</td><td>Há outro plantão com check-in aberto.</td><td>Toque no botão de check-out do aviso e encerre esse plantão primeiro.</td></tr>
-<tr><td><span class="ui">Check-in duplicado</span></td><td><em>Check-in já realizado para este plantão</em>: o registro já existe.</td><td>Confira a lista do mês. Não é preciso refazer. Se a saída aparecer como <span class="ui">Automático</span> e não estiver certa, peça a revisão.</td></tr>
+<tr><td><span class="ui">Check-in duplicado</span></td><td><em>Check-in já realizado para este plantão</em>: o registro já existe.</td><td>Confira a lista do mês. Não é preciso refazer.</td></tr>
+<tr><td><span class="ui">Check-out já registrado</span></td><td><em>O check-out deste plantão já foi registrado. Se o horário estiver errado, peça revisão de horário.</em> A saída já existe, inclusive quando o sistema fechou o registro sozinho depois do fim previsto.</td><td>Se o horário da saída não estiver certo, peça a revisão. Veja <a href="/help/revisao-de-horario">Pedir revisão de horário</a>.</td></tr>
 <tr><td><span class="ui">Acesso negado</span></td><td><em>Não autorizado para realizar check-in</em> ou <em>Plantão não elegível para check-in</em>. O plantão pode ter sido passado a outro profissional, ou a conta não registra ponto por esta tela.</td><td>Procure a coordenação.</td></tr>
 <tr><td><span class="ui">Fora da janela de check-out</span></td><td>Você tentou fazer o check-out antes de a janela abrir.</td><td>Veja a data de Abertura na tela e tente de novo depois dela.</td></tr>
-<tr><td><span class="ui">Fora da janela de check-out</span>, com a frase <em>A janela de check-out deste plantão encerrou</em></td><td>Já passaram 30 dias depois do fim previsto do plantão.</td><td>Procure a coordenação para registrar ou ajustar o ponto.</td></tr>
 <tr><td><span class="ui">Horas registradas parecem atípicas</span></td><td>O check-out foi feito depois do prazo normal do plantão. O horário gravado é o do toque.</td><td>Toque em <span class="ui">Solicitar revisão</span> e explique o motivo.</td></tr>
 <tr><td><span class="ui">Você está fora do local do plantão</span></td><td>O check-out está sendo feito longe do local.</td><td>Escreva a justificativa e marque <em>Estou ciente e desejo continuar</em>. Uma revisão é aberta.</td></tr>
 <tr><td><span class="ui">Check-out indisponível</span></td><td><em>Não há check-in aberto para este plantão</em>.</td><td>Confira a lista do mês. Se faltar algum horário, procure a coordenação.</td></tr>
